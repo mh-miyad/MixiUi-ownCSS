@@ -1,29 +1,34 @@
+/* Link Bootstrap Icon  */
+@import url("https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css");
+/* Link Bootstrap Icon  */
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
 @layer utilities {
+  /* Button part Start Here  */
   .btn {
-    @apply rounded px-4 py-2 font-bold text-white transition-all duration-200 ease-linear active:scale-95;
+    @apply rounded px-4 py-2 font-bold text-black transition-all duration-200 ease-linear active:scale-95;
   }
   .btn-xs {
-    @apply px-3 py-2 text-center text-xs font-medium;
+    @apply mx-1 px-3 py-2 text-center text-xs font-medium;
   }
   .btn-sm {
-    @apply px-3 py-2 text-center text-sm font-medium;
+    @apply mx-1 px-3 py-2 text-center text-sm font-medium;
   }
   .btn-lg {
-    @apply px-5 py-3 text-center text-base font-medium;
+    @apply mx-1 px-5 py-3 text-center text-base font-medium;
   }
   .btn-xl {
-    @apply px-6 py-3.5 text-center text-base font-medium;
+    @apply mx-1 px-6 py-3.5 text-center text-base font-medium;
   }
   .btn-primary {
-    @apply bg-blue-500 hover:bg-blue-600;
+    @apply bg-blue-500 text-white hover:bg-blue-600;
   }
   .btn-danger {
-    @apply bg-red-500 hover:bg-red-600;
+    @apply bg-red-500 text-white hover:bg-red-600;
   }
+  /* Button part end Here  */
   /* Modal part  */
   .modalMainPart {
     @apply fixed left-0 right-0 top-0 z-50  h-[calc(100%-1rem)] max-h-full w-full items-center justify-center overflow-y-auto overflow-x-hidden md:inset-0;
@@ -33,6 +38,9 @@
   }
   .modalBody {
     @apply relative rounded-lg bg-white shadow dark:bg-gray-700;
+  }
+  .modalHeader {
+    @apply flex items-center justify-between rounded-t border-b p-4 dark:border-gray-600 md:p-5;
   }
   .modalCloseBtn {
     @apply ms-auto inline-flex h-8 w-8 items-center justify-center rounded-lg bg-transparent text-sm text-gray-400 hover:bg-gray-200 hover:text-gray-900 dark:hover:bg-gray-600 dark:hover:text-white;
