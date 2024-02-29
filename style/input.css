@@ -24,4 +24,18 @@
   .btn-danger {
     @apply bg-red-500 hover:bg-red-600;
   }
+  /* Modal part  */
+  .modalMainPart {
+    @apply fixed left-0 right-0 top-0 z-50  h-[calc(100%-1rem)] max-h-full w-full items-center justify-center overflow-y-auto overflow-x-hidden md:inset-0;
+  }
+  .modalContent {
+    @apply relative max-h-full w-full max-w-2xl p-4;
+  }
+  .modalBody {
+    @apply relative rounded-lg bg-white shadow dark:bg-gray-700;
+  }
+  .modalCloseBtn {
+    @apply ms-auto inline-flex h-8 w-8 items-center justify-center rounded-lg bg-transparent text-sm text-gray-400 hover:bg-gray-200 hover:text-gray-900 dark:hover:bg-gray-600 dark:hover:text-white;
+  }
+  /* Modal part  */
 }
