@@ -16,6 +16,7 @@
   "description": "",
   "dependencies": {
     "alpinejs": "^3.13.5",
-    "flowbite": "^2.3.0"
+    "flowbite": "^2.3.0",
+    "fullcalendar": "^6.1.11"
   }
 }
