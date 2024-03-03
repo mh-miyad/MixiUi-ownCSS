@@ -1,0 +1,108 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- icons -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Syncopate:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+    <!-- icons -->
+    <link rel="stylesheet" href="../../style/output.css" />
+    <title>Document</title>
+  </head>
+  <body class="font-[Open Sans] dark:bg-slate-950">
+    <h1 class="dark:text-white">Components making</h1>
+
+    <!--  Create new button and Modal  -->
+    <main class="container mx-auto">
+      <section>
+        <!-- Modal toggle -->
+        <button
+          data-modal-target="default-modal"
+          data-modal-toggle="default-modal"
+          class="btn btn-lg bg-pink-400"
+          type="button"
+        >
+          Toggle modal
+        </button>
+
+        <!-- Main modal -->
+
+        <div
+          id="default-modal"
+          tabindex="-1"
+          aria-hidden="true"
+          class="modalMainPart hidden"
+        >
+          <div class="modalContent">
+            <!-- Modal content -->
+            <div class="modalBody">
+              <!-- Modal header -->
+              <div class="modalHeader">
+                <h3 class="text-xl font-semibold text-gray-900 dark:text-white">
+                  Terms of Service
+                </h3>
+                <button
+                  type="button"
+                  class="modalCloseBtn"
+                  data-modal-hide="default-modal"
+                >
+                  <i class="bi bi-x-lg"></i>
+                  <span class="sr-only">Close modal</span>
+                </button>
+              </div>
+              <!-- Modal body -->
+              <div class="space-y-4 p-4 md:p-5">
+                <p
+                  class="text-base leading-relaxed text-gray-500 dark:text-gray-400"
+                >
+                  With less than a month to go before the European Union enacts
+                  new consumer privacy laws for its citizens, companies around
+                  the world are updating their terms of service agreements to
+                  comply.
+                </p>
+                <p
+                  class="text-base leading-relaxed text-gray-500 dark:text-gray-400"
+                >
+                  The European Union’s General Data Protection Regulation
+                  (G.D.P.R.) goes into effect on May 25 and is meant to ensure a
+                  common set of data rights in the European Union. It requires
+                  organizations to notify users as soon as possible of high-risk
+                  data breaches that could personally affect them.
+                </p>
+              </div>
+              <!-- Modal footer -->
+              <div
+                class="flex items-center rounded-b border-t border-gray-200 p-4 dark:border-gray-600 md:p-5"
+              >
+                <button
+                  data-modal-hide="default-modal"
+                  type="button"
+                  class="btn btn-sm bg-purple-500"
+                >
+                  I accept
+                </button>
+                <button
+                  data-modal-hide="default-modal"
+                  type="button"
+                  class="btn btn-sm bg-yellow-200"
+                >
+                  Decline
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+    <!--  Create new button and Modal  -->
+
+    <!-- Script js And Jquery  -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/2.3.0/flowbite.min.js"></script>
+  </body>
+</html>
