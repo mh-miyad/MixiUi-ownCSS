@@ -3,4 +3,9 @@
   background-image: url("../Assets/Image/header-image.jpg");
   background-repeat: no-repeat;
   background-size: cover;
+  background-color: #0000004f;
+  background-blend-mode: darken;
+}
+.text-stroke {
+  -webkit-text-stroke: 0.2px #fca311; /* Adjust display type as needed */
 }
