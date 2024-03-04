@@ -4,19 +4,20 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="./style/output.css" />
+    <link rel="stylesheet" href="./style/Custom.css">
     <title>Document</title>
   </head>
   <body>
-    <header class="max-w-7xl mx-auto">
+    <header class="header-part">
       <!-- Navbar  -->
         <nav class="navBar">
           <!-- Logo  -->
           <div>
-            Logo 
+            <img src="./Assets/Image/logo/logo.svg" alt=""> 
           </div>
           <!-- Logo  -->
           <!-- right side Of nav bar  -->
-          <div>
+          <div class="hidden lg:block">
             <ul class="nav-links">
               <li>
                 <a href="#">
@@ -33,22 +34,29 @@
                   Buy Tickets  
                 </button>
               </li>
+              
             </ul>
+          </div>
+          <div class="block lg:hidden ">
+            <button class="btn btn-primary "
+            type="button"
+            data-te-offcanvas-toggle
+            data-te-target="#offcanvasRight"
+            aria-controls="offcanvasRight"
+            data-te-ripple-init
+            data-te-ripple-color="light"
+            >
+            <span class="sr-only"> Open menu </span>
+            <i class="bi bi-list text-2xl"></i>
+            </button>
           </div>
           <!-- right side Of nav bar  -->
         </nav>
-      
-      
       <!-- Navbar  -->
       <!-- Navbar For Mobile Version  -->
       <!-- <button
         class="btn btn-lg bg-pink-400"
-        type="button"
-        data-te-offcanvas-toggle
-        data-te-target="#offcanvasRight"
-        aria-controls="offcanvasRight"
-        data-te-ripple-init
-        data-te-ripple-color="light"
+       
       >
         Toggle right offcanvas
       </button> -->

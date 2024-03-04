@@ -1,0 +1,6 @@
+.header-part {
+  height: 43rem;
+  background-image: url("../Assets/Image/header-image.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+}
