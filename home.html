@@ -116,24 +116,112 @@
       </div>
       <!-- Navbar For Mobile Version  -->
 
-    
-        <div class="header-content">
-         <h1 class="text-stroke">
-          Welcome To Our <br> 
-          <span class="header-image">
-            <img src="./Assets/Image/icon.svg" class="animate-pulse"  alt="">
-            <img src="./Assets/Image/evenspro.svg" class=" bg-white p-2 rounded-sm"  alt="">
-          </span>
-            Online Ticketing <br> System
-         </h1>
-         <button class="btn btn-lg btn-primary mt-4"> Buy Tickets</button>
-      </div>
-     
-
-
+    <!--  Header Content  -->
+    <div class="header-content">
+      <h1 class="text-stroke">
+        Welcome To Our <br> 
+        <span class="header-image">
+          <img src="./Assets/Image/icon.svg" class="animate-pulse"  alt="">
+          <img src="./Assets/Image/evenspro.svg" class=" bg-white p-2 rounded-sm"  alt="">
+        </span>
+        Online Ticketing <br> System
+      </h1>
+      <button class="btn btn-lg btn-primary mt-4"> Buy Tickets</button>
+    </div>
+    <!--  Header Content  -->
 
     </header>
-    <main class="container mx-auto my-20"></main>
+    <main class="max-w-7xl mx-auto mb-20">
+      <section  class="my-10">
+
+
+        <!--  All Events Section -->
+
+        <div class="flex container  mx-auto justify-between mb-10 gap-3 px-5 items-center flex-col md:flex-row">
+          <h3 class="text-4xl md:text-5xl font-bold "> All Events</h3>
+          <div class="flex flex-wrap gap-3">
+           <select class="input-select" name="eventPrice" id="eventPrice">
+                        <option class="" value="0">Any Price</option>
+                        <option value="0-250">AED 0-250</option>
+                        <option value="251-500">AED 251-500</option>
+                        <option value="501-750">AED 501-750</option>
+                        <option value="751-1000">AED 751-1000</option>
+                    </select>
+            <select class="input-select" name="price" id="eventCategory" name="Categories"><option value="0">Select Category</option>
+<option value="1">Business</option>
+<option value="2">Charity &amp; Causes</option>
+<option value="3">Community</option>
+<option value="4">Auto, Boat &amp; Air</option>
+<option value="5">Family &amp; Education</option>
+<option value="6">Fashion</option>
+<option value="7">Film &amp; Media</option>
+<option value="8">Food &amp; Drink</option>
+<option value="9">Government</option>
+<option value="10">Health</option>
+<option value="11">Hobbies</option>
+<option value="12">Holiday</option>
+</select>
+          </div>
+
+        </div>
+        <!--  All Events Section -->
+        <div class=" container  mx-auto grid grid-col-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-3 items-stretch gap-3 justify-center lg:px-3">
+
+        
+     <!-- Cards Section  -->
+  <div class="max-w-md sm:max-w-lg xl:max-w-md   border border-gray-200 rounded-lg shadow relative">
+    <a href="#">
+      <img class="rounded-t-lg object-cover w-full" src="./Assets/Image/card-img.png" alt="" />
+      <span class="sr-only"> Image This Card </span>
+    </a>
+    <!-- overlay -->
+    <div class="absolute top-3 left-2 right-2  flex justify-between items-start">
+      <span class="text-2xl bg-black/80 px-4 py-2 rounded-lg text-white text-center"> March <br> 01</span>
+      <span class="text-2xl bg-white p-2 rounded-lg uppercase">aed 0 - 60</span>
+
+    </div>
+    <!-- overlay -->
+    <div class="p-5">
+      Coming Soon
+    </div>
+  </div>
+  <div class="max-w-md sm:max-w-lg xl:max-w-md   border border-gray-200 rounded-lg shadow relative">
+    <a href="#">
+      <img class="rounded-t-lg object-cover w-full" src="./Assets/Image/card-img.png" alt="" />
+      <span class="sr-only"> Image This Card </span>
+    </a>
+    <!-- overlay -->
+    <div class="absolute top-3 left-2 right-2  flex justify-between items-start">
+      <span class="text-2xl bg-black/80 px-4 py-2 rounded-lg text-white text-center"> March <br> 01</span>
+      <span class="text-2xl bg-white p-2 rounded-lg uppercase">aed 0 - 60</span>
+
+    </div>
+    <!-- overlay -->
+    <div class="p-5">
+      Coming Soon
+    </div>
+  </div>
+  <div class="max-w-md sm:max-w-lg xl:max-w-md   border border-gray-200 rounded-lg shadow relative">
+    <a href="#">
+      <img class="rounded-t-lg object-cover w-full" src="./Assets/Image/card-img.png" alt="" />
+      <span class="sr-only"> Image This Card </span>
+    </a>
+    <!-- overlay -->
+    <div class="absolute top-3 left-2 right-2  flex justify-between items-start">
+      <span class="text-2xl bg-black/80 px-4 py-2 rounded-lg text-white text-center"> March <br> 01</span>
+      <span class="text-2xl bg-white p-2 rounded-lg uppercase">aed 0 - 60</span>
+
+    </div>
+    <!-- overlay -->
+    <div class="p-5">
+      Coming Soon
+    </div>
+  </div>
+  </div>
+  
+  <!-- Cards Section  -->
+</section>
+    </main>
 
     <!-- Script js And Jquery  -->
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>

@@ -3,11 +3,6 @@
 @import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Syncopate:wght@400;700&display=swap");
 /* Link Bootstrap Icon  */
 @tailwind base;
-@layer base {
-  body {
-    @apply font-[Montserrat];
-  }
-}
 @tailwind components;
 @tailwind utilities;
 
@@ -45,14 +40,15 @@
   }
 
   .header-image {
-    @apply my-2  flex justify-center gap-3 md:my-5  md:scale-[1.4] xl:my-7 xl:scale-150;
+    @apply mx-auto my-2 flex w-full max-w-sm justify-center  gap-3 md:my-5 md:scale-[1.4]  xl:my-7 xl:scale-150;
   }
+
   /* header part  */
 
   /* Navbar Part  */
 
   .navBar-fixed {
-    @apply fixed left-0 right-0 top-5 z-[1045];
+    @apply fixed left-0 right-0 top-0 z-[1045];
   }
   .navBar {
     @apply mx-auto flex max-w-7xl items-center justify-between gap-6 rounded-md bg-black/40 px-6 py-4 backdrop-blur-sm;
@@ -74,6 +70,13 @@
     @apply invisible fixed bottom-0 right-0 top-0 z-[1045] flex w-96 max-w-full translate-x-full flex-col border-none bg-white bg-clip-padding text-neutral-700 shadow-sm outline-none transition duration-300 ease-in-out dark:bg-neutral-800 dark:text-neutral-200 [&[data-te-offcanvas-show]]:transform-none;
   }
   /* Navbar Part  */
+
+  /* input section */
+  .input-select {
+    @apply form-select appearance-none rounded-md border-[#FCA311] px-3 text-center focus:border-[#FCA311] focus:outline-none focus:ring-[#FCA311];
+  }
+  /* input section */
+
   /* Modal part  */
   .modalMainPart {
     @apply fixed left-0 right-0 top-0 z-50  h-[calc(100%-1rem)] max-h-full w-full items-center justify-center overflow-y-auto overflow-x-hidden md:inset-0;
