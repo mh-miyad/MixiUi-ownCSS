@@ -91,7 +91,28 @@
           </button>
         </div>
         <!--  Header Part Of Responsive navbar  -->
-        <div class="offcanvas-body flex-grow overflow-y-auto p-4">...</div>
+        <!-- ! Main navbar Of Responsive navbar -->
+        <div class="offcanvas-body flex-grow overflow-y-auto p-4">
+          <ul class="nav-links-responsive">
+            <li>
+              <a href="#">
+                Brows Event
+              </a>
+            </li>
+            <li>
+              <a href="#">
+                Sign In 
+              </a>
+            </li>
+            <li>
+              <button class="btn btn-lg btn-primary ">
+                Buy Tickets  
+              </button>
+            </li>
+            
+          </ul>
+        </div>
+        <!-- ! Main navbar Of Responsive navbar -->
       </div>
       <!-- Navbar For Mobile Version  -->
 
@@ -99,8 +120,11 @@
         <div class="header-content">
          <h1 class="text-stroke">
           Welcome To Our <br> 
-           <img src="./Assets/Image/logo/logo.svg" class="header-image"  alt="">
-          Online Ticketing <br> System
+          <span class="header-image">
+            <img src="./Assets/Image/icon.svg" class="animate-pulse"  alt="">
+            <img src="./Assets/Image/evenspro.svg" class=" bg-white p-2"  alt="">
+          </span>
+            Online Ticketing <br> System
          </h1>
          <button class="btn btn-lg btn-primary mt-4"> Buy Tickets</button>
       </div>
@@ -114,7 +138,8 @@
     <!-- Script js And Jquery  -->
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script src="./js/flowbite.js"></script>
-    <script src="./js/custom.js" type="module"></script>
     <script src="./js/tw-elements.umd.min.js"></script>
+    <script src="./js/plugins/autoType.js"></script>
+    <script src="./js/custom.js" type="module"></script>
   </body>
 </html>

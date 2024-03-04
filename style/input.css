@@ -45,7 +45,7 @@
   }
 
   .header-image {
-    @apply mx-auto my-2 md:my-5  md:scale-[1.4] xl:my-7 xl:scale-150;
+    @apply my-2  flex justify-center gap-3 md:my-5  md:scale-[1.4] xl:my-7 xl:scale-150;
   }
   /* header part  */
 
@@ -59,6 +59,12 @@
   }
   .nav-links {
     @apply flex items-center  gap-6;
+  }
+  .nav-links-responsive {
+    @apply flex flex-col items-center justify-center gap-6;
+  }
+  .nav-links-responsive li a {
+    @apply rounded-md px-10 py-2 text-lg font-medium capitalize leading-7  transition-all duration-150 ease-linear hover:bg-[#FCA311] hover:text-white active:bg-[#FCA311] active:text-white;
   }
   .nav-links li a {
     @apply text-lg font-medium capitalize leading-7 text-white transition-all duration-150 ease-linear hover:text-yellow-300;

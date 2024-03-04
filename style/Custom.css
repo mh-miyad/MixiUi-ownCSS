@@ -7,5 +7,5 @@
   background-blend-mode: darken;
 }
 .text-stroke {
-  -webkit-text-stroke: 0.2px #fca311; /* Adjust display type as needed */
+  -webkit-text-stroke: 0.1px #fca311; /* Adjust display type as needed */
 }
