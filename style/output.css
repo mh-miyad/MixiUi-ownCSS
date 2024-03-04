@@ -2070,12 +2070,28 @@ select{
   height: 100vh;
 }
 
+.h-40{
+  height: 10rem;
+}
+
+.h-20{
+  height: 5rem;
+}
+
+.h-52{
+  height: 13rem;
+}
+
 .max-h-\[calc\(100\%-64px\)\]{
   max-height: calc(100% - 64px);
 }
 
 .max-h-full{
   max-height: 100%;
+}
+
+.max-h-52{
+  max-height: 13rem;
 }
 
 .min-h-\[1\.5rem\]{
@@ -3386,6 +3402,11 @@ select{
   background-color: rgb(63 63 70 / var(--tw-bg-opacity));
 }
 
+.bg-red-600{
+  --tw-bg-opacity: 1;
+  background-color: rgb(224 36 36 / var(--tw-bg-opacity));
+}
+
 .bg-clip-padding{
   background-clip: padding-box;
 }
@@ -3786,6 +3807,10 @@ select{
   font-weight: 700;
 }
 
+.font-thin{
+  font-weight: 100;
+}
+
 .uppercase{
   text-transform: uppercase;
 }
@@ -4175,6 +4200,12 @@ select{
 .shadow-sm{
   --tw-shadow: 0 1px 2px 0 rgb(0 0 0 / 0.05);
   --tw-shadow-colored: 0 1px 2px 0 var(--tw-shadow-color);
+  box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
+}
+
+.shadow-md{
+  --tw-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
+  --tw-shadow-colored: 0 4px 6px -1px var(--tw-shadow-color), 0 2px 4px -2px var(--tw-shadow-color);
   box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
 }
 
@@ -5502,6 +5533,24 @@ select{
   width: 11px;
 }
 
+.group:hover .group-\[\&\:hover\]\:scale-150{
+  --tw-scale-x: 1.5;
+  --tw-scale-y: 1.5;
+  transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
+}
+
+.group:hover .group-\[\&\:hover\]\:scale-105{
+  --tw-scale-x: 1.05;
+  --tw-scale-y: 1.05;
+  transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
+}
+
+.group:hover .group-\[\&\:hover\]\:scale-110{
+  --tw-scale-x: 1.1;
+  --tw-scale-y: 1.1;
+  transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
+}
+
 .group[data-te-datepicker-cell-current] .group-\[\[data-te-datepicker-cell-current\]\]\:border{
   border-width: 1px;
 }
@@ -5559,6 +5608,30 @@ select{
 
 .group\/ps.ps--scrolling-y .group-\[\&\.ps--scrolling-y\]\/ps\:opacity-60{
   opacity: 0.6;
+}
+
+.group:hover .group-\[\&\:hover\]\:duration-300{
+  transition-duration: 300ms;
+}
+
+.group:hover .group-\[\&\:hover\]\:duration-500{
+  transition-duration: 500ms;
+}
+
+.group:hover .group-\[\&\:hover\]\:duration-1000{
+  transition-duration: 1000ms;
+}
+
+.group:hover .group-\[\&\:hover\]\:duration-\[3s\]{
+  transition-duration: 3s;
+}
+
+.group:hover .group-\[\&\:hover\]\:duration-\[1s\]{
+  transition-duration: 1s;
+}
+
+.group:hover .group-\[\&\:hover\]\:ease-in-out{
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .peer:focus ~ .peer-focus\:-translate-y-\[0\.75rem\]{
