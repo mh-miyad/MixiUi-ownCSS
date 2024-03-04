@@ -77,21 +77,24 @@
   }
   /* input section */
 
-  /* Modal part  */
-  .modalMainPart {
-    @apply fixed left-0 right-0 top-0 z-50  h-[calc(100%-1rem)] max-h-full w-full items-center justify-center overflow-y-auto overflow-x-hidden md:inset-0;
+  /* card */
+  .all-cards {
+    @apply grid-col-1 grid items-stretch justify-center gap-3 sm:grid-cols-2 lg:grid-cols-3 lg:px-3 xl:grid-cols-3;
   }
-  .modalContent {
-    @apply relative max-h-full w-full max-w-2xl p-4;
+  .event-card {
+    @apply relative max-w-md overflow-hidden rounded-lg border border-gray-200 shadow-md;
   }
-  .modalBody {
-    @apply relative rounded-lg bg-white shadow dark:bg-gray-700;
+  .card-img {
+    @apply max-h-52 w-full overflow-hidden rounded-t-lg object-cover ease-linear;
   }
-  .modalHeader {
-    @apply flex items-center justify-between rounded-t border-b p-4 dark:border-gray-600 md:p-5;
+  .event-card-overlay {
+    @apply absolute left-2 right-2 top-3 flex items-start justify-between;
   }
-  .modalCloseBtn {
-    @apply ms-auto inline-flex h-8 w-8 items-center justify-center rounded-lg bg-transparent text-sm text-gray-400 hover:bg-gray-200 hover:text-gray-900 dark:hover:bg-gray-600 dark:hover:text-white;
+  .overlay-card-left {
+    @apply rounded-lg bg-black/80 px-4 py-2 text-center text-2xl text-white;
   }
-  /* Modal part  */
+  .overlay-card-right {
+    @apply rounded-lg bg-white p-2 text-xl uppercase;
+  }
+  /* card */
 }

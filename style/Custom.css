@@ -1,11 +1,11 @@
 .header-part {
   width: 100%;
-  height: 34rem;
   background-image: url("../Assets/Image/header-image.jpg");
   background-repeat: no-repeat;
   background-size: cover;
   background-color: #0000004f;
   background-blend-mode: darken;
+  padding-bottom: 3rem;
   /* overflow-x: hidden; */
 }
 .text-stroke {
