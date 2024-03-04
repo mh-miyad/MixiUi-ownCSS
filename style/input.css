@@ -23,12 +23,29 @@
     @apply mx-1 px-6 py-3.5 text-center text-base font-medium;
   }
   .btn-primary {
-    @apply bg-blue-500 text-white hover:bg-blue-600;
+    @apply bg-[#FCA311] font-normal capitalize text-white hover:bg-[#d49c41];
   }
   .btn-danger {
     @apply bg-red-500 text-white hover:bg-red-600;
   }
+  .close-btn-navbar {
+    @apply box-content rounded-none border-none  hover:no-underline hover:opacity-75 focus:opacity-100 focus:shadow-none focus:outline-none;
+  }
   /* Button part end Here  */
+
+  /* Navbar Part  */
+
+  .navBar {
+    @apply flex items-center justify-between gap-6 bg-black/20 px-6 py-4;
+  }
+  .nav-links {
+    @apply flex items-center  gap-6;
+  }
+
+  .navbar-responsive {
+    @apply invisible fixed bottom-0 right-0 top-0 z-[1045] flex w-96 max-w-full translate-x-full flex-col border-none bg-white bg-clip-padding text-neutral-700 shadow-sm outline-none transition duration-300 ease-in-out dark:bg-neutral-800 dark:text-neutral-200 [&[data-te-offcanvas-show]]:transform-none;
+  }
+  /* Navbar Part  */
   /* Modal part  */
   .modalMainPart {
     @apply fixed left-0 right-0 top-0 z-50  h-[calc(100%-1rem)] max-h-full w-full items-center justify-center overflow-y-auto overflow-x-hidden md:inset-0;
