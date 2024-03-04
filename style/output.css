@@ -1178,6 +1178,10 @@ input:checked + .toggle-bg{
   height: 2.25rem;
 }
 
+.h-\[500px\]{
+  height: 500px;
+}
+
 .w-1\/2{
   width: 50%;
 }
@@ -1196,6 +1200,10 @@ input:checked + .toggle-bg{
 
 .w-full{
   width: 100%;
+}
+
+.w-\[700px\]{
+  width: 700px;
 }
 
 .flex-1{
