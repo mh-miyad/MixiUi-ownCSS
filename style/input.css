@@ -9,7 +9,7 @@
 @layer utilities {
   /* Button part Start Here  */
   .btn {
-    @apply rounded px-4 py-2 font-bold text-black transition-all duration-200 ease-linear active:scale-95;
+    @apply rounded px-4 py-2  text-black transition-all duration-200 ease-linear active:scale-95;
   }
   .btn-xs {
     @apply mx-1 px-3 py-2 text-center text-xs font-medium;
@@ -28,6 +28,9 @@
   }
   .btn-danger {
     @apply bg-red-500 text-white hover:bg-red-600;
+  }
+  .btn-outline {
+    @apply mx-auto mt-4 border border-black/20 px-5 py-1 text-xs transition-all duration-300 ease-linear hover:bg-[#FCA311] hover:text-white sm:text-sm;
   }
   .close-btn-navbar {
     @apply box-content rounded-none border-none  hover:no-underline hover:opacity-75 focus:opacity-100 focus:shadow-none focus:outline-none;
@@ -112,14 +115,19 @@
   /* details part */
 
   .details-main-part {
-    @apply container mx-auto mb-24 mt-24 w-full max-w-[1320px]  px-5 sm:mt-36 md:mt-40 lg:mt-48;
+    @apply container mx-auto mb-24  w-full max-w-[1320px]  px-5  sm:px-10;
   }
   .blog-main-details {
-    @apply flex flex-col items-start gap-6 md:flex-row md:justify-between;
+    @apply my-10 flex flex-col items-start justify-center gap-6  py-20 sm:my-20  md:py-24 lg:flex-row lg:justify-between;
   }
   .left-side-blog h2 {
     @apply text-lg font-medium text-[#14213D];
   }
-
+  .btn-tab {
+    @apply rounded-md border border-black/20 px-3 py-2 text-base font-normal capitalize transition-all duration-200 ease-linear hover:border-b-[3.5px] hover:border-b-[#FCA311];
+  }
+  .btn-tab.active {
+    @apply border-b-[3.5px] border-b-[#FCA311];
+  }
   /* details part */
 }
