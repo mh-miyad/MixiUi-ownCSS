@@ -1817,6 +1817,22 @@ select{
   margin-top: 0.15rem;
 }
 
+.mt-20{
+  margin-top: 5rem;
+}
+
+.mb-24{
+  margin-bottom: 6rem;
+}
+
+.mt-32{
+  margin-top: 8rem;
+}
+
+.mt-40{
+  margin-top: 10rem;
+}
+
 .box-border{
   box-sizing: border-box;
 }
@@ -3365,10 +3381,6 @@ select{
   padding: 1rem;
 }
 
-.p-5{
-  padding: 1.25rem;
-}
-
 .p-\[1rem\]{
   padding: 1rem;
 }
@@ -3626,6 +3638,11 @@ select{
   line-height: 2.5rem;
 }
 
+.text-7xl{
+  font-size: 4.5rem;
+  line-height: 1;
+}
+
 .text-\[0\.8rem\]{
   font-size: 0.8rem;
 }
@@ -3685,14 +3702,14 @@ select{
   line-height: 1.25rem;
 }
 
-.text-xs{
-  font-size: 0.75rem;
-  line-height: 1rem;
-}
-
 .text-xl{
   font-size: 1.25rem;
   line-height: 1.75rem;
+}
+
+.text-xs{
+  font-size: 0.75rem;
+  line-height: 1rem;
 }
 
 .font-black{

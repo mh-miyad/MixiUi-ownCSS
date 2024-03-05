@@ -11,3 +11,31 @@
 .text-stroke {
   -webkit-text-stroke: 0.1px #fca311; /* Adjust display type as needed */
 }
+
+.details-header-part {
+  width: 100%;
+  background-image: url("../Assets/headerImage.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  height: 19rem;
+  padding-bottom: 3rem;
+  margin-bottom: 15rem;
+  position: relative;
+  overflow-x: hidden;
+}
+
+.details-header-content {
+  position: absolute;
+  top: 6rem;
+  left: 0;
+  right: 0;
+}
+.details-header-content img {
+  margin: 0 auto;
+  border-radius: 4px;
+  -webkit-border-radius: 4px;
+  -moz-border-radius: 4px;
+  -ms-border-radius: 4px;
+  -o-border-radius: 4px;
+}
