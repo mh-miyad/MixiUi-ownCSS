@@ -43,7 +43,7 @@
     @apply mx-auto my-2 flex w-full max-w-sm justify-center  gap-3 md:my-5 md:scale-[1.4]  xl:my-7 xl:scale-150;
   }
   .details-header-part {
-    @apply h-32 md:h-56 lg:h-72 xl:h-96;
+    @apply h-28 md:h-56 lg:h-72 xl:h-96;
   }
   .details-header-content {
     @apply top-20 mx-auto max-h-[400px] w-full max-w-5xl sm:top-32 xl:max-w-7xl;
@@ -112,7 +112,13 @@
   /* details part */
 
   .details-main-part {
-    @apply container mx-auto mb-24 mt-40 w-full max-w-[1320px];
+    @apply container mx-auto mb-24 mt-24 w-full max-w-[1320px]  px-5 sm:mt-36 md:mt-40 lg:mt-48;
+  }
+  .blog-main-details {
+    @apply flex flex-col items-start gap-6 md:flex-row md:justify-between;
+  }
+  .left-side-blog h2 {
+    @apply text-lg font-medium text-[#14213D];
   }
 
   /* details part */
