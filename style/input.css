@@ -42,13 +42,21 @@
   .header-image {
     @apply mx-auto my-2 flex w-full max-w-sm justify-center  gap-3 md:my-5 md:scale-[1.4]  xl:my-7 xl:scale-150;
   }
-
+  .details-header-part {
+    @apply h-32 md:h-60;
+  }
+  .details-header-content {
+    @apply top-32 mx-auto h-[240px] w-10/12;
+  }
+  .details-header-content-img {
+    @apply mx-auto h-full rounded-lg object-cover;
+  }
   /* header part  */
 
   /* Navbar Part  */
 
   .navBar-fixed {
-    @apply fixed left-0 right-0 top-0 z-[1045] bg-white/20  backdrop-blur-sm;
+    @apply fixed left-0 right-0 top-0 z-[1045] bg-white/30  backdrop-blur-sm;
   }
   .navBar {
     @apply flex  items-center justify-between gap-6  px-6 py-4;
