@@ -43,13 +43,13 @@
     @apply mx-auto my-2 flex w-full max-w-sm justify-center  gap-3 md:my-5 md:scale-[1.4]  xl:my-7 xl:scale-150;
   }
   .details-header-part {
-    @apply h-32 md:h-60;
+    @apply h-32 md:h-56 lg:h-72 xl:h-96;
   }
   .details-header-content {
-    @apply top-32 mx-auto h-[240px] w-10/12;
+    @apply top-20 mx-auto max-h-[400px] w-full max-w-5xl sm:top-32 xl:max-w-7xl;
   }
   .details-header-content-img {
-    @apply mx-auto h-full rounded-lg object-cover;
+    @apply mx-auto  h-full w-10/12 rounded-sm object-cover;
   }
   /* header part  */
 
