@@ -108,4 +108,12 @@
     @apply rounded-lg bg-white p-2 text-lg uppercase;
   }
   /* card */
+
+  /* details part */
+
+  .details-main-part {
+    @apply container mx-auto mb-24 mt-40 w-full max-w-[1320px];
+  }
+
+  /* details part */
 }
