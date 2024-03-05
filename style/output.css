@@ -1699,6 +1699,16 @@ select{
   margin-bottom: 5px;
 }
 
+.mx-10{
+  margin-left: 2.5rem;
+  margin-right: 2.5rem;
+}
+
+.my-8{
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+}
+
 .-ml-\[1\.5rem\]{
   margin-left: -1.5rem;
 }
@@ -1829,6 +1839,14 @@ select{
 
 .mt-\[0\.15rem\]{
   margin-top: 0.15rem;
+}
+
+.mr-20{
+  margin-right: 5rem;
+}
+
+.mb-5{
+  margin-bottom: 1.25rem;
 }
 
 .box-border{
@@ -2289,6 +2307,10 @@ select{
 
 .max-w-xs{
   max-width: 20rem;
+}
+
+.max-w-sm{
+  max-width: 24rem;
 }
 
 .flex-1{
@@ -2775,6 +2797,10 @@ select{
 
 .gap-7{
   gap: 1.75rem;
+}
+
+.gap-6{
+  gap: 1.5rem;
 }
 
 .space-x-2 > :not([hidden]) ~ :not([hidden]){
@@ -3363,6 +3389,11 @@ select{
   background-color: rgb(63 63 70 / var(--tw-bg-opacity));
 }
 
+.bg-\[\#FCA311\]{
+  --tw-bg-opacity: 1;
+  background-color: rgb(252 163 17 / var(--tw-bg-opacity));
+}
+
 .bg-clip-padding{
   background-clip: padding-box;
 }
@@ -3566,6 +3597,16 @@ select{
   padding-bottom: 5px;
 }
 
+.px-10{
+  padding-left: 2.5rem;
+  padding-right: 2.5rem;
+}
+
+.py-5{
+  padding-top: 1.25rem;
+  padding-bottom: 1.25rem;
+}
+
 .pb-0{
   padding-bottom: 0px;
 }
@@ -3649,6 +3690,11 @@ select{
 .text-2xl{
   font-size: 1.5rem;
   line-height: 2rem;
+}
+
+.text-3xl{
+  font-size: 1.875rem;
+  line-height: 2.25rem;
 }
 
 .text-4xl{
@@ -3755,6 +3801,10 @@ select{
 
 .font-thin{
   font-weight: 100;
+}
+
+.font-\[700\]{
+  font-weight: 700;
 }
 
 .uppercase{
@@ -6834,6 +6884,10 @@ select{
 
   .lg\:grid-cols-3{
     grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+
+  .lg\:flex-row{
+    flex-direction: row;
   }
 
   .lg\:px-3{
