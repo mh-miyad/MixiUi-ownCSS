@@ -1976,20 +1976,16 @@ select{
   margin-top: 1.25rem;
 }
 
+.mt-6{
+  margin-top: 1.5rem;
+}
+
 .mt-8{
   margin-top: 2rem;
 }
 
 .mt-\[0\.15rem\]{
   margin-top: 0.15rem;
-}
-
-.ml-4{
-  margin-left: 1rem;
-}
-
-.mt-6{
-  margin-top: 1.5rem;
 }
 
 .box-border{
@@ -2425,10 +2421,6 @@ select{
   min-width: 64px;
 }
 
-.max-w-2xl{
-  max-width: 42rem;
-}
-
 .max-w-5xl{
   max-width: 64rem;
 }
@@ -2463,10 +2455,6 @@ select{
 
 .max-w-full{
   max-width: 100%;
-}
-
-.max-w-md{
-  max-width: 28rem;
 }
 
 .max-w-screen-xl{
@@ -2887,16 +2875,16 @@ select{
           appearance: none;
 }
 
+.grid-cols-1{
+  grid-template-columns: repeat(1, minmax(0, 1fr));
+}
+
 .grid-cols-4{
   grid-template-columns: repeat(4, minmax(0, 1fr));
 }
 
 .grid-cols-7{
   grid-template-columns: repeat(7, minmax(0, 1fr));
-}
-
-.grid-cols-1{
-  grid-template-columns: repeat(1, minmax(0, 1fr));
 }
 
 .\!flex-row{
@@ -2967,16 +2955,16 @@ select{
   gap: 1rem;
 }
 
+.gap-5{
+  gap: 1.25rem;
+}
+
 .gap-6{
   gap: 1.5rem;
 }
 
 .gap-7{
   gap: 1.75rem;
-}
-
-.gap-5{
-  gap: 1.25rem;
 }
 
 .space-x-2 > :not([hidden]) ~ :not([hidden]){
@@ -2997,16 +2985,16 @@ select{
   margin-left: calc(1rem * calc(1 - var(--tw-space-x-reverse)));
 }
 
-.space-y-4 > :not([hidden]) ~ :not([hidden]){
-  --tw-space-y-reverse: 0;
-  margin-top: calc(1rem * calc(1 - var(--tw-space-y-reverse)));
-  margin-bottom: calc(1rem * var(--tw-space-y-reverse));
-}
-
 .space-x-7 > :not([hidden]) ~ :not([hidden]){
   --tw-space-x-reverse: 0;
   margin-right: calc(1.75rem * var(--tw-space-x-reverse));
   margin-left: calc(1.75rem * calc(1 - var(--tw-space-x-reverse)));
+}
+
+.space-y-4 > :not([hidden]) ~ :not([hidden]){
+  --tw-space-y-reverse: 0;
+  margin-top: calc(1rem * calc(1 - var(--tw-space-y-reverse)));
+  margin-bottom: calc(1rem * var(--tw-space-y-reverse));
 }
 
 .overflow-auto{
@@ -3245,10 +3233,6 @@ select{
   border-left-width: 0px;
 }
 
-.border-l-4{
-  border-left-width: 4px;
-}
-
 .border-l-\[0\.125rem\]{
   border-left-width: 0.125rem;
 }
@@ -3257,12 +3241,12 @@ select{
   border-right-width: 0px;
 }
 
-.border-t-0{
-  border-top-width: 0px;
-}
-
 .border-t{
   border-top-width: 1px;
+}
+
+.border-t-0{
+  border-top-width: 0px;
 }
 
 .\!border-solid{
@@ -3378,11 +3362,6 @@ select{
 .border-white{
   --tw-border-opacity: 1;
   border-color: rgb(255 255 255 / var(--tw-border-opacity));
-}
-
-.border-l-\[\#FCA311\]{
-  --tw-border-opacity: 1;
-  border-left-color: rgb(252 163 17 / var(--tw-border-opacity));
 }
 
 .border-r-transparent{
@@ -3635,11 +3614,6 @@ select{
   fill: currentColor;
 }
 
-.object-contain{
-  -o-object-fit: contain;
-     object-fit: contain;
-}
-
 .object-cover{
   -o-object-fit: cover;
      object-fit: cover;
@@ -3754,6 +3728,11 @@ select{
   padding-right: 1.5rem;
 }
 
+.px-8{
+  padding-left: 2rem;
+  padding-right: 2rem;
+}
+
 .px-\[0\.4rem\]{
   padding-left: 0.4rem;
   padding-right: 0.4rem;
@@ -3819,6 +3798,11 @@ select{
   padding-bottom: 1.25rem;
 }
 
+.py-6{
+  padding-top: 1.5rem;
+  padding-bottom: 1.5rem;
+}
+
 .py-8{
   padding-top: 2rem;
   padding-bottom: 2rem;
@@ -3857,16 +3841,6 @@ select{
 .py-\[5px\]{
   padding-top: 5px;
   padding-bottom: 5px;
-}
-
-.px-8{
-  padding-left: 2rem;
-  padding-right: 2rem;
-}
-
-.py-6{
-  padding-top: 1.5rem;
-  padding-bottom: 1.5rem;
 }
 
 .pb-0{
@@ -3921,16 +3895,16 @@ select{
   padding-top: 0.625rem;
 }
 
+.pt-6{
+  padding-top: 1.5rem;
+}
+
 .pt-\[0\.37rem\]{
   padding-top: 0.37rem;
 }
 
 .pt-\[6px\]{
   padding-top: 6px;
-}
-
-.pt-6{
-  padding-top: 1.5rem;
 }
 
 .text-left{
@@ -4079,10 +4053,6 @@ select{
 
 .uppercase{
   text-transform: uppercase;
-}
-
-.capitalize{
-  text-transform: capitalize;
 }
 
 .normal-case{
@@ -4420,11 +4390,6 @@ select{
 .text-white{
   --tw-text-opacity: 1;
   color: rgb(255 255 255 / var(--tw-text-opacity));
-}
-
-.text-cyan-950{
-  --tw-text-opacity: 1;
-  color: rgb(8 51 68 / var(--tw-text-opacity));
 }
 
 .underline{
@@ -5002,7 +4967,7 @@ select{
   --tw-bg-opacity: 1;
   background-color: rgb(252 163 17 / var(--tw-bg-opacity));
   --tw-text-opacity: 1;
-  color: rgb(252 163 17 / var(--tw-text-opacity));
+  color: rgb(255 255 255 / var(--tw-text-opacity));
 }
 
 .nav-links-responsive li a:active{
@@ -7271,11 +7236,6 @@ select{
   .md\:text-5xl{
     font-size: 3rem;
     line-height: 1;
-  }
-
-  .md\:text-base{
-    font-size: 1rem;
-    line-height: 1.5rem;
   }
 }
 
