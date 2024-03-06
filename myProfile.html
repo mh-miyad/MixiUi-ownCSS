@@ -124,8 +124,10 @@
             <p class="text-md mb-5 font-semibold text-slate-700">Student</p>
           </div>
           <div class="flex flex-col gap-4">
-            <button class="btn btn-primary" id="profileBtn">My Profile</button>
-            <button class="btn btn-primary" id="ticketBtn">My Tickets</button>
+            <button class="btn btn-profile active" id="profileBtn">
+              My Profile
+            </button>
+            <button class="btn btn-profile" id="ticketBtn">My Tickets</button>
           </div>
         </div>
         <!-- My profile Part  -->
@@ -394,10 +396,14 @@
       profileBtn.addEventListener("click", () => {
         document.getElementById("my-profile").classList.remove("hidden");
         document.getElementById("my-tickets").classList.add("hidden");
+        profileBtn.classList.add("active");
+        ticketBtn.classList.remove("active");
       });
       ticketBtn.addEventListener("click", () => {
         document.getElementById("my-tickets").classList.remove("hidden");
         document.getElementById("my-profile").classList.add("hidden");
+        ticketBtn.classList.add("active");
+        profileBtn.classList.remove("active");
       });
     </script>
   </body>

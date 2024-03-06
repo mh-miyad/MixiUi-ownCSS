@@ -4730,6 +4730,29 @@ select{
   background-color: rgb(20 33 61 / var(--tw-bg-opacity));
 }
 
+.btn-profile{
+  --tw-bg-opacity: 1;
+  background-color: rgb(20 33 61 / var(--tw-bg-opacity));
+  font-weight: 600;
+  text-transform: capitalize;
+  --tw-text-opacity: 1;
+  color: rgb(255 255 255 / var(--tw-text-opacity));
+}
+
+.btn-profile:hover{
+  --tw-bg-opacity: 1;
+  background-color: rgb(252 163 17 / var(--tw-bg-opacity));
+}
+
+.btn-profile.active{
+  --tw-bg-opacity: 1;
+  background-color: rgb(252 163 17 / var(--tw-bg-opacity));
+  font-weight: 600;
+  text-transform: capitalize;
+  --tw-text-opacity: 1;
+  color: rgb(255 255 255 / var(--tw-text-opacity));
+}
+
 .btn-outline{
   margin-left: auto;
   margin-right: auto;
