@@ -129,12 +129,89 @@
           </div>
         </div>
         <!-- My profile Part  -->
-        <div class="hidden h-auto w-full border bg-gray-50 p-3" id="my-profile">
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Fuga vitae
-          officiis ab optio aperiam, quam quidem, temporibus id, qui pariatur
-          quaerat. Neque, enim. Tempora sit quo nemo, natus perferendis quis.
+        <div class="h-auto w-full border bg-gray-50 p-3" id="my-profile">
+          <div
+            class="mx-auto max-w-md overflow-hidden rounded-lg bg-white p-6 shadow-md"
+          >
+            <!-- Username -->
+            <h2 class="mb-2 text-center text-3xl font-bold">johnDeo_23</h2>
+            <!-- Name -->
+
+            <!-- Bio -->
+            <p class="mb-6 text-center text-gray-700">
+              Student | Traveler | Music lover
+            </p>
+            <!-- Location -->
+            <p class="mb-6 text-center text-gray-700">
+              Location: New York City
+            </p>
+            <!-- Interests -->
+            <div class="mb-6 text-center">
+              <p class="mb-2 font-semibold text-gray-700">Interests:</p>
+              <div class="flex flex-wrap justify-center">
+                <span
+                  class="mb-2 mr-2 rounded-full bg-blue-200 px-3 py-1 text-blue-800"
+                  >Concerts</span
+                >
+                <span
+                  class="mb-2 mr-2 rounded-full bg-blue-200 px-3 py-1 text-blue-800"
+                  >Tech Workshops</span
+                >
+                <span
+                  class="mb-2 mr-2 rounded-full bg-blue-200 px-3 py-1 text-blue-800"
+                  >AI Seminars</span
+                >
+              </div>
+            </div>
+            <!-- Following -->
+            <div class="mb-6 text-center">
+              <p class="mb-2 font-semibold text-gray-700">Following:</p>
+              <div class="flex flex-wrap justify-center">
+                <a href="#" class="mb-2 mr-2 text-blue-500 hover:underline"
+                  >TechTalks</a
+                >
+                <a href="#" class="mb-2 mr-2 text-blue-500 hover:underline"
+                  >MusicFest</a
+                >
+              </div>
+            </div>
+            <!-- Ticketing Preferences -->
+            <div class="mb-6">
+              <p class="mb-2 text-center font-semibold text-gray-700">
+                Ticketing Preferences:
+              </p>
+              <!-- Notifications -->
+              <div class="mb-2 flex items-center justify-between">
+                <p class="text-gray-600">Notifications:</p>
+                <select class="rounded-md border px-3 py-1">
+                  <option>Email</option>
+                  <option>Push Notification</option>
+                  <option selected>Both</option>
+                  <option>None</option>
+                </select>
+              </div>
+              <!-- Payment Methods -->
+              <div class="mb-2 flex items-center justify-between">
+                <p class="text-gray-600">Payment Methods:</p>
+                <select class="rounded-md border px-3 py-1">
+                  <option>Credit Card</option>
+                  <option>PayPal</option>
+                  <option selected>Apple Pay</option>
+                  <option>Google Pay</option>
+                </select>
+              </div>
+              <!-- Ticket History -->
+              <div class="text-center">
+                <p class="text-gray-600">Ticket History:</p>
+                <p class="text-gray-700">No ticket history available.</p>
+              </div>
+            </div>
+          </div>
         </div>
-        <div class="h-auto w-full border bg-gray-50/50 p-3" id="my-tickets">
+        <div
+          class="hidden h-auto w-full border bg-gray-50/50 p-3"
+          id="my-tickets"
+        >
           <!-- Card -1 -->
           <div
             class="mx-auto flex max-w-2xl flex-col items-center justify-between gap-4 rounded-lg border border-l-4 border-gray-200 border-l-[#FCA311] bg-white px-3 py-5 shadow hover:bg-gray-100 md:flex-row"
