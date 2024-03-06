@@ -131,80 +131,79 @@
         <!-- My profile Part  -->
         <div class="h-auto w-full border bg-gray-50 p-3" id="my-profile">
           <div
-            class="mx-auto max-w-md overflow-hidden rounded-lg bg-white p-6 shadow-md"
+            class="mx-auto flex flex-col overflow-hidden rounded-lg bg-white px-8 py-6 shadow-md"
           >
-            <!-- Username -->
-            <h2 class="mb-2 text-center text-3xl font-bold">johnDeo_23</h2>
-            <!-- Name -->
+            <div class="mb-8 flex items-center">
+              <img
+                class="mr-4 h-20 w-20 rounded-full"
+                src="./Assets/avatar.jpg"
+                alt="Profile Picture"
+              />
+              <div class="flex flex-col">
+                <h2 class="text-2xl font-bold text-gray-800">John Doe</h2>
+                <p class="text-sm text-gray-600">
+                  Student | Traveler | Music Lover
+                </p>
+              </div>
+            </div>
 
-            <!-- Bio -->
-            <p class="mb-6 text-center text-gray-700">
-              Student | Traveler | Music lover
-            </p>
-            <!-- Location -->
-            <p class="mb-6 text-center text-gray-700">
-              Location: New York City
-            </p>
-            <!-- Interests -->
-            <div class="mb-6 text-center">
-              <p class="mb-2 font-semibold text-gray-700">Interests:</p>
-              <div class="flex flex-wrap justify-center">
+            <div class="mb-2 flex items-center">
+              <p class="mr-4 text-lg font-semibold text-gray-800">Location:</p>
+              <p class="text-sm text-gray-600">New York City</p>
+            </div>
+
+            <div class="mb-2 flex items-center gap-5">
+              <p class="py-1 text-start text-lg font-semibold text-gray-800">
+                Interests:
+              </p>
+              <div class="flex flex-wrap gap-2">
                 <span
-                  class="mb-2 mr-2 rounded-full bg-blue-200 px-3 py-1 text-blue-800"
+                  class="rounded-full bg-blue-500 px-3 py-1 text-sm text-white"
                   >Concerts</span
                 >
                 <span
-                  class="mb-2 mr-2 rounded-full bg-blue-200 px-3 py-1 text-blue-800"
+                  class="rounded-full bg-green-500 px-3 py-1 text-sm text-white"
                   >Tech Workshops</span
                 >
                 <span
-                  class="mb-2 mr-2 rounded-full bg-blue-200 px-3 py-1 text-blue-800"
+                  class="rounded-full bg-purple-500 px-3 py-1 text-sm text-white"
                   >AI Seminars</span
                 >
               </div>
             </div>
-            <!-- Following -->
-            <div class="mb-6 text-center">
-              <p class="mb-2 font-semibold text-gray-700">Following:</p>
-              <div class="flex flex-wrap justify-center">
-                <a href="#" class="mb-2 mr-2 text-blue-500 hover:underline"
-                  >TechTalks</a
-                >
-                <a href="#" class="mb-2 mr-2 text-blue-500 hover:underline"
-                  >MusicFest</a
-                >
+            <div class="mt-6 border-t border-gray-200 pt-6 text-start">
+              <h3 class="mb-4 text-lg font-semibold text-gray-800">Settings</h3>
+
+              <div class="mb-6">
+                <p class="mb-2 text-lg font-semibold text-gray-800">
+                  Ticketing Preferences:
+                </p>
+                <div class="grid grid-cols-1 gap-4">
+                  <div class="flex items-center space-x-7">
+                    <p class="text-xl text-gray-600">Notifications:</p>
+                    <select class="form-select rounded-md border px-3 py-1">
+                      <option>Email</option>
+                      <option>Push Notification</option>
+                      <option selected>Both</option>
+                      <option>None</option>
+                    </select>
+                  </div>
+                </div>
+              </div>
+
+              <div class="flex space-x-7 text-gray-600">
+                <p class="mb-2 text-xl">Ticket History:</p>
+                <p class="text-xl">Tickets - <b>5</b></p>
               </div>
             </div>
-            <!-- Ticketing Preferences -->
-            <div class="mb-6">
-              <p class="mb-2 text-center font-semibold text-gray-700">
-                Ticketing Preferences:
-              </p>
-              <!-- Notifications -->
-              <div class="mb-2 flex items-center justify-between">
-                <p class="text-gray-600">Notifications:</p>
-                <select class="rounded-md border px-3 py-1">
-                  <option>Email</option>
-                  <option>Push Notification</option>
-                  <option selected>Both</option>
-                  <option>None</option>
-                </select>
-              </div>
-              <!-- Payment Methods -->
-              <div class="mb-2 flex items-center justify-between">
-                <p class="text-gray-600">Payment Methods:</p>
-                <select class="rounded-md border px-3 py-1">
-                  <option>Credit Card</option>
-                  <option>PayPal</option>
-                  <option selected>Apple Pay</option>
-                  <option>Google Pay</option>
-                </select>
-              </div>
-              <!-- Ticket History -->
-              <div class="text-center">
-                <p class="text-gray-600">Ticket History:</p>
-                <p class="text-gray-700">No ticket history available.</p>
-              </div>
+
+            <div class="mt-6 flex justify-end">
+              <a href="#" class="text-sm text-blue-500 hover:underline"
+                >About Evenpro</a
+              >
+              <a href="#" class="ml-4 text-sm text-blue-500 hover:underline"
+                >Contact</a
+              >
             </div>
           </div>
         </div>
@@ -213,24 +212,125 @@
           id="my-tickets"
         >
           <!-- Card -1 -->
-          <div
-            class="mx-auto flex max-w-2xl flex-col items-center justify-between gap-4 rounded-lg border border-l-4 border-gray-200 border-l-[#FCA311] bg-white px-3 py-5 shadow hover:bg-gray-100 md:flex-row"
-          >
-            <div class="px-5 text-start">
-              <h5
-                class="mb-2 text-lg font-bold tracking-tight text-gray-900 dark:text-white md:text-2xl"
+
+          <div class="relative overflow-x-auto shadow-md sm:rounded-lg">
+            <table
+              class="w-full text-left text-sm text-gray-500 dark:text-gray-400 rtl:text-right"
+            >
+              <thead
+                class="bg-gray-50 text-xs uppercase text-gray-700 dark:bg-gray-700 dark:text-gray-400"
               >
-                Noteworthy technology acquisitions 2021
-              </h5>
-              <p
-                class="text-xs font-normal text-gray-700 dark:text-gray-400 md:text-base"
-              >
-                Here are the biggest enterprise technology acquisitions of 2021
-                so far, in reverse chronological order.
-              </p>
-            </div>
-            <button class="btn btn-lg btn-primary">Download</button>
+                <tr>
+                  <th scope="col" class="px-6 py-3">Product name</th>
+                  <th scope="col" class="px-6 py-3">Color</th>
+                  <th scope="col" class="px-6 py-3">Category</th>
+                  <th scope="col" class="px-6 py-3">Price</th>
+                  <th scope="col" class="px-6 py-3">Action</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr
+                  class="border-b odd:bg-white even:bg-gray-50 dark:border-gray-700 odd:dark:bg-gray-900 even:dark:bg-gray-800"
+                >
+                  <th
+                    scope="row"
+                    class="whitespace-nowrap px-6 py-4 font-medium text-gray-900 dark:text-white"
+                  >
+                    Apple MacBook Pro 17"
+                  </th>
+                  <td class="px-6 py-4">Silver</td>
+                  <td class="px-6 py-4">Laptop</td>
+                  <td class="px-6 py-4">$2999</td>
+                  <td class="px-6 py-4">
+                    <a
+                      href="#"
+                      class="font-medium text-blue-600 hover:underline dark:text-blue-500"
+                      >Edit</a
+                    >
+                  </td>
+                </tr>
+                <tr
+                  class="border-b odd:bg-white even:bg-gray-50 dark:border-gray-700 odd:dark:bg-gray-900 even:dark:bg-gray-800"
+                >
+                  <th
+                    scope="row"
+                    class="whitespace-nowrap px-6 py-4 font-medium text-gray-900 dark:text-white"
+                  >
+                    Microsoft Surface Pro
+                  </th>
+                  <td class="px-6 py-4">White</td>
+                  <td class="px-6 py-4">Laptop PC</td>
+                  <td class="px-6 py-4">$1999</td>
+                  <td class="px-6 py-4">
+                    <a
+                      href="#"
+                      class="font-medium text-blue-600 hover:underline dark:text-blue-500"
+                      >Edit</a
+                    >
+                  </td>
+                </tr>
+                <tr
+                  class="border-b odd:bg-white even:bg-gray-50 dark:border-gray-700 odd:dark:bg-gray-900 even:dark:bg-gray-800"
+                >
+                  <th
+                    scope="row"
+                    class="whitespace-nowrap px-6 py-4 font-medium text-gray-900 dark:text-white"
+                  >
+                    Magic Mouse 2
+                  </th>
+                  <td class="px-6 py-4">Black</td>
+                  <td class="px-6 py-4">Accessories</td>
+                  <td class="px-6 py-4">$99</td>
+                  <td class="px-6 py-4">
+                    <a
+                      href="#"
+                      class="font-medium text-blue-600 hover:underline dark:text-blue-500"
+                      >Edit</a
+                    >
+                  </td>
+                </tr>
+                <tr
+                  class="border-b odd:bg-white even:bg-gray-50 dark:border-gray-700 odd:dark:bg-gray-900 even:dark:bg-gray-800"
+                >
+                  <th
+                    scope="row"
+                    class="whitespace-nowrap px-6 py-4 font-medium text-gray-900 dark:text-white"
+                  >
+                    Google Pixel Phone
+                  </th>
+                  <td class="px-6 py-4">Gray</td>
+                  <td class="px-6 py-4">Phone</td>
+                  <td class="px-6 py-4">$799</td>
+                  <td class="px-6 py-4">
+                    <a
+                      href="#"
+                      class="font-medium text-blue-600 hover:underline dark:text-blue-500"
+                      >Edit</a
+                    >
+                  </td>
+                </tr>
+                <tr>
+                  <th
+                    scope="row"
+                    class="whitespace-nowrap px-6 py-4 font-medium text-gray-900 dark:text-white"
+                  >
+                    Apple Watch 5
+                  </th>
+                  <td class="px-6 py-4">Red</td>
+                  <td class="px-6 py-4">Wearables</td>
+                  <td class="px-6 py-4">$999</td>
+                  <td class="px-6 py-4">
+                    <a
+                      href="#"
+                      class="font-medium text-blue-600 hover:underline dark:text-blue-500"
+                      >Edit</a
+                    >
+                  </td>
+                </tr>
+              </tbody>
+            </table>
           </div>
+
           <!-- Card -1 -->
         </div>
         <!-- My profile Part  -->
