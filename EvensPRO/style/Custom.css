@@ -1,0 +1,33 @@
+.header-part {
+  width: 100%;
+  background-image: url("../Assets/Image/header-image.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-color: #0000004f;
+  background-blend-mode: darken;
+  padding-bottom: 3rem;
+  /* overflow-x: hidden; */
+}
+.text-stroke {
+  -webkit-text-stroke: 0.1px #fca311; /* Adjust display type as needed */
+}
+
+.details-header-part {
+  width: 100%;
+  background-image: url("../Assets/headerImage.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  position: relative;
+  overflow-x: hidden;
+}
+
+.details-header-content {
+  position: absolute;
+  right: 0;
+  left: 0;
+}
+
+/*! ====================================== */
+
+/* !====================================== */

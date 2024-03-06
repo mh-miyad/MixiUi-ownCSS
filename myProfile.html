@@ -105,137 +105,61 @@
       <!-- Navbar For Mobile Version  -->
     </header>
     <!-- Header Section  -->
-    <main class="container mx-auto my-5 text-center">
-      <section>
-        <!-- Profile Image  -->
-        <div class="profile-image">
-          <img
-            class="mx-auto size-60 rounded object-cover"
-            src="./Assets/avatar.jpg"
-            alt="Default avatar"
-          />
-          <p class="my-2 text-3xl">John Doe</p>
-          <p class="mb-2 text-3xl">
-            <i class="bi bi-geo-alt"></i> Dubai , Arab Amirates
-          </p>
+    <main class="mx-auto my-5 max-w-[1320px] px-4 text-center">
+      <section
+        class="flex flex-col items-start justify-center gap-3 md:flex-row md:justify-start"
+      >
+        <div
+          class="mx-auto h-96 w-full border bg-gray-50 p-3 shadow-2 md:w-full md:max-w-xs"
+        >
+          <div class="">
+            <img
+              class="mx-auto my-3 size-40 rounded-full object-cover ring-2 ring-[#FCA311] ring-offset-2"
+              src="./Assets/avatar.jpg"
+              alt="Default avatar"
+            />
+            <p class="text-2xl font-semibold uppercase text-slate-700">
+              John Doe
+            </p>
+            <p class="text-md mb-5 font-semibold text-slate-700">Student</p>
+          </div>
+          <div class="flex flex-col gap-4">
+            <button class="btn btn-primary" id="profileBtn">My Profile</button>
+            <button class="btn btn-primary" id="ticketBtn">My Tickets</button>
+          </div>
         </div>
-        <!-- Profile Image  -->
+        <!-- My profile Part  -->
+        <div class="hidden h-auto w-full border bg-gray-50 p-3" id="my-profile">
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Fuga vitae
+          officiis ab optio aperiam, quam quidem, temporibus id, qui pariatur
+          quaerat. Neque, enim. Tempora sit quo nemo, natus perferendis quis.
+        </div>
+        <div class="h-auto w-full border bg-gray-50/50 p-3" id="my-tickets">
+          <!-- Card -1 -->
+          <div
+            class="mx-auto flex max-w-2xl flex-col items-center justify-between gap-4 rounded-lg border border-l-4 border-gray-200 border-l-[#FCA311] bg-white px-3 py-5 shadow hover:bg-gray-100 md:flex-row"
+          >
+            <div class="px-5 text-start">
+              <h5
+                class="mb-2 text-lg font-bold tracking-tight text-gray-900 dark:text-white md:text-2xl"
+              >
+                Noteworthy technology acquisitions 2021
+              </h5>
+              <p
+                class="text-xs font-normal text-gray-700 dark:text-gray-400 md:text-base"
+              >
+                Here are the biggest enterprise technology acquisitions of 2021
+                so far, in reverse chronological order.
+              </p>
+            </div>
+            <button class="btn btn-lg btn-primary">Download</button>
+          </div>
+          <!-- Card -1 -->
+        </div>
+        <!-- My profile Part  -->
       </section>
       <!-- Profile Section -->
-      <section>
-        <div
-          class="mb-6 flex flex-col items-center justify-center gap-3 sm:flex-row"
-        >
-          <button class="btn-tab active w-60">My Tickets</button>
-          <button class="btn-tab w-60">My Ticket</button>
-        </div>
-        <div>
-          <!--  Here Tickets Will Be Displayed -->
-          <div class="mt-6 space-y-5">
-            <!-- Card -1 -->
-            <div
-              class="mx-auto flex max-w-2xl flex-col items-center justify-between gap-4 rounded-lg border border-l-4 border-gray-200 border-l-[#FCA311] bg-white px-3 py-5 shadow hover:bg-gray-100 md:flex-row"
-            >
-              <div class="px-5 text-start">
-                <h5
-                  class="mb-2 text-lg font-bold tracking-tight text-gray-900 dark:text-white md:text-2xl"
-                >
-                  Noteworthy technology acquisitions 2021
-                </h5>
-                <p
-                  class="text-xs font-normal text-gray-700 dark:text-gray-400 md:text-base"
-                >
-                  Here are the biggest enterprise technology acquisitions of
-                  2021 so far, in reverse chronological order.
-                </p>
-              </div>
-              <button class="btn btn-lg btn-primary">Download</button>
-            </div>
-            <!-- Card -1 -->
-            <!-- Card -1 -->
-            <div
-              class="mx-auto flex max-w-2xl flex-col items-center justify-between gap-4 rounded-lg border border-l-4 border-gray-200 border-l-[#FCA311] bg-white px-3 py-5 shadow hover:bg-gray-100 md:flex-row"
-            >
-              <div class="px-5 text-start">
-                <h5
-                  class="mb-2 text-lg font-bold tracking-tight text-gray-900 dark:text-white md:text-2xl"
-                >
-                  Noteworthy technology acquisitions 2021
-                </h5>
-                <p
-                  class="text-xs font-normal text-gray-700 dark:text-gray-400 md:text-base"
-                >
-                  Here are the biggest enterprise technology acquisitions of
-                  2021 so far, in reverse chronological order.
-                </p>
-              </div>
-              <button class="btn btn-lg btn-primary">Download</button>
-            </div>
-            <!-- Card -1 -->
-            <!-- Card -1 -->
-            <div
-              class="mx-auto flex max-w-2xl flex-col items-center justify-between gap-4 rounded-lg border border-l-4 border-gray-200 border-l-[#FCA311] bg-white px-3 py-5 shadow hover:bg-gray-100 md:flex-row"
-            >
-              <div class="px-5 text-start">
-                <h5
-                  class="mb-2 text-lg font-bold tracking-tight text-gray-900 dark:text-white md:text-2xl"
-                >
-                  Noteworthy technology acquisitions 2021
-                </h5>
-                <p
-                  class="text-xs font-normal text-gray-700 dark:text-gray-400 md:text-base"
-                >
-                  Here are the biggest enterprise technology acquisitions of
-                  2021 so far, in reverse chronological order.
-                </p>
-              </div>
-              <button class="btn btn-lg btn-primary">Download</button>
-            </div>
-            <!-- Card -1 -->
-            <!-- Card -1 -->
-            <div
-              class="mx-auto flex max-w-2xl flex-col items-center justify-between gap-4 rounded-lg border border-l-4 border-gray-200 border-l-[#FCA311] bg-white px-3 py-5 shadow hover:bg-gray-100 md:flex-row"
-            >
-              <div class="px-5 text-start">
-                <h5
-                  class="mb-2 text-lg font-bold tracking-tight text-gray-900 dark:text-white md:text-2xl"
-                >
-                  Noteworthy technology acquisitions 2021
-                </h5>
-                <p
-                  class="text-xs font-normal text-gray-700 dark:text-gray-400 md:text-base"
-                >
-                  Here are the biggest enterprise technology acquisitions of
-                  2021 so far, in reverse chronological order.
-                </p>
-              </div>
-              <button class="btn btn-lg btn-primary">Download</button>
-            </div>
-            <!-- Card -1 -->
-            <!-- Card -1 -->
-            <div
-              class="mx-auto flex max-w-2xl flex-col items-center justify-between gap-4 rounded-lg border border-l-4 border-gray-200 border-l-[#FCA311] bg-white px-3 py-5 shadow hover:bg-gray-100 md:flex-row"
-            >
-              <div class="px-5 text-start">
-                <h5
-                  class="mb-2 text-lg font-bold tracking-tight text-gray-900 dark:text-white md:text-2xl"
-                >
-                  Noteworthy technology acquisitions 2021
-                </h5>
-                <p
-                  class="text-xs font-normal text-gray-700 dark:text-gray-400 md:text-base"
-                >
-                  Here are the biggest enterprise technology acquisitions of
-                  2021 so far, in reverse chronological order.
-                </p>
-              </div>
-              <button class="btn btn-lg btn-primary">Download</button>
-            </div>
-            <!-- Card -1 -->
-          </div>
-          <!--  Here Tickets Will Be Displayed -->
-        </div>
-      </section>
+
       <!-- Profile Section -->
     </main>
     <!-- Footer Section  -->
@@ -283,10 +207,20 @@
     <!-- Footer Section  -->
     <!-- Footer Section  -->
     <!-- Script js And Jquery  -->
-    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-    <script src="./js/flowbite.js"></script>
     <script src="./js/tw-elements.umd.min.js"></script>
-    <script src="./js/plugins/autoType.js"></script>
-    <script src="./js/custom.js" type="module"></script>
+
+    <script>
+      const profileBtn = document.getElementById("profileBtn");
+      const ticketBtn = document.getElementById("ticketBtn");
+
+      profileBtn.addEventListener("click", () => {
+        document.getElementById("my-profile").classList.remove("hidden");
+        document.getElementById("my-tickets").classList.add("hidden");
+      });
+      ticketBtn.addEventListener("click", () => {
+        document.getElementById("my-tickets").classList.remove("hidden");
+        document.getElementById("my-profile").classList.add("hidden");
+      });
+    </script>
   </body>
 </html>
