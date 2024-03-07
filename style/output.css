@@ -2470,6 +2470,18 @@ select{
   max-width: 20rem;
 }
 
+.max-w-md{
+  max-width: 28rem;
+}
+
+.max-w-xl{
+  max-width: 36rem;
+}
+
+.max-w-2xl{
+  max-width: 42rem;
+}
+
 .flex-1{
   flex: 1 1 0%;
 }
@@ -2843,6 +2855,10 @@ select{
 
 .cursor-pointer{
   cursor: pointer;
+}
+
+.cursor-text{
+  cursor: text;
 }
 
 .touch-none{
@@ -3762,6 +3778,10 @@ select{
 
 .p-\[auto\]{
   padding: auto;
+}
+
+.p-8{
+  padding: 2rem;
 }
 
 .\!py-0{
@@ -5706,6 +5726,26 @@ select{
   display: none;
 }
 
+.focus-within\:outline-none:focus-within{
+  outline: 2px solid transparent;
+  outline-offset: 2px;
+}
+
+.focus-within\:ring-2:focus-within{
+  --tw-ring-offset-shadow: var(--tw-ring-inset) 0 0 0 var(--tw-ring-offset-width) var(--tw-ring-offset-color);
+  --tw-ring-shadow: var(--tw-ring-inset) 0 0 0 calc(2px + var(--tw-ring-offset-width)) var(--tw-ring-color);
+  box-shadow: var(--tw-ring-offset-shadow), var(--tw-ring-shadow), var(--tw-shadow, 0 0 #0000);
+}
+
+.focus-within\:ring-\[\#14213D\]:focus-within{
+  --tw-ring-opacity: 1;
+  --tw-ring-color: rgb(20 33 61 / var(--tw-ring-opacity));
+}
+
+.focus-within\:ring-offset-2:focus-within{
+  --tw-ring-offset-width: 2px;
+}
+
 .hover\:cursor-pointer:hover{
   cursor: pointer;
 }
@@ -5776,6 +5816,16 @@ select{
   background-color: rgb(255 255 255 / var(--tw-bg-opacity));
 }
 
+.hover\:bg-blue-600:hover{
+  --tw-bg-opacity: 1;
+  background-color: rgb(28 100 242 / var(--tw-bg-opacity));
+}
+
+.hover\:bg-\[\#FCA311\]:hover{
+  --tw-bg-opacity: 1;
+  background-color: rgb(252 163 17 / var(--tw-bg-opacity));
+}
+
 .hover\:fill-\[\#8b8b8b\]:hover{
   fill: #8b8b8b;
 }
@@ -5828,6 +5878,11 @@ select{
 .hover\:text-white:hover{
   --tw-text-opacity: 1;
   color: rgb(255 255 255 / var(--tw-text-opacity));
+}
+
+.hover\:text-\[\#FCA311\]:hover{
+  --tw-text-opacity: 1;
+  color: rgb(252 163 17 / var(--tw-text-opacity));
 }
 
 .hover\:underline:hover{
@@ -6022,6 +6077,20 @@ select{
 .focus\:ring-gray-200:focus{
   --tw-ring-opacity: 1;
   --tw-ring-color: rgb(229 231 235 / var(--tw-ring-opacity));
+}
+
+.focus\:ring-\[\#FCA311\]:focus{
+  --tw-ring-opacity: 1;
+  --tw-ring-color: rgb(252 163 17 / var(--tw-ring-opacity));
+}
+
+.focus\:ring-\[\#14213D\]:focus{
+  --tw-ring-opacity: 1;
+  --tw-ring-color: rgb(20 33 61 / var(--tw-ring-opacity));
+}
+
+.focus\:ring-offset-2:focus{
+  --tw-ring-offset-width: 2px;
 }
 
 .focus\:transition-\[border-color_0\.2s\]:focus{
