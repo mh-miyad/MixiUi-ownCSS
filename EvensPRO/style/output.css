@@ -2469,6 +2469,10 @@ select{
   max-width: 20rem;
 }
 
+.max-w-sm{
+  max-width: 24rem;
+}
+
 .flex-1{
   flex: 1 1 0%;
 }
@@ -7375,6 +7379,10 @@ select{
 
   .lg\:flex-row{
     flex-direction: row;
+  }
+
+  .lg\:justify-start{
+    justify-content: flex-start;
   }
 
   .lg\:px-3{
