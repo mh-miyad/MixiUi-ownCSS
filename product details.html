@@ -110,15 +110,287 @@
       </div>
       <!--  Header Content  -->
     </header>
-    <main class="mx-auto mb-20 max-w-7xl">
-      <section>
-        <div>product Details</div>
+    <main class="mx-auto mb-20 min-h-96 max-w-7xl">
+      <section
+        class="mx-5 my-5 flex flex-col items-start justify-center gap-5 lg:flex-row"
+      >
+        <!--  left side Of main -->
+        <div
+          class="mx-auto w-full max-w-xl rounded-t-lg border border-gray-300"
+        >
+          <h3 class="caption-bottom py-4 text-center text-4xl font-bold">
+            Buyer Information
+          </h3>
+          <hr />
+          <section class="checkout-form px-5 pb-10 pt-3">
+            <form action="#!" method="get">
+              <h6>Contact information</h6>
+              <div class="form-control">
+                <label for="checkout-email">E-mail</label>
+                <div>
+                  <span class="fa fa-envelope"></span>
+                  <input
+                    type="email"
+                    id="checkout-email"
+                    name="checkout-email"
+                    placeholder="Enter your email..."
+                  />
+                </div>
+              </div>
+              <div class="form-control">
+                <label for="checkout-phone">Phone</label>
+                <div>
+                  <span class="fa fa-phone"></span>
+                  <input
+                    type="tel"
+                    name="checkout-phone"
+                    id="checkout-phone"
+                    placeholder="Enter you phone..."
+                  />
+                </div>
+              </div>
+              <br />
+              <h6>Shipping address</h6>
+              <div class="form-control">
+                <label for="checkout-name">Full name</label>
+                <div>
+                  <span class="fa fa-user-circle"></span>
+                  <input
+                    type="text"
+                    id="checkout-name"
+                    name="checkout-name"
+                    placeholder="Enter you name..."
+                  />
+                </div>
+              </div>
+              <div class="form-control">
+                <label for="checkout-address">Address</label>
+                <div>
+                  <span class="fa fa-home"></span>
+                  <input
+                    type="text"
+                    name="checkout-address"
+                    id="checkout-address"
+                    placeholder="Your address..."
+                  />
+                </div>
+              </div>
+              <div class="form-control">
+                <label for="checkout-city">City</label>
+                <div>
+                  <span class="fa fa-building"></span>
+                  <input
+                    type="text"
+                    name="checkout-city"
+                    id="checkout-city"
+                    placeholder="Your city..."
+                  />
+                </div>
+              </div>
+              <div class="form-group">
+                <div class="form-control">
+                  <label for="checkout-country">Country</label>
+                  <div>
+                    <span class="fa fa-globe"></span>
+                    <input
+                      type="text"
+                      name="checkout-country"
+                      id="checkout-country"
+                      placeholder="Your country..."
+                      list="country-list"
+                    />
+                    <datalist id="country-list">
+                      <option value="India"></option>
+                      <option value="USA"></option>
+                      <option value="Russia"></option>
+                      <option value="Japan"></option>
+                      <option value="Egypt"></option>
+                    </datalist>
+                  </div>
+                </div>
+                <div class="form-control">
+                  <label for="checkout-postal">Postal code</label>
+                  <div>
+                    <span class="fa fa-archive"></span>
+                    <input
+                      type="numeric"
+                      name="checkout-postal"
+                      id="checkout-postal"
+                      placeholder="Your postal code..."
+                    />
+                  </div>
+                </div>
+              </div>
+              <div class="form-control checkbox-control">
+                <input
+                  type="checkbox"
+                  name="checkout-checkbox"
+                  id="checkout-checkbox"
+                />
+                <label for="checkout-checkbox"
+                  >Save this information for next time</label
+                >
+              </div>
+              <div class="form-control-btn">
+                <button type="button" class="btn btn-primary mt-4 capitalize">
+                  checkout
+                </button>
+              </div>
+            </form>
+          </section>
+        </div>
+        <!--  left side Of main -->
+        <!--  Right side Of main -->
+
+        <div
+          class="mx-auto w-full max-w-xl rounded-t-lg border border-gray-300"
+        >
+          <h3 class="caption-bottom py-4 text-center text-4xl font-bold">
+            Order Summary
+          </h3>
+          <hr />
+          <ul class="my-5 space-y-2 px-5 py-2 text-lg capitalize">
+            <li class="flex justify-between">
+              ticket Type : <span class="font-bold">Student</span>
+            </li>
+            <li class="flex justify-between">
+              price : <span class="font-bold">120</span>
+            </li>
+            <li class="flex justify-between">
+              Quantity : <span class="font-bold">5</span>
+            </li>
+            <li class="flex justify-between">
+              Subtotal : <span class="font-bold">600</span>
+            </li>
+          </ul>
+          <hr />
+          <p class="flex justify-between px-5 py-3 text-3xl">
+            Order Total : <b> 600AED</b>
+          </p>
+        </div>
+        <!--  Right side Of main -->
       </section>
+
+      <!-- Similar project  -->
+      <section class="my-20">
+        <h3 class="mb-10 text-center text-5xl font-semibold">
+          Similar Project
+        </h3>
+        <!--  All Events Section -->
+        <div
+          class="grid-col-1 grid items-stretch justify-center gap-7 px-5 sm:grid-cols-2 lg:grid-cols-3 lg:px-3 xl:grid-cols-3"
+        >
+          <!-- Cards Section  -->
+          <div class="event-card group">
+            <a href="./eventDetails.html" class="card-achor">
+              <img
+                class="card-img group-[&:hover]:scale-110 group-[&:hover]:duration-[3s] group-[&:hover]:ease-in-out"
+                src="./Assets/Image/card-img.png"
+                alt=""
+              />
+              <span class="sr-only"> Image This Card </span>
+            </a>
+            <!-- overlay -->
+            <div class="event-card-overlay">
+              <span class="overlay-card-left">
+                March <br />
+                01</span
+              >
+              <span class="overlay-card-right">aed 0 - 60</span>
+            </div>
+            <!-- overlay -->
+            <div class="px-5 py-2">
+              <h3 class="mb-2 text-xl font-bold">
+                The Body Museum-Collaboration
+              </h3>
+              <p class="text-sm font-thin">
+                Date and Time Fri, September 2022 -- 50 شارع طَوِي مُوَيلِح
+                القاهرة
+                <br />
+                <span class="font-medium">
+                  Abu Dhabi - United Arab Emirates</span
+                >
+              </p>
+            </div>
+          </div>
+          <!-- Cards Section  -->
+          <!-- Cards Section  -->
+          <div class="event-card group">
+            <a href="./eventDetails.html" class="card-achor">
+              <img
+                class="card-img group-[&:hover]:scale-110 group-[&:hover]:duration-[3s] group-[&:hover]:ease-in-out"
+                src="./Assets/Image/card-img.png"
+                alt=""
+              />
+              <span class="sr-only"> Image This Card </span>
+            </a>
+            <!-- overlay -->
+            <div class="event-card-overlay">
+              <span class="overlay-card-left">
+                March <br />
+                01</span
+              >
+              <span class="overlay-card-right">aed 0 - 60</span>
+            </div>
+            <!-- overlay -->
+            <div class="px-5 py-2">
+              <h3 class="mb-2 text-xl font-bold">
+                The Body Museum-Collaboration
+              </h3>
+              <p class="text-sm font-thin">
+                Date and Time Fri, September 2022 -- 50 شارع طَوِي مُوَيلِح
+                القاهرة
+                <br />
+                <span class="font-medium">
+                  Abu Dhabi - United Arab Emirates</span
+                >
+              </p>
+            </div>
+          </div>
+          <!-- Cards Section  -->
+          <!-- Cards Section  -->
+          <div class="event-card group">
+            <a href="./eventDetails.html" class="card-achor">
+              <img
+                class="card-img group-[&:hover]:scale-110 group-[&:hover]:duration-[3s] group-[&:hover]:ease-in-out"
+                src="./Assets/Image/card-img.png"
+                alt=""
+              />
+              <span class="sr-only"> Image This Card </span>
+            </a>
+            <!-- overlay -->
+            <div class="event-card-overlay">
+              <span class="overlay-card-left">
+                March <br />
+                01</span
+              >
+              <span class="overlay-card-right">aed 0 - 60</span>
+            </div>
+            <!-- overlay -->
+            <div class="px-5 py-2">
+              <h3 class="mb-2 text-xl font-bold">
+                The Body Museum-Collaboration
+              </h3>
+              <p class="text-sm font-thin">
+                Date and Time Fri, September 2022 -- 50 شارع طَوِي مُوَيلِح
+                القاهرة
+                <br />
+                <span class="font-medium">
+                  Abu Dhabi - United Arab Emirates</span
+                >
+              </p>
+            </div>
+          </div>
+          <!-- Cards Section  -->
+        </div>
+        <!-- ALL Cards END here  -->
+      </section>
+      <!-- Similar project  -->
     </main>
 
     <!-- Footer Section  -->
 
-    <footer class="bg-[#14213D] shadow dark:bg-gray-900">
+    <footer class="mt-40 bg-[#14213D] shadow dark:bg-gray-900">
       <div class="mx-auto w-full max-w-screen-xl p-4 md:py-8">
         <div class="sm:flex sm:items-center sm:justify-between">
           <a
