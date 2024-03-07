@@ -7308,6 +7308,10 @@ select{
     flex-direction: row;
   }
 
+  .md\:flex-nowrap{
+    flex-wrap: nowrap;
+  }
+
   .md\:justify-start{
     justify-content: flex-start;
   }
