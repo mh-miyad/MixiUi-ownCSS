@@ -35,11 +35,26 @@
                 <button class="btn btn-lg btn-primary">Buy Tickets</button>
               </li>
               <li>
-                <button><i class="bi bi-cart4"></i> Cart</button>
+                <button
+                  type="button"
+                  class="btn btn-profile cart-btn relative inline-flex items-center"
+                >
+                  <i class="bi bi-cart4"></i>
+                  <span class="mx-2">Add to Cart</span>
+                  <div class="badgeBox">0</div>
+                </button>
               </li>
             </ul>
           </div>
           <div class="block lg:hidden">
+            <button
+              type="button"
+              class="btn-profile cart-btn relative mx-5 inline-flex items-center rounded px-3 py-1"
+            >
+              <i class="bi bi-cart4 text-xl"></i>
+              <span class="sr-only">Add Cart</span>
+              <div class="badgeBox">0</div>
+            </button>
             <button
               class="btn btn-primary"
               type="button"
@@ -100,6 +115,21 @@
             </li>
             <li>
               <button class="btn btn-lg btn-primary">Buy Tickets</button>
+            </li>
+            <li>
+              <button class="btn btn-primary">
+                <i class="bi bi-cart4"></i> Cart
+              </button>
+            </li>
+            <li>
+              <button
+                type="button"
+                class="btn btn-profile cart-btn relative inline-flex items-center"
+              >
+                <i class="bi bi-cart4"></i>
+                <span class="mx-2">Add to Cart</span>
+                <div class="badgeBox">0</div>
+              </button>
             </li>
           </ul>
         </div>
@@ -573,7 +603,9 @@
                         <a href="./productDetails.html" class="btn btn-primary"
                           >View Details</a
                         >
-                        <a href="#" class="btn btn-primary">Add to cart</a>
+                        <button class="btn btn-primary addToCart"
+                          >Add to cart</
+                        >
                       </div>
                     </div>
                   </div>
@@ -678,7 +710,9 @@
                         <a href="./productDetails.html" class="btn btn-primary"
                           >View Details</a
                         >
-                        <a href="#" class="btn btn-primary">Add to cart</a>
+                        <button class="btn btn-primary addToCart"
+                          >Add to cart</
+                        >
                       </div>
                     </div>
                   </div>
@@ -783,7 +817,9 @@
                         <a href="./productDetails.html" class="btn btn-primary"
                           >View Details</a
                         >
-                        <a href="#" class="btn btn-primary">Add to cart</a>
+                        <button class="btn btn-primary addToCart"
+                          >Add to cart</
+                        >
                       </div>
                     </div>
                   </div>
@@ -888,7 +924,9 @@
                         <a href="./productDetails.html" class="btn btn-primary"
                           >View Details</a
                         >
-                        <a href="#" class="btn btn-primary">Add to cart</a>
+                        <button class="btn btn-primary addToCart"
+                          >Add to cart</button
+                        >
                       </div>
                     </div>
                   </div>
@@ -921,6 +959,9 @@
             </button>
           </div>
         </div>
+      </section>
+      <section>
+        <div>here we mke</div>
       </section>
 
       <!-- here Cards Section of merchandise -->
@@ -991,6 +1032,22 @@
         slider.style.transform = "translateX(" + defaultTransform + "px)";
       }
       prev.addEventListener("click", goPrev);
+      // Add To Cart Functionality
+
+      const cartButtons = document.querySelectorAll(".badgeBox");
+      const addButtons = document.querySelectorAll(".addToCart");
+      let count = 0;
+      addButtons.forEach((button) => {
+        button.addEventListener("click", () => {
+          cartButtons.forEach((cartButton) => {
+            cartButton.textContent = count;
+           
+          });
+           count++;
+        });
+      });
+
+      // Add To Cart Functionality
     </script>
   </body>
 </html>
