@@ -37,6 +37,8 @@
               <li>
                 <button
                   type="button"
+                   data-modal-target="crypto-modal"
+                data-modal-toggle="crypto-modal"
                   class="btn btn-profile cart-btn relative inline-flex items-center"
                 >
                   <i class="bi bi-cart4"></i>
@@ -49,6 +51,8 @@
           <div class="block lg:hidden">
             <button
               type="button"
+               data-modal-target="crypto-modal"
+                data-modal-toggle="crypto-modal"
               class="btn-profile cart-btn relative mx-5 inline-flex items-center rounded px-3 py-1"
             >
               <i class="bi bi-cart4 text-xl"></i>
@@ -117,13 +121,10 @@
               <button class="btn btn-lg btn-primary">Buy Tickets</button>
             </li>
             <li>
-              <button class="btn btn-primary">
-                <i class="bi bi-cart4"></i> Cart
-              </button>
-            </li>
-            <li>
               <button
                 type="button"
+                 data-modal-target="crypto-modal"
+                data-modal-toggle="crypto-modal"
                 class="btn btn-profile cart-btn relative inline-flex items-center"
               >
                 <i class="bi bi-cart4"></i>
@@ -960,13 +961,152 @@
           </div>
         </div>
       </section>
-      <section>
-        <div>here we mke</div>
-      </section>
-
       <!-- here Cards Section of merchandise -->
     </main>
-
+ <!-- Modal Section  -->
+    <div
+      id="crypto-modal"
+      tabindex="-1"
+      aria-hidden="true"
+      class="fixed left-0 right-0 top-0 z-50 hidden h-[calc(100%-1rem)] max-h-full w-full items-center justify-center overflow-y-auto overflow-x-hidden md:inset-0"
+    >
+      <div class="relative max-h-full w-full max-w-md p-4">
+        <!-- Modal content -->
+        <div class="relative rounded-lg bg-white shadow dark:bg-gray-700">
+          <!-- Modal header -->
+          <div
+            class="flex items-center justify-between rounded-t border-b p-4 dark:border-gray-600 md:p-5"
+          >
+            <h3 class="text-lg font-semibold text-gray-900 dark:text-white">
+              Product You Add
+            </h3>
+            <button
+              type="button"
+              class="ms-auto inline-flex h-8 w-8 items-center justify-center rounded-lg bg-transparent text-sm text-gray-400 hover:bg-gray-200 hover:text-gray-900 dark:hover:bg-gray-600 dark:hover:text-white"
+              data-modal-toggle="crypto-modal"
+            >
+              <svg
+                class="h-3 w-3"
+                aria-hidden="true"
+                xmlns="http://www.w3.org/2000/svg"
+                fill="none"
+                viewBox="0 0 14 14"
+              >
+                <path
+                  stroke="currentColor"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="m1 1 6 6m0 0 6 6M7 7l6-6M7 7l-6 6"
+                />
+              </svg>
+              <span class="sr-only">Close modal</span>
+            </button>
+          </div>
+          <!-- Modal body -->
+          <div class="p-4 md:p-5">
+            <ul class="my-4 space-y-3">
+              <li>
+                <a
+                  href="#"
+                  class="group flex items-center rounded-lg bg-gray-50 p-3 text-base font-bold text-gray-900 hover:bg-gray-100 hover:shadow dark:bg-gray-600 dark:text-white dark:hover:bg-gray-500"
+                >
+                  <img
+                    src="https://img.freepik.com/free-vector/realistic-chips-package_1284-34786.jpg"
+                    class="size-20"
+                    alt=""
+                  />
+                  <span class="ms-3 flex-1 whitespace-nowrap"
+                    >Allooz chips
+                  </span>
+                  <span
+                    class="ms-3 inline-flex items-center justify-center rounded bg-gray-200 px-2 py-0.5 text-xs font-medium text-gray-500 dark:bg-gray-700 dark:text-gray-400"
+                    >1</span
+                  >
+                </a>
+              </li>
+              <li>
+                <a
+                  href="#"
+                  class="group flex items-center rounded-lg bg-gray-50 p-3 text-base font-bold text-gray-900 hover:bg-gray-100 hover:shadow dark:bg-gray-600 dark:text-white dark:hover:bg-gray-500"
+                >
+                  <img
+                    src="https://img.freepik.com/free-vector/realistic-chips-package_1284-34786.jpg"
+                    class="size-20"
+                    alt=""
+                  />
+                  <span class="ms-3 flex-1 whitespace-nowrap"
+                    >Allooz chips
+                  </span>
+                  <span
+                    class="ms-3 inline-flex items-center justify-center rounded bg-gray-200 px-2 py-0.5 text-xs font-medium text-gray-500 dark:bg-gray-700 dark:text-gray-400"
+                    >1</span
+                  >
+                </a>
+              </li>
+              <li>
+                <a
+                  href="#"
+                  class="group flex items-center rounded-lg bg-gray-50 p-3 text-base font-bold text-gray-900 hover:bg-gray-100 hover:shadow dark:bg-gray-600 dark:text-white dark:hover:bg-gray-500"
+                >
+                  <img
+                    src="https://img.freepik.com/free-vector/realistic-chips-package_1284-34786.jpg"
+                    class="size-20"
+                    alt=""
+                  />
+                  <span class="ms-3 flex-1 whitespace-nowrap"
+                    >Allooz chips
+                  </span>
+                  <span
+                    class="ms-3 inline-flex items-center justify-center rounded bg-gray-200 px-2 py-0.5 text-xs font-medium text-gray-500 dark:bg-gray-700 dark:text-gray-400"
+                    >1</span
+                  >
+                </a>
+              </li>
+              <li>
+                <a
+                  href="#"
+                  class="group flex items-center rounded-lg bg-gray-50 p-3 text-base font-bold text-gray-900 hover:bg-gray-100 hover:shadow dark:bg-gray-600 dark:text-white dark:hover:bg-gray-500"
+                >
+                  <img
+                    src="https://img.freepik.com/free-vector/realistic-chips-package_1284-34786.jpg"
+                    class="size-20"
+                    alt=""
+                  />
+                  <span class="ms-3 flex-1 whitespace-nowrap"
+                    >Allooz chips
+                  </span>
+                  <span
+                    class="ms-3 inline-flex items-center justify-center rounded bg-gray-200 px-2 py-0.5 text-xs font-medium text-gray-500 dark:bg-gray-700 dark:text-gray-400"
+                    >1</span
+                  >
+                </a>
+              </li>
+              <li>
+                <a
+                  href="#"
+                  class="group flex items-center rounded-lg bg-gray-50 p-3 text-base font-bold text-gray-900 hover:bg-gray-100 hover:shadow dark:bg-gray-600 dark:text-white dark:hover:bg-gray-500"
+                >
+                  <img
+                    src="https://img.freepik.com/free-vector/realistic-chips-package_1284-34786.jpg"
+                    class="size-20"
+                    alt=""
+                  />
+                  <span class="ms-3 flex-1 whitespace-nowrap"
+                    >Allooz chips
+                  </span>
+                  <span
+                    class="ms-3 inline-flex items-center justify-center rounded bg-gray-200 px-2 py-0.5 text-xs font-medium text-gray-500 dark:bg-gray-700 dark:text-gray-400"
+                    >1</span
+                  >
+                </a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- Modal Section  -->
     <!-- Footer Section  -->
 
     <footer class="bg-[#14213D] shadow dark:bg-gray-900">
@@ -1036,7 +1176,7 @@
 
       const cartButtons = document.querySelectorAll(".badgeBox");
       const addButtons = document.querySelectorAll(".addToCart");
-      let count = 0;
+      let count = 1;
       addButtons.forEach((button) => {
         button.addEventListener("click", () => {
           cartButtons.forEach((cartButton) => {
