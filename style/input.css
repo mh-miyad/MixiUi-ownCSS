@@ -98,7 +98,7 @@
   }
 
   .drawer-toggle {
-    @apply fixed right-0 top-0 z-[99999] h-screen w-80 overflow-y-auto bg-white p-4 transition-transform delay-150 duration-300 ease-linear dark:bg-gray-800;
+    @apply fixed right-0 top-0 z-[99999] h-screen w-full max-w-lg  overflow-y-auto bg-white p-4 transition-transform delay-150 duration-300 ease-linear dark:bg-gray-800;
   }
   /* Navbar Part  */
 
