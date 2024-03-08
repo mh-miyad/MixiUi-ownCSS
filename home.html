@@ -38,12 +38,14 @@
               <li>
                 <button
                   type="button"
-                  data-modal-target="crypto-modal"
-                  data-modal-toggle="crypto-modal"
+                  data-drawer-target="drawer-right-example"
+                  data-drawer-show="drawer-right-example"
+                  data-drawer-placement="right"
+                  aria-controls="drawer-right-example"
                   class="btn btn-profile cart-btn relative inline-flex items-center"
                 >
                   <i class="bi bi-cart4"></i>
-                  <span class="mx-2">Add to Cart</span>
+                  <span class="sr-only">Add to Cart</span>
                   <div class="badgeBox">0</div>
                 </button>
               </li>
@@ -52,8 +54,10 @@
           <div class="block lg:hidden">
             <button
               type="button"
-              data-modal-target="crypto-modal"
-              data-modal-toggle="crypto-modal"
+              data-drawer-target="drawer-right-example"
+              data-drawer-show="drawer-right-example"
+              data-drawer-placement="right"
+              aria-controls="drawer-right-example"
               class="btn-profile cart-btn relative mx-5 inline-flex items-center rounded px-3 py-1"
             >
               <i class="bi bi-cart4 text-xl"></i>
@@ -120,18 +124,6 @@
             </li>
             <li>
               <button class="btn btn-lg btn-primary">Buy Tickets</button>
-            </li>
-            <li>
-              <button
-                type="button"
-                data-modal-target="crypto-modal"
-                data-modal-toggle="crypto-modal"
-                class="btn btn-profile cart-btn relative inline-flex items-center"
-              >
-                <i class="bi bi-cart4"></i>
-                <span class="mx-2">Add to Cart</span>
-                <div class="badgeBox">0</div>
-              </button>
             </li>
           </ul>
         </div>
@@ -1599,6 +1591,42 @@
         </div>
       </div>
     </div>
+    <!-- Modal Section  -->
+
+    <!-- drawer init and toggle -->
+
+    <!-- drawer component -->
+    <div
+      id="drawer-right-example"
+      class="drawer-toggle translate-x-full"
+      tabindex="-1"
+      aria-labelledby="drawer-right-label"
+    >
+      <h5
+        id="drawer-right-label"
+        class="mb-4 inline-flex items-center text-base font-semibold text-gray-500 dark:text-gray-400"
+      >
+        Your Cart Item
+      </h5>
+      <button
+        type="button"
+        data-drawer-hide="drawer-right-example"
+        aria-controls="drawer-right-example"
+        class="btn btn-xs absolute end-6 top-2.5 mr-9 inline-flex size-8 items-center"
+      >
+        <i class="bi bi-x-lg border text-2xl text-red-600"></i>
+        <span class="sr-only">Close menu</span>
+      </button>
+      <!--  Body Of drawer -->
+      <div>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Repudiandae,
+        dignissimos quo alias deleniti veniam, necessitatibus placeat deserunt
+        earum praesentium suscipit eos porro amet ipsum molestiae nostrum at
+        illo reiciendis consectetur?
+      </div>
+      <!--  Body Of drawer -->
+    </div>
+
     <!-- Modal Section  -->
     <!-- Footer Section  -->
 
