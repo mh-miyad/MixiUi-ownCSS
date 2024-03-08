@@ -1,12 +1,14 @@
 //  Add To Cart Functionality
 const cartButtons = document.querySelectorAll(".badgeBox");
-const addButtons = document.querySelector(".addToCart");
+const addButtons = document.querySelectorAll(".addToCart");
 let count = 1;
-addButtons.addEventListener("click", () => {
-  cartButtons.forEach((cartButton) => {
-    cartButton.textContent = count;
+addButtons.forEach((button) => {
+  button.addEventListener("click", () => {
+    cartButtons.forEach((cartButton) => {
+      cartButton.textContent = count;
+    });
+    count++;
   });
-  count++;
 });
 //  Add To Cart Functionality
 //?  Add Here Swiper Js Code
