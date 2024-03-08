@@ -41,12 +41,14 @@
               <li>
                 <button
                   type="button"
-                  data-modal-target="crypto-modal"
-                  data-modal-toggle="crypto-modal"
+                  data-drawer-target="drawer-right-example"
+                  data-drawer-show="drawer-right-example"
+                  data-drawer-placement="right"
+                  aria-controls="drawer-right-example"
                   class="btn btn-profile cart-btn relative inline-flex items-center"
                 >
                   <i class="bi bi-cart4"></i>
-                  <span class="mx-2">Add to Cart</span>
+                  <span class="sr-only">Add to Cart</span>
                   <div class="badgeBox">0</div>
                 </button>
               </li>
@@ -55,8 +57,10 @@
           <div class="block lg:hidden">
             <button
               type="button"
-              data-modal-target="crypto-modal"
-              data-modal-toggle="crypto-modal"
+              data-drawer-target="drawer-right-example"
+              data-drawer-show="drawer-right-example"
+              data-drawer-placement="right"
+              aria-controls="drawer-right-example"
               class="btn-profile cart-btn relative mx-5 inline-flex items-center rounded px-3 py-1"
             >
               <i class="bi bi-cart4 text-xl"></i>
@@ -123,18 +127,6 @@
             </li>
             <li>
               <button class="btn btn-lg btn-primary">Buy Tickets</button>
-            </li>
-            <li>
-              <button
-                type="button"
-                data-modal-target="crypto-modal"
-                data-modal-toggle="crypto-modal"
-                class="btn btn-profile cart-btn relative inline-flex items-center"
-              >
-                <i class="bi bi-cart4"></i>
-                <span class="mx-2">Add to Cart</span>
-                <div class="badgeBox">0</div>
-              </button>
             </li>
           </ul>
         </div>
@@ -342,18 +334,6 @@
     <!-- Modal Section  -->
 
     <!-- drawer init and toggle -->
-    <div class="text-center">
-      <button
-        class="btn btn-profile"
-        type="button"
-        data-drawer-target="drawer-right-example"
-        data-drawer-show="drawer-right-example"
-        data-drawer-placement="right"
-        aria-controls="drawer-right-example"
-      >
-        Show right drawer
-      </button>
-    </div>
 
     <!-- drawer component -->
     <div
@@ -1374,54 +1354,6 @@
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
     <script src="./js/flowbite.js"></script>
     <script src="./js/tw-elements.umd.min.js"></script>
-    <script>
-      // Add To Cart Functionality
-
-      const cartButtons = document.querySelectorAll(".badgeBox");
-      const addButtons = document.querySelector(".addToCart");
-      let count = 1;
-      addButtons.addEventListener("click", () => {
-        cartButtons.forEach((cartButton) => {
-          cartButton.textContent = count;
-        });
-        count++;
-      });
-    </script>
-    <script>
-      var swiper = new Swiper(".mySwiper", {
-        slidesPerView: 1,
-        spaceBetween: 10,
-        autoplay: {
-          delay: 2500,
-          disableOnInteraction: false,
-        },
-        pagination: {
-          el: ".swiper-pagination",
-          clickable: true,
-        },
-        breakpoints: {
-          640: {
-            slidesPerView: 2,
-            spaceBetween: 20,
-          },
-          768: {
-            slidesPerView: 2,
-            spaceBetween: 4,
-          },
-          890: {
-            slidesPerView: 3,
-            spaceBetween: 10,
-          },
-          1024: {
-            slidesPerView: 3,
-            spaceBetween: 10,
-          },
-          1320: {
-            slidesPerView: 4,
-            spaceBetween: 10,
-          },
-        },
-      });
-    </script>
+    <script src="./js/custom.js"></script>
   </body>
 </html>
