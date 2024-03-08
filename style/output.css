@@ -7843,14 +7843,6 @@ select{
     margin-bottom: 9rem;
   }
 
-  .xl\:mt-36{
-    margin-top: 9rem;
-  }
-
-  .xl\:h-60{
-    height: 15rem;
-  }
-
   .xl\:h-72{
     height: 18rem;
   }
@@ -7887,10 +7879,6 @@ select{
   .\32xl\:my-40{
     margin-top: 10rem;
     margin-bottom: 10rem;
-  }
-
-  .\32xl\:mt-40{
-    margin-top: 10rem;
   }
 
   .\32xl\:h-52{
