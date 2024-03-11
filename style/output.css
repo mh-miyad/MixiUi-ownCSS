@@ -1453,10 +1453,6 @@ select{
   border-radius: 0px;
 }
 
-.form-radio{
-  border-radius: 100%;
-}
-
 .form-checkbox:focus,.form-radio:focus{
   outline: 2px solid transparent;
   outline-offset: 2px;
@@ -1483,18 +1479,6 @@ select{
 
 @media (forced-colors: active) {
   .form-checkbox:checked{
-    -webkit-appearance: auto;
-       -moz-appearance: auto;
-            appearance: auto;
-  }
-}
-
-.form-radio:checked{
-  background-image: url("data:image/svg+xml,%3csvg viewBox='0 0 16 16' fill='white' xmlns='http://www.w3.org/2000/svg'%3e%3ccircle cx='8' cy='8' r='3'/%3e%3c/svg%3e");
-}
-
-@media (forced-colors: active) {
-  .form-radio:checked{
     -webkit-appearance: auto;
        -moz-appearance: auto;
             appearance: auto;
@@ -1835,11 +1819,6 @@ select{
 .\!my-0{
   margin-top: 0px !important;
   margin-bottom: 0px !important;
-}
-
-.-mx-2{
-  margin-left: -0.5rem;
-  margin-right: -0.5rem;
 }
 
 .mx-1{
@@ -3640,11 +3619,6 @@ select{
   background-color: rgb(238 238 238 / var(--tw-bg-opacity));
 }
 
-.bg-\[\#fca311\]{
-  --tw-bg-opacity: 1;
-  background-color: rgb(252 163 17 / var(--tw-bg-opacity));
-}
-
 .bg-\[\#fca311\]\/60{
   background-color: rgb(252 163 17 / 0.6);
 }
@@ -4588,11 +4562,6 @@ select{
 .text-green-600{
   --tw-text-opacity: 1;
   color: rgb(5 122 85 / var(--tw-text-opacity));
-}
-
-.text-indigo-500{
-  --tw-text-opacity: 1;
-  color: rgb(104 117 245 / var(--tw-text-opacity));
 }
 
 .text-info{
@@ -6241,10 +6210,6 @@ select{
   border-radius: 50%;
 }
 
-.focus\:border-none:focus{
-  border-style: none;
-}
-
 .focus\:\!border-\[\#14a44d\]:focus{
   --tw-border-opacity: 1 !important;
   border-color: rgb(20 164 77 / var(--tw-border-opacity)) !important;
@@ -7749,20 +7714,12 @@ select{
     height: 100vh;
   }
 
-  .md\:max-w-sm{
-    max-width: 24rem;
-  }
-
-  .md\:max-w-xl{
-    max-width: 36rem;
-  }
-
-  .md\:max-w-2xl{
-    max-width: 42rem;
-  }
-
   .md\:max-w-3xl{
     max-width: 48rem;
+  }
+
+  .md\:max-w-sm{
+    max-width: 24rem;
   }
 
   .md\:flex-row{
@@ -7942,12 +7899,12 @@ select{
     height: 18rem;
   }
 
-  .xl\:max-w-sm{
-    max-width: 24rem;
-  }
-
   .xl\:max-w-2xl{
     max-width: 42rem;
+  }
+
+  .xl\:max-w-sm{
+    max-width: 24rem;
   }
 
   .xl\:grid-cols-3{
