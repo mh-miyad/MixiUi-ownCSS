@@ -1479,53 +1479,36 @@
             <h1 class="text-2xl font-semibold">Shopping Cart</h1>
             <h2 class="text-2xl font-semibold">3 Items</h2>
           </div>
-          <div class="mb-5 mt-10 flex items-center justify-between">
-            <h3 class="text-xs font-semibold uppercase text-gray-600">
-              Product Details
-            </h3>
-            <h3 class="text-xs font-semibold uppercase text-gray-600">
-              Quantity
-            </h3>
-            <h3 class="text-xs font-semibold uppercase text-gray-600">Price</h3>
-            <h3 class="text-xs font-semibold uppercase text-gray-600">Total</h3>
-          </div>
-          <div class="flex items-center px-6 py-5 hover:bg-gray-100">
-            <div class="flex">
-              <!-- product -->
-              <div class="">
-                <img
-                  class="h-24 w-24 object-cover object-center"
-                  src="https://chaldn.com/_mpimage/cadbury-dairy-milk-silk-roast-almond-chocolate-bar-143-gm?src=https%3A%2F%2Feggyolk.chaldal.com%2Fapi%2FPicture%2FRaw%3FpictureId%3D128513&q=best&v=1&m=400&webp=1"
-                  alt=""
-                />
-              </div>
-              <div
-                class="ml-4 flex flex-grow flex-col items-center justify-between"
-              >
-                <span class="text-sm font-bold">Chocolate Bar</span>
-              </div>
-            </div>
-            <div class="flex justify-center">
-              <svg class="w-3 fill-current text-gray-600" viewBox="0 0 448 512">
-                <path
-                  d="M416 208H32c-17.67 0-32 14.33-32 32v32c0 17.67 14.33 32 32 32h384c17.67 0 32-14.33 32-32v-32c0-17.67-14.33-32-32-32z"
-                />
-              </svg>
-
-              <input
-                class="mx-2 w-8 border text-center"
-                type="text"
-                value="1"
+          <!-- item one  -->
+          <div class="flex items-center justify-between border-b pb-5">
+            <div class="flex items-center gap-4">
+              <img
+                class="h-24 w-24 object-cover object-center"
+                src="https://chaldn.com/_mpimage/cadbury-dairy-milk-silk-roast-almond-chocolate-bar-143-gm?src=https%3A%2F%2Feggyolk.chaldal.com%2Fapi%2FPicture%2FRaw%3FpictureId%3D128513&q=best&v=1&m=400&webp=1"
+                alt=""
               />
-
-              <svg class="w-3 fill-current text-gray-600" viewBox="0 0 448 512">
-                <path
-                  d="M416 208H272V64c0-17.67-14.33-32-32-32h-32c-17.67 0-32 14.33-32 32v144H32c-17.67 0-32 14.33-32 32v32c0 17.67 14.33 32 32 32h144v144c0 17.67 14.33 32 32 32h32c17.67 0 32-14.33 32-32V304h144c17.67 0 32-14.33 32-32v-32c0-17.67-14.33-32-32-32z"
-                />
-              </svg>
+              <h2 class="text-lg font-semibold">Alooz Chips</h2>
             </div>
-            <span class="text-center text-sm font-semibold">$400.00</span>
-            <span class="text-center text-sm font-semibold">$400.00</span>
+            <div class="flex items-center gap-2">
+              <label for="cart-shopping" class="sr-only">Quantity</label>
+              <button
+                class="border border-black/50 px-3 py-1 text-lg font-bold"
+              >
+                -
+              </button>
+              <input
+                type="text"
+                id="cart-shopping"
+                value="1"
+                class="form-input w-10 py-1.5 text-center"
+                name="cart-shopping"
+              />
+              <button
+                class="border border-black/50 px-3 py-1 text-lg font-bold"
+              >
+                +
+              </button>
+            </div>
           </div>
 
           <a href="#" class="mt-10 flex text-sm font-semibold text-[#14213D]">
