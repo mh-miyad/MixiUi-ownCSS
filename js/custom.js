@@ -13,48 +13,48 @@ addButtons.forEach((button) => {
 //  Add To Cart Functionality
 //?  Add Here Swiper Js Code
 
-document.addEventListener("DOMContentLoaded", function () {
-  var swiper = new Swiper(".mySwiper", {
-    slidesPerView: 1,
-    spaceBetween: 10,
-    autoplay: {
-      delay: 2500,
-      disableOnInteraction: false,
-    },
-    pagination: {
-      el: ".swiper-pagination",
-      clickable: true,
-    },
-    breakpoints: {
-      640: {
-        slidesPerView: 2,
-        spaceBetween: 20,
-      },
-      768: {
-        slidesPerView: 2,
-        spaceBetween: 10,
-      },
-      890: {
-        slidesPerView: 3,
-        spaceBetween: 10,
-      },
-      1024: {
-        slidesPerView: 3,
-        spaceBetween: 10,
-      },
-      1200: {
-        slidesPerView: 4,
-        spaceBetween: 20,
-      },
-      1320: {
-        slidesPerView: 4,
-        spaceBetween: 20,
-      },
-    },
-  });
+// document.addEventListener("DOMContentLoaded", function () {
+//   var swiper = new Swiper(".mySwiper", {
+//     slidesPerView: 1,
+//     spaceBetween: 10,
+//     autoplay: {
+//       delay: 2500,
+//       disableOnInteraction: false,
+//     },
+//     pagination: {
+//       el: ".swiper-pagination",
+//       clickable: true,
+//     },
+//     breakpoints: {
+//       640: {
+//         slidesPerView: 2,
+//         spaceBetween: 20,
+//       },
+//       768: {
+//         slidesPerView: 2,
+//         spaceBetween: 10,
+//       },
+//       890: {
+//         slidesPerView: 3,
+//         spaceBetween: 10,
+//       },
+//       1024: {
+//         slidesPerView: 3,
+//         spaceBetween: 10,
+//       },
+//       1200: {
+//         slidesPerView: 4,
+//         spaceBetween: 20,
+//       },
+//       1320: {
+//         slidesPerView: 4,
+//         spaceBetween: 20,
+//       },
+//     },
+//   });
 
-  //?  Add Here Swiper Js Code
-});
+//   //?  Add Here Swiper Js Code
+// });
 
 const addToCalendarButton = document.querySelector("#addToCalendarButton");
 
@@ -79,4 +79,21 @@ addToCalendarButton.addEventListener("click", () => {
 
   window.open(calendarLink, "_blank"); // Open calendar link in new tab
   console.log(eventDetails); // Or use clipboard API to copy to clipboard
+});
+
+document.addEventListener("DOMContentLoaded", function () {
+  const form = document.querySelector(".checkout-form form");
+
+  form.addEventListener("submit", function (event) {
+    event.preventDefault(); // Prevent the form from submitting
+
+    const formData = new FormData(form);
+    const formValues = {};
+
+    for (const [key, value] of formData.entries()) {
+      formValues[key] = value;
+    }
+
+    console.log(formValues);
+  });
 });

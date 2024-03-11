@@ -146,10 +146,10 @@
             <hr />
 
             <div
-              class="flex flex-col items-center justify-between border-b bg-[#fca311] border-gray-300"
+              class="flex flex-col items-center justify-between border-b border-gray-300 bg-[#fca311]"
             >
               <div
-                class="flex justify-center gap-2  px-3 py-4 text-center text-2xl font-bold text-white sm:flex-row sm:justify-start"
+                class="flex justify-center gap-2 px-3 py-4 text-center text-2xl font-bold text-white sm:flex-row sm:justify-start"
               >
                 <i class="bi bi-clock"></i>
                 <span id="timer">8.00</span>
@@ -163,118 +163,123 @@
 
             <section class="checkout-form px-5 pb-10 pt-3">
               <form action="#!" method="get">
-                <h6>Contact information</h6>
-                <div class="form-control">
-                  <label for="checkout-email">E-mail</label>
-                  <div>
-                    <span class="fa fa-envelope"></span>
-                    <input
-                      type="email"
-                      id="checkout-email"
-                      name="checkout-email"
-                      placeholder="Enter your email..."
-                    />
-                  </div>
-                </div>
-                <div class="form-control">
-                  <label for="checkout-phone">Phone</label>
-                  <input
-                    type="tel"
-                    name="checkout-phone"
-                    id="checkout-phone"
-                    placeholder="Enter you phone..."
-                  />
-                </div>
-                <br />
-                <h6>Shipping address</h6>
-                <div class="form-control">
-                  <label for="checkout-name">Full name</label>
-                  <div>
-                    <span class="fa fa-user-circle"></span>
-                    <input
-                      type="text"
-                      id="checkout-name"
-                      name="checkout-name"
-                      placeholder="Enter you name..."
-                    />
-                  </div>
-                </div>
-                <div class="form-control">
-                  <label for="checkout-address">Address</label>
-                  <div>
-                    <span class="fa fa-home"></span>
-                    <input
-                      type="text"
-                      name="checkout-address"
-                      id="checkout-address"
-                      placeholder="Your address..."
-                    />
-                  </div>
-                </div>
-                <div class="form-control">
-                  <label for="checkout-city">City</label>
-                  <div>
-                    <span class="fa fa-building"></span>
-                    <input
-                      type="text"
-                      name="checkout-city"
-                      id="checkout-city"
-                      placeholder="Your city..."
-                    />
-                  </div>
-                </div>
-                <div class="form-group">
-                  <div class="form-control">
-                    <label for="checkout-country">Country</label>
-                    <div>
-                      <span class="fa fa-globe"></span>
+                <div>
+                  <h2 class="text-xl my-2 font-medium">Ticket Buyer</>
+                  <div class="flex items-center justify-between gap-5">
+                    <div class="form-control flex-grow">
+                      <label for="ticket-Buyer-first-name" class="sr-only"
+                        >First Name
+                      </label>
                       <input
                         type="text"
-                        name="checkout-country"
-                        id="checkout-country"
-                        placeholder="Your country..."
-                        list="country-list"
+                        id="ticket-Buyer-first-name"
+                        name="ticket-Buyer-first-name"
+                        placeholder="First Name "
                       />
-                      <datalist id="country-list">
-                        <option value="India"></option>
-                        <option value="USA"></option>
-                        <option value="Russia"></option>
-                        <option value="Japan"></option>
-                        <option value="Egypt"></option>
-                      </datalist>
                     </div>
-                  </div>
-                  <div class="form-control">
-                    <label for="checkout-postal">Postal code</label>
-                    <div>
-                      <span class="fa fa-archive"></span>
+                    <div class="form-control flex-grow">
+                      <label for="ticket-Buyer-last-name" class="sr-only"
+                        >Last Name
+                      </label>
                       <input
-                        type="numeric"
-                        name="checkout-postal"
-                        id="checkout-postal"
-                        placeholder="Your postal code..."
+                        type="text"
+                        id="ticket-Buyer-last-name"
+                        name="ticket-Buyer-last-name"
+                        placeholder="Last Name "
+                      />
+                    </div>
+                  </div>
+                  <div class="flex items-center justify-between gap-5">
+                    <div class="form-control flex-grow">
+                      <label for="ticket-Buyer-email" class="sr-only"
+                        >email
+                      </label>
+                      <input
+                        type="email"
+                        id="ticket-Buyer-email"
+                        name="ticket-Buyer-email"
+                        placeholder="Email"
+                      />
+                    </div>
+                    <div class="form-control flex-grow">
+                      <label for="ticket-Buyer-confirm-email" class="sr-only"
+                        >Confirm Email
+                      </label>
+                      <input
+                        type="text"
+                        id="ticket-Buyer-confirm-email"
+                        name="ticket-Buyer-confirm-email"
+                        placeholder="Confirm Email"
                       />
                     </div>
                   </div>
                 </div>
-                <div class="form-control checkbox-control">
-                  <input
-                    type="checkbox"
-                    name="checkout-checkbox"
-                    id="checkout-checkbox"
-                  />
-                  <label for="checkout-checkbox"
-                    >Save this information for next time</label
-                  >
+                
+                <div>
+                  <h2 class="text-xl my-2 font-medium">Ticket Buyer <span class="text-xs"> ( Your Card Info is not stored in EvensPro Website )</span> </h2>
+                  <div class="flex items-center justify-between gap-5">
+                    <div class="form-control flex-grow">
+                      <label for="ticket-Buyer-first-name" class="sr-only"
+                        >First Name
+                      </label>
+                      <input
+                        type="text"
+                        id="ticket-Buyer-first-name"
+                        name="ticket-Buyer-first-name"
+                        placeholder="First Name "
+                      />
+                    </div>
+                    <div class="form-control flex-grow">
+                      <label for="ticket-Buyer-last-name" class="sr-only"
+                        >Last Name
+                      </label>
+                      <input
+                        type="text"
+                        id="ticket-Buyer-last-name"
+                        name="ticket-Buyer-last-name"
+                        placeholder="Last Name "
+                      />
+                    </div>
+                  </div>
+                  <div class="flex items-center justify-between gap-5">
+                    <div class="form-control flex-grow">
+                      <label for="ticket-Buyer-email" class="sr-only"
+                        >email
+                      </label>
+                      <input
+                        type="email"
+                        id="ticket-Buyer-email"
+                        name="ticket-Buyer-email"
+                        placeholder="Email"
+                      />
+                    </div>
+                    <div class="form-control flex-grow">
+                      <label for="ticket-Buyer-confirm-email" class="sr-only"
+                        >Confirm Email
+                      </label>
+                      <input
+                        type="text"
+                        id="ticket-Buyer-confirm-email"
+                        name="ticket-Buyer-confirm-email"
+                        placeholder="Confirm Email"
+                      />
+                    </div>
+                  </div>
                 </div>
+                
+               
+              
                 <div class="-mx-2 mb-3 flex">
                   <div class="px-2">
-                    <label for="type1" class="flex cursor-pointer items-center">
+                    <label
+                      for="default-payment-1"
+                      class="flex cursor-pointer items-center"
+                    >
                       <input
                         type="radio"
                         class="form-radio h-5 w-5 text-indigo-500"
-                        name="type"
-                        id="type1"
+                        name="default-payment-1"
+                        id="default-payment-2"
                         checked
                       />
                       <img
@@ -284,12 +289,15 @@
                     </label>
                   </div>
                   <div class="px-2">
-                    <label for="type2" class="flex cursor-pointer items-center">
+                    <label
+                      for="default-payment-1"
+                      class="flex cursor-pointer items-center"
+                    >
                       <input
                         type="radio"
                         class="form-radio h-5 w-5 text-indigo-500"
-                        name="type"
-                        id="type2"
+                        name="default-payment-1"
+                        id="default-payment-1"
                       />
                       <img
                         src="https://www.sketchappsources.com/resources/source-image/PayPalCard.png"
@@ -299,7 +307,7 @@
                   </div>
                 </div>
                 <div class="form-control-btn">
-                  <button type="button" class="btn btn-primary mt-4 capitalize">
+                  <button type="submit" class="btn btn-primary mt-4 capitalize">
                     checkout
                   </button>
                 </div>
