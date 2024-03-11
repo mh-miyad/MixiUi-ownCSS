@@ -7868,8 +7868,16 @@ select{
     flex-direction: row;
   }
 
+  .lg\:flex-nowrap{
+    flex-wrap: nowrap;
+  }
+
   .lg\:justify-start{
     justify-content: flex-start;
+  }
+
+  .lg\:justify-between{
+    justify-content: space-between;
   }
 
   .lg\:px-3{
