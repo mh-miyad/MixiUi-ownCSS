@@ -216,30 +216,42 @@
                 </div>
                 
                 <div>
-                  <h2 class="text-xl my-2 font-medium">Ticket Buyer <span class="text-xs"> ( Your Card Info is not stored in EvensPro Website )</span> </h2>
+                  <h2 class="text-2xl my-2 font-bold">Payment<span class="text-xs mx-2"> ( Your Card Info is not stored in EvensPro Website )</span> </h2>
                   <div class="flex items-center justify-between gap-5">
                     <div class="form-control flex-grow">
-                      <label for="ticket-Buyer-first-name" class="sr-only"
-                        >First Name
+                      <label for="ticket-Buyer-card-type" class="sr-only"
+                        >ticket-Buyer-card-type
                       </label>
-                      <input
-                        type="text"
-                        id="ticket-Buyer-first-name"
-                        name="ticket-Buyer-first-name"
-                        placeholder="First Name "
-                      />
+                     <select name="ticket-Buyer-card-type" id="ticket-Buyer-card-type">
+                      <option value="Select Your Card type">Select Your Card type</option>
+                      <option value="paypal">paypal</option>
+                      <option value="visa">visa</option>
+                      <option value="American express">American express</option>
+                      <option value="Master Card">Master Card</option>
+                      <option value="Xoom">Xoom</option>
+                     </select>
                     </div>
                     <div class="form-control flex-grow">
-                      <label for="ticket-Buyer-last-name" class="sr-only"
-                        >Last Name
+                      <label for="ticket-Buyer-card-expiry" class="sr-only"
+                        >Expiry Month
                       </label>
-                      <input
-                        type="text"
-                        id="ticket-Buyer-last-name"
-                        name="ticket-Buyer-last-name"
-                        placeholder="Last Name "
-                      />
+                     <select name="ticket-Buyer-card-expiry" id="ticket-Buyer-card-expiry">
+                      <option value="Select Month">Select Expiry Month</option>
+                   <option value="January">January</option>
+                   <option value="February">February</option>
+                   <option value="March">March</option>
+                   <option value="April">April</option>
+                   <option value="May">May</option>
+                   <option value="June">June</option>
+                   <option value="July">July</option>
+                   <option value="August">August</option>
+                   <option value="September">September</option>
+                   <option value="October">October</option>
+                   <option value="Novembar">Novembar</option>
+                   <option value="Decembar">Decembar</option>
+                     </select>
                     </div>
+                    
                   </div>
                   <div class="flex items-center justify-between gap-5">
                     <div class="form-control flex-grow">
