@@ -106,7 +106,7 @@
 
       <!--  Header Content  -->
       <div class="header-content">
-        <h1>Product Details</h1>
+        <h1 class="sr-only">Checkout Page</h1>
       </div>
       <!--  Header Content  -->
     </header>
@@ -115,126 +115,144 @@
         class="mx-5 my-5 flex flex-col items-start justify-center gap-5 lg:flex-row"
       >
         <!--  left side Of main -->
-        <div
-          class="mx-auto w-full max-w-xl rounded-t-lg border border-gray-300"
-        >
-          <h3 class="caption-bottom py-4 text-center text-4xl font-bold">
-            Buyer Information
-          </h3>
-          <hr />
-          <section class="checkout-form px-5 pb-10 pt-3">
-            <form action="#!" method="get">
-              <h6>Contact information</h6>
-              <div class="form-control">
-                <label for="checkout-email">E-mail</label>
-                <div>
-                  <span class="fa fa-envelope"></span>
-                  <input
-                    type="email"
-                    id="checkout-email"
-                    name="checkout-email"
-                    placeholder="Enter your email..."
-                  />
-                </div>
-              </div>
-              <div class="form-control">
-                <label for="checkout-phone">Phone</label>
-                <input
-                  type="tel"
-                  name="checkout-phone"
-                  id="checkout-phone"
-                  placeholder="Enter you phone..."
-                />
-              </div>
-              <br />
-              <h6>Shipping address</h6>
-              <div class="form-control">
-                <label for="checkout-name">Full name</label>
-                <div>
-                  <span class="fa fa-user-circle"></span>
-                  <input
-                    type="text"
-                    id="checkout-name"
-                    name="checkout-name"
-                    placeholder="Enter you name..."
-                  />
-                </div>
-              </div>
-              <div class="form-control">
-                <label for="checkout-address">Address</label>
-                <div>
-                  <span class="fa fa-home"></span>
-                  <input
-                    type="text"
-                    name="checkout-address"
-                    id="checkout-address"
-                    placeholder="Your address..."
-                  />
-                </div>
-              </div>
-              <div class="form-control">
-                <label for="checkout-city">City</label>
-                <div>
-                  <span class="fa fa-building"></span>
-                  <input
-                    type="text"
-                    name="checkout-city"
-                    id="checkout-city"
-                    placeholder="Your city..."
-                  />
-                </div>
-              </div>
-              <div class="form-group">
+        <div>
+          <a href="./home.html" class="mx-auto mb-5">
+            <img
+              src="./Assets/Image/eventImage.png"
+              class="mx-auto rounded-sm object-cover"
+              alt=""
+            />
+          </a>
+          <div
+            class="mx-auto my-5 w-full max-w-xl rounded-t-lg border border-gray-300"
+          >
+            <h3
+              class="flex caption-bottom items-center justify-between px-3 py-4 text-center text-lg font-semibold text-[#141b38]"
+            >
+              Registration Information
+              <span class="text-sm text-gray-500"
+                >Have an account?
+                <a href="./login.html" class="underline underline-offset-2">
+                  Sign In</a
+                ></span
+              >
+            </h3>
+            <hr />
+
+            <section class="checkout-form px-5 pb-10 pt-3">
+              <form action="#!" method="get">
+                <h6>Contact information</h6>
                 <div class="form-control">
-                  <label for="checkout-country">Country</label>
+                  <label for="checkout-email">E-mail</label>
                   <div>
-                    <span class="fa fa-globe"></span>
+                    <span class="fa fa-envelope"></span>
+                    <input
+                      type="email"
+                      id="checkout-email"
+                      name="checkout-email"
+                      placeholder="Enter your email..."
+                    />
+                  </div>
+                </div>
+                <div class="form-control">
+                  <label for="checkout-phone">Phone</label>
+                  <input
+                    type="tel"
+                    name="checkout-phone"
+                    id="checkout-phone"
+                    placeholder="Enter you phone..."
+                  />
+                </div>
+                <br />
+                <h6>Shipping address</h6>
+                <div class="form-control">
+                  <label for="checkout-name">Full name</label>
+                  <div>
+                    <span class="fa fa-user-circle"></span>
                     <input
                       type="text"
-                      name="checkout-country"
-                      id="checkout-country"
-                      placeholder="Your country..."
-                      list="country-list"
+                      id="checkout-name"
+                      name="checkout-name"
+                      placeholder="Enter you name..."
                     />
-                    <datalist id="country-list">
-                      <option value="India"></option>
-                      <option value="USA"></option>
-                      <option value="Russia"></option>
-                      <option value="Japan"></option>
-                      <option value="Egypt"></option>
-                    </datalist>
                   </div>
                 </div>
                 <div class="form-control">
-                  <label for="checkout-postal">Postal code</label>
+                  <label for="checkout-address">Address</label>
                   <div>
-                    <span class="fa fa-archive"></span>
+                    <span class="fa fa-home"></span>
                     <input
-                      type="numeric"
-                      name="checkout-postal"
-                      id="checkout-postal"
-                      placeholder="Your postal code..."
+                      type="text"
+                      name="checkout-address"
+                      id="checkout-address"
+                      placeholder="Your address..."
                     />
                   </div>
                 </div>
-              </div>
-              <div class="form-control checkbox-control">
-                <input
-                  type="checkbox"
-                  name="checkout-checkbox"
-                  id="checkout-checkbox"
-                />
-                <label for="checkout-checkbox"
-                  >Save this information for next time</label
-                >
-              </div>
-              <div class="form-control-btn">
-                <button type="button" class="btn btn-primary mt-4 capitalize">
-                  checkout
-                </button>
-              </div>
-            </form>
-          </section>
+                <div class="form-control">
+                  <label for="checkout-city">City</label>
+                  <div>
+                    <span class="fa fa-building"></span>
+                    <input
+                      type="text"
+                      name="checkout-city"
+                      id="checkout-city"
+                      placeholder="Your city..."
+                    />
+                  </div>
+                </div>
+                <div class="form-group">
+                  <div class="form-control">
+                    <label for="checkout-country">Country</label>
+                    <div>
+                      <span class="fa fa-globe"></span>
+                      <input
+                        type="text"
+                        name="checkout-country"
+                        id="checkout-country"
+                        placeholder="Your country..."
+                        list="country-list"
+                      />
+                      <datalist id="country-list">
+                        <option value="India"></option>
+                        <option value="USA"></option>
+                        <option value="Russia"></option>
+                        <option value="Japan"></option>
+                        <option value="Egypt"></option>
+                      </datalist>
+                    </div>
+                  </div>
+                  <div class="form-control">
+                    <label for="checkout-postal">Postal code</label>
+                    <div>
+                      <span class="fa fa-archive"></span>
+                      <input
+                        type="numeric"
+                        name="checkout-postal"
+                        id="checkout-postal"
+                        placeholder="Your postal code..."
+                      />
+                    </div>
+                  </div>
+                </div>
+                <div class="form-control checkbox-control">
+                  <input
+                    type="checkbox"
+                    name="checkout-checkbox"
+                    id="checkout-checkbox"
+                  />
+                  <label for="checkout-checkbox"
+                    >Save this information for next time</label
+                  >
+                </div>
+                <div class="form-control-btn">
+                  <button type="button" class="btn btn-primary mt-4 capitalize">
+                    checkout
+                  </button>
+                </div>
+              </form>
+            </section>
+          </div>
         </div>
         <!--  left side Of main -->
         <!--  Right side Of main -->
