@@ -10,7 +10,7 @@
     />
     <link rel="stylesheet" href="./style/output.css" />
     <link rel="stylesheet" href="./style/Custom.css" />
-    <title>EvensPRO - Home</title>
+    <title>EvensPRO - Checkout </title>
   </head>
   <body>
     <header class="header-part">
@@ -110,16 +110,16 @@
       </div>
       <!--  Header Content  -->
     </header>
-    <main class="mx-auto mb-20 min-h-96 max-w-7xl">
+    <main class="mx-auto px-5  mb-20 min-h-96 max-w-7xl  sm:px-8 md:px-10">
       <section
-        class="mx-5 my-5 flex flex-col items-start justify-center gap-5 lg:flex-row"
+        class="mx-auto my-5 flex flex-col items-start justify-center gap-5 lg:flex-row"
       >
         <!--  left side Of main -->
         <div>
           <a href="./home.html" class="mx-auto">
             <img
               src="./Assets/Image/eventImage.png"
-              class="mx-auto rounded-sm object-cover"
+              class="mx-auto rounded-sm px-5  object-cover"
               alt=""
             />
           </a>
@@ -131,13 +131,12 @@
           </p>
 
            <div
-            class=" mx-10 my-5 w-full  rounded-t-lg border border-gray-300 bg-slate-50/30 md:max-w-3xl xl:max-w-2xl"
+            class=" mx-auto my-5 w-full max-w-xs  rounded-t-lg border border-gray-300 bg-slate-50/30 md:max-w-3xl xl:max-w-2xl"
           >
-        
-            <h2 class="text-3xl font-semibold mb-4 p-4"> Order Summery </h2>
+<h2 class="text-3xl font-semibold mb-4 p-4"> Order Summery </h2>
 <div class="relative overflow-x-auto shadow-md sm:rounded-lg">
-    <table class="w-full text-sm text-left rtl:text-right text-gray-500 dark:text-gray-400">
-        <thead class="text-xs text-gray-700 uppercase bg-gray-50 dark:bg-gray-700 dark:text-gray-400">
+    <table class="w-full text-sm text-left  text-gray-500 dark:text-gray-400">
+        <thead class="text-xs text-gray-700 uppercase bg-gray-100">
             <tr>
                 <th scope="col" class="px-6 py-3">
                     Ticket Type
@@ -209,12 +208,9 @@
         </tbody>
     </table>
 </div>
-
-        
-        </div>
-
+</div>
           <div
-            class="mx-10  my-5 w-full xl:max-w-2xl  rounded-t-lg border border-gray-300 bg-slate-50/30 md:max-w-3xl"
+            class="mx-auto max-w-xs my-5 w-full xl:max-w-2xl  rounded-t-lg border border-gray-300 bg-slate-50/30 md:max-w-3xl"
           >
             <h3
               class="flex caption-bottom items-center justify-between px-3 py-4 text-center text-lg font-semibold text-[#141b38]"
@@ -230,15 +226,15 @@
             <hr />
 
             <div
-              class="flex flex-col items-center justify-between border-b border-gray-300 "
+              class="flex  flex-col md:flex-row  items-center justify-between border-b border-gray-300 "
             >
               <div
-                class="flex justify-center gap-2 px-3 py-4 text-center text-2xl font-bold text-white sm:flex-row sm:justify-start"
+                class="flex justify-center flex-grow w-full md:w-fit  md:flex-grow-0 bg-[#fca311] gap-2 px-3 py-4 text-center text-2xl font-bold text-white"
               >
                 <i class="bi bi-clock"></i>
                 <span id="timer">8.00</span>
               </div>
-              <p class="bg-[#fca311]/60 p-3 text-sm capitalize">
+              <p class="bg-[#fca311]/60 p-3 flex-grow md:flex-grow-0 text-sm capitalize">
                 Please Complete registration within 8.00 minutes br After 8.00
                 minutes , the reservation we're holding will be released to
                 other .
@@ -430,7 +426,7 @@
                      <textarea 
                      class="rounded-lg resize-none"
                      placeholder="Address" 
-                     name="ticket-Buyer-card-address" title="ticket-Buyer-card-address" id="ticket-Buyer-card-address" cols="40" rows="6"></textarea>
+                     name="ticket-Buyer-card-address" title="ticket-Buyer-card-address" id="ticket-Buyer-card-address" cols="25" rows="6"></textarea>
                     </div>
                     
                   </div>
@@ -438,7 +434,7 @@
                   
                 </div>
                 
-                <div class="form-control-btn flex justify-between items-center">
+                <div class="form-control-btn gap-2  flex flex-col md:flex-row justify-between items-center">
                   <button type="submit" class="btn btn-profile  mt-4 capitalize">
                     Payment
                   </button>

@@ -3781,6 +3781,16 @@ select{
   background-color: rgb(63 63 70 / var(--tw-bg-opacity));
 }
 
+.bg-\[\#fca311\]{
+  --tw-bg-opacity: 1;
+  background-color: rgb(252 163 17 / var(--tw-bg-opacity));
+}
+
+.bg-gray-500{
+  --tw-bg-opacity: 1;
+  background-color: rgb(107 114 128 / var(--tw-bg-opacity));
+}
+
 .bg-clip-padding{
   background-clip: padding-box;
 }
@@ -7627,6 +7637,10 @@ select{
     max-width: 28rem;
   }
 
+  .sm\:flex-grow-0{
+    flex-grow: 0;
+  }
+
   .sm\:grid-cols-2{
     grid-template-columns: repeat(2, minmax(0, 1fr));
   }
@@ -7658,6 +7672,11 @@ select{
   .sm\:px-4{
     padding-left: 1rem;
     padding-right: 1rem;
+  }
+
+  .sm\:px-8{
+    padding-left: 2rem;
+    padding-right: 2rem;
   }
 
   .sm\:text-center{
@@ -7714,12 +7733,25 @@ select{
     height: 100vh;
   }
 
+  .md\:w-0{
+    width: 0px;
+  }
+
+  .md\:w-fit{
+    width: -moz-fit-content;
+    width: fit-content;
+  }
+
   .md\:max-w-3xl{
     max-width: 48rem;
   }
 
   .md\:max-w-sm{
     max-width: 24rem;
+  }
+
+  .md\:flex-grow-0{
+    flex-grow: 0;
   }
 
   .md\:flex-row{
@@ -7743,6 +7775,11 @@ select{
   .md\:py-8{
     padding-top: 2rem;
     padding-bottom: 2rem;
+  }
+
+  .md\:px-10{
+    padding-left: 2.5rem;
+    padding-right: 2.5rem;
   }
 
   .md\:pr-1{
