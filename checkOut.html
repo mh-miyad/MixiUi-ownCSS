@@ -255,75 +255,119 @@
                   </div>
                   <div class="flex items-center justify-between gap-5">
                     <div class="form-control flex-grow">
-                      <label for="ticket-Buyer-email" class="sr-only"
-                        >email
-                      </label>
-                      <input
-                        type="email"
-                        id="ticket-Buyer-email"
-                        name="ticket-Buyer-email"
-                        placeholder="Email"
-                      />
-                    </div>
-                    <div class="form-control flex-grow">
-                      <label for="ticket-Buyer-confirm-email" class="sr-only"
-                        >Confirm Email
+                      <label for="ticket-Buyer-card-number" class="sr-only"
+                        >Card Number 
                       </label>
                       <input
                         type="text"
-                        id="ticket-Buyer-confirm-email"
-                        name="ticket-Buyer-confirm-email"
-                        placeholder="Confirm Email"
+                        id="ticket-Buyer-card-number"
+                        name="ticket-Buyer-card-number"
+                        placeholder="Card Number "
                       />
                     </div>
+                    <div class="form-control flex-grow">
+                      <label for="ticket-Buyer-year" class="sr-only"
+                        >ticket-Buyer-card-year
+                      </label>
+                     <select name="ticket-Buyer-year" id="ticket-Buyer-year">
+                      <option value="Select Year">Year</option>
+                      <option value="Select Year">Select year</option>
+                      <option value="2023">2023</option>
+                      <option value="2024">2024</option>
+                      <option value="2025">2025</option>
+                    
+                     </select>
+                    </div>
+                    <div class="form-control flex-grow">
+                      <label for="ticket-Buyer-card-csv/csc" class="sr-only"
+                        >CSV/CSC
+                      </label>
+                      <input
+                        type="text"
+                        id="ticket-Buyer-card-csv/csc"
+                        name="ticket-Buyer-card-csv/csc"
+                        placeholder="CSV/CSC "
+                      />
+                    </div>
+                    
                   </div>
+                  
                 </div>
                 
-               
-              
-                <div class="-mx-2 mb-3 flex">
-                  <div class="px-2">
-                    <label
-                      for="default-payment-1"
-                      class="flex cursor-pointer items-center"
-                    >
+                <div>
+                  <h2 class="text-2xl my-2 font-bold">Billing Information</h2>
+                  <div class="flex items-center justify-between gap-5">
+                   <div>
+                     <div class="form-control flex-grow">
+                      <label for="ticket-Buyer-country" class="sr-only"
+                        >ticket-Buyer-card-type
+                      </label>
+                     <select name="ticket-Buyer-country" id="ticket-Buyer-country">
+                      <option value="Country">Country</option>
+                      <option value="Dubai">Dubai</option>
+                      <option value="UAE">UAE</option>
+                      <option value="USA">USA</option>
+                      <option value="India">India</option>
+                      <option value="Bangladesh">Bangladesh</option>
+                     
+                     </select>
+                    </div>
+                     <div class="form-control flex-grow">
+                      <label for="ticket-Buyer-city" class="sr-only"
+                        >ticket-Buyer-card-type
+                      </label>
+                     <select name="ticket-Buyer-city" id="ticket-Buyer-city">
+                      <option value="City">City</option>
+                      <option value="Dubai">Dubai</option>
+                      <option value="Jeddah">Jeddah</option>
+                      <option value="Riyadh">Riyadh</option>
+                      <option value="Kuwait">Kuwait</option>
+                    
+                     
+                     </select>
+                    </div>
+                    <div class="form-control flex-grow">
+                      <label for="ticket-Buyer-postalCode" class="sr-only"
+                        >Postal Code
+                      </label>
                       <input
-                        type="radio"
-                        class="form-radio h-5 w-5 text-indigo-500"
-                        name="default-payment-1"
-                        id="default-payment-2"
-                        checked
+                        type="text"
+                        id="ticket-Buyer-postalCode"
+                        name="ticket-Buyer-postalCode"
+                        placeholder="Postal Code"
                       />
-                      <img
+                    </div>
+
+                   </div>
+                    <div class="form-control flex-grow">
+                      <label for="ticket-Buyer-card-expiry" class="sr-only"
+                        >Text Area 
+                      </label>
+                     <textarea 
+                     class="rounded-lg resize-none"
+                     placeholder="Address" 
+                     name="ticket-Buyer-card-address" title="ticket-Buyer-card-address" id="ticket-Buyer-card-address" cols="30" rows="6"></textarea>
+                    </div>
+                    
+                  </div>
+                  
+                  
+                </div>
+                
+                <div class="form-control-btn flex justify-between items-center">
+                  <button type="submit" class="btn btn-profile  mt-4 capitalize">
+                    Payment
+                  </button>
+                   <img
                         src="https://leadershipmemphis.org/wp-content/uploads/2020/08/780370.png"
                         class="ml-3 h-8"
+                        alt="payemnt"
                       />
-                    </label>
-                  </div>
-                  <div class="px-2">
-                    <label
-                      for="default-payment-1"
-                      class="flex cursor-pointer items-center"
-                    >
-                      <input
-                        type="radio"
-                        class="form-radio h-5 w-5 text-indigo-500"
-                        name="default-payment-1"
-                        id="default-payment-1"
-                      />
-                      <img
-                        src="https://www.sketchappsources.com/resources/source-image/PayPalCard.png"
-                        class="ml-3 h-8"
-                      />
-                    </label>
-                  </div>
-                </div>
-                <div class="form-control-btn">
-                  <button type="submit" class="btn btn-primary mt-4 capitalize">
-                    checkout
-                  </button>
                 </div>
               </form>
+              <p class="text-center mt-5">
+                I accept the terms of service and have read the privacy policy. I agree to the evenspro policy and terms of service.
+              </p>
             </section>
           </div>
         </div>

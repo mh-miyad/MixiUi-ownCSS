@@ -3016,6 +3016,10 @@ select{
           user-select: all;
 }
 
+.resize-none{
+  resize: none;
+}
+
 .resize{
   resize: both;
 }
