@@ -1841,6 +1841,11 @@ select{
   margin-right: 0.75rem;
 }
 
+.mx-5{
+  margin-left: 1.25rem;
+  margin-right: 1.25rem;
+}
+
 .mx-\[10px\]{
   margin-left: 10px;
   margin-right: 10px;
@@ -1938,6 +1943,10 @@ select{
 
 .mb-4{
   margin-bottom: 1rem;
+}
+
+.mb-40{
+  margin-bottom: 10rem;
 }
 
 .mb-5{
@@ -7613,6 +7622,10 @@ select{
 
   .sm\:flex{
     display: flex;
+  }
+
+  .sm\:h-auto{
+    height: auto;
   }
 
   .sm\:max-w-md{
