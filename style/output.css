@@ -3619,6 +3619,11 @@ select{
   background-color: rgb(238 238 238 / var(--tw-bg-opacity));
 }
 
+.bg-\[\#fca311\]{
+  --tw-bg-opacity: 1;
+  background-color: rgb(252 163 17 / var(--tw-bg-opacity));
+}
+
 .bg-\[\#fca311\]\/60{
   background-color: rgb(252 163 17 / 0.6);
 }
@@ -3779,16 +3784,6 @@ select{
 .bg-zinc-700{
   --tw-bg-opacity: 1;
   background-color: rgb(63 63 70 / var(--tw-bg-opacity));
-}
-
-.bg-\[\#fca311\]{
-  --tw-bg-opacity: 1;
-  background-color: rgb(252 163 17 / var(--tw-bg-opacity));
-}
-
-.bg-gray-500{
-  --tw-bg-opacity: 1;
-  background-color: rgb(107 114 128 / var(--tw-bg-opacity));
 }
 
 .bg-clip-padding{
@@ -7637,24 +7632,12 @@ select{
     max-width: 28rem;
   }
 
-  .sm\:flex-grow-0{
-    flex-grow: 0;
-  }
-
   .sm\:grid-cols-2{
     grid-template-columns: repeat(2, minmax(0, 1fr));
   }
 
-  .sm\:flex-row{
-    flex-direction: row;
-  }
-
   .sm\:items-center{
     align-items: center;
-  }
-
-  .sm\:justify-start{
-    justify-content: flex-start;
   }
 
   .sm\:justify-between{
@@ -7733,10 +7716,6 @@ select{
     height: 100vh;
   }
 
-  .md\:w-0{
-    width: 0px;
-  }
-
   .md\:w-fit{
     width: -moz-fit-content;
     width: fit-content;
@@ -7772,14 +7751,14 @@ select{
     margin-bottom: calc(1.5rem * var(--tw-space-y-reverse));
   }
 
-  .md\:py-8{
-    padding-top: 2rem;
-    padding-bottom: 2rem;
-  }
-
   .md\:px-10{
     padding-left: 2.5rem;
     padding-right: 2.5rem;
+  }
+
+  .md\:py-8{
+    padding-top: 2rem;
+    padding-bottom: 2rem;
   }
 
   .md\:pr-1{
