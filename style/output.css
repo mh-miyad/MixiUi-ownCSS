@@ -2336,6 +2336,10 @@ select{
   height: 100vh;
 }
 
+.h-2{
+  height: 0.5rem;
+}
+
 .max-h-\[calc\(100\%-64px\)\]{
   max-height: calc(100% - 64px);
 }
