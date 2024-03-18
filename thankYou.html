@@ -137,7 +137,7 @@
      
       <!--  Header Content  -->
     </header>
-    <main class="my-20 xl:my-36 2xl:my-40  flex h-96 items-center justify-center">
+    <main class="my-28 sm:mb-40 xl:my-36 2xl:my-40  flex h-96 items-center justify-center">
       <div class="mx-auto md:container">
         <div class="mx-auto w-full rounded bg-white p-8">
           <div class="text-center">
@@ -180,15 +180,37 @@
             </p>
           </div>
           <div class="flex justify-center">
-            <button class="btn btn-download">
-               Download Ticket</
-            >
+            <button onclick="downloadPdf()" class="btn btn-download"> Download Ticket</button>
           </div>
         </div>
       </div>
     </main>
 
+
+
+
+
+    <!-- Modal Option  -->
+
+    <div class="pdfViwer-modal showPdf ">
+   
+         <div class="w-full h-full p-10 ">
+            <div class="flex justify-end">
+              <i class="bi bi-x-lg border text-xl bg-white text-red-600 px-2 py-1 mb-2 rounded cursor-pointer" onclick="downloadPdf()"></i>
+            </div>
+            <object data="./Assets/pdf.pdf" type="application/pdf" class="w-[95%] h-full mx-auto  "></object>
+         </div>
+       
+    
+    </div>
+
+
+    <!-- Modal Option  -->
     <!-- drawer init and toggle -->
+
+
+
+
 
     <!-- drawer component -->
     <div
@@ -222,6 +244,9 @@
       <!--  Body Of drawer -->
     </div>
    <!-- Footer Section  -->
+
+
+
 
     <footer class="bg-[#14213D] shadow dark:bg-gray-900">
       <div class="mx-auto w-full max-w-screen-xl p-4 md:py-8">
@@ -268,5 +293,11 @@
     <script src="./js/flowbite.js"></script>
     <script src="./js/tw-elements.umd.min.js"></script>
     <script src="./js/custom.js"></script>
+    <script>
+      function downloadPdf() {
+        const pdf = document.querySelector(".pdfViwer-modal");
+        pdf.classList.toggle("showPdf");
+      }
+    </script>
   </body>
 </html>
