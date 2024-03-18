@@ -1893,6 +1893,11 @@ select{
   margin-bottom: 5rem;
 }
 
+.my-28{
+  margin-top: 7rem;
+  margin-bottom: 7rem;
+}
+
 .my-3{
   margin-top: 0.75rem;
   margin-bottom: 0.75rem;
@@ -1916,16 +1921,6 @@ select{
 .my-\[5px\]{
   margin-top: 5px;
   margin-bottom: 5px;
-}
-
-.my-24{
-  margin-top: 6rem;
-  margin-bottom: 6rem;
-}
-
-.my-28{
-  margin-top: 7rem;
-  margin-bottom: 7rem;
 }
 
 .-ml-\[1\.5rem\]{
@@ -2550,6 +2545,10 @@ select{
   width: 76px;
 }
 
+.w-\[90\%\]{
+  width: 90%;
+}
+
 .w-\[calc\(100\%-100px\)\]{
   width: calc(100% - 100px);
 }
@@ -2568,6 +2567,10 @@ select{
 
 .w-screen{
   width: 100vw;
+}
+
+.w-\[95\%\]{
+  width: 95%;
 }
 
 .min-w-0{
@@ -3921,6 +3924,10 @@ select{
 
 .p-\[auto\]{
   padding: auto;
+}
+
+.p-10{
+  padding: 2.5rem;
 }
 
 .\!py-0{
@@ -5887,6 +5894,27 @@ select{
 }
 
 /* details part */
+
+.pdfViwer-modal{
+  position: fixed;
+  left: 0px;
+  top: 0px;
+  z-index: 9999;
+  display: flex;
+  height: 100%;
+  width: 100%;
+  align-items: center;
+  justify-content: center;
+  background-color: rgba(0,0,0,0.8);
+  transition-property: all;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-duration: 200ms;
+  transition-timing-function: linear;
+}
+
+.showPdf{
+  display: none;
+}
 
 .\!\[clip\:rect\(0\2c 0\2c 0\2c 0\)\]{
   clip: rect(0,0,0,0) !important;
@@ -7870,10 +7898,6 @@ select{
 
   .md\:mt-0{
     margin-top: 0px;
-  }
-
-  .md\:mb-40{
-    margin-bottom: 10rem;
   }
 
   .md\:h-screen{

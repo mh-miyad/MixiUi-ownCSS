@@ -156,4 +156,11 @@
     @apply border-b-[3.5px] border-b-[#FCA311];
   }
   /* details part */
+
+  .pdfViwer-modal {
+    @apply fixed left-0 top-0 z-[9999] flex h-full w-full items-center justify-center bg-[rgba(0,0,0,0.8)] transition-all duration-200 ease-linear;
+  }
+  .showPdf {
+    @apply hidden;
+  }
 }
