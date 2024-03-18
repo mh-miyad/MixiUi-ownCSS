@@ -3906,6 +3906,10 @@ select{
   padding: 1rem;
 }
 
+.p-5{
+  padding: 1.25rem;
+}
+
 .p-6{
   padding: 1.5rem;
 }
@@ -3924,10 +3928,6 @@ select{
 
 .p-\[auto\]{
   padding: auto;
-}
-
-.p-5{
-  padding: 1.25rem;
 }
 
 .\!py-0{
@@ -4195,10 +4195,6 @@ select{
   padding-top: 0.75rem;
 }
 
-.pt-5{
-  padding-top: 1.25rem;
-}
-
 .pt-6{
   padding-top: 1.5rem;
 }
@@ -4330,6 +4326,11 @@ select{
 .text-xs{
   font-size: 0.75rem;
   line-height: 1rem;
+}
+
+.text-9xl{
+  font-size: 8rem;
+  line-height: 1;
 }
 
 .font-\[500\]{
@@ -5918,6 +5919,63 @@ select{
 
 .showPdf{
   display: none;
+}
+
+.blog-page{
+  width: 100%;
+}
+
+@media (min-width: 320px){
+  .blog-page{
+    max-width: 320px;
+  }
+}
+
+@media (min-width: 640px){
+  .blog-page{
+    max-width: 640px;
+  }
+}
+
+@media (min-width: 768px){
+  .blog-page{
+    max-width: 768px;
+  }
+}
+
+@media (min-width: 1024px){
+  .blog-page{
+    max-width: 1024px;
+  }
+}
+
+@media (min-width: 1280px){
+  .blog-page{
+    max-width: 1280px;
+  }
+}
+
+@media (min-width: 1536px){
+  .blog-page{
+    max-width: 1536px;
+  }
+}
+
+.blog-page{
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 6rem;
+  width: 100%;
+  max-width: 1320px;
+  padding-left: 1.25rem;
+  padding-right: 1.25rem;
+}
+
+@media (min-width: 640px){
+  .blog-page{
+    padding-left: 2.5rem;
+    padding-right: 2.5rem;
+  }
 }
 
 .\!\[clip\:rect\(0\2c 0\2c 0\2c 0\)\]{
