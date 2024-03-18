@@ -2345,6 +2345,10 @@ select{
   height: 100vh;
 }
 
+.h-80{
+  height: 20rem;
+}
+
 .max-h-\[calc\(100\%-64px\)\]{
   max-height: calc(100% - 64px);
 }
@@ -4113,6 +4117,11 @@ select{
 .py-\[5px\]{
   padding-top: 5px;
   padding-bottom: 5px;
+}
+
+.py-10{
+  padding-top: 2.5rem;
+  padding-bottom: 2.5rem;
 }
 
 .pb-0{
