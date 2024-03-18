@@ -4259,6 +4259,11 @@ select{
   line-height: 1;
 }
 
+.text-9xl{
+  font-size: 8rem;
+  line-height: 1;
+}
+
 .text-\[0\.8rem\]{
   font-size: 0.8rem;
 }
@@ -4326,11 +4331,6 @@ select{
 .text-xs{
   font-size: 0.75rem;
   line-height: 1rem;
-}
-
-.text-9xl{
-  font-size: 8rem;
-  line-height: 1;
 }
 
 .font-\[500\]{
