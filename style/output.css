@@ -2075,20 +2075,12 @@ select{
   margin-top: 0.625rem;
 }
 
-.mt-20{
-  margin-top: 5rem;
-}
-
 .mt-3{
   margin-top: 0.75rem;
 }
 
 .mt-4{
   margin-top: 1rem;
-}
-
-.mt-40{
-  margin-top: 10rem;
 }
 
 .mt-5{
@@ -2346,10 +2338,6 @@ select{
 }
 
 .h-screen{
-  height: 100vh;
-}
-
-.h-\[100vh\]{
   height: 100vh;
 }
 

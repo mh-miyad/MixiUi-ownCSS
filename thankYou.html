@@ -357,6 +357,10 @@
      
     </footer>
 
+      <button id="scroll-btn">
+      <span class="sr-only">Scroll to Top </span>
+      <i class="bi bi-arrow-up-short"></i>
+    </button>
     <!-- Footer Section  -->
     <!-- Modal Section  -->
     <script src="./js/flowbite.js"></script>
@@ -367,6 +371,23 @@
         const pdf = document.querySelector(".pdfViwer-modal");
         pdf.classList.toggle("showPdf");
       }
+    </script>
+     <script>
+   const scrollBtn = document.getElementById("scroll-btn");
+
+window.addEventListener("scroll", function() {
+  console.log(window.scrollY);
+  if (window.scrollY > 100) {
+    scrollBtn.classList.add("show"); /* Add 'show' class for animation */
+  } else {
+    scrollBtn.classList.remove("show"); /* Remove 'show' class to hide */
+  }
+});
+
+scrollBtn.addEventListener("click", function() {
+  window.scrollTo({ top: 0, behavior: "smooth" });
+});
+
     </script>
   </body>
 </html>
