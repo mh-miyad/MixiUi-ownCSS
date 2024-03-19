@@ -134,7 +134,7 @@
     <!-- Header Section  -->
     <main class="mx-auto my-5 max-w-[1320px] px-4 text-center">
     
-   <div class="blog-page text-9xl">
+   <div class="blog-page text-9xl h-screen">
     Coming Soon
    </div>
     </main>
@@ -287,6 +287,10 @@
     </div>
      
     </footer>
+    <button id="scroll-btn">
+      <span class="sr-only">Scroll to Top </span>
+      <i class="bi bi-arrow-up-short"></i>
+    </button>
 
     <!-- Footer Section  -->
     <!-- Footer Section  -->
@@ -294,21 +298,21 @@
     <script src="./js/tw-elements.umd.min.js"></script>
     <script src="./js/flowbite.js"></script>
     <script>
-      const profileBtn = document.getElementById("profileBtn");
-      const ticketBtn = document.getElementById("ticketBtn");
+   const scrollBtn = document.getElementById("scroll-btn");
 
-      profileBtn.addEventListener("click", () => {
-        document.getElementById("my-profile").classList.remove("hidden");
-        document.getElementById("my-tickets").classList.add("hidden");
-        profileBtn.classList.add("active");
-        ticketBtn.classList.remove("active");
-      });
-      ticketBtn.addEventListener("click", () => {
-        document.getElementById("my-tickets").classList.remove("hidden");
-        document.getElementById("my-profile").classList.add("hidden");
-        ticketBtn.classList.add("active");
-        profileBtn.classList.remove("active");
-      });
+window.addEventListener("scroll", function() {
+  console.log(window.scrollY);
+  if (window.scrollY > 100) {
+    scrollBtn.classList.add("show"); /* Add 'show' class for animation */
+  } else {
+    scrollBtn.classList.remove("show"); /* Remove 'show' class to hide */
+  }
+});
+
+scrollBtn.addEventListener("click", function() {
+  window.scrollTo({ top: 0, behavior: "smooth" });
+});
+
     </script>
   </body>
 </html>
