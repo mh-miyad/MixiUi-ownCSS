@@ -1544,17 +1544,19 @@
     <script src="./js/flowbite.js"></script>
     <script src="./js/tw-elements.umd.min.js"></script>
     <script src="./js/custom.js"></script>
+    
      <script>
-   const scrollBtn = document.getElementById("scroll-btn");
+   
+  const scrollBtn = document.getElementById("scroll-btn");
 
-window.addEventListener("scroll", function() {
+  window.addEventListener("scroll", function() {
   console.log(window.scrollY);
   if (window.scrollY > 100) {
     scrollBtn.classList.add("show"); /* Add 'show' class for animation */
   } else {
     scrollBtn.classList.remove("show"); /* Remove 'show' class to hide */
   }
-});
+  });
 
 scrollBtn.addEventListener("click", function() {
   window.scrollTo({ top: 0, behavior: "smooth" });
