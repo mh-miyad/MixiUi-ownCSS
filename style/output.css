@@ -2099,20 +2099,16 @@ select{
   margin-top: 1.5rem;
 }
 
+.mt-7{
+  margin-top: 1.75rem;
+}
+
 .mt-8{
   margin-top: 2rem;
 }
 
 .mt-\[0\.15rem\]{
   margin-top: 0.15rem;
-}
-
-.mb-7{
-  margin-bottom: 1.75rem;
-}
-
-.mt-7{
-  margin-top: 1.75rem;
 }
 
 .box-border{
@@ -2351,10 +2347,6 @@ select{
 
 .h-screen{
   height: 100vh;
-}
-
-.h-80{
-  height: 20rem;
 }
 
 .max-h-\[calc\(100\%-64px\)\]{
@@ -2637,6 +2629,10 @@ select{
   max-width: 100%;
 }
 
+.max-w-md{
+  max-width: 28rem;
+}
+
 .max-w-screen-xl{
   max-width: 1280px;
 }
@@ -2647,10 +2643,6 @@ select{
 
 .max-w-xs{
   max-width: 20rem;
-}
-
-.max-w-md{
-  max-width: 28rem;
 }
 
 .flex-1{
@@ -3171,10 +3163,6 @@ select{
   gap: 1.75rem;
 }
 
-.gap-10{
-  gap: 2.5rem;
-}
-
 .space-x-1 > :not([hidden]) ~ :not([hidden]){
   --tw-space-x-reverse: 0;
   margin-right: calc(0.25rem * var(--tw-space-x-reverse));
@@ -3199,6 +3187,12 @@ select{
   margin-left: calc(1rem * calc(1 - var(--tw-space-x-reverse)));
 }
 
+.space-x-5 > :not([hidden]) ~ :not([hidden]){
+  --tw-space-x-reverse: 0;
+  margin-right: calc(1.25rem * var(--tw-space-x-reverse));
+  margin-left: calc(1.25rem * calc(1 - var(--tw-space-x-reverse)));
+}
+
 .space-x-7 > :not([hidden]) ~ :not([hidden]){
   --tw-space-x-reverse: 0;
   margin-right: calc(1.75rem * var(--tw-space-x-reverse));
@@ -3221,12 +3215,6 @@ select{
   --tw-space-y-reverse: 0;
   margin-top: calc(1.25rem * calc(1 - var(--tw-space-y-reverse)));
   margin-bottom: calc(1.25rem * var(--tw-space-y-reverse));
-}
-
-.space-x-5 > :not([hidden]) ~ :not([hidden]){
-  --tw-space-x-reverse: 0;
-  margin-right: calc(1.25rem * var(--tw-space-x-reverse));
-  margin-left: calc(1.25rem * calc(1 - var(--tw-space-x-reverse)));
 }
 
 .overflow-auto{
@@ -4152,21 +4140,6 @@ select{
   padding-bottom: 2.5rem;
 }
 
-.px-20{
-  padding-left: 5rem;
-  padding-right: 5rem;
-}
-
-.py-20{
-  padding-top: 5rem;
-  padding-bottom: 5rem;
-}
-
-.py-24{
-  padding-top: 6rem;
-  padding-bottom: 6rem;
-}
-
 .pb-0{
   padding-bottom: 0px;
 }
@@ -4185,6 +4158,10 @@ select{
 
 .pb-5{
   padding-bottom: 1.25rem;
+}
+
+.pb-6{
+  padding-bottom: 1.5rem;
 }
 
 .pb-\[5px\]{
@@ -4235,6 +4212,10 @@ select{
   padding-right: 24px;
 }
 
+.pt-14{
+  padding-top: 3.5rem;
+}
+
 .pt-2{
   padding-top: 0.5rem;
 }
@@ -4261,30 +4242,6 @@ select{
 
 .pt-\[6px\]{
   padding-top: 6px;
-}
-
-.pt-10{
-  padding-top: 2.5rem;
-}
-
-.pb-24{
-  padding-bottom: 6rem;
-}
-
-.pb-20{
-  padding-bottom: 5rem;
-}
-
-.pt-14{
-  padding-top: 3.5rem;
-}
-
-.pb-14{
-  padding-bottom: 3.5rem;
-}
-
-.pb-6{
-  padding-bottom: 1.5rem;
 }
 
 .text-left{
@@ -4837,6 +4794,36 @@ select{
   color: rgb(250 202 21 / var(--tw-text-opacity));
 }
 
+.text-\[\#FCA311\]{
+  --tw-text-opacity: 1;
+  color: rgb(252 163 17 / var(--tw-text-opacity));
+}
+
+.text-rose-600{
+  --tw-text-opacity: 1;
+  color: rgb(225 29 72 / var(--tw-text-opacity));
+}
+
+.text-rose-500{
+  --tw-text-opacity: 1;
+  color: rgb(244 63 94 / var(--tw-text-opacity));
+}
+
+.text-rose-400{
+  --tw-text-opacity: 1;
+  color: rgb(251 113 133 / var(--tw-text-opacity));
+}
+
+.text-red-400{
+  --tw-text-opacity: 1;
+  color: rgb(249 128 128 / var(--tw-text-opacity));
+}
+
+.text-red-500{
+  --tw-text-opacity: 1;
+  color: rgb(240 82 82 / var(--tw-text-opacity));
+}
+
 .underline{
   text-decoration-line: underline;
 }
@@ -4851,6 +4838,14 @@ select{
 
 .underline-offset-auto{
   text-underline-offset: auto;
+}
+
+.underline-offset-8{
+  text-underline-offset: 8px;
+}
+
+.underline-offset-4{
+  text-underline-offset: 4px;
 }
 
 .\!opacity-0{
@@ -4869,6 +4864,10 @@ select{
   opacity: 1;
 }
 
+.opacity-30{
+  opacity: 0.3;
+}
+
 .opacity-50{
   opacity: 0.5;
 }
@@ -4879,10 +4878,6 @@ select{
 
 .opacity-\[\.54\]{
   opacity: .54;
-}
-
-.opacity-30{
-  opacity: 0.3;
 }
 
 .shadow{
@@ -6055,6 +6050,20 @@ select{
   .blog-page{
     padding-left: 2.5rem;
     padding-right: 2.5rem;
+  }
+}
+
+.footer-mob{
+  margin-bottom: 1.75rem;
+  display: grid;
+  grid-template-columns: repeat(1, minmax(0, 1fr));
+  justify-content: space-between;
+  gap: 3.5rem;
+}
+
+@media (min-width: 768px){
+  .footer-mob{
+    grid-template-columns: repeat(2, minmax(0, 1fr));
   }
 }
 
@@ -8179,10 +8188,6 @@ select{
     grid-template-columns: repeat(3, minmax(0, 1fr));
   }
 
-  .lg\:grid-cols-4{
-    grid-template-columns: repeat(4, minmax(0, 1fr));
-  }
-
   .lg\:flex-row{
     flex-direction: row;
   }
@@ -8278,6 +8283,13 @@ select{
   .xl\:text-9xl{
     font-size: 8rem;
     line-height: 1;
+  }
+
+  .xl\:footer-desk{
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    padding-bottom: 5rem;
   }
 }
 
