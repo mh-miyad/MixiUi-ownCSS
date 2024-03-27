@@ -1,8 +1,4 @@
 {
-  "files.autoSave": "afterDelay",
-  "editor.fontSize": 16,
-  "editor.fontFamily": "Fira Code",
-  "editor.wordWrap": "on",
   "editor.defaultFormatter": "esbenp.prettier-vscode",
   "editor.formatOnPaste": true,
   "editor.formatOnSave": true
