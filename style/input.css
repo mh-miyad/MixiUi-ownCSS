@@ -129,10 +129,10 @@
     @apply relative max-w-md overflow-hidden rounded-lg border border-gray-200 shadow-md;
   }
   .card-anchor {
-    @apply block h-full max-h-[130px] overflow-hidden md:max-h-[200px];
+    @apply block h-full max-h-[160px] overflow-hidden md:max-h-[200px];
   }
   .card-img {
-    @apply max-h-52 w-full overflow-hidden rounded-t-lg object-cover ease-linear;
+    @apply max-h-52 w-full overflow-hidden rounded-t-lg object-cover transition-all duration-200 ease-linear;
   }
   .event-card-overlay {
     @apply absolute left-2 right-2 top-3 flex items-start justify-between;
@@ -182,4 +182,19 @@
   .footer-bottom {
     @apply mx-auto flex max-w-[1320px] flex-col items-center gap-5 px-5 py-10 text-center text-base  md:flex-row  md:justify-between;
   }
+
+  /* Start Card here  */
+  .card {
+    @apply w-full max-w-sm overflow-hidden rounded-lg  border-2 shadow;
+  }
+  .card-img-effect {
+    @apply block max-h-[200px] overflow-hidden object-contain transition-all duration-500 ease-linear;
+  }
+  .card-img-2 {
+    @apply h-[190px] rounded-t-lg transition-all duration-500 group-hover:scale-110;
+  }
+  .card-body {
+    @apply px-5 py-3;
+  }
+  /* Start Card here  */
 }
