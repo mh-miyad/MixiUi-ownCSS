@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <button id="theme-toggle" type="button" class="">
+  <!-- id="theme-toggle-light-icon" id="theme-toggle-dark-icon" -->
+  <i class="bi bi-moon hidden" id="theme-toggle-dark-icon"></i>
+  <i class="bi bi-brightness-high hidden" id="theme-toggle-light-icon"></i>
+  <span class="sr-only">Dark mood button </span>
+</button>
+
+
+<script>
+    
+var themeToggleBtn = document.getElementById("theme-toggle");
+var themeToggleDarkIcon = document.getElementById("theme-toggle-dark-icon");
+var themeToggleLightIcon = document.getElementById("theme-toggle-light-icon");
+
+const mood = window.matchMedia("(prefers-color-scheme: dark)").matches;
+
+const defaultTheme = localStorage.getItem("color-theme");
+
+if (defaultTheme == "light" || mood == false) {
+  document.documentElement.classList.add("light");
+  themeToggleLightIcon.classList.remove("hidden");
+} else if (defaultTheme == "dark" || mood == true) {
+  document.documentElement.classList.add("dark");
+  themeToggleDarkIcon.classList.remove("hidden");
+}
+
+themeToggleBtn.addEventListener("click", function () {
+  document.documentElement.classList.toggle("dark");
+  themeToggleDarkIcon.classList.toggle("hidden");
+  themeToggleLightIcon.classList.toggle("hidden");
+  if (localStorage.getItem("color-theme") === "light") {
+    localStorage.setItem("color-theme", "dark");
+  } else {
+    localStorage.setItem("color-theme", "light");
+  }
+});
+
+</script>
+    
+</body>
+</html>
