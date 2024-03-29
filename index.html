@@ -13,30 +13,49 @@
     <!-- Here Add jquery  -->
     <title>Royex technology</title>
   </head>
-  <body class="container mx-auto ">
-    <!--  here Make a card and make it overlay  -->
+  <body class="bg-slate-950 text-white border-white ">
+  <!-- More content here -->
+  <main class="flex justify-center h-screen items-center border-2 ">
 
 
-       <section class="my-5 ">
-            <div class="card">
-     <a href="#" class="card-img-effect ">
-       <img src="./Assets/Image/card-img.png" class="card-img" alt="">
-     </a>
-     <div class="card-body">
-      <h2>Lorem ipsum dolor sit.</h2>
-      <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Repellat, enim.</p>
-      <button class="btn ">Read More</button>
-
-     </div>
-
+    <div class="accordion" id="accordion">
+  <div class="accordion-item">
+    <h2 class="accordion-header" id="headingOne">
+      <button class="accordion-button p-4 rounded-lg text-left focus:outline-none hover:bg-gray-100 active:bg-gray-200" type="button" data-target="#collapseOne" aria-expanded="false" aria-controls="collapseOne">
+        Section 1 Title
+      </button>
+    </h2>
+    <div id="collapseOne" class="accordion-collapse hidden overflow-hidden p-4 rounded-lg border border-gray-200" aria-labelledby="headingOne">
+      <div class="accordion-body">
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed fermentum leo vel orci porta, nec dapibus tellus tincidunt.</p>
+      </div>
     </div>
-       </section>
+  </div>
+  </div>
 
 
-    <!--  here Make a card and make it overlay  -->
+    
+
+  </main>
+  <!-- More content here -->
 
     <!-- here add html tag -->
     <script src="./js/custom.js"></script>
+    <script src="./js/jquery.min.js"></script>
+    <script>
+$(document).ready(function() {
+  $('.accordion-button').click(function() {
+    const targetId = $(this).data('target');  // Get target ID from data-target attribute
+    const content = $(targetId);             // Select the content section using ID
+    content.toggleClass('hidden');             // Toggle the "hidden" class
+
+    // Optional: Toggle button styling (replace classes as needed)
+    $(this).toggleClass('active');
+  });
+});
+
+
+    </script>
     <!-- here add html tag -->
   </body>
 </html>
