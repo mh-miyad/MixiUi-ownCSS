@@ -4219,19 +4219,6 @@ body{
 
 /* card */
 
-.card-anchor{
-  display: block;
-  height: 100%;
-  max-height: 160px;
-  overflow: hidden;
-}
-
-@media (min-width: 768px){
-  .card-anchor{
-    max-height: 200px;
-  }
-}
-
 .card-img{
   max-height: 13rem;
   width: 100%;
@@ -5018,12 +5005,6 @@ body{
   width: 11px;
 }
 
-.group:hover .group-hover\:scale-110{
-  --tw-scale-x: 1.1;
-  --tw-scale-y: 1.1;
-  transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
-}
-
 .group\/x:hover .group-hover\/x\:bg-\[\#999\]{
   --tw-bg-opacity: 1;
   background-color: rgb(153 153 153 / var(--tw-bg-opacity));
@@ -5708,11 +5689,6 @@ body{
 :is(.dark .dark\:bg-neutral-800){
   --tw-bg-opacity: 1;
   background-color: rgb(38 38 38 / var(--tw-bg-opacity));
-}
-
-:is(.dark .dark\:bg-neutral-950){
-  --tw-bg-opacity: 1;
-  background-color: rgb(10 10 10 / var(--tw-bg-opacity));
 }
 
 :is(.dark .dark\:bg-primary-600){
