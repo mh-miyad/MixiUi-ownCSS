@@ -1,0 +1,1574 @@
+<!DOCTYPE html>
+<html dir="ltr" lang="en" data-bs-theme="light">
+
+<head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <!-- Tell the browser to be responsive to screen width -->
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="keywords" content="" />
+  <meta name="description" content="" />
+  <meta name="robots" content="noindex,nofollow" />
+  <title>Royex Events || Booking Details</title>
+  <link rel="canonical" href="" />
+  <!-- Favicon icon -->
+  <link rel="icon" type="image/png" sizes="16x16" href="assets/images/favicon.png" />
+  <!-- this pagjs -->
+  <link rel="stylesheet" href="assets/libs/apexcharts/dist/apexcharts.css" />
+  <link href="assets/libs/jvectormap/jquery-jvectormap.css" rel="stylesheet" />
+  <link href="assets/libs/fontawesome/css/all.css" rel="stylesheet" />
+  <!-- Custom CSS -->
+  <link href="assets/dist/css/style.css" rel="stylesheet" />
+  <link href="assets/css/theme-mood.css" rel="stylesheet" />
+  <link href="assets/css/custom.css" rel="stylesheet" />
+  <!-- mhmiyad css  -->
+  <link href="assets/css/style/style.css" rel="stylesheet" />
+  <!-- mhmiyad css  -->
+  <link href="assets/css/responsive.css" rel="stylesheet" />
+  <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"></script>
+
+  <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+  <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+  <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+      <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+</head>
+
+<body>
+  <!-- -------------------------------------------------------------- -->
+  <!-- Preloader - style you can find in spinners.css -->
+  <!-- -------------------------------------------------------------- -->
+  <div class="preloader">
+    <img src="assets/images/loading-img.png" alt="loading-img" class="img-fluid loading-img" />
+  </div>
+  <!-- -------------------------------------------------------------- -->
+  <!-- Main wrapper - style you can find in pages.scss -->
+  <!-- -------------------------------------------------------------- -->
+  <div id="main-wrapper">
+    <!-- -------------------------------------------------------------- -->
+    <!-- Topbar header - style you can find in pages.scss -->
+    <!-- -------------------------------------------------------------- -->
+    <header class="topbar">
+      <nav class="navbar top-navbar navbar-expand-md navbar-dark">
+        <div class="navbar-header">
+          <!-- This is for the sidebar toggle which is visible on mobile only -->
+          <a class="nav-toggler waves-effect waves-light d-block d-md-none" href="javascript:void(0)">
+            <i class="ri-close-line fs-6 ri-menu-2-line"></i>
+          </a>
+          <!-- -------------------------------------------------------------- -->
+          <!-- Logo -->
+          <!-- -------------------------------------------------------------- -->
+          <a class="navbar-brand d-none" href="index.html">
+            <!-- Logo text -->
+            <span class="logo-text">
+              <!-- dark Logo text -->
+              <img src="assets/images/logo-light-text.png" alt="homepage" class="dark-logo" />
+              <!-- Light Logo text -->
+              <img src="assets/images/logo-dark-text.png" class="light-logo" alt="homepage" />
+            </span>
+          </a>
+
+          <a class="navbar-brand" href="index.html">
+            <!-- Logo icon -->
+            <b class="logo-icon">
+              <!--You can put here icon as well // <i class="wi wi-sunset"></i> //-->
+              <!-- Dark Logo icon -->
+              <img src="assets/images/logo-icon-light.png" alt="homepage" class="dark-logo" />
+              <!-- Light Logo icon -->
+              <img src="assets/images/logo-icon-dark.png" alt="homepage" class="light-logo" />
+            </b>
+            <!--End Logo icon -->
+            <!-- Logo text -->
+            <span class="logo-text">
+              <!-- dark Logo text -->
+              <img src="assets/images/logo-light-text.png" alt="homepage" class="dark-logo" />
+              <!-- Light Logo text -->
+              <img src="assets/images/logo-dark-text.png" class="light-logo" alt="homepage" />
+            </span>
+          </a>
+          <!-- -------------------------------------------------------------- -->
+          <!-- End Logo -->
+          <!-- -------------------------------------------------------------- -->
+          <!-- -------------------------------------------------------------- -->
+          <!-- Toggle which is visible on mobile only -->
+          <!-- -------------------------------------------------------------- -->
+          <a class="topbartoggler d-block d-md-none waves-effect waves-light" href="javascript:void(0)"
+            data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+            aria-expanded="false" aria-label="Toggle navigation"><i data-feather="more-horizontal"
+              class="feather-sm"></i></a>
+        </div>
+
+        <!-- -------------------------------------------------------------- -->
+        <!-- End Logo -->
+        <!-- -------------------------------------------------------------- -->
+        <div class="navbar-collapse collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav me-auto">
+            <!-- This is  -->
+            <li class="nav-item">
+              <a class="nav-link sidebartoggler sidebar-toggle d-none d-md-block waves-effect waves-dark"
+                href="javascript:void(0)"><i data-feather="menu" class="feather-sm"></i></a>
+            </li>
+          </ul>
+          <div class="top-search-box mb-0">
+            <form class="search-form" action="">
+              <div class="input-group">
+                <button type="submit" class="btn input-group-text" id="basic-addon1">
+                  <i data-feather="search" class="feather-sm"></i>
+                </button>
+                <input type="text" class="form-control" placeholder="Search..." aria-label="Username"
+                  aria-describedby="basic-addon1" />
+              </div>
+            </form>
+          </div>
+          <!-- -------------------------------------------------------------- -->
+          <!-- toggle and nav items -->
+          <!-- -------------------------------------------------------------- -->
+
+          <!-- -------------------------------------------------------------- -->
+          <!-- Right side toggle and nav items -->
+          <!-- -------------------------------------------------------------- -->
+          <ul class="navbar-nav justify-content-end align-items-center w-100">
+            <!-- -------------------------------------------------------------- -->
+            <!-- Mood -->
+            <!-- -------------------------------------------------------------- -->
+
+            <li class="nav-item">
+              <button class="theme-switcher gray-circle-btn waves-effect waves-dark" id="btnSwitch" type="button"
+                title="Switch theme">
+                <span class="sr-only">Switch theme</span>
+                <i class="sun-icon" data-feather="sun" aria-hidden="true"></i>
+                <i class="moon-icon" data-feather="moon" aria-hidden="true"></i>
+              </button>
+            </li>
+            <!-- -------------------------------------------------------------- -->
+            <!-- Comment -->
+            <!-- -------------------------------------------------------------- -->
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle waves-effect waves-dark" href="#" data-bs-toggle="dropdown"
+                aria-haspopup="true" aria-expanded="false"><i data-feather="bell"></i>
+                <div class="notify">
+                  <span class="heartbit"></span> <span class="point"></span>
+                </div>
+              </a>
+              <div class="dropdown-menu dropdown-menu-end mailbox animated flipInY">
+                <ul class="list-style-none">
+                  <li>
+                    <div class="border-bottom rounded-top py-3 px-4">
+                      <div class="mb-0 font-weight-medium fs-4">
+                        Notifications
+                      </div>
+                    </div>
+                  </li>
+                  <li>
+                    <div class="message-center notifications position-relative" style="height: auto">
+                      <!-- Message -->
+                      <a href="javascript:void(0)"
+                        class="message-item d-flex align-items-center border-bottom px-3 py-2">
+                        <span class="btn btn-light-danger text-danger btn-circle">
+                          <i data-feather="link" class="feather-sm fill-white"></i>
+                        </span>
+                        <div class="w-75 d-inline-block v-middle ps-3">
+                          <h5 class="message-title mb-0 mt-1 fs-3 fw-bold">
+                            Luanch Admin
+                          </h5>
+                          <span class="fs-2 text-nowrap d-block time text-truncate fw-normal text-muted mt-1">Just see
+                            the my new admin!</span>
+                          <span class="fs-2 text-nowrap d-block subtext text-muted">9:30 AM</span>
+                        </div>
+                      </a>
+                      <!-- Message -->
+                      <a href="javascript:void(0)"
+                        class="message-item d-flex align-items-center border-bottom px-3 py-2">
+                        <span class="btn btn-light-success text-success btn-circle">
+                          <i data-feather="calendar" class="feather-sm fill-white"></i>
+                        </span>
+                        <div class="w-75 d-inline-block v-middle ps-3">
+                          <h5 class="message-title mb-0 mt-1 fs-3 fw-bold">
+                            Event today
+                          </h5>
+                          <span class="fs-2 text-nowrap d-block time text-truncate fw-normal text-muted mt-1">Just a
+                            reminder that you have event</span>
+                          <span class="fs-2 text-nowrap d-block subtext text-muted">9:10 AM</span>
+                        </div>
+                      </a>
+                      <!-- Message -->
+                      <a href="javascript:void(0)"
+                        class="message-item d-flex align-items-center border-bottom px-3 py-2">
+                        <span class="btn btn-light-info text-info btn-circle">
+                          <i data-feather="settings" class="feather-sm fill-white"></i>
+                        </span>
+                        <div class="w-75 d-inline-block v-middle ps-3">
+                          <h5 class="message-title mb-0 mt-1 fs-3 fw-bold">
+                            Settings
+                          </h5>
+                          <span class="fs-2 text-nowrap d-block time text-truncate fw-normal text-muted mt-1">You can
+                            customize this template as you want</span>
+                          <span class="fs-2 text-nowrap d-block subtext text-muted">9:08 AM</span>
+                        </div>
+                      </a>
+                      <!-- Message -->
+                      <a href="javascript:void(0)"
+                        class="message-item d-flex align-items-center border-bottom px-3 py-2">
+                        <span class="btn btn-light-primary text-primary btn-circle">
+                          <i data-feather="users" class="feather-sm fill-white"></i>
+                        </span>
+                        <div class="w-75 d-inline-block v-middle ps-3">
+                          <h5 class="message-title mb-0 mt-1 fs-3 fw-bold">
+                            Pavan kumar
+                          </h5>
+                          <span class="fs-2 text-nowrap d-block time text-truncate fw-normal text-muted mt-1">Just see
+                            the my admin!</span>
+                          <span class="fs-2 text-nowrap d-block subtext text-muted">9:02 AM</span>
+                        </div>
+                      </a>
+                    </div>
+                  </li>
+                  <li>
+                    <a class="nav-link border-top text-center text-dark pt-3" href="javascript:void(0);">
+                      <strong>Check all notifications</strong>
+                      <i data-feather="chevron-right" class="feather-sm"></i>
+                    </a>
+                  </li>
+                </ul>
+              </div>
+            </li>
+            <!-- -------------------------------------------------------------- -->
+            <!-- End Comment -->
+            <!-- -------------------------------------------------------------- -->
+            <!-- -------------------------------------------------------------- -->
+            <!-- Profile -->
+            <!-- -------------------------------------------------------------- -->
+            <li class="nav-item dropdown user-dropdown">
+              <a class="nav-link dropdown-toggle waves-effect waves-dark user-pic justify-content-between" href="#"
+                data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                <div class="author-pic w-100">
+                  <img src="assets/images/users/1.jpg" alt="user" width="34" class="profile-pic rounded-circle" />
+                  <span>Tamim Tanvir</span>
+                </div>
+                <i data-feather="chevron-down" class="feather-sm"></i>
+              </a>
+              <div class="dropdown-menu dropdown-menu-top animated flipInY pb-0">
+                <!-- <div class="d-flex no-block align-items-center p-3 bg-primary text-white mb-2">
+                                    <div class=""><img src="assets/images/users/1.jpg" alt="user" class="rounded-circle" width="60"></div>
+                                    <div class="ms-2">
+                                        <h4 class="mb-0 text-white">Steave Jobs</h4>
+                                        <p class=" mb-0">varun@gmail.com</p>
+                                    </div>
+                                </div> -->
+                <a class="dropdown-item" href="#"><i data-feather="user" class="feather-sm text-info me-1 ms-1"></i>
+                  My Profile</a>
+                <a class="dropdown-item" href="#"><i data-feather="credit-card"
+                    class="feather-sm text-primary me-1 ms-1"></i>
+                  My Task</a>
+                <div class="dropdown-divider"></div>
+                <!-- <a class="dropdown-item" href="#"><i data-feather="settings" class="feather-sm text-warning me-1 ms-1"></i>
+                                    Account Setting</a> -->
+                <a class="dropdown-item" id="accounts-Billing" href="javascript:void(0);" aria-expanded="false">
+                  <img src="assets/images/icon/credit_card.png" alt="credit_card" class="img-fluid icon-img" width="24"
+                    height="24" />
+                  <img src="assets/images/icon/credit_card1.png" alt="credit_card" class="img-fluid hover-img"
+                    width="24" height="24" />
+                  <span class="hide-menu">Accounts Billing</span>
+                </a>
+                <a class="dropdown-item" id="consulting" href="javascript:void(0);" aria-expanded="false">
+                  <img src="assets/images/icon/person.png" alt="person" class="img-fluid icon-img" width="24"
+                    height="24" />
+                  <img src="assets/images/icon/person1.png" alt="person" class="img-fluid hover-img" width="24"
+                    height="24" />
+                  <span class="hide-menu">Consulting services</span>
+                </a>
+                <a class="dropdown-item" id="support" href="javascript:void(0);" aria-expanded="false">
+                  <img src="assets/images/icon/support_agent.png" alt="support_agent" class="img-fluid icon-img"
+                    width="24" height="24" />
+                  <img src="assets/images/icon/support_agent1.png" alt="support_agent" class="img-fluid hover-img"
+                    width="24" height="24" />
+                  <span class="hide-menu">Support</span>
+                </a>
+                <a class="dropdown-item" id="knowledge" href="javascript:void(0);" aria-expanded="false">
+                  <img src="assets/images/icon/import_contacts.png" alt="import_contacts" class="img-fluid icon-img"
+                    width="24" height="24" />
+                  <img src="assets/images/icon/import_contacts1.png" alt="import_contacts" class="img-fluid hover-img"
+                    width="24" height="24" />
+                  <span class="hide-menu">Knowledge Base</span>
+                </a>
+                <div class="dropdown-divider"></div>
+                <a class="dropdown-item" href="#"><i data-feather="log-out"
+                    class="feather-sm text-danger me-1 ms-1"></i>
+                  Logout</a>
+              </div>
+            </li>
+          </ul>
+        </div>
+      </nav>
+    </header>
+    <!-- -------------------------------------------------------------- -->
+    <!-- End Topbar header -->
+    <!-- -------------------------------------------------------------- -->
+    <!-- -------------------------------------------------------------- -->
+    <!-- Left Sidebar - style you can find in sidebar.scss  -->
+    <!-- -------------------------------------------------------------- -->
+    <aside class="left-sidebar">
+      <!-- Sidebar scroll-->
+      <div class="scroll-sidebar">
+        <!-- Sidebar navigation-->
+        <nav class="sidebar-nav">
+          <ul class="sidebar-user-nav sidebarnav w-100">
+            <li class="sidebar-item nav-item dropend user-profile mb-0">
+              <a data-bs-toggle="dropdown" role="button" aria-expanded="false"
+                class="nav-link dropdown-toggle sidebar-link has-arrow waves-effect waves-dark user-box"
+                href="javascript:void(0)" aria-expanded="false">
+                <!-- <img src="assets/images/users/profile.png" alt="user" class="m-0"> -->
+                <div class="highlight">
+                  <span>R</span>
+                </div>
+                <div class="hide-menu user-name">
+                  <h3 class="hide-menu">Account Name Here</h3>
+                </div>
+                <div class="hide-menu icon-hide-menu">
+                  <img src="assets/images/icon/settings_ethernet.png" alt="settings_ethernet"
+                    class="img-fluid w-auto h-auto settings_ethernet" />
+                  <img src="assets/images/icon/settings_ethernet_dark.png" alt="settings_ethernet"
+                    class="img-fluid w-auto h-auto settings_ethernet_hover" />
+                  <img src="assets/images/icon/settings_ethernet_dark.png" alt="settings_ethernet"
+                    class="img-fluid w-auto h-auto settings_ethernet_dark" />
+                </div>
+              </a>
+              <div role="menu" class="dropdown-menu sidenav-dropdown dropdown-menu-end custom-scrollbar-css">
+                <a href="dashboard.html" class="dropdown-item">
+                  <div class="task-name">
+                    <div class="left-box">
+                      <span class="name">K</span>
+                      <div class="activity-rate">
+                        <h4>teambuiding.ae</h4>
+                        <p>Project | teambuiding.ae</p>
+                      </div>
+                    </div>
+                    <div class="arrow">
+                      <i class="bi bi-box-arrow-up-right"></i>
+                    </div>
+                  </div>
+                </a>
+                <a href="dashboard.html" class="dropdown-item">
+                  <div class="task-name">
+                    <div class="left-box">
+                      <span class="name">K</span>
+                      <div class="activity-rate">
+                        <h4>teambuiding.ae</h4>
+                        <p>Project | teambuiding.ae</p>
+                      </div>
+                    </div>
+                    <div class="arrow">
+                      <i class="bi bi-box-arrow-up-right"></i>
+                    </div>
+                  </div>
+                </a>
+                <a href="dashboard.html" class="dropdown-item">
+                  <div class="task-name">
+                    <div class="left-box">
+                      <span class="name">K</span>
+                      <div class="activity-rate">
+                        <h4>teambuiding.ae</h4>
+                        <p>Project | teambuiding.ae</p>
+                      </div>
+                    </div>
+                    <div class="arrow">
+                      <i class="bi bi-box-arrow-up-right"></i>
+                    </div>
+                  </div>
+                </a>
+                <a href="dashboard.html" class="dropdown-item">
+                  <div class="task-name">
+                    <div class="left-box">
+                      <span class="name">K</span>
+                      <div class="activity-rate">
+                        <h4>teambuiding.ae</h4>
+                        <p>Project | teambuiding.ae</p>
+                      </div>
+                    </div>
+                    <div class="arrow">
+                      <i class="bi bi-box-arrow-up-right"></i>
+                    </div>
+                  </div>
+                </a>
+                <a href="dashboard.html" class="dropdown-item">
+                  <div class="task-name">
+                    <div class="left-box">
+                      <span class="name">K</span>
+                      <div class="activity-rate">
+                        <h4>teambuiding.ae</h4>
+                        <p>Project | teambuiding.ae</p>
+                      </div>
+                    </div>
+                    <div class="arrow">
+                      <i class="bi bi-box-arrow-up-right"></i>
+                    </div>
+                  </div>
+                </a>
+                <a href="dashboard.html" class="dropdown-item">
+                  <div class="task-name">
+                    <div class="left-box">
+                      <span class="name">K</span>
+                      <div class="activity-rate">
+                        <h4>teambuiding.ae</h4>
+                        <p>Project | teambuiding.ae</p>
+                      </div>
+                    </div>
+                    <div class="arrow">
+                      <i class="bi bi-box-arrow-up-right"></i>
+                    </div>
+                  </div>
+                </a>
+              </div>
+            </li>
+          </ul>
+          <ul id="sidebarnav" class="sidebarnav w-100 custom-scrollbar-css">
+            <li class="sidebar-item">
+              <a class="sidebar-link has-arrow waves-effect waves-dark" href="javascript:void(0)" aria-expanded="false">
+                <img src="assets/images/events-menu-icon/dashboard.png" alt="home" class="img-fluid dark-img" />
+                <img src="assets/images/events-menu-icon/dashboard_active.png" alt="home"
+                  class="img-fluid active-img" />
+                <img src="assets/images/events-menu-icon/dashboard_dark.png" alt="home" class="img-fluid light-img" />
+                <span class="hide-menu">Dashboard</span></a>
+              <ul aria-expanded="false" class="collapse first-level">
+                <li class="sidebar-item">
+                  <a href="#" class="sidebar-link"><i data-feather="chevron-right" class="feather-sm"></i>
+                    <span class="hide-menu"> User Entry List </span></a>
+                </li>
+                <li class="sidebar-item">
+                  <a href="#" class="sidebar-link"><i data-feather="chevron-right" class="feather-sm"></i><span
+                      class="hide-menu"> Entry Name</span></a>
+                </li>
+                <li class="sidebar-item">
+                  <a href="#" class="sidebar-link"><i data-feather="chevron-right" class="feather-sm"></i><span
+                      class="hide-menu"> Add New Entry</span></a>
+                </li>
+              </ul>
+            </li>
+            <li class="sidebar-item">
+              <a class="sidebar-link has-arrow waves-effect waves-dark" href="javascript:void(0)" aria-expanded="false">
+                <img src="assets/images/events-menu-icon/operation.png" alt="home" class="img-fluid dark-img" />
+                <img src="assets/images/events-menu-icon/operation_active.png" alt="home"
+                  class="img-fluid active-img" />
+                <img src="assets/images/events-menu-icon/operation_dark.png" alt="home" class="img-fluid light-img" />
+                <span class="hide-menu">Operation </span></a>
+              <ul aria-expanded="false" class="collapse first-level">
+                <li class="sidebar-item">
+                  <a href="#" class="sidebar-link"><i data-feather="chevron-right" class="feather-sm"></i><span
+                      class="hide-menu"> Booking </span></a>
+                </li>
+                <li class="sidebar-item">
+                  <a href="#" class="sidebar-link"><i data-feather="chevron-right" class="feather-sm"></i><span
+                      class="hide-menu"> POS</span></a>
+                </li>
+                <li class="sidebar-item">
+                  <a href="#" class="sidebar-link"><i data-feather="chevron-right" class="feather-sm"></i><span
+                      class="hide-menu"> Scanning</span></a>
+                </li>
+              </ul>
+            </li>
+            <li class="sidebar-item">
+              <a class="sidebar-link has-arrow waves-effect waves-dark" href="javascript:void(0)" aria-expanded="false">
+                <img src="assets/images/events-menu-icon/events.png" alt="home" class="img-fluid dark-img" />
+                <img src="assets/images/events-menu-icon/events_active.png" alt="home" class="img-fluid active-img" />
+                <img src="assets/images/events-menu-icon/events_dark.png" alt="home" class="img-fluid light-img" />
+                <span class="hide-menu">Event Setup</span></a>
+              <ul aria-expanded="false" class="collapse first-level">
+                <li class="sidebar-item">
+                  <a href="#" class="sidebar-link"><i data-feather="chevron-right" class="feather-sm"></i>
+                    <span class="hide-menu"> Activity</span></a>
+                </li>
+                <li class="sidebar-item">
+                  <a href="#" class="sidebar-link"><i data-feather="chevron-right" class="feather-sm"></i><span
+                      class="hide-menu"> Activity Schedules</span></a>
+                </li>
+                <li class="sidebar-item">
+                  <a href="#" class="sidebar-link"><i data-feather="chevron-right" class="feather-sm"></i><span
+                      class="hide-menu"> Venue</span></a>
+                </li>
+                <li class="sidebar-item">
+                  <a href="#" class="sidebar-link"><i data-feather="chevron-right" class="feather-sm"></i><span
+                      class="hide-menu"> Event Waiver</span></a>
+                </li>
+                <li class="sidebar-item">
+                  <a href="#" class="sidebar-link"><i data-feather="chevron-right" class="feather-sm"></i><span
+                      class="hide-menu">
+                      Event Terms and Conditions</span></a>
+                </li>
+                <li class="sidebar-item">
+                  <a href="#" class="sidebar-link"><i data-feather="chevron-right" class="feather-sm"></i><span
+                      class="hide-menu"> Event FAQs</span></a>
+                </li>
+              </ul>
+            </li>
+            <li class="sidebar-item">
+              <a class="sidebar-link has-arrow waves-effect waves-dark" href="javascript:void(0)" aria-expanded="false">
+                <img src="assets/images/events-menu-icon/tickets.png" alt="home" class="img-fluid dark-img" />
+                <img src="assets/images/events-menu-icon/tickets_active.png" alt="home" class="img-fluid active-img" />
+                <img src="assets/images/events-menu-icon/tickets_dark.png" alt="home" class="img-fluid light-img" />
+                <span class="hide-menu">Tickets</span></a>
+              <ul aria-expanded="false" class="collapse first-level">
+                <li class="sidebar-item">
+                  <a href="#" class="sidebar-link"><i data-feather="chevron-right" class="feather-sm"></i><span
+                      class="hide-menu">Ticket Types</span></a>
+                </li>
+                <li class="sidebar-item">
+                  <a href="#" class="sidebar-link"><i data-feather="chevron-right" class="feather-sm"></i><span
+                      class="hide-menu">Ticket Printing</span></a>
+                </li>
+                <li class="sidebar-item">
+                  <a href="#" class="sidebar-link"><i data-feather="chevron-right" class="feather-sm"></i><span
+                      class="hide-menu">Seating and Arena</span></a>
+                </li>
+                <li class="sidebar-item">
+                  <a href="#" class="sidebar-link"><i data-feather="chevron-right" class="feather-sm"></i><span
+                      class="hide-menu">Ticket Scanning</span></a>
+                </li>
+                <li class="sidebar-item">
+                  <a href="#" class="sidebar-link"><i data-feather="chevron-right" class="feather-sm"></i><span
+                      class="hide-menu">Footfall Reports</span></a>
+                </li>
+                <li class="sidebar-item">
+                  <a href="#" class="sidebar-link"><i data-feather="chevron-right" class="feather-sm"></i><span
+                      class="hide-menu">Promocode</span></a>
+                </li>
+              </ul>
+            </li>
+            <li class="sidebar-item">
+              <a class="sidebar-link has-arrow waves-effect waves-dark" href="javascript:void(0)" aria-expanded="false">
+                <img src="assets/images/events-menu-icon/registration.png" alt="home" class="img-fluid dark-img" />
+                <img src="assets/images/events-menu-icon/registration_active.png" alt="home"
+                  class="img-fluid active-img" />
+                <img src="assets/images/events-menu-icon/registration_dark.png" alt="home"
+                  class="img-fluid light-img" />
+                <span class="hide-menu">Registration</span></a>
+              <ul aria-expanded="false" class="collapse first-level">
+                <li class="sidebar-item">
+                  <a href="#" class="sidebar-link"><i data-feather="chevron-right" class="feather-sm"></i><span
+                      class="hide-menu"> Visitors</span></a>
+                </li>
+                <li class="sidebar-item">
+                  <a href="#" class="sidebar-link"><i data-feather="chevron-right" class="feather-sm"></i><span
+                      class="hide-menu"> VIP</span></a>
+                </li>
+                <li class="sidebar-item">
+                  <a href="#" class="sidebar-link"><i data-feather="chevron-right" class="feather-sm"></i><span
+                      class="hide-menu"> Entertainer</span></a>
+                </li>
+                <li class="sidebar-item">
+                  <a href="#" class="sidebar-link"><i data-feather="chevron-right" class="feather-sm"></i><span
+                      class="hide-menu"> Vendor</span></a>
+                </li>
+                <li class="sidebar-item">
+                  <a href="#" class="sidebar-link"><i data-feather="chevron-right" class="feather-sm"></i><span
+                      class="hide-menu"> Speaker</span></a>
+                </li>
+                <li class="sidebar-item">
+                  <a href="#" class="sidebar-link"><i data-feather="chevron-right" class="feather-sm"></i><span
+                      class="hide-menu"> Sponsor</span></a>
+                </li>
+                <li class="sidebar-item">
+                  <a href="#" class="sidebar-link"><i data-feather="chevron-right" class="feather-sm"></i><span
+                      class="hide-menu"> Contract</span></a>
+                </li>
+                <li class="sidebar-item">
+                  <a href="#" class="sidebar-link"><i data-feather="chevron-right" class="feather-sm"></i><span
+                      class="hide-menu"> Complimentary Ticket</span></a>
+                </li>
+              </ul>
+            </li>
+            <li class="sidebar-item">
+              <a class="sidebar-link has-arrow waves-effect waves-dark" href="javascript:void(0)" aria-expanded="false">
+                <img src="assets/images/events-menu-icon/reports.png" alt="home" class="img-fluid dark-img" />
+                <img src="assets/images/events-menu-icon/reports_active.png" alt="home" class="img-fluid active-img" />
+                <img src="assets/images/events-menu-icon/reports_dark.png" alt="home" class="img-fluid light-img" />
+                <span class="hide-menu">Reports </span></a>
+              <ul aria-expanded="false" class="collapse first-level">
+                <li class="sidebar-item">
+                  <a href="#" class="sidebar-link"><i data-feather="chevron-right" class="feather-sm"></i>
+                    <span class="hide-menu"> User Entry List </span></a>
+                </li>
+                <li class="sidebar-item">
+                  <a href="#" class="sidebar-link"><i data-feather="chevron-right" class="feather-sm"></i><span
+                      class="hide-menu"> Entry Name</span></a>
+                </li>
+                <li class="sidebar-item">
+                  <a href="#" class="sidebar-link"><i data-feather="chevron-right" class="feather-sm"></i><span
+                      class="hide-menu"> Add New Entry</span></a>
+                </li>
+              </ul>
+            </li>
+            <li class="sidebar-item">
+              <a class="sidebar-link has-arrow waves-effect waves-dark" href="javascript:void(0)" aria-expanded="false">
+                <img src="assets/images/events-menu-icon/marketing.png" alt="home" class="img-fluid dark-img" />
+                <img src="assets/images/events-menu-icon/marketing_active.png" alt="home"
+                  class="img-fluid active-img" />
+                <img src="assets/images/events-menu-icon/marketing_dark.png" alt="home" class="img-fluid light-img" />
+                <span class="hide-menu">Marketing </span></a>
+              <ul aria-expanded="false" class="collapse first-level">
+                <li class="sidebar-item">
+                  <a href="#" class="sidebar-link"><i data-feather="chevron-right" class="feather-sm"></i>
+                    <span class="hide-menu">Message Template</span></a>
+                </li>
+                <li class="sidebar-item">
+                  <a href="#" class="sidebar-link"><i data-feather="chevron-right" class="feather-sm"></i><span
+                      class="hide-menu">Push Notification</span></a>
+                </li>
+                <li class="sidebar-item">
+                  <a href="#" class="sidebar-link"><i data-feather="chevron-right" class="feather-sm"></i><span
+                      class="hide-menu">Email Message</span></a>
+                </li>
+                <li class="sidebar-item">
+                  <a href="#" class="sidebar-link"><i data-feather="chevron-right" class="feather-sm"></i><span
+                      class="hide-menu">Pre Event Survey</span></a>
+                </li>
+                <li class="sidebar-item">
+                  <a href="#" class="sidebar-link"><i data-feather="chevron-right" class="feather-sm"></i><span
+                      class="hide-menu">Post Event Survey</span></a>
+                </li>
+                <li class="sidebar-item">
+                  <a href="#" class="sidebar-link"><i data-feather="chevron-right" class="feather-sm"></i><span
+                      class="hide-menu">Polls during the Events</span></a>
+                </li>
+              </ul>
+            </li>
+            <li class="sidebar-item">
+              <a class="sidebar-link has-arrow waves-effect waves-dark" href="javascript:void(0)" aria-expanded="false">
+                <img src="assets/images/events-menu-icon/merchandise.png" alt="home" class="img-fluid dark-img" />
+                <img src="assets/images/events-menu-icon/merchandise_active.png" alt="home"
+                  class="img-fluid active-img" />
+                <img src="assets/images/events-menu-icon/merchandise_dark.png" alt="home" class="img-fluid light-img" />
+                <span class="hide-menu">Merchandise </span></a>
+              <ul aria-expanded="false" class="collapse first-level">
+                <li class="sidebar-item">
+                  <a href="#" class="sidebar-link"><i data-feather="chevron-right" class="feather-sm"></i>
+                    <span class="hide-menu">Order</span></a>
+                </li>
+                <li class="sidebar-item">
+                  <a href="#" class="sidebar-link"><i data-feather="chevron-right" class="feather-sm"></i><span
+                      class="hide-menu">Inventory</span></a>
+                </li>
+              </ul>
+            </li>
+            <li class="sidebar-item">
+              <a class="sidebar-link has-arrow waves-effect waves-dark" href="javascript:void(0)" aria-expanded="false">
+                <img src="assets/images/events-menu-icon/support.png" alt="home" class="img-fluid dark-img" />
+                <img src="assets/images/events-menu-icon/support_active.png" alt="home" class="img-fluid active-img" />
+                <img src="assets/images/events-menu-icon/support_dark.png" alt="home" class="img-fluid light-img" />
+                <span class="hide-menu">Support </span></a>
+              <ul aria-expanded="false" class="collapse first-level">
+                <li class="sidebar-item">
+                  <a href="#" class="sidebar-link"><i data-feather="chevron-right" class="feather-sm"></i>
+                    <span class="hide-menu">FAQ </span></a>
+                </li>
+                <li class="sidebar-item">
+                  <a href="#" class="sidebar-link"><i data-feather="chevron-right" class="feather-sm"></i><span
+                      class="hide-menu">Visitor feedback</span></a>
+                </li>
+                <li class="sidebar-item">
+                  <a href="#" class="sidebar-link"><i data-feather="chevron-right" class="feather-sm"></i><span
+                      class="hide-menu">Survey</span></a>
+                </li>
+              </ul>
+            </li>
+            <li class="sidebar-item">
+              <a class="sidebar-link has-arrow waves-effect waves-dark" href="javascript:void(0)" aria-expanded="false">
+                <img src="assets/images/events-menu-icon/content.png" alt="home" class="img-fluid dark-img" />
+                <img src="assets/images/events-menu-icon/content_active.png" alt="home" class="img-fluid active-img" />
+                <img src="assets/images/events-menu-icon/content_dark.png" alt="home" class="img-fluid light-img" />
+                <span class="hide-menu">Content </span></a>
+              <ul aria-expanded="false" class="collapse first-level">
+                <li class="sidebar-item">
+                  <a href="#" class="sidebar-link"><i data-feather="chevron-right" class="feather-sm"></i>
+                    <span class="hide-menu">Web Content</span></a>
+                </li>
+                <li class="sidebar-item">
+                  <a href="#" class="sidebar-link"><i data-feather="chevron-right" class="feather-sm"></i><span
+                      class="hide-menu">Mobile Content</span></a>
+                </li>
+                <li class="sidebar-item">
+                  <a href="#" class="sidebar-link"><i data-feather="chevron-right" class="feather-sm"></i><span
+                      class="hide-menu">News</span></a>
+                </li>
+                <li class="sidebar-item">
+                  <a href="#" class="sidebar-link"><i data-feather="chevron-right" class="feather-sm"></i><span
+                      class="hide-menu">Blog</span></a>
+                </li>
+                <li class="sidebar-item">
+                  <a href="#" class="sidebar-link"><i data-feather="chevron-right" class="feather-sm"></i><span
+                      class="hide-menu">Gallery</span></a>
+                </li>
+              </ul>
+            </li>
+            <li class="sidebar-item">
+              <a class="sidebar-link has-arrow waves-effect waves-dark" href="javascript:void(0)" aria-expanded="false">
+                <img src="assets/images/events-menu-icon/settings1.png" alt="home" class="img-fluid dark-img" />
+                <img src="assets/images/events-menu-icon/settings1_active.png" alt="home"
+                  class="img-fluid active-img" />
+                <img src="assets/images/events-menu-icon/settings1_dark.png" alt="home" class="img-fluid light-img" />
+                <span class="hide-menu">Settings </span></a>
+              <ul aria-expanded="false" class="collapse first-level">
+                <li class="sidebar-item">
+                  <a href="#" class="sidebar-link"><i data-feather="chevron-right" class="feather-sm"></i>
+                    <span class="hide-menu">Web Content</span></a>
+                </li>
+                <li class="sidebar-item">
+                  <a href="#" class="sidebar-link"><i data-feather="chevron-right" class="feather-sm"></i><span
+                      class="hide-menu">Mobile Content</span></a>
+                </li>
+                <li class="sidebar-item">
+                  <a href="#" class="sidebar-link"><i data-feather="chevron-right" class="feather-sm"></i><span
+                      class="hide-menu">News</span></a>
+                </li>
+                <li class="sidebar-item">
+                  <a href="#" class="sidebar-link"><i data-feather="chevron-right" class="feather-sm"></i><span
+                      class="hide-menu">Blog</span></a>
+                </li>
+                <li class="sidebar-item">
+                  <a href="#" class="sidebar-link"><i data-feather="chevron-right" class="feather-sm"></i><span
+                      class="hide-menu">Gallery</span></a>
+                </li>
+              </ul>
+            </li>
+          </ul>
+
+          <ul id="sidebarnav2" class="sidebarnav2 d-none w-100">
+            <!-- <li class="sidebar-item"> 
+                            <a class="sidebar-link waves-effect waves-dark sidebar-link" href="#" aria-expanded="false"><img src="assets/images/icon/credit_card.png" alt="credit_card" class="img-fluid">
+                                <span class="hide-menu">Accounts Billing</span>
+                            </a>
+                        </li>
+                        <li class="sidebar-item"> 
+                            <a class="sidebar-link waves-effect waves-dark sidebar-link" href="#" aria-expanded="false"><img src="assets/images/icon/person.png" alt="person" class="img-fluid">
+                                <span class="hide-menu">Consulting services</span>
+                            </a>
+                        </li>
+                        <li class="sidebar-item"> 
+                            <a class="sidebar-link waves-effect waves-dark sidebar-link" href="#" aria-expanded="false"><img src="assets/images/icon/support_agent.png" alt="support_agent" class="img-fluid">
+                                <span class="hide-menu">Support</span>
+                            </a>
+                        </li>
+                        <li class="sidebar-item"> 
+                            <a class="sidebar-link waves-effect waves-dark sidebar-link" href="#" aria-expanded="false"><img src="assets/images/icon/import_contacts.png" alt="import_contacts" class="img-fluid">
+                                <span class="hide-menu">Knowledge Base</span>
+                            </a>
+                        </li> -->
+            <li class="sidebar-item">
+              <a class="sidebar-link waves-effect waves-dark sidebar-link" href="#" aria-expanded="false">
+                <div class="powered-by">
+                  <span class="hide-menu">Powered by</span>
+                  <img src="assets/images/royex-logo.png" alt="royex-logo" class="img-fluid royex-logo" />
+                  <img src="assets/images/royex-logo-dark.png" alt="royex-logo-dark"
+                    class="img-fluid royex-logo-dark" />
+                </div>
+              </a>
+            </li>
+          </ul>
+        </nav>
+
+        <!-- End Sidebar navigation -->
+      </div>
+      <!-- End Sidebar scroll-->
+    </aside>
+    <!-- -------------------------------------------------------------- -->
+    <!-- End Left Sidebar - style you can find in sidebar.scss  -->
+    <!-- -------------------------------------------------------------- -->
+    <!-- -------------------------------------------------------------- -->
+    <!-- Page wrapper  -->
+    <!-- -------------------------------------------------------------- -->
+    <div class="page-wrapper">
+      <!-- -------------------------------------------------------------- -->
+      <!-- Container fluid  -->
+      <!-- -------------------------------------------------------------- -->
+      <div class="container-fluid">
+        <!-- -------------------------------------------------------------- -->
+        <!-- Start Page Content -->
+        <!-- -------------------------------------------------------------- -->
+        <!-- 3. Entry List -->
+        <section class="section postEvent-survey faq-list-section entry-list-section" id="entry-list-section">
+          <div class="container-fluid">
+            <div class="section-title d-flex justify-content-between align-items-center flex-wrap">
+              <h3>Create Survey</h3>
+              <div class="">
+                <a href="./postEventSurveyList.html" class="btn btn-outline-warning  py-2 ">
+                  Preview
+                </a>
+                <a href="./postEventSurveyList.html" class="btn  btn-warning  py-2 px-4 ">
+                  Send
+                </a>
+              </div>
+            </div>
+            <!-- here Start main Section  -->
+            <main class="my-5">
+              <!-- Here start Create Survey Section  -->
+              <div class="enter-survey-name p-3  ">
+                <div>
+                  <label for="enter-survey-name" class="form-label text-dark">
+                    Enter Survey Name
+                  </label>
+                  <input type="text" id="survey-input-1" class="form-control py-3" placeholder="Write ...">
+                  <div class="toolBar">
+                    <span class="mx-1" id="bold-btn-1">B</span>
+                    <span class="mx-1" id="italic-btn-1">I</span>
+                    <span class="mx-1" id="underline-btn-1">U</span>
+                    <span class="mx-1" id="link-btn-1"><i class="bi bi-link"></i></span>
+                  </div>
+                </div>
+                <div>
+                  <label for="enter-survey-name" class="form-label text-dark">
+                    Description
+                  </label>
+                  <input type="text" id="survey-input-2" class="form-control py-3" placeholder="Write ...">
+                  <div class="toolBar">
+                    <span class="mx-1" id="bold-btn-2">B</span>
+                    <span class="mx-1" id="italic-btn-2">I</span>
+                    <span class="mx-1" id="underline-btn-2">U</span>
+                    <span class="mx-1" id="link-btn-2"><i class="bi bi-link"></i></span>
+                  </div>
+                </div>
+              <!-- enter-survey-name end here  -->
+              </div>
+              <!-- Here start Option Section -->
+              <div class="d-flex flex-column flex-lg-row align-items-lg-start justify-content-lg-between">
+                <div id="survey_create_option" class="my-5 flex-grow-1">
+                  <!-- Option 1 -->
+              <div class="my-3   lg-w-75 py-3 pe-5 ps-4 visitor-main-box" id="survey-option-1">
+                <!-- content -->
+                <div class="d-flex justify-content-between align-items-center">
+                  <div></div>
+                  <div>
+                    <button class="btn" data-bs-toggle="modal" data-bs-target="#staticBackdrop">
+                      <i class="bi bi-pen"></i>
+                    </button>
+                    <button class="btn text-danger" onclick="deleteBox('survey-option-1')">
+                      <i class="bi bi-trash"></i>
+                    </button>
+                  </div>
+                </div>
+
+                <div class="d-flex flex-column flex-sm-row justify-content-lg-between align-items-start select-div-1  gap-2" data-option="1">
+                  <div class="flex-grow-1 ">
+                    <div class="short-title  d-flex justify-content-between align-items-start gap-2 ">
+                      <div class="flex-grow-1">
+                        <div>
+                          <label for="short-tittle" class="form-label text-dark">
+                            Short Title
+                          </label>
+                          <input type="text" id="survey-input-1" class="form-control py-3" placeholder="Write ...">
+                          <div class="toolBar">
+                            <button class="btn fw-bold  cursor-pointer  bold-btn-1">B</button>
+                            <button class="btn fw-bold  cursor-pointer  italic-btn-1">I</button>
+                            <button class="btn fw-bold  cursor-pointer  underline-btn-1">U</button>
+                            <button class="btn fw-bold  link-btn-1"><i class="bi bi-link"></i></button>
+                          </div>
+                        </div>
+                        <button class="btn btn-warning" onclick="saveInfo(this,'Short Answer','1')">Save</button>
+                      </div>
+                      <button class="mt-5 btn btn-danger short-title-btn">
+                        <i class="bi bi-x-lg"></i>
+                      </button>
+                    </div>
+                    <div class="prgraph-input d-none  d-flex justify-content-between align-items-center  gap-2 ">
+                      <div class="flex-grow-1">
+                        <div>
+                          <label for="short-tittle" class="form-label text-dark">
+                            Paragraph 
+                          </label>
+                          <input type="text" id="survey-input-1" class="form-control py-3" placeholder="Write ...">
+                          <div class="toolBar">
+                            <button class="btn fw-bold  cursor-pointer  bold-btn-1">B</button>
+                            <button class="btn fw-bold  cursor-pointer  italic-btn-1">I</button>
+                            <button class="btn fw-bold  cursor-pointer  underline-btn-1">U</button>
+                            <button class="btn fw-bold  link-btn-1"><i class="bi bi-link"></i></button>
+                          </div>
+                        </div>
+                        <button class="btn btn-warning" onclick="saveInfo(this,'Paragraph','1')">Save</button>
+                      </div>
+                      <button class=" mt-0 btn btn-danger prg-btn">
+                        <i class="bi bi-x-lg"></i>
+                      </button>
+                    </div>
+                    <div class="multiple-input d-none my-3">
+                      <div class="add-more-multiple-input" id="add-more-multiple-input-1">
+                        <div class="multiple-box">
+                          <label for="Titile" class="form-label text-dark">
+                            Multiple Choice Tittle 
+                          </label>
+                          <input type="text"  class="form-control py-3" placeholder="Write ...">
+                         
+                        </div>
+                        <div class="d-flex  align-items-center  gap-3 ">
+                          <div class="form-check my-2 d-flex align-items-center gap-2 multiple-box-all ">
+                            <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios1"/>
+                            <div>
+                              <input class="form-control txt-black mt-1 fw-normal" id="choice-input-first"
+                                placeholder="Option 1"  />
+                            </div>
+                          </div>
+                          <button class=" mt-1 btn btn-danger multiple-choice-btn">
+                            <i class="bi bi-x-lg"></i>
+                          </button>
+                        </div>
+                      </div>
+                      <div class="form-check my-2 d-flex align-items-center gap-2">
+                        <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios2"
+                          value="option2" />
+                        <Button class="btn text-muted mt-1 fw-normal"
+                          onclick="addMoreInput( `radio`,`add-more-multiple-input-1`,`multiple-choice-btn`)">
+                          Add option
+                        </Button>
+                      </div>
+                      <button class="btn btn-warning mx-3" onclick="saveMultipleBtn3( 'survey_create_option','multiple-input','1')"> Save</button>
+                    </div>
+                    <div class="choice-input d-none my-3">
+                      <div class="add-more-choice-input" id="add-more-choice-input-1">
+                        <div>
+                          <label for="Titile" class="form-label text-dark">
+                             Choice Tittle 
+                          </label>
+                          <input type="text"  class="form-control py-3" placeholder="Write ...">
+                         
+                        </div>
+                        <div class="d-flex  align-items-center  gap-3">
+                          <div class="form-check my-2 d-flex align-items-center gap-2 ">
+                            <input class="form-check-input" type="checkbox" name="exampleRadios" id="exampleRadios1"
+                              value="option1" />
+                           
+                              <div>
+                                <input class="form-control txt-black mt-1 fw-normal" id="choice-input-first"
+                                placeholder="Option 1"  />
+                              </div>
+                           
+
+                          </div>
+                          <button class=" mt-1 btn btn-danger choice-input-btn">
+                            <i class="bi bi-x-lg"></i>
+                          </button>
+                        </div>
+                      </div>
+                      <div class="form-check my-2 d-flex align-items-center gap-2">
+                        <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios2"
+                          value="option2" />
+                        <Button class="btn text-muted mt-1 fw-normal"
+                          onclick="addMoreInput( `checkbox`,`add-more-choice-input-1`,`choice-input-btn`)">
+                          Add option
+                        </Button>
+                      </div>
+                      <button class="btn btn-warning mx-3" onclick="saveMultipleBtn3( 'survey_create_option','choice-input','1')"> Save</button>
+                    </div>
+                    <div class="dropdown-input d-none my-3">
+                      <div class="add-more-dropdown-input" id="add-more-dropdown-input-1">
+                        <div>
+                          <label for="Titile" class="form-label text-dark">
+                            DropDown  Tittle 
+                          </label>
+                          <input type="text"  class="form-control py-3" placeholder="Write ...">
+                         
+                        </div>
+                        <div class="d-flex  align-items-center  gap-3">
+                          <div class="form-check my-2 d-flex align-items-center gap-2 ">
+                            <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios1"
+                              value="option1" />
+                            <div>
+                              <input class="form-control txt-black mt-1 fw-normal" id="choice-input-first"
+                                placeholder="Option 1"  />
+                            </div>
+
+                          </div>
+                          <button class=" mt-1 btn btn-danger dropdown-input-btn">
+                            <i class="bi bi-x-lg"></i>
+                          </button>
+                        </div>
+                      </div>
+                      <div class="form-check my-2 d-flex align-items-center gap-2">
+                        <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios2"
+                          value="option2" />
+                        <Button class="btn text-muted mt-1 fw-normal"
+                          onclick="addMoreInput( `radio`,`add-more-dropdown-input-1`,`dropdown-input-btn`)">
+                          Add option
+                        </Button>
+                      </div>
+                      <button class="btn btn-warning mx-3" onclick="saveMultipleBtn3( 'survey_create_option','dropdown-input','1')"> Save</button>
+                    </div>
+                   <div class="fileUpload-input d-none my-3">
+                    <div class=" d-flex justify-content-between align-items-center  gap-3 ">
+                      <div class="flex-grow-1">
+                        <label for="writePrg" class="form-label txt-black">Upload File </label>
+                       
+                        <div class="form-group card dropzone border-dashed">
+                          <div class="card-img">
+                              <div class="img-preview position-relative btn-file">
+                                  <div class="yes" >
+                                      <img id="ImgPreview" src="assets/images/icon/cloud-upload.png" alt="broken_image" class="preview1 upload-img mx-auto" />
+                                  </div>
+                                  <input type="file" id="imag" title="Upload_img" class="form-control input-img"/>
+                              </div>
+                              <button type="button" id="removeImage1" class="close-btn btn-rmv1"><i class="bi bi-x-circle-fill"></i></button>
+                          </div>
+                      </div>
+                      </div>
+                      <button class=" mt-4 btn btn-danger fileUpload-input-btn">
+                        <i class="bi bi-x-lg"></i>
+                      </button>
+                      
+                    </div>
+                    <button class="btn btn-warning mx-3" onclick="saveFile(this,'File Upload','1')">Save</button>
+                   </div>
+                    <div class="linear-scale-input d-none my-3 d-flex justify-content-between align-items-start gap-3 ">
+                      <div class="flex-grow-1 linear-scale" >
+                        <label for="enter-survey-name" class="form-label text-dark">
+                          Tittle Of Scale 
+                        </label>
+                        <input type="text" class="form-control py-3" placeholder="Write ...">
+                        <div class="toolBar my-3">
+                          <span class="mx-1 bold-btn-1">B</span>
+                          <span class="mx-1 italic-btn-1">I</span>
+                          <span class="mx-1 underline-btn-1">U</span>
+                          <span class="mx-1 link-btn-1"><i class="bi bi-link"></i></span>
+                        </div>
+                        <div>
+                           <!-- here level  select  -->
+                           <div class="linear-main-scale d-flex gap-5 align-items-center">
+                            <select name="levelFirst" class="form-select w-50 linear-scale-option-value" id="" data-linear-value="first">
+                              <option value="1">1</option>
+                            </select>
+                            <div>To</div>
+                            <select name="levelLast" class="form-select w-50 linear-scale-option-value" id="" data-linear-value="last">
+                              <option value="2">2</option>
+                              <option value="3">3</option>
+                              <option value="4">4</option>
+                              <option value="5">5</option>
+                              <option value="6">6</option>
+                              <option value="7">7</option>
+                              <option value="8">8</option>
+                              <option value="9">9</option>
+                              <option value="10">10</option>
+                            </select>
+      
+                           </div>
+                           <!-- here level  select  -->
+                          <div class="linear-all-scale my-4">
+                             <!-- here level left name  -->
+                             <div class="d-flex align-items-center gap-2 my-2 linear-first">
+                              <span class="text-dark">1</span>
+                              <input class="form-control" type="text" name="" id="">
+                             </div>
+                          
+                           <!-- here level left name  -->
+      
+                         
+                           <!-- here level  Right Name   -->
+                           <div class="d-flex align-items-center gap-2 linear-second">
+                            <span class="linear-second-last text-dark">2</span>
+                            <input class="form-control" type="text" name="" id="">
+                           </div>
+                           <!-- here level  Right Name   -->
+                          </div>
+                          <div class="linear-scale-created d-none">
+                            <h2 class="linear-input-main-value text-dark text-center text-capitalize "></h2>
+                           <div class="d-flex justify-content-between align-items-center  my-4">
+                            <span class="inputValue1 text-dark">1</span>
+                            <div class="new-created-input">
+                            
+                            </div>
+                            <span class="inputValue2 text-dark">10</span>
+                           </div>
+                          </div>
+                        </div>
+                       <div>
+                        <button class="btn btn-warning my-3 linear-scale-save-btn ">Save</button>
+                        <button class="btn btn-danger my-3 linear-scale-delete-btn d-none">Delete</button>
+                      </div>
+                       </div>
+                      <button class=" mt-4 btn btn-danger linearScale-input-btn">
+                        <i class="bi bi-x-lg"></i>
+                      </button>
+                    </div>
+
+                    <div class="multiple-choice-grid d-none my-3 d-flex justify-content-between align-items-start  gap-3">
+                      <div>
+                        <div class="choice-inbox">
+                          <label for="Titile" class="form-label text-dark">
+                            Multiple Choice Tittle 
+                          </label>
+                          <input type="text"  class="form-control py-3" placeholder="Write ...">
+                        </div>
+                        <div class="d-flex align-items-lg-start flex-column flex-xl-row gap-3 multiple-grid-choice-main-div">
+                         <div>
+                           <!-- Rows part  -->
+                           <div class="add-more-multiple-rows" id="add-more-multiple-rows-1">
+                             <h2 class="text-dark mx-5 mt-2"> Rows </h2>
+                             <div class="d-flex align-items-center  gap-3">
+                              <div class="form-check my-2 d-flex align-items-center gap-2 ">
+                                <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios1"
+                                  value="option1" />
+                                <div>
+                                  <input class="form-control txt-black mt-1 fw-normal" id="choice-input-first"
+                                    placeholder="Option 1"  />
+                                </div>
+                              </div>
+                              <button class=" mt-1 btn btn-danger multiple-choice-btn">
+                                <i class="bi bi-x-lg"></i>
+                              </button>
+                            </div>
+                        </div>
+                         <!-- rows part add option  -->
+                      
+                         <div class="form-check my-2 d-flex align-items-center gap-2">
+                          <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios2"
+                            value="option2" />
+                          <button class="btn text-muted mt-1 fw-normal"
+                            onclick="addMoreRows( `radio`,`add-more-multiple-rows-1`,`multiple-choice-btn`)">
+                            Add option
+                          </button>
+                        </div>
+                      
+                       <!-- rows part add option  -->
+                         <!-- Rows part  -->
+                         </div>
+                         <hr class="border-2 border border-dark d-lg-none">
+                         <div>
+                           
+                           <!-- Column part  -->
+                           <div class="add-more-multiple-column" id="add-more-multiple-column-1">
+                           <h2 class="text-dark mx-5 mt-2"> Columns </h2>
+                          <div class="d-flex align-items-center  gap-3">
+                            <div class="form-check my-2 d-flex align-items-center gap-2 ">
+                              <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios1"
+                                value="option1" />
+                              <div>
+                                <input class="form-control txt-black mt-1 fw-normal" id="choice-input-first"
+                                  placeholder="Option 1"  />
+                              </div>
+                            </div>
+                            <button class=" mt-1 btn btn-danger multiple-choice-btn">
+                              <i class="bi bi-x-lg"></i>
+                            </button>
+                          </div>
+      
+                        </div>
+                         <!-- Column part  -->
+                          <!-- Column  part add option  -->
+                          <div class="form-check my-2 d-flex align-items-center gap-2">
+                           <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios2"
+                             value="option2" />
+                           <button class="btn text-muted mt-1 fw-normal"
+                             onclick="addMoreColumn( `radio`,`add-more-multiple-column-1`,`multiple-choice-btn`)">
+                             Add option
+                           </button>
+                         </div>
+                          <!-- Column  part add option  -->
+                         </div>
+                        </div>
+                        <div>
+                          <button class="btn btn-warning save-multiple-choice-grid mx-4 px-5 my-4 py-2" onclick="saveMultipleBtn(this)"> Save </button>
+                        </div>
+                      </div>
+                      <button class=" mt-4 btn btn-danger multiple-choice-grid-btn">
+                        <i class="bi bi-x-lg"></i>
+                      </button>
+                  </div>
+                    <div class="multiple-checkBox-grid d-none my-3 d-flex justify-content-between align-items-start  gap-3">
+                      <div>
+                        <div class="chekbox-inbox">
+                          <label for="Titile" class="form-label text-dark">
+                            CheckBox  Tittle 
+                          </label>
+                          <input type="text"  class="form-control py-3" placeholder="Write ...">
+                        </div>
+                        <div class="d-flex align-items-lg-start flex-column flex-xl-row gap-3 multiple-grid-choice-main-div">
+                         <div>
+                           <!-- Rows part  -->
+                           <div class="add-more-multiple-rows" id="add-more-multipleCheckBox-rows-1">
+                             <h2 class="text-dark mx-5 mt-2"> Rows </h2>
+                             <div class="d-flex align-items-center  gap-3">
+                              <div class="form-check my-2 d-flex align-items-center gap-2 ">
+                                <input class="form-check-input" type="checkbox" name="exampleRadios" id="exampleRadios1"
+                                  value="option1" />
+                                <div>
+                                  <input class="form-control txt-black mt-1 fw-normal" id="choice-input-first"
+                                    placeholder="Option 1"  />
+                                </div>
+                              </div>
+                              <button class=" mt-1 btn btn-danger multiple-choice-btn">
+                                <i class="bi bi-x-lg"></i>
+                              </button>
+                            </div>
+                        </div>
+                         <!-- rows part add option  -->
+                      
+                         <div class="form-check my-2 d-flex align-items-center gap-2">
+                          <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios2"
+                            value="option2" />
+                          <button class="btn text-muted mt-1 fw-normal"
+                            onclick="addMoreRows( `checkbox`,`add-more-multipleCheckBox-rows-1`,`multiple-choice-btn`)">
+                            Add option
+                          </button>
+                        </div>
+                      
+                       <!-- rows part add option  -->
+                         <!-- Rows part  -->
+                         </div>
+                         <hr class="border-2 border border-dark d-lg-none">
+                         <div>
+                           
+                           <!-- Column part  -->
+                           <div class="add-more-multiple-column" id="add-more-multipleCheckBox-column-1">
+                           <h2 class="text-dark mx-5 mt-2"> Columns </h2>
+                          <div class="d-flex align-items-center  gap-3">
+                            <div class="form-check my-2 d-flex align-items-center gap-2 ">
+                              <input class="form-check-input" type="checkbox" name="exampleRadios" id="exampleRadios1"
+                                value="option1" />
+                              <div>
+                                <input class="form-control txt-black mt-1 fw-normal" id="choice-input-first"
+                                  placeholder="Option 1"  />
+                              </div>
+                            </div>
+                            <button class=" mt-1 btn btn-danger multiple-choice-btn">
+                              <i class="bi bi-x-lg"></i>
+                            </button>
+                          </div>
+      
+                        </div>
+                         <!-- Column part  -->
+                          <!-- Column  part add option  -->
+                          <div class="form-check my-2 d-flex align-items-center gap-2">
+                           <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios2"
+                             value="option2" />
+                           <button class="btn text-muted mt-1 fw-normal"
+                             onclick="addMoreColumn( `checkbox`,`add-more-multipleCheckBox-column-1`,`multiple-choice-btn`)">
+                             Add option
+                           </button>
+                         </div>
+                          <!-- Column  part add option  -->
+                         </div>
+                        </div>
+                        <div>
+                          <button class="btn btn-warning save-multiple-choice-grid mx-4 px-5 my-4 py-2" onclick="saveMultipleBtn2(this)"> Save </button>
+                        </div>
+                      </div>
+                      <button class=" mt-4 btn btn-danger multiple-checkBox-grid-btn">
+                        <i class="bi bi-x-lg"></i>
+                      </button>
+                  </div>
+                  <div class="date-input d-none my-3">
+                    <div class="d-flex justify-content-between align-items-center  gap-3 ">
+                      <div class="flex-grow-1">
+                        <label for="writePrg" class="form-label txt-black">Date</label>
+                        <input type="date" placeholder="Write Paragraph" name="write" id="writePrg"
+                          class="form-control" />
+                      </div>
+                      <button class=" mt-4 btn btn-danger date-input-btn">
+                        <i class="bi bi-x-lg"></i>
+                      </button>
+                    </div>
+                    <button class="btn btn-warning my-2" onclick="saveInfo(this,`Date`,'1')">
+                      save
+                    </button>
+                  </div>
+                    <div class="time-input d-none my-3">
+                    <div class=" d-flex justify-content-between align-items-center  gap-3 ">
+                      <div class="flex-grow-1">
+                        <label for="writePrg" class="form-label txt-black">Time</label>
+                        <input type="time" placeholder="Write Paragraph" name="write" id="writePrg"
+                          class="form-control" />
+                      </div>
+                      <button class=" mt-4 btn btn-danger time-input-btn">
+                        <i class="bi bi-x-lg"></i>
+                      </button>
+                    </div>
+                    <button class="btn btn-warning my-2" onclick="saveInfo(this,`Time`,'1')">
+                      save
+                    </button>
+                  </div>
+                  </div>
+                  <!-- Image Part  -->
+                  <div class="d-flex align-items-lg-start gap-3 mt-3">
+                    <span class="mt-2 btn-file cursor-pointer"><i class="bi bi-image fs-7"></i>
+                      <input type="file" />
+                    </span>
+                    <div>
+                      <div class="block-wrapper">
+                        <ul class="select">
+                          <li class="" style="list-style-type: none;">
+                            <div class="select-field" id="option-1">
+
+                              <p class="txt-black fs-4 fw-normal">
+                                <span>
+                                  <img src="./assets/images/icon/short-msg.png" alt="" class="mx-2">
+                                </span> 
+                                <span>Short Answer</span>
+                              </p>
+                              <span></span>
+                            </div>
+                            <ul class="select-list">
+                              <li class="">
+                                <p class="txt-black  fs-4 fw-normal">
+                                  <span>
+                                    <img src="./assets/images/icon/short-msg.png" alt="" class="mx-2">
+                                  </span> 
+                                  <span>Short Answer</span>
+                                </p>
+                              </li>
+                              <li>
+                                <p class="txt-black fs-4 fw-normal">
+                                  <span>
+                                    <img src="./assets/images/icon/modal_list.png" alt="" class="mx-2">
+                                  </span> 
+                                  <span>Paragraph</span>
+                                </p>
+                              </li>
+                              <li>
+                                <hr class="border-1 border border-dark">
+                                <p class="txt-black fs-4 fw-normal">
+                                  <span>
+                                    <img src="./assets/images/icon/multiple-choice.png" alt="" class="mx-2">
+                                  </span> 
+                                  <span>Multiple Choice</span>
+                                </p>
+                              </li>
+                              <li>
+                                <p class="txt-black fs-4 fw-normal">
+                                  <span>
+                                    <img src="./assets/images/icon/checkmark.png" alt="" class="mx-2">
+                                  </span> 
+                                  <span>Checkboxes</span>
+                                </p>
+                              </li>
+                              <li>
+                                <p class="txt-black fs-4 fw-normal">
+                                  <span>
+                                    <img src="./assets/images/icon/dropdown.png" alt="" class="mx-2">
+                                  </span> 
+                                  <span>DropDown</span>
+                                </p>
+                                <hr class="border-1 border border-dark">
+                              </li>
+                              <li>
+                                <p class="txt-black fs-4 fw-normal">
+                                  <span>
+                                    <img src="./assets/images/icon/fileUpload.png" alt="" class="mx-2">
+                                  </span> 
+                                  <span>File Upload</span>
+                                </p>
+                              </li>
+                              <li>
+                                <hr class="border-1 border border-dark">
+                                <p class="txt-black  fs-4 fw-normal">
+                                  <span>
+                                    <img src="./assets/images/icon/lineearScale.png" alt="" class="mx-2">
+                                  </span> 
+                                  <span>Linear Scale</span>
+                                </p>
+                              </li>
+                              <li>
+                                <p class="txt-black fs-4 fw-normal">
+                                  <span>
+                                    <img src="./assets/images/icon/multipleGrid.png" alt="" class="mx-2">
+                                  </span> 
+                                  <span>Multiple Choice Grid</span>
+                                </p>
+                              </li>
+                              <li>
+                                <p class="txt-black fs-4 fw-normal">
+                                  <span>
+                                    <img src="./assets/images/icon/checkBoxGrid.png" alt="" class="mx-2">
+                                  </span> 
+                                  <span>Checkbox Grid</span>
+                                </p>
+                              </li>
+                              <li>
+                                <hr class="border-1 border border-dark">
+                                <p class="txt-black fs-4 fw-normal">
+                                  <span>
+                                    <img src="./assets/images/icon/date.png" alt="" class="mx-2">
+                                  </span> 
+                                  <span>Date</span>
+                                </p>
+                              </li>
+                              <li>
+                                <p class="txt-black fs-4 fw-normal">
+                                  <span>
+                                    <img src="./assets/images/icon/time.png" alt="" class="mx-2">
+                                  </span> 
+                                  <span>Time</span>
+                                </p>
+                              </li>
+                            </ul>
+                          </li>
+                        </ul>
+
+                      </div>
+                    </div>
+                  </div>
+                  <!-- Image Part  -->
+                </div>
+              
+              </div>
+              <!-- Option 1 -->
+              </div>
+              <div id="toolBoxOfInput" class="shadow-sm">
+                <!-- Modal -->
+                <div>
+                 <ul>
+                  <li id="btn-create-option">
+                    <i class="bi bi-plus-circle"></i>
+                  </li>
+                  <li>
+                    <i class="bi bi-file-earmark-break"></i>
+                  </li>
+                  <li>
+                    <img src="./assets/images/icon/tt.png" alt="">
+                  </li>
+                  <li class="btn-file">
+                    <i class="bi bi-card-image "></i>
+                    <input type="file">
+                  </li>
+                  <li>
+                    <img src="./assets/images/icon/videoIcon.png" alt="">
+                  </li>
+                  <li>
+                    <img src="./assets/images/icon/grab.png" alt="">
+                  </li>
+                 </ul>
+                </div>
+              </div>
+              </div>
+              <!-- Here start Create Survey Section  -->
+            </main>
+
+            <!--  here End main section  page  -->
+          </div>
+      </div>
+      </section>
+      <!-- Modal -->
+      <!-- here Start Modal part  -->
+     
+      <!-- here Start Modal part  -->
+
+      <!-- 3. end kichen sink -->
+
+     
+
+      <!-- -------------------------------------------------------------- -->
+      <!-- End PAge Content -->
+      <!-- -------------------------------------------------------------- -->
+    </div>
+    <!-- -------------------------------------------------------------- -->
+    <!-- End Container fluid  -->
+    <!-- -------------------------------------------------------------- -->
+    <!-- -------------------------------------------------------------- -->
+    <!-- footer -->
+    <!-- -------------------------------------------------------------- -->
+    <footer class="footer text-center d-none">
+      All Rights Reserved by
+      <a href="https://www.royex.ae/" target="_blank">Royex Technologies</a>.
+    </footer>
+    <!-- -------------------------------------------------------------- -->
+    <!-- End footer -->
+    <!-- -------------------------------------------------------------- -->
+  </div>
+  <!-- -------------------------------------------------------------- -->
+  <!-- End Page wrapper  -->
+  <!-- -------------------------------------------------------------- -->
+  </div>
+  <!-- -------------------------------------------------------------- -->
+  <!-- End Wrapper -->
+  <!-- -------------------------------------------------------------- -->
+  <!-- -------------------------------------------------------------- -->
+  <!-- All Jquery -->
+  <!-- -------------------------------------------------------------- -->
+  <script src="assets/libs/jquery/dist/jquery.min.js"></script>
+  <!-- Bootstrap tether Core JavaScript -->
+  <script src="assets/libs/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="assets/libs/fontawesome/js/all.js"></script>
+  <!-- apps -->
+  <script src="assets/dist/js/app.min.js"></script>
+  <script src="assets/dist/js/app.init.minimal.js"></script>
+  <script src="assets/dist/js/app-style-switcher.js"></script>
+  <!-- slimscrollbar scrollbar JavaScript -->
+  <script src="assets/libs/perfect-scrollbar/dist/perfect-scrollbar.jquery.min.js"></script>
+  <script src="assets/extra-libs/sparkline/sparkline.js"></script>
+  <!--Wave Effects -->
+  <script src="assets/dist/js/waves.js"></script>
+  <!--Menu sidebar -->
+  <script src="assets/dist/js/sidebarmenu.js"></script>
+  <!--Custom JavaScript -->
+  <script src="assets/dist/js/feather.min.js"></script>
+  <script src="assets/dist/js/custom.min.js"></script>
+  <!-- This Page JS -->
+  <script src="assets/extra-libs/prism/prism.js"></script>
+  <!-- <script src="./js/utils.js"></script> -->
+  <script src="assets/js/texteditor.js"></script>
+  <script src="./js/newUtils.js"></script>
+  <!-- Bootstrap Table link  -->
+  <script src="https://unpkg.com/tableexport@5.2.0/dist/js/tableexport.js"></script>
+  <script src="https://unpkg.com/bootstrap-table@1.22.2/dist/bootstrap-table.min.js"></script>
+
+  <!-- Bootstrap Table link  -->
+  <script>
+    document.getElementById("btnSwitch").addEventListener("click", () => {
+      if (document.documentElement.getAttribute("data-bs-theme") == "dark") {
+        document.documentElement.setAttribute("data-bs-theme", "light");
+      } else {
+        document.documentElement.setAttribute("data-bs-theme", "dark");
+      }
+    });
+  </script>
+  <script>
+    $(document).ready(function () {
+      $("#myInput").on("keyup", function () {
+        var value = $(this).val().toLowerCase();
+        $("#myList li").filter(function () {
+          $(this).toggle($(this).text().toLowerCase().indexOf(value) > -1);
+        });
+      });
+    });
+  </script>
+
+  <script>
+    function readURL(input, imgControlName) {
+      if (input.files && input.files[0]) {
+        var reader = new FileReader();
+        reader.onload = function (e) {
+          $(imgControlName).attr("src", e.target.result);
+        };
+        reader.readAsDataURL(input.files[0]);
+      }
+    }
+
+    $("#imag").change(function () {
+      // add your logic to decide which image control you'll use
+      var imgControlName = "#ImgPreview";
+      readURL(this, imgControlName);
+      $(".preview1").addClass("it");
+      $(".btn-rmv1").addClass("rmv");
+    });
+
+    $("#removeImage1").click(function (e) {
+      e.preventDefault();
+      $("#imag").val("");
+      $("#ImgPreview").attr("src", "assets/images/icon/broken_image.png");
+      $(".preview1").removeClass("it");
+      $(".btn-rmv1").removeClass("rmv");
+    });
+
+    $("#imag1").change(function () {
+      // add your logic to decide which image control you'll use
+      var imgControlName = "#ImgPreview1";
+      readURL(this, imgControlName);
+      $(".preview_1").addClass("it");
+      $(".btn-rmv_1").addClass("rmv");
+    });
+
+    $("#removeImage_1").click(function (e) {
+      e.preventDefault();
+      $("#imag1").val("");
+      $("#ImgPreview1").attr("src", "assets/images/icon/picture_as_pdf.png");
+      $(".preview_1").removeClass("it");
+      $(".btn-rmv_1").removeClass("rmv");
+    });
+  </script>
+</body>
+
+</html>

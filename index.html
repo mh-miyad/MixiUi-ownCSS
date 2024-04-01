@@ -1,61 +1,1467 @@
-<!doctype html>
-<html lang="en">
+<!DOCTYPE html>
+<html dir="ltr" lang="en" data-bs-theme="light">
   <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <!-- Tell the browser to be responsive to screen width -->
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="keywords" content="" />
+    <meta name="description" content="" />
+    <meta name="robots" content="noindex,nofollow" />
+    <title>Royex Events || Ticket List</title>
+    <link rel="canonical" href="" />
+    <!-- Favicon icon -->
     <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/flowbite/2.3.0/flowbite.min.css"
+      rel="icon"
+      type="image/png"
+      sizes="16x16"
+      href="assets/images/favicon.png"
     />
-    <link rel="stylesheet" href="./style/output.css" />
-    <!-- Here Add jquery  -->
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
-    <!-- Here Add jquery  -->
-    <title>Royex technology</title>
+    <!-- this pagjs -->
+    <link rel="stylesheet" href="assets/libs/apexcharts/dist/apexcharts.css" />
+    <link
+      href="assets/libs/jvectormap/jquery-jvectormap.css"
+      rel="stylesheet"
+    />
+    <link href="assets/libs/fontawesome/css/all.css" rel="stylesheet" />
+    <!-- Custom CSS -->
+    <link href="assets/dist/css/style.css" rel="stylesheet" />
+    <link href="assets/css/theme-mood.css" rel="stylesheet" />
+    <link href="assets/css/custom.css" rel="stylesheet" />
+    <link rel="stylesheet" href="./style/orderList.css" />
+    <link href="assets/css/responsive.css" rel="stylesheet" />
+    <link rel="stylesheet" href="./style/output.css">
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+      <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
   </head>
-  <body class="bg-slate-950 text-white border-white ">
-  <!-- More content here -->
-  <main class="flex justify-center h-screen items-center border-2 ">
 
-
-    <div class="accordion" id="accordion">
-  <div class="accordion-item">
-    <h2 class="accordion-header" id="headingOne">
-      <button class="accordion-button p-4 rounded-lg text-left focus:outline-none hover:bg-gray-100 active:bg-gray-200" type="button" data-target="#collapseOne" aria-expanded="false" aria-controls="collapseOne">
-        Section 1 Title
-      </button>
-    </h2>
-    <div id="collapseOne" class="accordion-collapse hidden overflow-hidden p-4 rounded-lg border border-gray-200" aria-labelledby="headingOne">
-      <div class="accordion-body">
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed fermentum leo vel orci porta, nec dapibus tellus tincidunt.</p>
-      </div>
+  <body>
+    <!-- -------------------------------------------------------------- -->
+    <!-- Preloader - style you can find in spinners.css -->
+    <!-- -------------------------------------------------------------- -->
+    <div class="preloader">
+      <img
+        src="assets/images/loading-img.png"
+        alt="loading-img"
+        class="img-fluid loading-img"
+      />
     </div>
-  </div>
-  </div>
+    <!-- -------------------------------------------------------------- -->
+    <!-- Main wrapper - style you can find in pages.scss -->
+    <!-- -------------------------------------------------------------- -->
+    <div id="main-wrapper">
+      <!-- -------------------------------------------------------------- -->
+      <!-- Topbar header - style you can find in pages.scss -->
+      <!-- -------------------------------------------------------------- -->
+      <header class="topbar">
+        <nav class="navbar top-navbar navbar-expand-md navbar-dark">
+          <div class="navbar-header">
+            <!-- This is for the sidebar toggle which is visible on mobile only -->
+            <a
+              class="nav-toggler waves-effect waves-light d-block d-md-none"
+              href="javascript:void(0)"
+            >
+              <i class="ri-close-line fs-6 ri-menu-2-line"></i>
+            </a>
+            <!-- -------------------------------------------------------------- -->
+            <!-- Logo -->
+            <!-- -------------------------------------------------------------- -->
+            <a class="navbar-brand d-none" href="index.html">
+              <!-- Logo text -->
+              <span class="logo-text">
+                <!-- dark Logo text -->
+                <img
+                  src="assets/images/logo-light-text.png"
+                  alt="homepage"
+                  class="dark-logo"
+                />
+                <!-- Light Logo text -->
+                <img
+                  src="assets/images/logo-dark-text.png"
+                  class="light-logo"
+                  alt="homepage"
+                />
+              </span>
+            </a>
 
+            <a class="navbar-brand" href="index.html">
+              <!-- Logo icon -->
+              <b class="logo-icon">
+                <!--You can put here icon as well // <i class="wi wi-sunset"></i> //-->
+                <!-- Dark Logo icon -->
+                <img
+                  src="assets/images/logo-icon-light.png"
+                  alt="homepage"
+                  class="dark-logo"
+                />
+                <!-- Light Logo icon -->
+                <img
+                  src="assets/images/logo-icon-dark.png"
+                  alt="homepage"
+                  class="light-logo"
+                />
+              </b>
+              <!--End Logo icon -->
+              <!-- Logo text -->
+              <span class="logo-text">
+                <!-- dark Logo text -->
+                <img
+                  src="assets/images/logo-light-text.png"
+                  alt="homepage"
+                  class="dark-logo"
+                />
+                <!-- Light Logo text -->
+                <img
+                  src="assets/images/logo-dark-text.png"
+                  class="light-logo"
+                  alt="homepage"
+                />
+              </span>
+            </a>
+            <!-- -------------------------------------------------------------- -->
+            <!-- End Logo -->
+            <!-- -------------------------------------------------------------- -->
+            <!-- -------------------------------------------------------------- -->
+            <!-- Toggle which is visible on mobile only -->
+            <!-- -------------------------------------------------------------- -->
+            <a
+              class="topbartoggler d-block d-md-none waves-effect waves-light"
+              href="javascript:void(0)"
+              data-bs-toggle="collapse"
+              data-bs-target="#navbarSupportedContent"
+              aria-controls="navbarSupportedContent"
+              aria-expanded="false"
+              aria-label="Toggle navigation"
+              ><i data-feather="more-horizontal" class="feather-sm"></i
+            ></a>
+          </div>
 
-    
+          <!-- -------------------------------------------------------------- -->
+          <!-- End Logo -->
+          <!-- -------------------------------------------------------------- -->
+          <div class="navbar-collapse collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav me-auto">
+              <!-- This is  -->
+              <li class="nav-item">
+                <a
+                  class="nav-link sidebartoggler sidebar-toggle d-none d-md-block waves-effect waves-dark"
+                  href="javascript:void(0)"
+                  ><i data-feather="menu" class="feather-sm"></i
+                ></a>
+              </li>
+            </ul>
+            <div class="top-search-box mb-0">
+              <form class="search-form" action="">
+                <div class="input-group">
+                  <button
+                    type="submit"
+                    class="btn input-group-text"
+                    id="basic-addon1"
+                  >
+                    <i data-feather="search" class="feather-sm"></i>
+                  </button>
+                  <input
+                    type="text"
+                    class="form-control"
+                    placeholder="Search..."
+                    aria-label="Username"
+                    aria-describedby="basic-addon1"
+                  />
+                </div>
+              </form>
+            </div>
+            <!-- -------------------------------------------------------------- -->
+            <!-- toggle and nav items -->
+            <!-- -------------------------------------------------------------- -->
 
-  </main>
-  <!-- More content here -->
+            <!-- -------------------------------------------------------------- -->
+            <!-- Right side toggle and nav items -->
+            <!-- -------------------------------------------------------------- -->
+            <ul class="navbar-nav justify-content-end align-items-center w-100">
+              <!-- -------------------------------------------------------------- -->
+              <!-- Mood -->
+              <!-- -------------------------------------------------------------- -->
 
-    <!-- here add html tag -->
-    <script src="./js/custom.js"></script>
-    <script src="./js/jquery.min.js"></script>
+              <li class="nav-item">
+                <button
+                  class="theme-switcher gray-circle-btn waves-effect waves-dark"
+                  id="btnSwitch"
+                  type="button"
+                  title="Switch theme"
+                >
+                  <span class="sr-only">Switch theme</span>
+                  <i class="sun-icon" data-feather="sun" aria-hidden="true"></i>
+                  <i
+                    class="moon-icon"
+                    data-feather="moon"
+                    aria-hidden="true"
+                  ></i>
+                </button>
+              </li>
+              <!-- -------------------------------------------------------------- -->
+              <!-- Comment -->
+              <!-- -------------------------------------------------------------- -->
+              <li class="nav-item dropdown">
+                <a
+                  class="nav-link dropdown-toggle waves-effect waves-dark"
+                  href="#"
+                  data-bs-toggle="dropdown"
+                  aria-haspopup="true"
+                  aria-expanded="false"
+                  ><i data-feather="bell"></i>
+                  <div class="notify">
+                    <span class="heartbit"></span> <span class="point"></span>
+                  </div>
+                </a>
+                <div
+                  class="dropdown-menu dropdown-menu-end mailbox animated flipInY"
+                >
+                  <ul class="list-style-none">
+                    <li>
+                      <div class="border-bottom rounded-top py-3 px-4">
+                        <div class="mb-0 font-weight-medium fs-4">
+                          Notifications
+                        </div>
+                      </div>
+                    </li>
+                    <li>
+                      <div
+                        class="message-center notifications position-relative"
+                        style="height: auto"
+                      >
+                        <!-- Message -->
+                        <a
+                          href="javascript:void(0)"
+                          class="message-item d-flex align-items-center border-bottom px-3 py-2"
+                        >
+                          <span
+                            class="btn btn-light-danger text-danger btn-circle"
+                          >
+                            <i
+                              data-feather="link"
+                              class="feather-sm fill-white"
+                            ></i>
+                          </span>
+                          <div class="w-75 d-inline-block v-middle ps-3">
+                            <h5 class="message-title mb-0 mt-1 fs-3 fw-bold">
+                              Luanch Admin
+                            </h5>
+                            <span
+                              class="fs-2 text-nowrap d-block time text-truncate fw-normal text-muted mt-1"
+                              >Just see the my new admin!</span
+                            >
+                            <span
+                              class="fs-2 text-nowrap d-block subtext text-muted"
+                              >9:30 AM</span
+                            >
+                          </div>
+                        </a>
+                        <!-- Message -->
+                        <a
+                          href="javascript:void(0)"
+                          class="message-item d-flex align-items-center border-bottom px-3 py-2"
+                        >
+                          <span
+                            class="btn btn-light-success text-success btn-circle"
+                          >
+                            <i
+                              data-feather="calendar"
+                              class="feather-sm fill-white"
+                            ></i>
+                          </span>
+                          <div class="w-75 d-inline-block v-middle ps-3">
+                            <h5 class="message-title mb-0 mt-1 fs-3 fw-bold">
+                              Event today
+                            </h5>
+                            <span
+                              class="fs-2 text-nowrap d-block time text-truncate fw-normal text-muted mt-1"
+                              >Just a reminder that you have event</span
+                            >
+                            <span
+                              class="fs-2 text-nowrap d-block subtext text-muted"
+                              >9:10 AM</span
+                            >
+                          </div>
+                        </a>
+                        <!-- Message -->
+                        <a
+                          href="javascript:void(0)"
+                          class="message-item d-flex align-items-center border-bottom px-3 py-2"
+                        >
+                          <span class="btn btn-light-info text-info btn-circle">
+                            <i
+                              data-feather="settings"
+                              class="feather-sm fill-white"
+                            ></i>
+                          </span>
+                          <div class="w-75 d-inline-block v-middle ps-3">
+                            <h5 class="message-title mb-0 mt-1 fs-3 fw-bold">
+                              Settings
+                            </h5>
+                            <span
+                              class="fs-2 text-nowrap d-block time text-truncate fw-normal text-muted mt-1"
+                              >You can customize this template as you want</span
+                            >
+                            <span
+                              class="fs-2 text-nowrap d-block subtext text-muted"
+                              >9:08 AM</span
+                            >
+                          </div>
+                        </a>
+                        <!-- Message -->
+                        <a
+                          href="javascript:void(0)"
+                          class="message-item d-flex align-items-center border-bottom px-3 py-2"
+                        >
+                          <span
+                            class="btn btn-light-primary text-primary btn-circle"
+                          >
+                            <i
+                              data-feather="users"
+                              class="feather-sm fill-white"
+                            ></i>
+                          </span>
+                          <div class="w-75 d-inline-block v-middle ps-3">
+                            <h5 class="message-title mb-0 mt-1 fs-3 fw-bold">
+                              Pavan kumar
+                            </h5>
+                            <span
+                              class="fs-2 text-nowrap d-block time text-truncate fw-normal text-muted mt-1"
+                              >Just see the my admin!</span
+                            >
+                            <span
+                              class="fs-2 text-nowrap d-block subtext text-muted"
+                              >9:02 AM</span
+                            >
+                          </div>
+                        </a>
+                      </div>
+                    </li>
+                    <li>
+                      <a
+                        class="nav-link border-top text-center text-dark pt-3"
+                        href="javascript:void(0);"
+                      >
+                        <strong>Check all notifications</strong>
+                        <i data-feather="chevron-right" class="feather-sm"></i>
+                      </a>
+                    </li>
+                  </ul>
+                </div>
+              </li>
+              <!-- -------------------------------------------------------------- -->
+              <!-- End Comment -->
+              <!-- -------------------------------------------------------------- -->
+              <!-- -------------------------------------------------------------- -->
+              <!-- Profile -->
+              <!-- -------------------------------------------------------------- -->
+              <li class="nav-item dropdown user-dropdown">
+                <a
+                  class="nav-link dropdown-toggle waves-effect waves-dark user-pic justify-content-between"
+                  href="#"
+                  data-bs-toggle="dropdown"
+                  aria-haspopup="true"
+                  aria-expanded="false"
+                >
+                  <div class="author-pic w-100">
+                    <img
+                      src="assets/images/users/1.jpg"
+                      alt="user"
+                      width="34"
+                      class="profile-pic rounded-circle"
+                    />
+                    <span>Tamim Tanvir</span>
+                  </div>
+                  <i data-feather="chevron-down" class="feather-sm"></i>
+                </a>
+                <div
+                  class="dropdown-menu dropdown-menu-top animated flipInY pb-0"
+                >
+                  <!-- <div class="d-flex no-block align-items-center p-3 bg-primary text-white mb-2">
+                                    <div class=""><img src="assets/images/users/1.jpg" alt="user" class="rounded-circle" width="60"></div>
+                                    <div class="ms-2">
+                                        <h4 class="mb-0 text-white">Steave Jobs</h4>
+                                        <p class=" mb-0">varun@gmail.com</p>
+                                    </div>
+                                </div> -->
+                  <a class="dropdown-item" href="#"
+                    ><i
+                      data-feather="user"
+                      class="feather-sm text-info me-1 ms-1"
+                    ></i>
+                    My Profile</a
+                  >
+                  <a class="dropdown-item" href="#"
+                    ><i
+                      data-feather="credit-card"
+                      class="feather-sm text-primary me-1 ms-1"
+                    ></i>
+                    My Task</a
+                  >
+                  <div class="dropdown-divider"></div>
+                  <!-- <a class="dropdown-item" href="#"><i data-feather="settings" class="feather-sm text-warning me-1 ms-1"></i>
+                                    Account Setting</a> -->
+                  <a
+                    class="dropdown-item"
+                    id="accounts-Billing"
+                    href="javascript:void(0);"
+                    aria-expanded="false"
+                  >
+                    <img
+                      src="assets/images/icon/credit_card.png"
+                      alt="credit_card"
+                      class="img-fluid icon-img"
+                      width="24"
+                      height="24"
+                    />
+                    <img
+                      src="assets/images/icon/credit_card1.png"
+                      alt="credit_card"
+                      class="img-fluid hover-img"
+                      width="24"
+                      height="24"
+                    />
+                    <span class="hide-menu">Accounts Billing</span>
+                  </a>
+                  <a
+                    class="dropdown-item"
+                    id="consulting"
+                    href="javascript:void(0);"
+                    aria-expanded="false"
+                  >
+                    <img
+                      src="assets/images/icon/person.png"
+                      alt="person"
+                      class="img-fluid icon-img"
+                      width="24"
+                      height="24"
+                    />
+                    <img
+                      src="assets/images/icon/person1.png"
+                      alt="person"
+                      class="img-fluid hover-img"
+                      width="24"
+                      height="24"
+                    />
+                    <span class="hide-menu">Consulting services</span>
+                  </a>
+                  <a
+                    class="dropdown-item"
+                    id="support"
+                    href="javascript:void(0);"
+                    aria-expanded="false"
+                  >
+                    <img
+                      src="assets/images/icon/support_agent.png"
+                      alt="support_agent"
+                      class="img-fluid icon-img"
+                      width="24"
+                      height="24"
+                    />
+                    <img
+                      src="assets/images/icon/support_agent1.png"
+                      alt="support_agent"
+                      class="img-fluid hover-img"
+                      width="24"
+                      height="24"
+                    />
+                    <span class="hide-menu">Support</span>
+                  </a>
+                  <a
+                    class="dropdown-item"
+                    id="knowledge"
+                    href="javascript:void(0);"
+                    aria-expanded="false"
+                  >
+                    <img
+                      src="assets/images/icon/import_contacts.png"
+                      alt="import_contacts"
+                      class="img-fluid icon-img"
+                      width="24"
+                      height="24"
+                    />
+                    <img
+                      src="assets/images/icon/import_contacts1.png"
+                      alt="import_contacts"
+                      class="img-fluid hover-img"
+                      width="24"
+                      height="24"
+                    />
+                    <span class="hide-menu">Knowledge Base</span>
+                  </a>
+                  <div class="dropdown-divider"></div>
+                  <a class="dropdown-item" href="#"
+                    ><i
+                      data-feather="log-out"
+                      class="feather-sm text-danger me-1 ms-1"
+                    ></i>
+                    Logout</a
+                  >
+                </div>
+              </li>
+            </ul>
+          </div>
+        </nav>
+      </header>
+      <!-- -------------------------------------------------------------- -->
+      <!-- End Topbar header -->
+      <!-- -------------------------------------------------------------- -->
+      <!-- -------------------------------------------------------------- -->
+      <!-- Left Sidebar - style you can find in sidebar.scss  -->
+      <!-- -------------------------------------------------------------- -->
+      <aside class="left-sidebar">
+        <!-- Sidebar scroll-->
+        <div class="scroll-sidebar">
+          <!-- Sidebar navigation-->
+          <nav class="sidebar-nav">
+            <ul class="sidebar-user-nav sidebarnav w-100">
+              <li class="sidebar-item nav-item dropend user-profile mb-0">
+                <a
+                  data-bs-toggle="dropdown"
+                  role="button"
+                  aria-expanded="false"
+                  class="nav-link dropdown-toggle sidebar-link has-arrow waves-effect waves-dark user-box"
+                  href="javascript:void(0)"
+                  aria-expanded="false"
+                >
+                  <!-- <img src="assets/images/users/profile.png" alt="user" class="m-0"> -->
+                  <div class="highlight">
+                    <span>R</span>
+                  </div>
+                  <div class="hide-menu user-name">
+                    <h3 class="hide-menu">Account Name Here</h3>
+                  </div>
+                  <div class="hide-menu icon-hide-menu">
+                    <img
+                      src="assets/images/icon/settings_ethernet.png"
+                      alt="settings_ethernet"
+                      class="img-fluid w-auto h-auto settings_ethernet"
+                    />
+                    <img
+                      src="assets/images/icon/settings_ethernet_dark.png"
+                      alt="settings_ethernet"
+                      class="img-fluid w-auto h-auto settings_ethernet_hover"
+                    />
+                    <img
+                      src="assets/images/icon/settings_ethernet_dark.png"
+                      alt="settings_ethernet"
+                      class="img-fluid w-auto h-auto settings_ethernet_dark"
+                    />
+                  </div>
+                </a>
+                <div
+                  role="menu"
+                  class="dropdown-menu sidenav-dropdown dropdown-menu-end custom-scrollbar-css"
+                >
+                  <a href="dashboard.html" class="dropdown-item">
+                    <div class="task-name">
+                      <div class="left-box">
+                        <span class="name">K</span>
+                        <div class="activity-rate">
+                          <h4>teambuiding.ae</h4>
+                          <p>Project | teambuiding.ae</p>
+                        </div>
+                      </div>
+                      <div class="arrow">
+                        <i class="bi bi-box-arrow-up-right"></i>
+                      </div>
+                    </div>
+                  </a>
+                  <a href="dashboard.html" class="dropdown-item">
+                    <div class="task-name">
+                      <div class="left-box">
+                        <span class="name">K</span>
+                        <div class="activity-rate">
+                          <h4>teambuiding.ae</h4>
+                          <p>Project | teambuiding.ae</p>
+                        </div>
+                      </div>
+                      <div class="arrow">
+                        <i class="bi bi-box-arrow-up-right"></i>
+                      </div>
+                    </div>
+                  </a>
+                  <a href="dashboard.html" class="dropdown-item">
+                    <div class="task-name">
+                      <div class="left-box">
+                        <span class="name">K</span>
+                        <div class="activity-rate">
+                          <h4>teambuiding.ae</h4>
+                          <p>Project | teambuiding.ae</p>
+                        </div>
+                      </div>
+                      <div class="arrow">
+                        <i class="bi bi-box-arrow-up-right"></i>
+                      </div>
+                    </div>
+                  </a>
+                  <a href="dashboard.html" class="dropdown-item">
+                    <div class="task-name">
+                      <div class="left-box">
+                        <span class="name">K</span>
+                        <div class="activity-rate">
+                          <h4>teambuiding.ae</h4>
+                          <p>Project | teambuiding.ae</p>
+                        </div>
+                      </div>
+                      <div class="arrow">
+                        <i class="bi bi-box-arrow-up-right"></i>
+                      </div>
+                    </div>
+                  </a>
+                  <a href="dashboard.html" class="dropdown-item">
+                    <div class="task-name">
+                      <div class="left-box">
+                        <span class="name">K</span>
+                        <div class="activity-rate">
+                          <h4>teambuiding.ae</h4>
+                          <p>Project | teambuiding.ae</p>
+                        </div>
+                      </div>
+                      <div class="arrow">
+                        <i class="bi bi-box-arrow-up-right"></i>
+                      </div>
+                    </div>
+                  </a>
+                  <a href="dashboard.html" class="dropdown-item">
+                    <div class="task-name">
+                      <div class="left-box">
+                        <span class="name">K</span>
+                        <div class="activity-rate">
+                          <h4>teambuiding.ae</h4>
+                          <p>Project | teambuiding.ae</p>
+                        </div>
+                      </div>
+                      <div class="arrow">
+                        <i class="bi bi-box-arrow-up-right"></i>
+                      </div>
+                    </div>
+                  </a>
+                </div>
+              </li>
+            </ul>
+            <ul id="sidebarnav" class="sidebarnav w-100 custom-scrollbar-css">
+              <li class="sidebar-item">
+                <a
+                  class="sidebar-link has-arrow waves-effect waves-dark"
+                  href="javascript:void(0)"
+                  aria-expanded="false"
+                >
+                  <img
+                    src="assets/images/events-menu-icon/dashboard.png"
+                    alt="home"
+                    class="img-fluid dark-img"
+                  />
+                  <img
+                    src="assets/images/events-menu-icon/dashboard_active.png"
+                    alt="home"
+                    class="img-fluid active-img"
+                  />
+                  <img
+                    src="assets/images/events-menu-icon/dashboard_dark.png"
+                    alt="home"
+                    class="img-fluid light-img"
+                  />
+                  <span class="hide-menu">Dashboard</span></a
+                >
+                <ul aria-expanded="false" class="collapse first-level">
+                  <li class="sidebar-item">
+                    <a href="#" class="sidebar-link"
+                      ><i data-feather="chevron-right" class="feather-sm"></i>
+                      <span class="hide-menu"> User Entry List </span></a
+                    >
+                  </li>
+                  <li class="sidebar-item">
+                    <a href="#" class="sidebar-link"
+                      ><i data-feather="chevron-right" class="feather-sm"></i
+                      ><span class="hide-menu"> Entry Name</span></a
+                    >
+                  </li>
+                  <li class="sidebar-item">
+                    <a href="#" class="sidebar-link"
+                      ><i data-feather="chevron-right" class="feather-sm"></i
+                      ><span class="hide-menu"> Add New Entry</span></a
+                    >
+                  </li>
+                </ul>
+              </li>
+              <li class="sidebar-item">
+                <a
+                  class="sidebar-link has-arrow waves-effect waves-dark"
+                  href="javascript:void(0)"
+                  aria-expanded="false"
+                >
+                  <img
+                    src="assets/images/events-menu-icon/operation.png"
+                    alt="home"
+                    class="img-fluid dark-img"
+                  />
+                  <img
+                    src="assets/images/events-menu-icon/operation_active.png"
+                    alt="home"
+                    class="img-fluid active-img"
+                  />
+                  <img
+                    src="assets/images/events-menu-icon/operation_dark.png"
+                    alt="home"
+                    class="img-fluid light-img"
+                  />
+                  <span class="hide-menu">Operation </span></a
+                >
+                <ul aria-expanded="false" class="collapse first-level">
+                  <li class="sidebar-item">
+                    <a href="#" class="sidebar-link"
+                      ><i data-feather="chevron-right" class="feather-sm"></i
+                      ><span class="hide-menu"> Booking </span></a
+                    >
+                  </li>
+                  <li class="sidebar-item">
+                    <a href="#" class="sidebar-link"
+                      ><i data-feather="chevron-right" class="feather-sm"></i
+                      ><span class="hide-menu"> POS</span></a
+                    >
+                  </li>
+                  <li class="sidebar-item">
+                    <a href="#" class="sidebar-link"
+                      ><i data-feather="chevron-right" class="feather-sm"></i
+                      ><span class="hide-menu"> Scanning</span></a
+                    >
+                  </li>
+                </ul>
+              </li>
+              <li class="sidebar-item">
+                <a
+                  class="sidebar-link has-arrow waves-effect waves-dark"
+                  href="javascript:void(0)"
+                  aria-expanded="false"
+                >
+                  <img
+                    src="assets/images/events-menu-icon/events.png"
+                    alt="home"
+                    class="img-fluid dark-img"
+                  />
+                  <img
+                    src="assets/images/events-menu-icon/events_active.png"
+                    alt="home"
+                    class="img-fluid active-img"
+                  />
+                  <img
+                    src="assets/images/events-menu-icon/events_dark.png"
+                    alt="home"
+                    class="img-fluid light-img"
+                  />
+                  <span class="hide-menu">Event Setup</span></a
+                >
+                <ul aria-expanded="false" class="collapse first-level">
+                  <li class="sidebar-item">
+                    <a href="#" class="sidebar-link"
+                      ><i data-feather="chevron-right" class="feather-sm"></i>
+                      <span class="hide-menu"> Activity</span></a
+                    >
+                  </li>
+                  <li class="sidebar-item">
+                    <a href="#" class="sidebar-link"
+                      ><i data-feather="chevron-right" class="feather-sm"></i
+                      ><span class="hide-menu"> Activity Schedules</span></a
+                    >
+                  </li>
+                  <li class="sidebar-item">
+                    <a href="#" class="sidebar-link"
+                      ><i data-feather="chevron-right" class="feather-sm"></i
+                      ><span class="hide-menu"> Venue</span></a
+                    >
+                  </li>
+                  <li class="sidebar-item">
+                    <a href="#" class="sidebar-link"
+                      ><i data-feather="chevron-right" class="feather-sm"></i
+                      ><span class="hide-menu"> Event Waiver</span></a
+                    >
+                  </li>
+                  <li class="sidebar-item">
+                    <a href="#" class="sidebar-link"
+                      ><i data-feather="chevron-right" class="feather-sm"></i
+                      ><span class="hide-menu">
+                        Event Terms and Conditions</span
+                      ></a
+                    >
+                  </li>
+                  <li class="sidebar-item">
+                    <a href="#" class="sidebar-link"
+                      ><i data-feather="chevron-right" class="feather-sm"></i
+                      ><span class="hide-menu"> Event FAQs</span></a
+                    >
+                  </li>
+                </ul>
+              </li>
+              <li class="sidebar-item">
+                <a
+                  class="sidebar-link has-arrow waves-effect waves-dark"
+                  href="javascript:void(0)"
+                  aria-expanded="false"
+                >
+                  <img
+                    src="assets/images/events-menu-icon/tickets.png"
+                    alt="home"
+                    class="img-fluid dark-img"
+                  />
+                  <img
+                    src="assets/images/events-menu-icon/tickets_active.png"
+                    alt="home"
+                    class="img-fluid active-img"
+                  />
+                  <img
+                    src="assets/images/events-menu-icon/tickets_dark.png"
+                    alt="home"
+                    class="img-fluid light-img"
+                  />
+                  <span class="hide-menu">Tickets</span></a
+                >
+                <ul aria-expanded="false" class="collapse first-level">
+                  <li class="sidebar-item">
+                    <a href="#" class="sidebar-link"
+                      ><i data-feather="chevron-right" class="feather-sm"></i
+                      ><span class="hide-menu">Ticket Types</span></a
+                    >
+                  </li>
+                  <li class="sidebar-item">
+                    <a href="#" class="sidebar-link"
+                      ><i data-feather="chevron-right" class="feather-sm"></i
+                      ><span class="hide-menu">Ticket Printing</span></a
+                    >
+                  </li>
+                  <li class="sidebar-item">
+                    <a href="#" class="sidebar-link"
+                      ><i data-feather="chevron-right" class="feather-sm"></i
+                      ><span class="hide-menu">Seating and Arena</span></a
+                    >
+                  </li>
+                  <li class="sidebar-item">
+                    <a href="#" class="sidebar-link"
+                      ><i data-feather="chevron-right" class="feather-sm"></i
+                      ><span class="hide-menu">Ticket Scanning</span></a
+                    >
+                  </li>
+                  <li class="sidebar-item">
+                    <a href="#" class="sidebar-link"
+                      ><i data-feather="chevron-right" class="feather-sm"></i
+                      ><span class="hide-menu">Footfall Reports</span></a
+                    >
+                  </li>
+                  <li class="sidebar-item">
+                    <a href="#" class="sidebar-link"
+                      ><i data-feather="chevron-right" class="feather-sm"></i
+                      ><span class="hide-menu">Promocode</span></a
+                    >
+                  </li>
+                </ul>
+              </li>
+              <li class="sidebar-item">
+                <a
+                  class="sidebar-link has-arrow waves-effect waves-dark"
+                  href="javascript:void(0)"
+                  aria-expanded="false"
+                >
+                  <img
+                    src="assets/images/events-menu-icon/registration.png"
+                    alt="home"
+                    class="img-fluid dark-img"
+                  />
+                  <img
+                    src="assets/images/events-menu-icon/registration_active.png"
+                    alt="home"
+                    class="img-fluid active-img"
+                  />
+                  <img
+                    src="assets/images/events-menu-icon/registration_dark.png"
+                    alt="home"
+                    class="img-fluid light-img"
+                  />
+                  <span class="hide-menu">Registration</span></a
+                >
+                <ul aria-expanded="false" class="collapse first-level">
+                  <li class="sidebar-item">
+                    <a href="#" class="sidebar-link"
+                      ><i data-feather="chevron-right" class="feather-sm"></i
+                      ><span class="hide-menu"> Visitors</span></a
+                    >
+                  </li>
+                  <li class="sidebar-item">
+                    <a href="#" class="sidebar-link"
+                      ><i data-feather="chevron-right" class="feather-sm"></i
+                      ><span class="hide-menu"> VIP</span></a
+                    >
+                  </li>
+                  <li class="sidebar-item">
+                    <a href="#" class="sidebar-link"
+                      ><i data-feather="chevron-right" class="feather-sm"></i
+                      ><span class="hide-menu"> Entertainer</span></a
+                    >
+                  </li>
+                  <li class="sidebar-item">
+                    <a href="#" class="sidebar-link"
+                      ><i data-feather="chevron-right" class="feather-sm"></i
+                      ><span class="hide-menu"> Vendor</span></a
+                    >
+                  </li>
+                  <li class="sidebar-item">
+                    <a href="#" class="sidebar-link"
+                      ><i data-feather="chevron-right" class="feather-sm"></i
+                      ><span class="hide-menu"> Speaker</span></a
+                    >
+                  </li>
+                  <li class="sidebar-item">
+                    <a href="#" class="sidebar-link"
+                      ><i data-feather="chevron-right" class="feather-sm"></i
+                      ><span class="hide-menu"> Sponsor</span></a
+                    >
+                  </li>
+                  <li class="sidebar-item">
+                    <a href="#" class="sidebar-link"
+                      ><i data-feather="chevron-right" class="feather-sm"></i
+                      ><span class="hide-menu"> Contract</span></a
+                    >
+                  </li>
+                  <li class="sidebar-item">
+                    <a href="#" class="sidebar-link"
+                      ><i data-feather="chevron-right" class="feather-sm"></i
+                      ><span class="hide-menu"> Complimentary Ticket</span></a
+                    >
+                  </li>
+                </ul>
+              </li>
+              <li class="sidebar-item">
+                <a
+                  class="sidebar-link has-arrow waves-effect waves-dark"
+                  href="javascript:void(0)"
+                  aria-expanded="false"
+                >
+                  <img
+                    src="assets/images/events-menu-icon/reports.png"
+                    alt="home"
+                    class="img-fluid dark-img"
+                  />
+                  <img
+                    src="assets/images/events-menu-icon/reports_active.png"
+                    alt="home"
+                    class="img-fluid active-img"
+                  />
+                  <img
+                    src="assets/images/events-menu-icon/reports_dark.png"
+                    alt="home"
+                    class="img-fluid light-img"
+                  />
+                  <span class="hide-menu">Reports </span></a
+                >
+                <ul aria-expanded="false" class="collapse first-level">
+                  <li class="sidebar-item">
+                    <a href="#" class="sidebar-link"
+                      ><i data-feather="chevron-right" class="feather-sm"></i>
+                      <span class="hide-menu"> User Entry List </span></a
+                    >
+                  </li>
+                  <li class="sidebar-item">
+                    <a href="#" class="sidebar-link"
+                      ><i data-feather="chevron-right" class="feather-sm"></i
+                      ><span class="hide-menu"> Entry Name</span></a
+                    >
+                  </li>
+                  <li class="sidebar-item">
+                    <a href="#" class="sidebar-link"
+                      ><i data-feather="chevron-right" class="feather-sm"></i
+                      ><span class="hide-menu"> Add New Entry</span></a
+                    >
+                  </li>
+                </ul>
+              </li>
+              <li class="sidebar-item">
+                <a
+                  class="sidebar-link has-arrow waves-effect waves-dark"
+                  href="javascript:void(0)"
+                  aria-expanded="false"
+                >
+                  <img
+                    src="assets/images/events-menu-icon/marketing.png"
+                    alt="home"
+                    class="img-fluid dark-img"
+                  />
+                  <img
+                    src="assets/images/events-menu-icon/marketing_active.png"
+                    alt="home"
+                    class="img-fluid active-img"
+                  />
+                  <img
+                    src="assets/images/events-menu-icon/marketing_dark.png"
+                    alt="home"
+                    class="img-fluid light-img"
+                  />
+                  <span class="hide-menu">Marketing </span></a
+                >
+                <ul aria-expanded="false" class="collapse first-level">
+                  <li class="sidebar-item">
+                    <a href="#" class="sidebar-link"
+                      ><i data-feather="chevron-right" class="feather-sm"></i>
+                      <span class="hide-menu">Message Template</span></a
+                    >
+                  </li>
+                  <li class="sidebar-item">
+                    <a href="#" class="sidebar-link"
+                      ><i data-feather="chevron-right" class="feather-sm"></i
+                      ><span class="hide-menu">Push Notification</span></a
+                    >
+                  </li>
+                  <li class="sidebar-item">
+                    <a href="#" class="sidebar-link"
+                      ><i data-feather="chevron-right" class="feather-sm"></i
+                      ><span class="hide-menu">Email Message</span></a
+                    >
+                  </li>
+                  <li class="sidebar-item">
+                    <a href="#" class="sidebar-link"
+                      ><i data-feather="chevron-right" class="feather-sm"></i
+                      ><span class="hide-menu">Pre Event Survey</span></a
+                    >
+                  </li>
+                  <li class="sidebar-item">
+                    <a href="#" class="sidebar-link"
+                      ><i data-feather="chevron-right" class="feather-sm"></i
+                      ><span class="hide-menu">Post Event Survey</span></a
+                    >
+                  </li>
+                  <li class="sidebar-item">
+                    <a href="#" class="sidebar-link"
+                      ><i data-feather="chevron-right" class="feather-sm"></i
+                      ><span class="hide-menu">Polls during the Events</span></a
+                    >
+                  </li>
+                </ul>
+              </li>
+              <li class="sidebar-item">
+                <a
+                  class="sidebar-link has-arrow waves-effect waves-dark"
+                  href="javascript:void(0)"
+                  aria-expanded="false"
+                >
+                  <img
+                    src="assets/images/events-menu-icon/merchandise.png"
+                    alt="home"
+                    class="img-fluid dark-img"
+                  />
+                  <img
+                    src="assets/images/events-menu-icon/merchandise_active.png"
+                    alt="home"
+                    class="img-fluid active-img"
+                  />
+                  <img
+                    src="assets/images/events-menu-icon/merchandise_dark.png"
+                    alt="home"
+                    class="img-fluid light-img"
+                  />
+                  <span class="hide-menu">Merchandise </span></a
+                >
+                <ul aria-expanded="false" class="collapse first-level">
+                  <li class="sidebar-item">
+                    <a href="#" class="sidebar-link"
+                      ><i data-feather="chevron-right" class="feather-sm"></i>
+                      <span class="hide-menu">Order</span></a
+                    >
+                  </li>
+                  <li class="sidebar-item">
+                    <a href="#" class="sidebar-link"
+                      ><i data-feather="chevron-right" class="feather-sm"></i
+                      ><span class="hide-menu">Inventory</span></a
+                    >
+                  </li>
+                </ul>
+              </li>
+              <li class="sidebar-item">
+                <a
+                  class="sidebar-link has-arrow waves-effect waves-dark"
+                  href="javascript:void(0)"
+                  aria-expanded="false"
+                >
+                  <img
+                    src="assets/images/events-menu-icon/support.png"
+                    alt="home"
+                    class="img-fluid dark-img"
+                  />
+                  <img
+                    src="assets/images/events-menu-icon/support_active.png"
+                    alt="home"
+                    class="img-fluid active-img"
+                  />
+                  <img
+                    src="assets/images/events-menu-icon/support_dark.png"
+                    alt="home"
+                    class="img-fluid light-img"
+                  />
+                  <span class="hide-menu">Support </span></a
+                >
+                <ul aria-expanded="false" class="collapse first-level">
+                  <li class="sidebar-item">
+                    <a href="#" class="sidebar-link"
+                      ><i data-feather="chevron-right" class="feather-sm"></i>
+                      <span class="hide-menu">FAQ </span></a
+                    >
+                  </li>
+                  <li class="sidebar-item">
+                    <a href="#" class="sidebar-link"
+                      ><i data-feather="chevron-right" class="feather-sm"></i
+                      ><span class="hide-menu">Visitor feedback</span></a
+                    >
+                  </li>
+                  <li class="sidebar-item">
+                    <a href="#" class="sidebar-link"
+                      ><i data-feather="chevron-right" class="feather-sm"></i
+                      ><span class="hide-menu">Survey</span></a
+                    >
+                  </li>
+                </ul>
+              </li>
+              <li class="sidebar-item">
+                <a
+                  class="sidebar-link has-arrow waves-effect waves-dark"
+                  href="javascript:void(0)"
+                  aria-expanded="false"
+                >
+                  <img
+                    src="assets/images/events-menu-icon/content.png"
+                    alt="home"
+                    class="img-fluid dark-img"
+                  />
+                  <img
+                    src="assets/images/events-menu-icon/content_active.png"
+                    alt="home"
+                    class="img-fluid active-img"
+                  />
+                  <img
+                    src="assets/images/events-menu-icon/content_dark.png"
+                    alt="home"
+                    class="img-fluid light-img"
+                  />
+                  <span class="hide-menu">Content </span></a
+                >
+                <ul aria-expanded="false" class="collapse first-level">
+                  <li class="sidebar-item">
+                    <a href="#" class="sidebar-link"
+                      ><i data-feather="chevron-right" class="feather-sm"></i>
+                      <span class="hide-menu">Web Content</span></a
+                    >
+                  </li>
+                  <li class="sidebar-item">
+                    <a href="#" class="sidebar-link"
+                      ><i data-feather="chevron-right" class="feather-sm"></i
+                      ><span class="hide-menu">Mobile Content</span></a
+                    >
+                  </li>
+                  <li class="sidebar-item">
+                    <a href="#" class="sidebar-link"
+                      ><i data-feather="chevron-right" class="feather-sm"></i
+                      ><span class="hide-menu">News</span></a
+                    >
+                  </li>
+                  <li class="sidebar-item">
+                    <a href="#" class="sidebar-link"
+                      ><i data-feather="chevron-right" class="feather-sm"></i
+                      ><span class="hide-menu">Blog</span></a
+                    >
+                  </li>
+                  <li class="sidebar-item">
+                    <a href="#" class="sidebar-link"
+                      ><i data-feather="chevron-right" class="feather-sm"></i
+                      ><span class="hide-menu">Gallery</span></a
+                    >
+                  </li>
+                </ul>
+              </li>
+              <li class="sidebar-item">
+                <a
+                  class="sidebar-link has-arrow waves-effect waves-dark"
+                  href="javascript:void(0)"
+                  aria-expanded="false"
+                >
+                  <img
+                    src="assets/images/events-menu-icon/settings1.png"
+                    alt="home"
+                    class="img-fluid dark-img"
+                  />
+                  <img
+                    src="assets/images/events-menu-icon/settings1_active.png"
+                    alt="home"
+                    class="img-fluid active-img"
+                  />
+                  <img
+                    src="assets/images/events-menu-icon/settings1_dark.png"
+                    alt="home"
+                    class="img-fluid light-img"
+                  />
+                  <span class="hide-menu">Settings </span></a
+                >
+                <ul aria-expanded="false" class="collapse first-level">
+                  <li class="sidebar-item">
+                    <a href="#" class="sidebar-link"
+                      ><i data-feather="chevron-right" class="feather-sm"></i>
+                      <span class="hide-menu">Web Content</span></a
+                    >
+                  </li>
+                  <li class="sidebar-item">
+                    <a href="#" class="sidebar-link"
+                      ><i data-feather="chevron-right" class="feather-sm"></i
+                      ><span class="hide-menu">Mobile Content</span></a
+                    >
+                  </li>
+                  <li class="sidebar-item">
+                    <a href="#" class="sidebar-link"
+                      ><i data-feather="chevron-right" class="feather-sm"></i
+                      ><span class="hide-menu">News</span></a
+                    >
+                  </li>
+                  <li class="sidebar-item">
+                    <a href="#" class="sidebar-link"
+                      ><i data-feather="chevron-right" class="feather-sm"></i
+                      ><span class="hide-menu">Blog</span></a
+                    >
+                  </li>
+                  <li class="sidebar-item">
+                    <a href="#" class="sidebar-link"
+                      ><i data-feather="chevron-right" class="feather-sm"></i
+                      ><span class="hide-menu">Gallery</span></a
+                    >
+                  </li>
+                </ul>
+              </li>
+            </ul>
+
+            <ul id="sidebarnav2" class="sidebarnav2 d-none w-100">
+              <li class="sidebar-item">
+                <a
+                  class="sidebar-link waves-effect waves-dark sidebar-link"
+                  href="#"
+                  aria-expanded="false"
+                >
+                  <div class="powered-by">
+                    <span class="hide-menu">Powered by</span>
+                    <img
+                      src="assets/images/royex-logo.png"
+                      alt="royex-logo"
+                      class="img-fluid royex-logo"
+                    />
+                    <img
+                      src="assets/images/royex-logo-dark.png"
+                      alt="royex-logo-dark"
+                      class="img-fluid royex-logo-dark"
+                    />
+                  </div>
+                </a>
+              </li>
+            </ul>
+          </nav>
+          <!-- End Sidebar navigation -->
+        </div>
+        <!-- End Sidebar scroll-->
+      </aside>
+      <!-- -------------------------------------------------------------- -->
+      <!-- End Left Sidebar - style you can find in sidebar.scss  -->
+      <!-- -------------------------------------------------------------- -->
+      <!-- -------------------------------------------------------------- -->
+      <!-- Page wrapper  -->
+      <!-- -------------------------------------------------------------- -->
+      <div class="page-wrapper">
+        <!-- -------------------------------------------------------------- -->
+        <!-- Container fluid  -->
+        <!-- -------------------------------------------------------------- -->
+        <div class="container-fluid">
+          <!-- -------------------------------------------------------------- -->
+          <!-- Start Page Content -->
+          <!-- -------------------------------------------------------------- -->
+          <!-- 3. Entry List -->
+          <section
+            class="section entry-list-section visitor-list-section tenant-list-section contact-list-section"
+            id="contact-list-section"
+          >
+            <div class="section-title justify-content-between">
+              <h3>Contract</h3>
+              <div class="product-list-btn">
+                <a href="#" class="btn btn-primary w-auto"
+                  ><i class="bi bi-file-e armark-pdf"></i> Export as PDF</a
+                >
+                <a href="#" class="btn btn-primary exp-btn w-auto"
+                  ><i class="bi bi-file-earmark-pdf"></i> Export as CSV</a
+                >
+                <a href="#" class="btn btn-primary rc-btn w-auto"
+                  ><i class="bi bi-printer"></i> Print</a
+                >
+                <a
+                  href="#"
+                  class="btn btn-primary rc-btn w-auto"
+                  data-bs-toggle="modal"
+                  data-bs-target="#exampleModal"
+                  >Cancel</a
+                >
+                <a href="#" class="btn btn-primary w-auto active"
+                  ><i data-feather="plus" class="feather-sm"></i> New</a
+                >
+              </div>
+            </div>
+            
+          </section>
+
+          <!-- 3. end kichen sink -->
+
+          <!-- -------------------------------------------------------------- -->
+          <!-- End PAge Content -->
+          <!-- -------------------------------------------------------------- -->
+        </div>
+
+        <!-- --------------------------------------------------------------
+          End -->
+        <div
+          class="modal fade contactDeleteModal"
+          id="exampleModal"
+          tabindex="-1"
+          aria-labelledby="exampleModalLabel"
+          aria-hidden="true"
+        >
+          <div class="modal-dialog modal-lg modal-dialog-centered">
+            <div class="modal-content">
+              <div class="modal-body p-lg-5">
+                <div class="text-center p-5 border border-2 rounded">
+                  <h2 class="fs-7 text-black">
+                    <span class="" id="conatctList">0</span> Contact Select
+                  </h2>
+                  <p class="text-capitalize text-black fs-4">
+                    Are you sure you want to Cancel the tickets
+                  </p>
+                  <div
+                    class="d-flex justify-content-center align-items-center gap-3"
+                  >
+                    <button
+                      class="btn btn-lg px-5 btn-outline-warning"
+                      data-bs-dismiss="modal"
+                    >
+                      NO
+                    </button>
+                    <button
+                      class="btn btn-lg px-5 btn-warning"
+                      id="deleteRowsOFtable"
+                      data-bs-dismiss="modal"
+                      disabled
+                    >
+                      Yes
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- -------------------------------------------------------------- -->
+
+        <!-- -------------------------------------------------------------- -->
+        <!-- End Container fluid  -->
+        <!-- -------------------------------------------------------------- -->
+        <!-- -------------------------------------------------------------- -->
+        <!-- footer -->
+        <!-- -------------------------------------------------------------- -->
+        <footer class="footer text-center d-none">
+          All Rights Reserved by
+          <a href="https://www.royex.ae/" target="_blank">Royex Technologies</a
+          >.
+        </footer>
+        <!-- -------------------------------------------------------------- -->
+        <!-- End footer -->
+        <!-- -------------------------------------------------------------- -->
+      </div>
+      <!-- -------------------------------------------------------------- -->
+      <!-- End Page wrapper  -->
+      <!-- -------------------------------------------------------------- -->
+    </div>
+    <!-- -------------------------------------------------------------- -->
+    <!-- End Wrapper -->
+    <!-- -------------------------------------------------------------- -->
+    <!-- -------------------------------------------------------------- -->
+    <!-- All Jquery -->
+    <!-- -------------------------------------------------------------- -->
+    <script src="assets/libs/jquery/dist/jquery.min.js"></script>
+    <!-- Bootstrap tether Core JavaScript -->
+    <script src="assets/libs/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="assets/libs/fontawesome/js/all.js"></script>
+    <!-- apps -->
+    <script src="assets/dist/js/app.min.js"></script>
+    <script src="assets/dist/js/app.init.minimal.js"></script>
+    <script src="assets/dist/js/app-style-switcher.js"></script>
+    <!-- slimscrollbar scrollbar JavaScript -->
+    <script src="assets/libs/perfect-scrollbar/dist/perfect-scrollbar.jquery.min.js"></script>
+    <script src="assets/extra-libs/sparkline/sparkline.js"></script>
+    <!--Wave Effects -->
+    <script src="assets/dist/js/waves.js"></script>
+    <!--Menu sidebar -->
+    <script src="assets/dist/js/sidebarmenu.js"></script>
+    <!--Custom JavaScript -->
+    <script src="assets/dist/js/feather.min.js"></script>
+    <script src="assets/dist/js/custom.min.js"></script>
+    <!-- This Page JS -->
+    <script src="assets/extra-libs/prism/prism.js"></script>
     <script>
-$(document).ready(function() {
-  $('.accordion-button').click(function() {
-    const targetId = $(this).data('target');  // Get target ID from data-target attribute
-    const content = $(targetId);             // Select the content section using ID
-    content.toggleClass('hidden');             // Toggle the "hidden" class
-
-    // Optional: Toggle button styling (replace classes as needed)
-    $(this).toggleClass('active');
-  });
-});
-
-
+      document
+        .getElementById("selectAllCheckbox")
+        .addEventListener("change", function () {
+          var checkboxes = document.querySelectorAll(
+            'tbody input[type="checkbox"]'
+          );
+          checkboxes.forEach(function (checkbox) {
+            checkbox.checked = event.target.checked;
+          });
+        });
     </script>
-    <!-- here add html tag -->
+    <script>
+      document.getElementById("btnSwitch").addEventListener("click", () => {
+        if (document.documentElement.getAttribute("data-bs-theme") == "dark") {
+          document.documentElement.setAttribute("data-bs-theme", "light");
+        } else {
+          document.documentElement.setAttribute("data-bs-theme", "dark");
+        }
+      });
+    </script>
+    <script>
+      $(document).ready(function () {
+        $("#myInput").on("keyup", function () {
+          var value = $(this).val().toLowerCase();
+          $("#myList li").filter(function () {
+            $(this).toggle($(this).text().toLowerCase().indexOf(value) > -1);
+          });
+        });
+      });
+    </script>
+
+    <script>
+      const checkboxes = document.querySelectorAll(".checkbox");
+      const lengthOfConatct = document.getElementById("conatctList");
+      const deleteBtn = document.getElementById("deleteRowsOFtable");
+
+      const rowOfTable = [];
+      checkboxes.forEach((checkbox) => {
+        checkbox.addEventListener("change", (e) => {
+          if (e.target.checked) {
+            const rowOfSelect = e.target.closest("tr");
+            rowOfTable.push(rowOfSelect);
+            lengthOfConatct.textContent = rowOfTable.length;
+            if (rowOfTable.length > 0) {
+              deleteBtn.removeAttribute("disabled");
+            }
+          }
+        });
+      });
+
+      deleteBtn.addEventListener("click", () => {
+        rowOfTable.forEach((row) => {
+          row.remove();
+        });
+        lengthOfConatct.textContent = 0;
+      });
+    </script>
   </body>
 </html>
