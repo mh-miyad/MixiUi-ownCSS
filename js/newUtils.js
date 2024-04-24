@@ -58,7 +58,7 @@ class SelectManager {
             // Loop through all attached events
             element.removeEventListener(
               eventType,
-              element.eventListeners[eventType][0]
+              element.eventListeners[eventType][0],
             );
           }
         });
@@ -510,7 +510,7 @@ function saveMultipleBtn3(id, ele, idValue) {
   const parentDiv = document.querySelector(` #${id} .${ele}`);
   // Gather dynamically created input values
   const inputValues = Array.from(
-    parentDiv.querySelectorAll(".form-control")
+    parentDiv.querySelectorAll(".form-control"),
   ).map((input) => input.value);
   // Gather all input values with class "form-control"
 
@@ -837,7 +837,7 @@ optionCreateBtn.addEventListener("click", () => {
        <!-- rows part add option  -->
          <!-- Rows part  -->
          </div>
-         <hr class="border-2 border border-dark d-lg-none">
+         <hr class="border-2  border-dark d-lg-none">
          <div>
            
            <!-- Column part  -->
@@ -965,6 +965,13 @@ optionCreateBtn.addEventListener("click", () => {
   <div class="date-input d-none my-3">
   <div class="d-flex justify-content-between align-items-center  gap-3 ">
     <div class="flex-grow-1">
+     <div>
+                          <label for="short-tittle" class="form-label text-dark">
+                            Short Title
+                          </label>
+                          <input type="text" id="survey-input-1" class="form-control py-3" placeholder="Write ...">
+                       
+                        </div>
       <label for="writePrg" class="form-label txt-black">Date</label>
       <input type="date" placeholder="Write Paragraph" name="write" id="writePrg"
         class="form-control" />
@@ -980,6 +987,13 @@ optionCreateBtn.addEventListener("click", () => {
 <div class="time-input d-none my-3">
 <div class=" d-flex justify-content-between align-items-center  gap-3 ">
   <div class="flex-grow-1">
+   <div>
+                          <label for="short-tittle" class="form-label text-dark">
+                            Short Title
+                          </label>
+                          <input type="text" id="survey-input-1" class="form-control py-3" placeholder="Write ...">
+                       
+                        </div>
     <label for="writePrg" class="form-label txt-black">Time</label>
     <input type="time" placeholder="Write Paragraph" name="write" id="writePrg"
       class="form-control" />
@@ -993,13 +1007,7 @@ optionCreateBtn.addEventListener("click", () => {
 </button>
 </div>
   </div>
-  <div class="d-flex align-items-lg-start gap-3 mt-3">
-    
-    <span class="mt-2 btn-file cursor-pointer"><i class="bi bi-image fs-7"></i>
-      <input type="file" />
-    </span>
-    <div>
-    <div>
+  
     <div class="block-wrapper">
       <ul class="select">
         <li class="" style="list-style-type: none;">
@@ -1110,8 +1118,7 @@ optionCreateBtn.addEventListener("click", () => {
         </li>
       </ul>
     </div>
-  </div>
-  </div>
+  
 </div>
 
 </div>`;
@@ -1129,7 +1136,7 @@ optionCreateBtn.addEventListener("click", () => {
 
 // linear Scale option
 const linearScaleOptions = document.querySelectorAll(
-  ".linear-scale-option-value"
+  ".linear-scale-option-value",
 );
 
 linearScaleOptions.forEach((option) => {
@@ -1137,29 +1144,29 @@ linearScaleOptions.forEach((option) => {
     // Use "change" event for better handling
     const linearScaleDiv = event.target.closest(".linear-scale");
     const inputOfValueOfMain = linearScaleDiv.querySelector(
-      ".linear-scale input"
+      ".linear-scale input",
     );
     const saveBtnOfLinearScale = linearScaleDiv.querySelector(
-      ".linear-scale-save-btn"
+      ".linear-scale-save-btn",
     );
     const deleteBtnOfLinearScale = linearScaleDiv.querySelector(
-      ".linear-scale-delete-btn"
+      ".linear-scale-delete-btn",
     );
     const linearSecondLast = linearScaleDiv.querySelector(
-      ".linear-second-last"
+      ".linear-second-last",
     );
     const mainLinearScaleOf =
       linearScaleDiv.querySelector(".linear-main-scale");
 
     const newDivOfLinearScale = linearScaleDiv.querySelector(
-      ".linear-scale-created"
+      ".linear-scale-created",
     );
     const newCreatedInput = linearScaleDiv.querySelector(".new-created-input");
     const linearFirstInput = linearScaleDiv.querySelector(
-      ".linear-first input"
+      ".linear-first input",
     );
     const linearSecondInput = linearScaleDiv.querySelector(
-      ".linear-second input"
+      ".linear-second input",
     );
     const mainLinearScale = linearScaleDiv.querySelector(".linear-all-scale");
     const valueOfSelect = [];
@@ -1198,7 +1205,7 @@ linearScaleOptions.forEach((option) => {
         console.log(
           inputOfValueOfMain.value,
           linearFirstInput.value,
-          linearSecondInput.value
+          linearSecondInput.value,
         );
         // value of all input
         newCreatedInput.append(crateInput);
@@ -1238,7 +1245,7 @@ function createCheckboxes(number) {
     "gap-4",
     "align-items-center",
     "justify-content-center",
-    "all-checkbox"
+    "all-checkbox",
   );
   for (let i = 0; i < number; i++) {
     const checkbox = document.createElement("input");
@@ -1291,7 +1298,7 @@ function toolBox(id) {
     if (link !== null && link.trim() !== "") {
       const selectedText = inputField.value.substring(
         inputField.selectionStart,
-        inputField.selectionEnd
+        inputField.selectionEnd,
       );
       const linkedText = `<a href="${link}">${selectedText}</a>`;
       const newText =
@@ -1309,29 +1316,29 @@ function linearScale(id) {
     // Use "change" event for better handling
     const linearScaleDiv = event.target.closest(".linear-scale");
     const inputOfValueOfMain = linearScaleDiv.querySelector(
-      ".linear-scale input"
+      ".linear-scale input",
     );
     const saveBtnOfLinearScale = linearScaleDiv.querySelector(
-      ".linear-scale-save-btn"
+      ".linear-scale-save-btn",
     );
     const deleteBtnOfLinearScale = linearScaleDiv.querySelector(
-      ".linear-scale-delete-btn"
+      ".linear-scale-delete-btn",
     );
     const linearSecondLast = linearScaleDiv.querySelector(
-      ".linear-second-last"
+      ".linear-second-last",
     );
     const mainLinearScaleOf =
       linearScaleDiv.querySelector(".linear-main-scale");
 
     const newDivOfLinearScale = linearScaleDiv.querySelector(
-      ".linear-scale-created"
+      ".linear-scale-created",
     );
     const newCreatedInput = linearScaleDiv.querySelector(".new-created-input");
     const linearFirstInput = linearScaleDiv.querySelector(
-      ".linear-first input"
+      ".linear-first input",
     );
     const linearSecondInput = linearScaleDiv.querySelector(
-      ".linear-second input"
+      ".linear-second input",
     );
     const mainLinearScale = linearScaleDiv.querySelector(".linear-all-scale");
     const valueOfSelect = [];

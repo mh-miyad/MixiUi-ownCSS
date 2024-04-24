@@ -1158,7 +1158,7 @@ color: #192328;
     margin: 0 0;
   }
 }
-@media (min-width: 768px) and (max-width: 1190px) {
+@media (min-width: 768px) and (max-width: 992px) {
   .postEvent-survey .select-field {
     width: 230px;
   }
@@ -1171,10 +1171,36 @@ color: #192328;
   #toolBoxOfInput {
     width: 90%;
     position: absolute;
-    /* bottom: -2.5rem; */
-    right: 1rem;
+    top: 22rem;
+    left: 0rem;
+    right: 0rem;
     margin: 2rem;
-    z-index: 20;
+   
+  }
+  #toolBoxOfInput ul {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+  }
+}
+@media (min-width: 992px) and (max-width: 1199px) {
+  .postEvent-survey .select-field {
+    width: 230px;
+  }
+  .postEvent-survey .select-list {
+    top: 20%;
+    left: 30%;
+    width: 20rem;
+    height: auto;
+  }
+  #toolBoxOfInput {
+    width: 90%;
+    position: absolute;
+    top: 22rem;
+    right: 0rem;
+    left: 0rem;
+    margin: 2rem;
+  
   }
   #toolBoxOfInput ul {
     display: flex;
@@ -1186,7 +1212,7 @@ color: #192328;
 @media (min-width: 1200px) {
   #toolBoxOfInput {
     position: absolute;
-    /* bottom: -0.5rem; */
+    bottom: 1.5rem;
     right: 11rem;
     word-wrap: break-word;
     list-style: none !important;
@@ -1209,11 +1235,7 @@ color: #192328;
 } */
 @media (min-width: 1920px) {
   #toolBoxOfInput {
-    /* position: fixed;
-    bottom: 7.5rem;
-    right: 22rem; */
     position: absolute;
-    /* bottom: -1.5rem; */
     bottom: 25px;
     right: 20.2rem;
     word-wrap: break-word;
