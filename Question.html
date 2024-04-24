@@ -17,12 +17,7 @@
       sizes="16x16"
       href="assets/images/favicon.png"
     />
-    <!-- this pagjs -->
-    <link rel="stylesheet" href="assets/libs/apexcharts/dist/apexcharts.css" />
-    <link
-      href="assets/libs/jvectormap/jquery-jvectormap.css"
-      rel="stylesheet"
-    />
+
     <link href="assets/libs/fontawesome/css/all.css" rel="stylesheet" />
     <!-- Custom CSS -->
     <link href="assets/dist/css/style.css" rel="stylesheet" />
@@ -32,1495 +27,175 @@
     <link rel="stylesheet" href="./style/form.css" />
     <!-- mhmiyad css  -->
     <link href="assets/css/responsive.css" rel="stylesheet" />
-    <script
-      defer
-      src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"
-    ></script>
-
-    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
-    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
-    <!--[if lt IE 9]>
-      <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
-      <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
-    <![endif]-->
   </head>
 
-  <body>
+  <body style="background-color: aliceblue">
     <!-- -------------------------------------------------------------- -->
     <!-- Preloader - style you can find in spinners.css -->
     <!-- -------------------------------------------------------------- -->
-    <div class="preloader">
+    <!-- <div class="preloader">
       <img
         src="assets/images/loading-img.png"
         alt="loading-img"
         class="img-fluid loading-img"
       />
-    </div>
+    </div> -->
     <!-- -------------------------------------------------------------- -->
     <!-- Main wrapper - style you can find in pages.scss -->
     <!-- -------------------------------------------------------------- -->
     <div id="main-wrapper">
-      <!-- -------------------------------------------------------------- -->
-      <!-- Topbar header - style you can find in pages.scss -->
-      <!-- -------------------------------------------------------------- -->
-      <header class="topbar">
-        <nav class="navbar top-navbar navbar-expand-md navbar-dark">
-          <div class="navbar-header">
-            <!-- This is for the sidebar toggle which is visible on mobile only -->
-            <a
-              class="nav-toggler waves-effect waves-light d-block d-md-none"
-              href="javascript:void(0)"
-            >
-              <i class="ri-close-line fs-6 ri-menu-2-line"></i>
-            </a>
-            <!-- -------------------------------------------------------------- -->
-            <!-- Logo -->
-            <!-- -------------------------------------------------------------- -->
-            <a class="navbar-brand d-none" href="index.html">
-              <!-- Logo text -->
-              <span class="logo-text">
-                <!-- dark Logo text -->
-                <img
-                  src="assets/images/logo-light-text.png"
-                  alt="homepage"
-                  class="dark-logo"
-                />
-                <!-- Light Logo text -->
-                <img
-                  src="assets/images/logo-dark-text.png"
-                  class="light-logo"
-                  alt="homepage"
-                />
-              </span>
-            </a>
-
-            <a class="navbar-brand" href="index.html">
-              <!-- Logo icon -->
-              <b class="logo-icon">
-                <!--You can put here icon as well // <i class="wi wi-sunset"></i> //-->
-                <!-- Dark Logo icon -->
-                <img
-                  src="assets/images/logo-icon-light.png"
-                  alt="homepage"
-                  class="dark-logo"
-                />
-                <!-- Light Logo icon -->
-                <img
-                  src="assets/images/logo-icon-dark.png"
-                  alt="homepage"
-                  class="light-logo"
-                />
-              </b>
-              <!--End Logo icon -->
-              <!-- Logo text -->
-              <span class="logo-text">
-                <!-- dark Logo text -->
-                <img
-                  src="assets/images/logo-light-text.png"
-                  alt="homepage"
-                  class="dark-logo"
-                />
-                <!-- Light Logo text -->
-                <img
-                  src="assets/images/logo-dark-text.png"
-                  class="light-logo"
-                  alt="homepage"
-                />
-              </span>
-            </a>
-            <!-- -------------------------------------------------------------- -->
-            <!-- End Logo -->
-            <!-- -------------------------------------------------------------- -->
-            <!-- -------------------------------------------------------------- -->
-            <!-- Toggle which is visible on mobile only -->
-            <!-- -------------------------------------------------------------- -->
-            <a
-              class="topbartoggler d-block d-md-none waves-effect waves-light"
-              href="javascript:void(0)"
-              data-bs-toggle="collapse"
-              data-bs-target="#navbarSupportedContent"
-              aria-controls="navbarSupportedContent"
-              aria-expanded="false"
-              aria-label="Toggle navigation"
-              ><i data-feather="more-horizontal" class="feather-sm"></i
-            ></a>
-          </div>
-
-          <!-- -------------------------------------------------------------- -->
-          <!-- End Logo -->
-          <!-- -------------------------------------------------------------- -->
-          <div class="navbar-collapse collapse" id="navbarSupportedContent">
-            <ul class="navbar-nav me-auto">
-              <!-- This is  -->
-              <li class="nav-item">
-                <a
-                  class="nav-link sidebartoggler sidebar-toggle d-none d-md-block waves-effect waves-dark"
-                  href="javascript:void(0)"
-                  ><i data-feather="menu" class="feather-sm"></i
-                ></a>
-              </li>
-            </ul>
-            <div class="top-search-box mb-0">
-              <form class="search-form" action="">
-                <div class="input-group">
-                  <button
-                    type="submit"
-                    class="btn input-group-text"
-                    id="basic-addon1"
-                  >
-                    <i data-feather="search" class="feather-sm"></i>
-                  </button>
-                  <input
-                    type="text"
-                    class="form-control"
-                    placeholder="Search..."
-                    aria-label="Username"
-                    aria-describedby="basic-addon1"
-                  />
+      <div class="container-fluid my-5">
+        <!-- -------------------------------------------------------------- -->
+        <!-- Start Page Content -->
+        <!-- -------------------------------------------------------------- -->
+        <!-- 3. Entry List -->
+        <section class="section">
+          <div class="container-fluid">
+            <form class="question-main-wrapper" id="main-wrapper-form">
+              <!-- Question Header Section  -->
+              <div class="description-title">
+                <h2>Lorem ipsum dolor sit amet consectetur adipisicing</h2>
+                <hr />
+                <div class="question-description">
+                  <p>
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                    Consequuntur laborum molestias error laboriosam possimus
+                    quaerat cupiditate minus tempore aliquid, laudantium
+                    mollitia explicabo. Esse veniam accusamus vitae quos vel id
+                    architecto.
+                  </p>
                 </div>
-              </form>
-            </div>
-            <!-- -------------------------------------------------------------- -->
-            <!-- toggle and nav items -->
-            <!-- -------------------------------------------------------------- -->
+                <hr />
+                <p class="require-text">* Indicates required question</p>
+              </div>
+              <!-- Question Header Section  -->
+              <!-- question Box  -->
+              <div class="form-control">
+                <label for="question" class="form-label">
+                  7. Why you need this job Please explain As , ( you can answer
+                  by bangla ) but we don't need to know ChatGPT Or Gemini
+                </label>
+                <textarea
+                  name="question"
+                  id="question"
+                  class="form-input"
+                ></textarea>
+              </div>
+              <!-- question Box  -->
+              <!-- question Box  -->
+              <div class="form-control">
+                <label for="question" class="form-label">
+                  7. Why you need this job Please explain As , ( you can answer
+                  by bangla ) but we don't need to know ChatGPT Or Gemini
+                </label>
+                <textarea
+                  name="question"
+                  id="question"
+                  class="form-input"
+                ></textarea>
+              </div>
+              <!-- question Box  -->
 
-            <!-- -------------------------------------------------------------- -->
-            <!-- Right side toggle and nav items -->
-            <!-- -------------------------------------------------------------- -->
-            <ul class="navbar-nav justify-content-end align-items-center w-100">
-              <!-- -------------------------------------------------------------- -->
-              <!-- Mood -->
-              <!-- -------------------------------------------------------------- -->
+              <!-- question Box  -->
 
-              <li class="nav-item">
-                <button
-                  class="theme-switcher gray-circle-btn waves-effect waves-dark"
-                  id="btnSwitch"
-                  type="button"
-                  title="Switch theme"
-                >
-                  <span class="sr-only">Switch theme</span>
-                  <i class="sun-icon" data-feather="sun" aria-hidden="true"></i>
-                  <i
-                    class="moon-icon"
-                    data-feather="moon"
-                    aria-hidden="true"
-                  ></i>
+              <!-- question Box  -->
+              <div class="form-control">
+                <label for="question" class="form-label">
+                  7. Why you need this job Please explain but ?
+                </label>
+                <input type="date" name="question" />
+              </div>
+              <!-- question Box  -->
+              <div class="form-control">
+                <label for="question" class="form-label">
+                  7. Why you need this job Please explain but ?
+                </label>
+                <input type="time" name="question" />
+              </div>
+              <!-- question Box  -->
+              <!-- question Box  -->
+              <div class="form-control">
+                <label for="question" class="form-label">
+                  7. Why you need this job Please explain but ?
+                </label>
+                <div class="multiple-choice-form">
+                  <input type="checkbox" name="question" />
+                  <label for="option-1"> option 1</label>
+                </div>
+                <div class="multiple-choice-form">
+                  <input type="checkbox" name="question" />
+                  <label for="option-1"> option 1</label>
+                </div>
+                <div class="multiple-choice-form">
+                  <input type="checkbox" name="question" />
+                  <label for="option-1"> option 1</label>
+                </div>
+                <div class="multiple-choice-form">
+                  <input type="checkbox" name="question" />
+                  <label for="option-1"> option 1</label>
+                </div>
+              </div>
+              <!-- question Box  -->
+              <!-- question Box  -->
+              <div class="form-control">
+                <label for="question" class="form-label">
+                  7. Why you need this job Please explain but ?
+                </label>
+                <div class="multiple-choice-form">
+                  <input type="radio" name="question" />
+                  <label for="option-1"> option 1</label>
+                </div>
+                <div class="multiple-choice-form">
+                  <input type="radio" name="question" />
+                  <label for="option-1"> option 1</label>
+                </div>
+                <div class="multiple-choice-form">
+                  <input type="radio" name="question" />
+                  <label for="option-1"> option 1</label>
+                </div>
+                <div class="multiple-choice-form">
+                  <input type="radio" name="question" />
+                  <label for="option-1"> option 1</label>
+                </div>
+              </div>
+              <!-- question Box  -->
+              <!-- question Box  -->
+              <div class="form-control">
+                <label for="question" class="form-label">
+                  7. Why you need this job Please explain but ?
+                </label>
+                <div>
+                  <select name="option" class="form-select" id="">
+                    <option value="1">Option 1</option>
+                    <option value="2">Option 1</option>
+                    <option value="3">Option 1</option>
+                    <option value="4">Option 1</option>
+                  </select>
+                </div>
+              </div>
+              <!-- question Box  -->
+
+              <div class="w-100 my-2">
+                <button type="submit" class="btn add-more btn-lg w-auto py-4">
+                  Save
                 </button>
-              </li>
-              <!-- -------------------------------------------------------------- -->
-              <!-- Comment -->
-              <!-- -------------------------------------------------------------- -->
-              <li class="nav-item dropdown">
-                <a
-                  class="nav-link dropdown-toggle waves-effect waves-dark"
-                  href="#"
-                  data-bs-toggle="dropdown"
-                  aria-haspopup="true"
-                  aria-expanded="false"
-                  ><i data-feather="bell"></i>
-                  <div class="notify">
-                    <span class="heartbit"></span> <span class="point"></span>
-                  </div>
-                </a>
-                <div
-                  class="dropdown-menu dropdown-menu-end mailbox animated flipInY"
-                >
-                  <ul class="list-style-none">
-                    <li>
-                      <div class="border-bottom rounded-top px-4 py-3">
-                        <div class="font-weight-medium fs-4 mb-0">
-                          Notifications
-                        </div>
-                      </div>
-                    </li>
-                    <li>
-                      <div
-                        class="message-center notifications position-relative"
-                        style="height: auto"
-                      >
-                        <!-- Message -->
-                        <a
-                          href="javascript:void(0)"
-                          class="message-item d-flex align-items-center border-bottom px-3 py-2"
-                        >
-                          <span
-                            class="btn btn-light-danger btn-circle text-danger"
-                          >
-                            <i
-                              data-feather="link"
-                              class="feather-sm fill-white"
-                            ></i>
-                          </span>
-                          <div class="w-75 d-inline-block v-middle ps-3">
-                            <h5 class="message-title fs-3 fw-bold mb-0 mt-1">
-                              Luanch Admin
-                            </h5>
-                            <span
-                              class="fs-2 d-block time text-truncate fw-normal text-muted mt-1 text-nowrap"
-                              >Just see the my new admin!</span
-                            >
-                            <span
-                              class="fs-2 d-block subtext text-muted text-nowrap"
-                              >9:30 AM</span
-                            >
-                          </div>
-                        </a>
-                        <!-- Message -->
-                        <a
-                          href="javascript:void(0)"
-                          class="message-item d-flex align-items-center border-bottom px-3 py-2"
-                        >
-                          <span
-                            class="btn btn-light-success btn-circle text-success"
-                          >
-                            <i
-                              data-feather="calendar"
-                              class="feather-sm fill-white"
-                            ></i>
-                          </span>
-                          <div class="w-75 d-inline-block v-middle ps-3">
-                            <h5 class="message-title fs-3 fw-bold mb-0 mt-1">
-                              Event today
-                            </h5>
-                            <span
-                              class="fs-2 d-block time text-truncate fw-normal text-muted mt-1 text-nowrap"
-                              >Just a reminder that you have event</span
-                            >
-                            <span
-                              class="fs-2 d-block subtext text-muted text-nowrap"
-                              >9:10 AM</span
-                            >
-                          </div>
-                        </a>
-                        <!-- Message -->
-                        <a
-                          href="javascript:void(0)"
-                          class="message-item d-flex align-items-center border-bottom px-3 py-2"
-                        >
-                          <span class="btn btn-light-info btn-circle text-info">
-                            <i
-                              data-feather="settings"
-                              class="feather-sm fill-white"
-                            ></i>
-                          </span>
-                          <div class="w-75 d-inline-block v-middle ps-3">
-                            <h5 class="message-title fs-3 fw-bold mb-0 mt-1">
-                              Settings
-                            </h5>
-                            <span
-                              class="fs-2 d-block time text-truncate fw-normal text-muted mt-1 text-nowrap"
-                              >You can customize this template as you want</span
-                            >
-                            <span
-                              class="fs-2 d-block subtext text-muted text-nowrap"
-                              >9:08 AM</span
-                            >
-                          </div>
-                        </a>
-                        <!-- Message -->
-                        <a
-                          href="javascript:void(0)"
-                          class="message-item d-flex align-items-center border-bottom px-3 py-2"
-                        >
-                          <span
-                            class="btn btn-light-primary btn-circle text-primary"
-                          >
-                            <i
-                              data-feather="users"
-                              class="feather-sm fill-white"
-                            ></i>
-                          </span>
-                          <div class="w-75 d-inline-block v-middle ps-3">
-                            <h5 class="message-title fs-3 fw-bold mb-0 mt-1">
-                              Pavan kumar
-                            </h5>
-                            <span
-                              class="fs-2 d-block time text-truncate fw-normal text-muted mt-1 text-nowrap"
-                              >Just see the my admin!</span
-                            >
-                            <span
-                              class="fs-2 d-block subtext text-muted text-nowrap"
-                              >9:02 AM</span
-                            >
-                          </div>
-                        </a>
-                      </div>
-                    </li>
-                    <li>
-                      <a
-                        class="nav-link border-top text-dark pt-3 text-center"
-                        href="javascript:void(0);"
-                      >
-                        <strong>Check all notifications</strong>
-                        <i data-feather="chevron-right" class="feather-sm"></i>
-                      </a>
-                    </li>
-                  </ul>
-                </div>
-              </li>
-              <!-- -------------------------------------------------------------- -->
-              <!-- End Comment -->
-              <!-- -------------------------------------------------------------- -->
-              <!-- -------------------------------------------------------------- -->
-              <!-- Profile -->
-              <!-- -------------------------------------------------------------- -->
-              <li class="nav-item dropdown user-dropdown">
-                <a
-                  class="nav-link dropdown-toggle waves-effect waves-dark user-pic justify-content-between"
-                  href="#"
-                  data-bs-toggle="dropdown"
-                  aria-haspopup="true"
-                  aria-expanded="false"
-                >
-                  <div class="author-pic w-100">
-                    <img
-                      src="assets/images/users/1.jpg"
-                      alt="user"
-                      width="34"
-                      class="profile-pic rounded-circle"
-                    />
-                    <span>Tamim Tanvir</span>
-                  </div>
-                  <i data-feather="chevron-down" class="feather-sm"></i>
-                </a>
-                <div
-                  class="dropdown-menu dropdown-menu-top animated flipInY pb-0"
-                >
-                  <!-- <div class="d-flex no-block align-items-center p-3 bg-primary text-white mb-2">
-                                    <div class=""><img src="assets/images/users/1.jpg" alt="user" class="rounded-circle" width="60"></div>
-                                    <div class="ms-2">
-                                        <h4 class="mb-0 text-white">Steave Jobs</h4>
-                                        <p class=" mb-0">varun@gmail.com</p>
-                                    </div>
-                                </div> -->
-                  <a class="dropdown-item" href="#"
-                    ><i
-                      data-feather="user"
-                      class="feather-sm me-1 ms-1 text-info"
-                    ></i>
-                    My Profile</a
-                  >
-                  <a class="dropdown-item" href="#"
-                    ><i
-                      data-feather="credit-card"
-                      class="feather-sm me-1 ms-1 text-primary"
-                    ></i>
-                    My Task</a
-                  >
-                  <div class="dropdown-divider"></div>
-                  <!-- <a class="dropdown-item" href="#"><i data-feather="settings" class="feather-sm text-warning me-1 ms-1"></i>
-                                    Account Setting</a> -->
-                  <a
-                    class="dropdown-item"
-                    id="accounts-Billing"
-                    href="javascript:void(0);"
-                    aria-expanded="false"
-                  >
-                    <img
-                      src="assets/images/icon/credit_card.png"
-                      alt="credit_card"
-                      class="img-fluid icon-img"
-                      width="24"
-                      height="24"
-                    />
-                    <img
-                      src="assets/images/icon/credit_card1.png"
-                      alt="credit_card"
-                      class="img-fluid hover-img"
-                      width="24"
-                      height="24"
-                    />
-                    <span class="hide-menu">Accounts Billing</span>
-                  </a>
-                  <a
-                    class="dropdown-item"
-                    id="consulting"
-                    href="javascript:void(0);"
-                    aria-expanded="false"
-                  >
-                    <img
-                      src="assets/images/icon/person.png"
-                      alt="person"
-                      class="img-fluid icon-img"
-                      width="24"
-                      height="24"
-                    />
-                    <img
-                      src="assets/images/icon/person1.png"
-                      alt="person"
-                      class="img-fluid hover-img"
-                      width="24"
-                      height="24"
-                    />
-                    <span class="hide-menu">Consulting services</span>
-                  </a>
-                  <a
-                    class="dropdown-item"
-                    id="support"
-                    href="javascript:void(0);"
-                    aria-expanded="false"
-                  >
-                    <img
-                      src="assets/images/icon/support_agent.png"
-                      alt="support_agent"
-                      class="img-fluid icon-img"
-                      width="24"
-                      height="24"
-                    />
-                    <img
-                      src="assets/images/icon/support_agent1.png"
-                      alt="support_agent"
-                      class="img-fluid hover-img"
-                      width="24"
-                      height="24"
-                    />
-                    <span class="hide-menu">Support</span>
-                  </a>
-                  <a
-                    class="dropdown-item"
-                    id="knowledge"
-                    href="javascript:void(0);"
-                    aria-expanded="false"
-                  >
-                    <img
-                      src="assets/images/icon/import_contacts.png"
-                      alt="import_contacts"
-                      class="img-fluid icon-img"
-                      width="24"
-                      height="24"
-                    />
-                    <img
-                      src="assets/images/icon/import_contacts1.png"
-                      alt="import_contacts"
-                      class="img-fluid hover-img"
-                      width="24"
-                      height="24"
-                    />
-                    <span class="hide-menu">Knowledge Base</span>
-                  </a>
-                  <div class="dropdown-divider"></div>
-                  <a class="dropdown-item" href="#"
-                    ><i
-                      data-feather="log-out"
-                      class="feather-sm me-1 ms-1 text-danger"
-                    ></i>
-                    Logout</a
-                  >
-                </div>
-              </li>
-            </ul>
+              </div>
+            </form>
           </div>
-        </nav>
-      </header>
-      <!-- -------------------------------------------------------------- -->
-      <!-- End Topbar header -->
-      <!-- -------------------------------------------------------------- -->
-      <!-- -------------------------------------------------------------- -->
-      <!-- Left Sidebar - style you can find in sidebar.scss  -->
-      <!-- -------------------------------------------------------------- -->
-      <aside class="left-sidebar">
-        <!-- Sidebar scroll-->
-        <div class="scroll-sidebar">
-          <!-- Sidebar navigation-->
-          <nav class="sidebar-nav">
-            <ul class="sidebar-user-nav sidebarnav w-100">
-              <li class="sidebar-item nav-item dropend user-profile mb-0">
-                <a
-                  data-bs-toggle="dropdown"
-                  role="button"
-                  aria-expanded="false"
-                  class="nav-link dropdown-toggle sidebar-link has-arrow waves-effect waves-dark user-box"
-                  href="javascript:void(0)"
-                  aria-expanded="false"
-                >
-                  <!-- <img src="assets/images/users/profile.png" alt="user" class="m-0"> -->
-                  <div class="highlight">
-                    <span>R</span>
-                  </div>
-                  <div class="hide-menu user-name">
-                    <h3 class="hide-menu">Account Name Here</h3>
-                  </div>
-                  <div class="hide-menu icon-hide-menu">
-                    <img
-                      src="assets/images/icon/settings_ethernet.png"
-                      alt="settings_ethernet"
-                      class="img-fluid settings_ethernet h-auto w-auto"
-                    />
-                    <img
-                      src="assets/images/icon/settings_ethernet_dark.png"
-                      alt="settings_ethernet"
-                      class="img-fluid settings_ethernet_hover h-auto w-auto"
-                    />
-                    <img
-                      src="assets/images/icon/settings_ethernet_dark.png"
-                      alt="settings_ethernet"
-                      class="img-fluid settings_ethernet_dark h-auto w-auto"
-                    />
-                  </div>
-                </a>
-                <div
-                  role="menu"
-                  class="dropdown-menu sidenav-dropdown dropdown-menu-end custom-scrollbar-css"
-                >
-                  <a href="dashboard.html" class="dropdown-item">
-                    <div class="task-name">
-                      <div class="left-box">
-                        <span class="name">K</span>
-                        <div class="activity-rate">
-                          <h4>teambuiding.ae</h4>
-                          <p>Project | teambuiding.ae</p>
-                        </div>
-                      </div>
-                      <div class="arrow">
-                        <i class="bi bi-box-arrow-up-right"></i>
-                      </div>
-                    </div>
-                  </a>
-                  <a href="dashboard.html" class="dropdown-item">
-                    <div class="task-name">
-                      <div class="left-box">
-                        <span class="name">K</span>
-                        <div class="activity-rate">
-                          <h4>teambuiding.ae</h4>
-                          <p>Project | teambuiding.ae</p>
-                        </div>
-                      </div>
-                      <div class="arrow">
-                        <i class="bi bi-box-arrow-up-right"></i>
-                      </div>
-                    </div>
-                  </a>
-                  <a href="dashboard.html" class="dropdown-item">
-                    <div class="task-name">
-                      <div class="left-box">
-                        <span class="name">K</span>
-                        <div class="activity-rate">
-                          <h4>teambuiding.ae</h4>
-                          <p>Project | teambuiding.ae</p>
-                        </div>
-                      </div>
-                      <div class="arrow">
-                        <i class="bi bi-box-arrow-up-right"></i>
-                      </div>
-                    </div>
-                  </a>
-                  <a href="dashboard.html" class="dropdown-item">
-                    <div class="task-name">
-                      <div class="left-box">
-                        <span class="name">K</span>
-                        <div class="activity-rate">
-                          <h4>teambuiding.ae</h4>
-                          <p>Project | teambuiding.ae</p>
-                        </div>
-                      </div>
-                      <div class="arrow">
-                        <i class="bi bi-box-arrow-up-right"></i>
-                      </div>
-                    </div>
-                  </a>
-                  <a href="dashboard.html" class="dropdown-item">
-                    <div class="task-name">
-                      <div class="left-box">
-                        <span class="name">K</span>
-                        <div class="activity-rate">
-                          <h4>teambuiding.ae</h4>
-                          <p>Project | teambuiding.ae</p>
-                        </div>
-                      </div>
-                      <div class="arrow">
-                        <i class="bi bi-box-arrow-up-right"></i>
-                      </div>
-                    </div>
-                  </a>
-                  <a href="dashboard.html" class="dropdown-item">
-                    <div class="task-name">
-                      <div class="left-box">
-                        <span class="name">K</span>
-                        <div class="activity-rate">
-                          <h4>teambuiding.ae</h4>
-                          <p>Project | teambuiding.ae</p>
-                        </div>
-                      </div>
-                      <div class="arrow">
-                        <i class="bi bi-box-arrow-up-right"></i>
-                      </div>
-                    </div>
-                  </a>
-                </div>
-              </li>
-            </ul>
-            <ul id="sidebarnav" class="sidebarnav w-100 custom-scrollbar-css">
-              <li class="sidebar-item">
-                <a
-                  class="sidebar-link has-arrow waves-effect waves-dark"
-                  href="javascript:void(0)"
-                  aria-expanded="false"
-                >
-                  <img
-                    src="assets/images/events-menu-icon/dashboard.png"
-                    alt="home"
-                    class="img-fluid dark-img"
-                  />
-                  <img
-                    src="assets/images/events-menu-icon/dashboard_active.png"
-                    alt="home"
-                    class="img-fluid active-img"
-                  />
-                  <img
-                    src="assets/images/events-menu-icon/dashboard_dark.png"
-                    alt="home"
-                    class="img-fluid light-img"
-                  />
-                  <span class="hide-menu">Dashboard</span></a
-                >
-                <ul aria-expanded="false" class="first-level collapse">
-                  <li class="sidebar-item">
-                    <a href="#" class="sidebar-link"
-                      ><i data-feather="chevron-right" class="feather-sm"></i>
-                      <span class="hide-menu"> User Entry List </span></a
-                    >
-                  </li>
-                  <li class="sidebar-item">
-                    <a href="#" class="sidebar-link"
-                      ><i data-feather="chevron-right" class="feather-sm"></i
-                      ><span class="hide-menu"> Entry Name</span></a
-                    >
-                  </li>
-                  <li class="sidebar-item">
-                    <a href="#" class="sidebar-link"
-                      ><i data-feather="chevron-right" class="feather-sm"></i
-                      ><span class="hide-menu"> Add New Entry</span></a
-                    >
-                  </li>
-                </ul>
-              </li>
-              <li class="sidebar-item">
-                <a
-                  class="sidebar-link has-arrow waves-effect waves-dark"
-                  href="javascript:void(0)"
-                  aria-expanded="false"
-                >
-                  <img
-                    src="assets/images/events-menu-icon/operation.png"
-                    alt="home"
-                    class="img-fluid dark-img"
-                  />
-                  <img
-                    src="assets/images/events-menu-icon/operation_active.png"
-                    alt="home"
-                    class="img-fluid active-img"
-                  />
-                  <img
-                    src="assets/images/events-menu-icon/operation_dark.png"
-                    alt="home"
-                    class="img-fluid light-img"
-                  />
-                  <span class="hide-menu">Operation </span></a
-                >
-                <ul aria-expanded="false" class="first-level collapse">
-                  <li class="sidebar-item">
-                    <a href="#" class="sidebar-link"
-                      ><i data-feather="chevron-right" class="feather-sm"></i
-                      ><span class="hide-menu"> Booking </span></a
-                    >
-                  </li>
-                  <li class="sidebar-item">
-                    <a href="#" class="sidebar-link"
-                      ><i data-feather="chevron-right" class="feather-sm"></i
-                      ><span class="hide-menu"> POS</span></a
-                    >
-                  </li>
-                  <li class="sidebar-item">
-                    <a href="#" class="sidebar-link"
-                      ><i data-feather="chevron-right" class="feather-sm"></i
-                      ><span class="hide-menu"> Scanning</span></a
-                    >
-                  </li>
-                </ul>
-              </li>
-              <li class="sidebar-item">
-                <a
-                  class="sidebar-link has-arrow waves-effect waves-dark"
-                  href="javascript:void(0)"
-                  aria-expanded="false"
-                >
-                  <img
-                    src="assets/images/events-menu-icon/events.png"
-                    alt="home"
-                    class="img-fluid dark-img"
-                  />
-                  <img
-                    src="assets/images/events-menu-icon/events_active.png"
-                    alt="home"
-                    class="img-fluid active-img"
-                  />
-                  <img
-                    src="assets/images/events-menu-icon/events_dark.png"
-                    alt="home"
-                    class="img-fluid light-img"
-                  />
-                  <span class="hide-menu">Event Setup</span></a
-                >
-                <ul aria-expanded="false" class="first-level collapse">
-                  <li class="sidebar-item">
-                    <a href="#" class="sidebar-link"
-                      ><i data-feather="chevron-right" class="feather-sm"></i>
-                      <span class="hide-menu"> Activity</span></a
-                    >
-                  </li>
-                  <li class="sidebar-item">
-                    <a href="#" class="sidebar-link"
-                      ><i data-feather="chevron-right" class="feather-sm"></i
-                      ><span class="hide-menu"> Activity Schedules</span></a
-                    >
-                  </li>
-                  <li class="sidebar-item">
-                    <a href="#" class="sidebar-link"
-                      ><i data-feather="chevron-right" class="feather-sm"></i
-                      ><span class="hide-menu"> Venue</span></a
-                    >
-                  </li>
-                  <li class="sidebar-item">
-                    <a href="#" class="sidebar-link"
-                      ><i data-feather="chevron-right" class="feather-sm"></i
-                      ><span class="hide-menu"> Event Waiver</span></a
-                    >
-                  </li>
-                  <li class="sidebar-item">
-                    <a href="#" class="sidebar-link"
-                      ><i data-feather="chevron-right" class="feather-sm"></i
-                      ><span class="hide-menu">
-                        Event Terms and Conditions</span
-                      ></a
-                    >
-                  </li>
-                  <li class="sidebar-item">
-                    <a href="#" class="sidebar-link"
-                      ><i data-feather="chevron-right" class="feather-sm"></i
-                      ><span class="hide-menu"> Event FAQs</span></a
-                    >
-                  </li>
-                </ul>
-              </li>
-              <li class="sidebar-item">
-                <a
-                  class="sidebar-link has-arrow waves-effect waves-dark"
-                  href="javascript:void(0)"
-                  aria-expanded="false"
-                >
-                  <img
-                    src="assets/images/events-menu-icon/tickets.png"
-                    alt="home"
-                    class="img-fluid dark-img"
-                  />
-                  <img
-                    src="assets/images/events-menu-icon/tickets_active.png"
-                    alt="home"
-                    class="img-fluid active-img"
-                  />
-                  <img
-                    src="assets/images/events-menu-icon/tickets_dark.png"
-                    alt="home"
-                    class="img-fluid light-img"
-                  />
-                  <span class="hide-menu">Tickets</span></a
-                >
-                <ul aria-expanded="false" class="first-level collapse">
-                  <li class="sidebar-item">
-                    <a href="#" class="sidebar-link"
-                      ><i data-feather="chevron-right" class="feather-sm"></i
-                      ><span class="hide-menu">Ticket Types</span></a
-                    >
-                  </li>
-                  <li class="sidebar-item">
-                    <a href="#" class="sidebar-link"
-                      ><i data-feather="chevron-right" class="feather-sm"></i
-                      ><span class="hide-menu">Ticket Printing</span></a
-                    >
-                  </li>
-                  <li class="sidebar-item">
-                    <a href="#" class="sidebar-link"
-                      ><i data-feather="chevron-right" class="feather-sm"></i
-                      ><span class="hide-menu">Seating and Arena</span></a
-                    >
-                  </li>
-                  <li class="sidebar-item">
-                    <a href="#" class="sidebar-link"
-                      ><i data-feather="chevron-right" class="feather-sm"></i
-                      ><span class="hide-menu">Ticket Scanning</span></a
-                    >
-                  </li>
-                  <li class="sidebar-item">
-                    <a href="#" class="sidebar-link"
-                      ><i data-feather="chevron-right" class="feather-sm"></i
-                      ><span class="hide-menu">Footfall Reports</span></a
-                    >
-                  </li>
-                  <li class="sidebar-item">
-                    <a href="#" class="sidebar-link"
-                      ><i data-feather="chevron-right" class="feather-sm"></i
-                      ><span class="hide-menu">Promocode</span></a
-                    >
-                  </li>
-                </ul>
-              </li>
-              <li class="sidebar-item">
-                <a
-                  class="sidebar-link has-arrow waves-effect waves-dark"
-                  href="javascript:void(0)"
-                  aria-expanded="false"
-                >
-                  <img
-                    src="assets/images/events-menu-icon/registration.png"
-                    alt="home"
-                    class="img-fluid dark-img"
-                  />
-                  <img
-                    src="assets/images/events-menu-icon/registration_active.png"
-                    alt="home"
-                    class="img-fluid active-img"
-                  />
-                  <img
-                    src="assets/images/events-menu-icon/registration_dark.png"
-                    alt="home"
-                    class="img-fluid light-img"
-                  />
-                  <span class="hide-menu">Registration</span></a
-                >
-                <ul aria-expanded="false" class="first-level collapse">
-                  <li class="sidebar-item">
-                    <a href="#" class="sidebar-link"
-                      ><i data-feather="chevron-right" class="feather-sm"></i
-                      ><span class="hide-menu"> Visitors</span></a
-                    >
-                  </li>
-                  <li class="sidebar-item">
-                    <a href="#" class="sidebar-link"
-                      ><i data-feather="chevron-right" class="feather-sm"></i
-                      ><span class="hide-menu"> VIP</span></a
-                    >
-                  </li>
-                  <li class="sidebar-item">
-                    <a href="#" class="sidebar-link"
-                      ><i data-feather="chevron-right" class="feather-sm"></i
-                      ><span class="hide-menu"> Entertainer</span></a
-                    >
-                  </li>
-                  <li class="sidebar-item">
-                    <a href="#" class="sidebar-link"
-                      ><i data-feather="chevron-right" class="feather-sm"></i
-                      ><span class="hide-menu"> Vendor</span></a
-                    >
-                  </li>
-                  <li class="sidebar-item">
-                    <a href="#" class="sidebar-link"
-                      ><i data-feather="chevron-right" class="feather-sm"></i
-                      ><span class="hide-menu"> Speaker</span></a
-                    >
-                  </li>
-                  <li class="sidebar-item">
-                    <a href="#" class="sidebar-link"
-                      ><i data-feather="chevron-right" class="feather-sm"></i
-                      ><span class="hide-menu"> Sponsor</span></a
-                    >
-                  </li>
-                  <li class="sidebar-item">
-                    <a href="#" class="sidebar-link"
-                      ><i data-feather="chevron-right" class="feather-sm"></i
-                      ><span class="hide-menu"> Contract</span></a
-                    >
-                  </li>
-                  <li class="sidebar-item">
-                    <a href="#" class="sidebar-link"
-                      ><i data-feather="chevron-right" class="feather-sm"></i
-                      ><span class="hide-menu"> Complimentary Ticket</span></a
-                    >
-                  </li>
-                </ul>
-              </li>
-              <li class="sidebar-item">
-                <a
-                  class="sidebar-link has-arrow waves-effect waves-dark"
-                  href="javascript:void(0)"
-                  aria-expanded="false"
-                >
-                  <img
-                    src="assets/images/events-menu-icon/reports.png"
-                    alt="home"
-                    class="img-fluid dark-img"
-                  />
-                  <img
-                    src="assets/images/events-menu-icon/reports_active.png"
-                    alt="home"
-                    class="img-fluid active-img"
-                  />
-                  <img
-                    src="assets/images/events-menu-icon/reports_dark.png"
-                    alt="home"
-                    class="img-fluid light-img"
-                  />
-                  <span class="hide-menu">Reports </span></a
-                >
-                <ul aria-expanded="false" class="first-level collapse">
-                  <li class="sidebar-item">
-                    <a href="#" class="sidebar-link"
-                      ><i data-feather="chevron-right" class="feather-sm"></i>
-                      <span class="hide-menu"> User Entry List </span></a
-                    >
-                  </li>
-                  <li class="sidebar-item">
-                    <a href="#" class="sidebar-link"
-                      ><i data-feather="chevron-right" class="feather-sm"></i
-                      ><span class="hide-menu"> Entry Name</span></a
-                    >
-                  </li>
-                  <li class="sidebar-item">
-                    <a href="#" class="sidebar-link"
-                      ><i data-feather="chevron-right" class="feather-sm"></i
-                      ><span class="hide-menu"> Add New Entry</span></a
-                    >
-                  </li>
-                </ul>
-              </li>
-              <li class="sidebar-item">
-                <a
-                  class="sidebar-link has-arrow waves-effect waves-dark"
-                  href="javascript:void(0)"
-                  aria-expanded="false"
-                >
-                  <img
-                    src="assets/images/events-menu-icon/marketing.png"
-                    alt="home"
-                    class="img-fluid dark-img"
-                  />
-                  <img
-                    src="assets/images/events-menu-icon/marketing_active.png"
-                    alt="home"
-                    class="img-fluid active-img"
-                  />
-                  <img
-                    src="assets/images/events-menu-icon/marketing_dark.png"
-                    alt="home"
-                    class="img-fluid light-img"
-                  />
-                  <span class="hide-menu">Marketing </span></a
-                >
-                <ul aria-expanded="false" class="first-level collapse">
-                  <li class="sidebar-item">
-                    <a href="#" class="sidebar-link"
-                      ><i data-feather="chevron-right" class="feather-sm"></i>
-                      <span class="hide-menu">Message Template</span></a
-                    >
-                  </li>
-                  <li class="sidebar-item">
-                    <a href="#" class="sidebar-link"
-                      ><i data-feather="chevron-right" class="feather-sm"></i
-                      ><span class="hide-menu">Push Notification</span></a
-                    >
-                  </li>
-                  <li class="sidebar-item">
-                    <a href="#" class="sidebar-link"
-                      ><i data-feather="chevron-right" class="feather-sm"></i
-                      ><span class="hide-menu">Email Message</span></a
-                    >
-                  </li>
-                  <li class="sidebar-item">
-                    <a href="#" class="sidebar-link"
-                      ><i data-feather="chevron-right" class="feather-sm"></i
-                      ><span class="hide-menu">Pre Event Survey</span></a
-                    >
-                  </li>
-                  <li class="sidebar-item">
-                    <a href="#" class="sidebar-link"
-                      ><i data-feather="chevron-right" class="feather-sm"></i
-                      ><span class="hide-menu">Post Event Survey</span></a
-                    >
-                  </li>
-                  <li class="sidebar-item">
-                    <a href="#" class="sidebar-link"
-                      ><i data-feather="chevron-right" class="feather-sm"></i
-                      ><span class="hide-menu">Polls during the Events</span></a
-                    >
-                  </li>
-                </ul>
-              </li>
-              <li class="sidebar-item">
-                <a
-                  class="sidebar-link has-arrow waves-effect waves-dark"
-                  href="javascript:void(0)"
-                  aria-expanded="false"
-                >
-                  <img
-                    src="assets/images/events-menu-icon/merchandise.png"
-                    alt="home"
-                    class="img-fluid dark-img"
-                  />
-                  <img
-                    src="assets/images/events-menu-icon/merchandise_active.png"
-                    alt="home"
-                    class="img-fluid active-img"
-                  />
-                  <img
-                    src="assets/images/events-menu-icon/merchandise_dark.png"
-                    alt="home"
-                    class="img-fluid light-img"
-                  />
-                  <span class="hide-menu">Merchandise </span></a
-                >
-                <ul aria-expanded="false" class="first-level collapse">
-                  <li class="sidebar-item">
-                    <a href="#" class="sidebar-link"
-                      ><i data-feather="chevron-right" class="feather-sm"></i>
-                      <span class="hide-menu">Order</span></a
-                    >
-                  </li>
-                  <li class="sidebar-item">
-                    <a href="#" class="sidebar-link"
-                      ><i data-feather="chevron-right" class="feather-sm"></i
-                      ><span class="hide-menu">Inventory</span></a
-                    >
-                  </li>
-                </ul>
-              </li>
-              <li class="sidebar-item">
-                <a
-                  class="sidebar-link has-arrow waves-effect waves-dark"
-                  href="javascript:void(0)"
-                  aria-expanded="false"
-                >
-                  <img
-                    src="assets/images/events-menu-icon/support.png"
-                    alt="home"
-                    class="img-fluid dark-img"
-                  />
-                  <img
-                    src="assets/images/events-menu-icon/support_active.png"
-                    alt="home"
-                    class="img-fluid active-img"
-                  />
-                  <img
-                    src="assets/images/events-menu-icon/support_dark.png"
-                    alt="home"
-                    class="img-fluid light-img"
-                  />
-                  <span class="hide-menu">Support </span></a
-                >
-                <ul aria-expanded="false" class="first-level collapse">
-                  <li class="sidebar-item">
-                    <a href="#" class="sidebar-link"
-                      ><i data-feather="chevron-right" class="feather-sm"></i>
-                      <span class="hide-menu">FAQ </span></a
-                    >
-                  </li>
-                  <li class="sidebar-item">
-                    <a href="#" class="sidebar-link"
-                      ><i data-feather="chevron-right" class="feather-sm"></i
-                      ><span class="hide-menu">Visitor feedback</span></a
-                    >
-                  </li>
-                  <li class="sidebar-item">
-                    <a href="#" class="sidebar-link"
-                      ><i data-feather="chevron-right" class="feather-sm"></i
-                      ><span class="hide-menu">Survey</span></a
-                    >
-                  </li>
-                </ul>
-              </li>
-              <li class="sidebar-item">
-                <a
-                  class="sidebar-link has-arrow waves-effect waves-dark"
-                  href="javascript:void(0)"
-                  aria-expanded="false"
-                >
-                  <img
-                    src="assets/images/events-menu-icon/content.png"
-                    alt="home"
-                    class="img-fluid dark-img"
-                  />
-                  <img
-                    src="assets/images/events-menu-icon/content_active.png"
-                    alt="home"
-                    class="img-fluid active-img"
-                  />
-                  <img
-                    src="assets/images/events-menu-icon/content_dark.png"
-                    alt="home"
-                    class="img-fluid light-img"
-                  />
-                  <span class="hide-menu">Content </span></a
-                >
-                <ul aria-expanded="false" class="first-level collapse">
-                  <li class="sidebar-item">
-                    <a href="#" class="sidebar-link"
-                      ><i data-feather="chevron-right" class="feather-sm"></i>
-                      <span class="hide-menu">Web Content</span></a
-                    >
-                  </li>
-                  <li class="sidebar-item">
-                    <a href="#" class="sidebar-link"
-                      ><i data-feather="chevron-right" class="feather-sm"></i
-                      ><span class="hide-menu">Mobile Content</span></a
-                    >
-                  </li>
-                  <li class="sidebar-item">
-                    <a href="#" class="sidebar-link"
-                      ><i data-feather="chevron-right" class="feather-sm"></i
-                      ><span class="hide-menu">News</span></a
-                    >
-                  </li>
-                  <li class="sidebar-item">
-                    <a href="#" class="sidebar-link"
-                      ><i data-feather="chevron-right" class="feather-sm"></i
-                      ><span class="hide-menu">Blog</span></a
-                    >
-                  </li>
-                  <li class="sidebar-item">
-                    <a href="#" class="sidebar-link"
-                      ><i data-feather="chevron-right" class="feather-sm"></i
-                      ><span class="hide-menu">Gallery</span></a
-                    >
-                  </li>
-                </ul>
-              </li>
-              <li class="sidebar-item">
-                <a
-                  class="sidebar-link has-arrow waves-effect waves-dark"
-                  href="javascript:void(0)"
-                  aria-expanded="false"
-                >
-                  <img
-                    src="assets/images/events-menu-icon/settings1.png"
-                    alt="home"
-                    class="img-fluid dark-img"
-                  />
-                  <img
-                    src="assets/images/events-menu-icon/settings1_active.png"
-                    alt="home"
-                    class="img-fluid active-img"
-                  />
-                  <img
-                    src="assets/images/events-menu-icon/settings1_dark.png"
-                    alt="home"
-                    class="img-fluid light-img"
-                  />
-                  <span class="hide-menu">Settings </span></a
-                >
-                <ul aria-expanded="false" class="first-level collapse">
-                  <li class="sidebar-item">
-                    <a href="#" class="sidebar-link"
-                      ><i data-feather="chevron-right" class="feather-sm"></i>
-                      <span class="hide-menu">Web Content</span></a
-                    >
-                  </li>
-                  <li class="sidebar-item">
-                    <a href="#" class="sidebar-link"
-                      ><i data-feather="chevron-right" class="feather-sm"></i
-                      ><span class="hide-menu">Mobile Content</span></a
-                    >
-                  </li>
-                  <li class="sidebar-item">
-                    <a href="#" class="sidebar-link"
-                      ><i data-feather="chevron-right" class="feather-sm"></i
-                      ><span class="hide-menu">News</span></a
-                    >
-                  </li>
-                  <li class="sidebar-item">
-                    <a href="#" class="sidebar-link"
-                      ><i data-feather="chevron-right" class="feather-sm"></i
-                      ><span class="hide-menu">Blog</span></a
-                    >
-                  </li>
-                  <li class="sidebar-item">
-                    <a href="#" class="sidebar-link"
-                      ><i data-feather="chevron-right" class="feather-sm"></i
-                      ><span class="hide-menu">Gallery</span></a
-                    >
-                  </li>
-                </ul>
-              </li>
-            </ul>
+        </section>
+        <!-- Modal -->
+        <!-- here Start Modal part  -->
 
-            <ul id="sidebarnav2" class="sidebarnav2 d-none w-100">
-              <!-- <li class="sidebar-item"> 
-                            <a class="sidebar-link waves-effect waves-dark sidebar-link" href="#" aria-expanded="false"><img src="assets/images/icon/credit_card.png" alt="credit_card" class="img-fluid">
-                                <span class="hide-menu">Accounts Billing</span>
-                            </a>
-                        </li>
-                        <li class="sidebar-item"> 
-                            <a class="sidebar-link waves-effect waves-dark sidebar-link" href="#" aria-expanded="false"><img src="assets/images/icon/person.png" alt="person" class="img-fluid">
-                                <span class="hide-menu">Consulting services</span>
-                            </a>
-                        </li>
-                        <li class="sidebar-item"> 
-                            <a class="sidebar-link waves-effect waves-dark sidebar-link" href="#" aria-expanded="false"><img src="assets/images/icon/support_agent.png" alt="support_agent" class="img-fluid">
-                                <span class="hide-menu">Support</span>
-                            </a>
-                        </li>
-                        <li class="sidebar-item"> 
-                            <a class="sidebar-link waves-effect waves-dark sidebar-link" href="#" aria-expanded="false"><img src="assets/images/icon/import_contacts.png" alt="import_contacts" class="img-fluid">
-                                <span class="hide-menu">Knowledge Base</span>
-                            </a>
-                        </li> -->
-              <li class="sidebar-item">
-                <a
-                  class="sidebar-link waves-effect waves-dark sidebar-link"
-                  href="#"
-                  aria-expanded="false"
-                >
-                  <div class="powered-by">
-                    <span class="hide-menu">Powered by</span>
-                    <img
-                      src="assets/images/royex-logo.png"
-                      alt="royex-logo"
-                      class="img-fluid royex-logo"
-                    />
-                    <img
-                      src="assets/images/royex-logo-dark.png"
-                      alt="royex-logo-dark"
-                      class="img-fluid royex-logo-dark"
-                    />
-                  </div>
-                </a>
-              </li>
-            </ul>
-          </nav>
+        <!-- here Start Modal part  -->
 
-          <!-- End Sidebar navigation -->
-        </div>
-        <!-- End Sidebar scroll-->
-      </aside>
-      <!-- -------------------------------------------------------------- -->
-      <!-- End Left Sidebar - style you can find in sidebar.scss  -->
-      <!-- -------------------------------------------------------------- -->
-      <!-- -------------------------------------------------------------- -->
-      <!-- Page wrapper  -->
-      <!-- -------------------------------------------------------------- -->
-      <div class="page-wrapper">
+        <!-- 3. end kichen sink -->
+
         <!-- -------------------------------------------------------------- -->
-        <!-- Container fluid  -->
-        <!-- -------------------------------------------------------------- -->
-        <div class="container-fluid">
-          <!-- -------------------------------------------------------------- -->
-          <!-- Start Page Content -->
-          <!-- -------------------------------------------------------------- -->
-          <!-- 3. Entry List -->
-          <section class="section">
-            <div class="container-fluid">
-              <form class="question-main-wrapper" id="main-wrapper-form">
-                <!-- Question Header Section  -->
-                <div class="description-title">
-                  <h2>Lorem ipsum dolor sit amet consectetur adipisicing</h2>
-                  <hr />
-                  <div class="question-description">
-                    <p>
-                      Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                      Consequuntur laborum molestias error laboriosam possimus
-                      quaerat cupiditate minus tempore aliquid, laudantium
-                      mollitia explicabo. Esse veniam accusamus vitae quos vel
-                      id architecto.
-                    </p>
-                  </div>
-                  <hr />
-                  <p class="require-text">* Indicates required question</p>
-                </div>
-                <!-- Question Header Section  -->
-                <!-- question Box  -->
-                <div class="form-control">
-                  <label for="question" class="form-label">
-                    7. Why you need this job Please explain As , ( you can
-                    answer by bangla ) but we don't need to know ChatGPT Or
-                    Gemini
-                  </label>
-                  <textarea
-                    name="question"
-                    id="question"
-                    class="form-input"
-                  ></textarea>
-                </div>
-                <!-- question Box  -->
-                <!-- question Box  -->
-                <div class="form-control">
-                  <label for="question" class="form-label">
-                    7. Why you need this job Please explain As , ( you can
-                    answer by bangla ) but we don't need to know ChatGPT Or
-                    Gemini
-                  </label>
-                  <textarea
-                    name="question"
-                    id="question"
-                    class="form-input"
-                  ></textarea>
-                </div>
-                <!-- question Box  -->
-
-                <!-- question Box  -->
-
-                <!-- question Box  -->
-                <div class="form-control">
-                  <label for="question" class="form-label">
-                    7. Why you need this job Please explain but ?
-                  </label>
-                  <input type="date" name="question" />
-                </div>
-                <!-- question Box  -->
-                <div class="form-control">
-                  <label for="question" class="form-label">
-                    7. Why you need this job Please explain but ?
-                  </label>
-                  <input type="time" name="question" />
-                </div>
-                <!-- question Box  -->
-                <!-- question Box  -->
-                <div class="form-control">
-                  <label for="question" class="form-label">
-                    7. Why you need this job Please explain but ?
-                  </label>
-                  <div class="multiple-choice-form">
-                    <input type="checkbox" name="question" />
-                    <label for="option-1"> option 1</label>
-                  </div>
-                  <div class="multiple-choice-form">
-                    <input type="checkbox" name="question" />
-                    <label for="option-1"> option 1</label>
-                  </div>
-                  <div class="multiple-choice-form">
-                    <input type="checkbox" name="question" />
-                    <label for="option-1"> option 1</label>
-                  </div>
-                  <div class="multiple-choice-form">
-                    <input type="checkbox" name="question" />
-                    <label for="option-1"> option 1</label>
-                  </div>
-                </div>
-                <!-- question Box  -->
-                <!-- question Box  -->
-                <div class="form-control">
-                  <label for="question" class="form-label">
-                    7. Why you need this job Please explain but ?
-                  </label>
-                  <div class="multiple-choice-form">
-                    <input type="radio" name="question" />
-                    <label for="option-1"> option 1</label>
-                  </div>
-                  <div class="multiple-choice-form">
-                    <input type="radio" name="question" />
-                    <label for="option-1"> option 1</label>
-                  </div>
-                  <div class="multiple-choice-form">
-                    <input type="radio" name="question" />
-                    <label for="option-1"> option 1</label>
-                  </div>
-                  <div class="multiple-choice-form">
-                    <input type="radio" name="question" />
-                    <label for="option-1"> option 1</label>
-                  </div>
-                </div>
-                <!-- question Box  -->
-                <!-- question Box  -->
-                <div class="form-control">
-                  <label for="question" class="form-label">
-                    7. Why you need this job Please explain but ?
-                  </label>
-                  <div>
-                    <select name="option" class="form-select" id="">
-                      <option value="1">Option 1</option>
-                      <option value="2">Option 1</option>
-                      <option value="3">Option 1</option>
-                      <option value="4">Option 1</option>
-                    </select>
-                  </div>
-                </div>
-                <!-- question Box  -->
-
-                <div class="w-100 my-2">
-                  <button type="submit" class="btn add-more btn-lg w-auto py-4">
-                    Save
-                  </button>
-                </div>
-              </form>
-            </div>
-          </section>
-          <!-- Modal -->
-          <!-- here Start Modal part  -->
-
-          <!-- here Start Modal part  -->
-
-          <!-- 3. end kichen sink -->
-
-          <!-- -------------------------------------------------------------- -->
-          <!-- End PAge Content -->
-          <!-- -------------------------------------------------------------- -->
-        </div>
-        <!-- -------------------------------------------------------------- -->
-        <!-- End Container fluid  -->
-        <!-- -------------------------------------------------------------- -->
-        <!-- -------------------------------------------------------------- -->
-        <!-- footer -->
-        <!-- -------------------------------------------------------------- -->
-        <footer class="footer d-none text-center">
-          All Rights Reserved by
-          <a href="https://www.royex.ae/" target="_blank">Royex Technologies</a
-          >.
-        </footer>
-        <!-- -------------------------------------------------------------- -->
-        <!-- End footer -->
+        <!-- End PAge Content -->
         <!-- -------------------------------------------------------------- -->
       </div>
-      <!-- -------------------------------------------------------------- -->
-      <!-- End Page wrapper  -->
-      <!-- -------------------------------------------------------------- -->
     </div>
-    <!-- -------------------------------------------------------------- -->
-    <!-- End Wrapper -->
-    <!-- -------------------------------------------------------------- -->
-    <!-- -------------------------------------------------------------- -->
-    <!-- All Jquery -->
-    <!-- -------------------------------------------------------------- -->
-    <script src="assets/libs/jquery/dist/jquery.min.js"></script>
-    <!-- Bootstrap tether Core JavaScript -->
-    <script src="assets/libs/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
-    <script src="assets/libs/fontawesome/js/all.js"></script>
-    <!-- apps -->
-    <script src="assets/dist/js/app.min.js"></script>
-    <script src="assets/dist/js/app.init.minimal.js"></script>
-    <script src="assets/dist/js/app-style-switcher.js"></script>
-    <!-- slimscrollbar scrollbar JavaScript -->
-    <script src="assets/libs/perfect-scrollbar/dist/perfect-scrollbar.jquery.min.js"></script>
-    <script src="assets/extra-libs/sparkline/sparkline.js"></script>
-    <!--Wave Effects -->
-    <script src="assets/dist/js/waves.js"></script>
-    <!--Menu sidebar -->
-    <script src="assets/dist/js/sidebarmenu.js"></script>
-    <!--Custom JavaScript -->
-    <script src="assets/dist/js/feather.min.js"></script>
-    <script src="assets/dist/js/custom.min.js"></script>
-    <!-- This Page JS -->
-    <script src="assets/extra-libs/prism/prism.js"></script>
-    <!-- <script src="./js/utils.js"></script> -->
 
-    <!-- Bootstrap Table link  -->
-
-    <!-- Bootstrap Table link  -->
-    <script>
-      document.getElementById("btnSwitch").addEventListener("click", () => {
-        if (document.documentElement.getAttribute("data-bs-theme") == "dark") {
-          document.documentElement.setAttribute("data-bs-theme", "light");
-        } else {
-          document.documentElement.setAttribute("data-bs-theme", "dark");
-        }
-      });
-    </script>
-    <script>
-      $(document).ready(function () {
-        $("#myInput").on("keyup", function () {
-          var value = $(this).val().toLowerCase();
-          $("#myList li").filter(function () {
-            $(this).toggle($(this).text().toLowerCase().indexOf(value) > -1);
-          });
-        });
-      });
-    </script>
     <script>
       const form = document.getElementById("main-wrapper-form");
       form.addEventListener("submit", (event) => {
