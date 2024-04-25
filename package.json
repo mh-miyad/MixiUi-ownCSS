@@ -10,7 +10,7 @@
   "version": "1.0.0",
   "main": "postcss.config.js",
   "scripts": {
-    "css": "npx tailwindcss -i ./style/input.css -o ./style/output.css --watch"
+    "css": "npx tailwindcss -i ./style/input-2.css -o ./style/thankyou.css --watch"
   },
   "keywords": [],
   "author": "",

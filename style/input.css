@@ -3,11 +3,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Kaushan+Script&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Syncopate:wght@400;700&display=swap");
 /* Link Bootstrap Icon  */
 @tailwind base;
-@layer base {
-  body {
-    @apply scroll-smooth transition-colors delay-100 duration-200 ease-in-out;
-  }
-}
+
 @tailwind components;
 @tailwind utilities;
 
