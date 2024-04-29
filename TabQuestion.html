@@ -17,16 +17,78 @@
     <link rel="stylesheet" href="./style/poll.css" />
 </head>
 
-<body style="background-color: aliceblue">
+<body style="background-color: rgb(58, 150, 232)">
 
 
-    <div class="container mx-auto PollBox">
+    <div class="container  PollBox">
+
+        <div class="toolbox">
+            <div class="question">
+                <h2>1. How Older are you ?</h2>
+            </div>
+            <div class="option-part">
+                <a href="#">View</a>
+                <select name="options" id="poolOption">
+                    <option value="1">Choose Chart</option>
+                    <option value="1"> Pie Chart</option>
+                    <option value="2"> Bard Chart</option>
+                </select>
+            </div>
+        </div>
+
+
+        <!--  Start Pool toolbox -->
+        <div class="main-tool-box">
+            <!-- Bar Chart -->
+            <div class="poolBars">
+                <div class="question-option ">
+                    <div class="question-text question-bars" style="width: 30%;">
+                        <p>
+                            <span>18-25</span>
+                            <span>30%</span>
+                        </p>
+                    </div>
+
+                </div>
+                <div class="question-option ">
+                    <div class="question-text question-bars" style="width: 90%;">
+                        <p>
+                            <span> These user Choose this Option 28-35</span>
+                            <span>90%</span>
+                        </p>
+                    </div>
+
+                </div>
+            </div>
+            <!-- Bar Chart -->
+            <div class="pie-chart hidden">
+                pie chart will see soon
+            </div>
+        </div>
+        <!--  Start Pool toolbox -->
+
 
     </div>
 
+
     <!--  Added Javascript Here  -->
     <script>
-        console.log("hello World ")
+        const selectElement = document.querySelectorAll('.all-question label input[type="radio"]');
+
+        selectElement.forEach((element) => {
+            element.addEventListener('change', (event) => {
+                if (event.target.value) {
+                    const op = element.closest('.question-wrapper').querySelector('.all-question');
+                    op.classList.add('hidden')
+                    const q = element.closest('.PollBox').querySelector('.main-tool-box .poolBars')
+                    q.classList.remove('hidden')
+                    console.log(q)
+
+
+                }
+            })
+        })
+
     </script>
     <!--  Added Javascript Here  -->
 </body>

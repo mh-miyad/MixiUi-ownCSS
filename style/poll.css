@@ -265,7 +265,9 @@ menu {
         max-width: 1536px;
     }
 }
-
+.hidden {
+    display: none !important;
+}
 .mx-auto {
     margin-left: auto;
     margin-right: auto;
@@ -277,6 +279,152 @@ menu {
     width: 90%;
     min-height: 100px;
     border-radius: 10px;
-    border: 1px solid #cfcf;
+    border-top: 4px solid #fca21161;
+    padding: 30px 35px;
+    margin: 10px auto;
 }
+
+.toolbox{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.question h2{
+    text-transform: capitalize;
+    font-size: 24px;
+    font-weight: 600;
+    color: #060c12;
+    
+}
+.all-question{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin-top: 10px;
+}
+label{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 16px;
+    font-weight: 500;
+    color: #060c12;
+}
+
+input[type="radio"] {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 25px;
+  height: 25px;
+  border-radius: 50%;
+  border: 1px solid #939494b7;
+  outline: none;
+  cursor: pointer;
+  box-shadow:2px 2px 10px rgba(0, 0, 0, 0.09);
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  -ms-border-radius: 50%;
+  -o-border-radius: 50%;
+  position: relative;
+
+}
+
+input[type="radio"]:checked::after {
+  
+  content: "\2713"; 
+  font-size: 12px;
+  color: #fff; 
+  position: absolute; 
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%); 
+}
+
+input[type="radio"]:checked {
+  background-color: #fca311; 
+  border: 1px solid #ffe681;
+  color: white;
+  font-weight: 600;
+  text-align: center;
+  line-height: 20px;
+}
+
+/* Optional: Change icon color dynamically */
+/* input[type="radio"]:checked.custom-icon-color::after {
+  counter-reset: none;
+} */
+
+
+/* Question tool Box  */
+.question-option{
+    max-width: 800px;
+    width: 100%;
+    border: 1px solid rgb(173, 175, 173);
+    transition: all linear 0.5s;
+    -webkit-transition: all linear 0.5s;
+    -moz-transition: all linear 0.5s;
+    -ms-transition: all linear 0.5s;
+    -o-transition: all linear 0.5s;
+    border-radius: 5px;
+}
+
+
+/* Question tool Box  */
+
 /*  Start here pool Box Design  */
+
+.question-bars {
+	-webkit-animation: question-bars 1s linear both;
+	        animation: question-bars 1s linear both;
+}
+
+@-webkit-keyframes question-bars {
+  0% {
+    -webkit-transform: scaleX(0.4);
+            transform: scaleX(0.4);
+    -webkit-transform-origin: 0% 0%;
+            transform-origin: 0% 0%;
+  }
+  100% {
+    -webkit-transform: scaleX(1);
+            transform: scaleX(1);
+    -webkit-transform-origin: 0% 0%;
+            transform-origin: 0% 0%;
+  }
+}
+@keyframes question-bars {
+  0% {
+    -webkit-transform: scaleX(0.4);
+            transform: scaleX(0.4);
+    -webkit-transform-origin: 0% 0%;
+            transform-origin: 0% 0%;
+  }
+  100% {
+    -webkit-transform: scaleX(1);
+            transform: scaleX(1);
+    -webkit-transform-origin: 0% 0%;
+            transform-origin: 0% 0%;
+  }
+}
+
+.question-text {
+    background-color: #ffedd178;
+    padding: 5px 10px;
+    width: 50%;
+    min-height: 30px;
+    max-height: 35px;
+}
+.question-text p {
+ display: flex;
+ justify-content: space-between;
+ font-size: 16px;
+ font-weight: 600;
+ color: #020314;
+ text-transform: capitalize;
+
+}
+.poolBars{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
