@@ -28,10 +28,12 @@
             </div>
             <div class="option-part">
                 <a href="#">View</a>
-                <select name="options" id="poolOption">
-                    <option value="1">Choose Chart</option>
+                <select name="options" class="poolOption">
+                    <option>Choose Chart</option>
                     <option value="1"> Pie Chart</option>
                     <option value="2"> Bard Chart</option>
+                    <option value="3"> Line Chart</option>
+                    <option value="4"> Summery </option>
                 </select>
             </div>
         </div>
@@ -64,8 +66,15 @@
             <div class="pie-chart hidden">
                 pie chart will see soon
             </div>
+            <div class="bar-chart hidden">
+                <div id="top_x_div" style="width: 900px; height: 500px;"></div>
+            </div>
+            <div class="line-chart hidden">
+                pie chart will see soon
+            </div>
         </div>
         <!--  Start Pool toolbox -->
+
 
 
     </div>
@@ -73,24 +82,61 @@
 
     <!--  Added Javascript Here  -->
     <script>
-        const selectElement = document.querySelectorAll('.all-question label input[type="radio"]');
+        const selectElement = document.querySelectorAll('.poolOption');
 
-        selectElement.forEach((element) => {
-            element.addEventListener('change', (event) => {
-                if (event.target.value) {
-                    const op = element.closest('.question-wrapper').querySelector('.all-question');
-                    op.classList.add('hidden')
-                    const q = element.closest('.PollBox').querySelector('.main-tool-box .poolBars')
-                    q.classList.remove('hidden')
-                    console.log(q)
+        selectElement.forEach((item) => {
+            item.addEventListener('click', (event) => {
+                event.preventDefault();
+                if (event.target.value == 1) {
+                    document.querySelector('.pie-chart').classList.remove('hidden');
+                    document.querySelector('.bar-chart').classList.add('hidden');
+                    document.querySelector('.line-chart').classList.add('hidden');
 
-
+                } else if (event.target.value == 2) {
+                    document.querySelector('.bar-chart').classList.remove('hidden');
                 }
             })
+
         })
 
     </script>
     <!--  Added Javascript Here  -->
+    <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+    <script>
+        google.charts.load('current', { 'packages': ['bar'] });
+        google.charts.setOnLoadCallback(drawStuff);
+
+        function drawStuff() {
+            var data = new google.visualization.arrayToDataTable([
+                ['Opening Move', 'Percentage'],
+                ["King's pawn (e4)", 44],
+                ["Queen's pawn (d4)", 31],
+                ["Knight to King 3 (Nf3)", 12],
+                ["Queen's bishop pawn (c4)", 10],
+                ['Other', 3]
+            ]);
+
+            var options = {
+                title: 'Chess opening moves',
+                width: 900,
+                legend: { position: 'none' },
+                chart: {
+                    title: 'Chess opening moves',
+                    subtitle: 'popularity by percentage'
+                },
+                bars: 'vertical', // Required for Material Bar Charts.
+                axes: {
+                    x: {
+                        0: { side: 'top', label: 'Percentage' } // Top x-axis.
+                    }
+                },
+                bar: { groupWidth: "90%" }
+            };
+
+            var chart = new google.charts.Bar(document.getElementById('top_x_div'));
+            chart.draw(data, options);
+        };
+    </script>
 </body>
 
 </html>
