@@ -66,13 +66,16 @@
             </div>
             <!-- Bar Chart -->
             <div class="pie-chart hidden">
-                pie chart will see soon
+                  <h5>Page Hits per Country</h5>
+  <div id="pie-chart"></div>
             </div>
             <div class="bar-chart hidden">
-                <div class="top_x_div" style="width: 100%;"></div>
+                <h5>Daily Page Hits</h5>
+  <div id="bar-chart"></div>
             </div>
             <div class="line-chart hidden">
-                 <div class="chart_div" style="width: 100%;"></div>
+                <h5>Traffic Over Time</h5>
+  <div id="line-chart"></div>
             </div>
         </div>
         <!--  Start Pool toolbox -->
@@ -81,16 +84,7 @@
 
     </div>
 
-<main>
-  <h2>Beautiful Google Charts</h2>
-  <h5>Daily Page Hits</h5>
-  <div id="bar-chart"></div>
-  <h5>Traffic Over Time</h5>
-  <div id="line-chart"></div>
-  <h5>Page Hits per Country</h5>
-  <div id="pie-chart"></div>
-	
-</main>
+
 
     <!--  Added Javascript Here  -->
     <script>
@@ -132,122 +126,21 @@
 
     <!--  Added Javascript Here  -->
     <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
-    <script>
-        google.charts.load('current', { 'packages': ['bar'] });
-        google.charts.setOnLoadCallback(drawStuff);
 
-        function drawStuff() {
-            var data = new google.visualization.arrayToDataTable([
-                ['Opening Move', 'Percentage'],
-                ["King's pawn (e4)", 44],
-                ["Queen's pawn (d4)", 31],
-                ["Knight to King 3 (Nf3)", 12],
-                ["Queen's bishop pawn (c4)", 10],
-                ['Other', 3]
-            ]);
-
-            var options = {
-                title: 'Chess opening moves',
-            
-                legend: { position: 'none' },
-                chart: {
-                    title: 'Chess opening moves',
-                    subtitle: 'popularity by percentage'
-                },
-                bars: 'vertical', // Required for Material Bar Charts.
-                axes: {
-                    x: {
-                        0: { side: 'top', label: 'Percentage' } // Top x-axis.
-                    }
-                },
-                bar: { groupWidth: "90%" }
-            };
-
-            // Select all elements with class 'top_x_div' and draw the chart for each one
-            var chartElements = document.querySelectorAll('.top_x_div');
-            chartElements.forEach((element) => {
-                var chart = new google.charts.Bar(element);
-                chart.draw(data, google.charts.Bar.convertOptions(options));
-            });
-        };
-    </script>
-    <script>
-        google.charts.load('current', {packages: ['corechart', 'line']});
-google.charts.setOnLoadCallback(drawLineStyles);
-
-function drawLineStyles() {
-      var data = new google.visualization.DataTable();
-      data.addColumn('number', 'X');
-      data.addColumn('number', '10%');
-      data.addColumn('number', '90%');
-      data.addColumn('number', '50%');
-
-      data.addRows([
-        [2, 10, 30,20]  , 
-        [23, 110, 40,10] , 
-        [342, 50, 30,60]  ,
-        [52, 10, 30,38] ,  
-      ]);
-      var options = {
-        hAxis: {
-          title: 'Ages'
-        },
-        // width: 1020,
-        vAxis: {
-          title: 'People Of Age'
-        },
-        colors: ['#a52714', '#097138','#fca311'],
-        series: {
-          0: {
-            lineWidth: 5,
-            lineDashStyle: [10 ,6]
-          },
-          1: {
-            lineWidth: 5,
-            lineDashStyle: [7, 2, 4, 3]
-          },
-          2: {
-            lineWidth: 3,
-            lineDashStyle: [10, 1, 6, 3]
-          }
-        }
-      };
-         var chartElements = document.querySelectorAll('.chart_div');
-         chartElements.forEach((element) => {
-                var chart =  new google.visualization.LineChart(element);
-                chart.draw(data, google.charts.Line.convertOptions(options));
-            });
-    }
-    </script>
     <script>
         google.load("visualization", "1", {packages:["corechart"]});
 google.setOnLoadCallback(drawCharts);
 function drawCharts() {
   
-  // BEGIN BAR CHART
-  /*
-  // create zero data so the bars will 'grow'
-  var barZeroData = google.visualization.arrayToDataTable([
-    ['Day', 'Page Views', 'Unique Views'],
-    ['Sun',  0,      0],
-    ['Mon',  0,      0],
-    ['Tue',  0,      0],
-    ['Wed',  0,      0],
-    ['Thu',  0,      0],
-    ['Fri',  0,      0],
-    ['Sat',  0,      0]
-  ]);
-	*/
-  // actual bar chart data
   var barData = google.visualization.arrayToDataTable([
     ['Day', 'Page Views', 'Unique Views'],
-    ['Sun',  1050,      600],
-    ['Mon',  1370,      910],
-    ['Tue',  660,       400],
-    ['Wed',  1030,      540],
-    ['Thu',  1000,      480],
-    ['Fri',  1170,      960],
-    ['Sat',  660,       320]
+    ['Sun',  1050,      600 ],
+    ['Mon',  1370,      910 ],
+    ['Tue',  660,       400 ],
+    ['Wed',  1030,      540 ],
+    ['Thu',  1000,      480 ],
+    ['Fri',  1170,      960 ],
+    ['Sat',  660,       320 ]
   ]);
   // set bar chart options
   var barOptions = {
@@ -258,8 +151,8 @@ function drawCharts() {
     chartArea: {
       left: 50,
       top: 10,
-      width: '100%',
-      height: '70%'
+      width: 700,
+      height: '60%'
     },
     bar: {
       groupWidth: '80%'
