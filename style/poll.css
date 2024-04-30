@@ -1,3 +1,4 @@
+@import url(https://fonts.googleapis.com/css?family=Open+Sans:400,700);
 *,
 ::before,
 ::after {
@@ -35,6 +36,8 @@ body {
   margin: 0;
   /* 1 */
   line-height: inherit;
+  font-family: "Open Sans", Arial;
+  background: #EDEDED;
   /* 2 */
 }
 
@@ -249,12 +252,16 @@ menu {
     background-color:white;
     width: 95%;
     min-height: 100px;
+    max-width: 700px;
     border-radius: 10px;
     border-top: 4px solid #fca21161;
     padding: 30px 35px;
     margin: 10px auto;
 }
-
+.main-tool-box{
+  width: 100%;
+  display: block;
+}
 .toolbox{
     display: flex;
     justify-content: space-between;
@@ -350,7 +357,7 @@ menu {
 }
 
 .poolOption{
-    border: 1px solid rgb(173, 175, 173);
+    border: 1px solid rgba(255, 176, 18, 0.813);
     padding: 8px 12px;
     margin: 0px 5px;
     border-radius: 5px;
@@ -358,6 +365,8 @@ menu {
     -moz-border-radius: 5px;
     -ms-border-radius: 5px;
     -o-border-radius: 5px;
+    font-size: 16px;
+    appearance: none;
 }
 .poolOption:focus{
   outline: none;
@@ -392,34 +401,92 @@ menu {
 
 /*  Final Design End here  */
 /*  Responsive Design  */
-@media (min-width: 320px) {
-    .container {
-        max-width: 320px;
-    }
+.line-chart {
+  max-width: 100%; /* Ensures responsiveness */
+  height: auto;
+  overflow: hidden;
+  overflow-x: auto; /* Enables horizontal scrolling if needed */
+  margin: 0 auto; /* Centers the chart horizontally */ /* Optional for better layout */
 }
-@media (min-width: 640px) {
-    .container {
-        max-width: 640px;
-    }
+
+/* @media screen and (max-width: 768px) {
+ 
+ 
+} */
+
+@media screen and (min-width: 769px) and (max-width: 1024px) {
+  /* Adjust styles for tablets (optional) */
+  .line-chart {
+    max-width: 80%; /* Adjust max-width for tablets */
+  }
 }
-@media (min-width: 768px) {
-    .container {
-        max-width: 768px;
-    }
+
+@media screen and (min-width: 1025px) {
+  /* Adjust styles for larger screens (optional) */
+  .line-chart {
+    max-width: 70%; /* Adjust max-width for larger screens */
+  }
 }
-@media (min-width: 1024px) {
-    .container {
-        max-width: 1024px;
-    }
-}
-@media (min-width: 1280px) {
-    .container {
-        max-width: 1280px;
-    }
-}
-@media (min-width: 1536px) {
-    .container {
-        max-width: 1536px;
-    }
-}
+
 /*  Responsive Design  */
+
+main {
+  width: 700px;
+  margin: 10px auto;
+  padding: 10px 20px 30px;
+  background: #FFF;
+  box-shadow: 0 3px 5px rgba(0,0,0,0.2);
+}
+p {
+  margin-top: 2rem;
+  font-size: 13px;
+}
+#bar-chart {
+  width: 700px;
+  height: 300px;
+  position: relative;
+}
+#line-chart {
+  width: 700px;
+  height: 300px;
+  position: relative;
+}
+#bar-chart::before, #line-chart::before {
+  content: "";
+  position: absolute;
+  display: block;
+  width: 240px;
+  height: 30px;
+  left: 155px;
+  top: 254px;
+  background: #FAFAFA;
+  box-shadow: 1px 1px 0 0 #DDD;
+}
+#pie-chart {
+  width: 700px;
+  height: 250px;
+  position: relative;
+}
+#pie-chart::before {
+  content: "";
+  position: absolute;
+  display: block;
+  width: 120px;
+  height: 115px;
+  left: 315px;
+  top: 0;
+  background: #FAFAFA;
+  box-shadow: 1px 1px 0 0 #DDD;
+}
+#pie-chart::after {
+  content: "";
+  position: absolute;
+  display: block;
+  top: 260px;
+  left: 70px;
+  width: 170px;
+  height: 2px;
+  background: rgba(0,0,0,0.1);
+  border-radius: 50%;
+  box-shadow: 0 0 3px 4px rgba(0,0,0,0.1);
+}
