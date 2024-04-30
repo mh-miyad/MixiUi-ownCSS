@@ -17,23 +17,25 @@
     <link rel="stylesheet" href="./style/poll.css" />
 </head>
 
-<body style="background-color: rgb(58, 150, 232)">
+<body style="background-color: rgb(227, 227, 227)">
 
 
-    <div class="container  PollBox">
+
+
+    <div class="PollBox">
 
         <div class="toolbox">
             <div class="question">
                 <h2>1. How Older are you ?</h2>
             </div>
             <div class="option-part">
-                <a href="#">View</a>
+                <a href="#" class="viewBtn">View</a>
                 <select name="options" class="poolOption">
                     <option>Choose Chart</option>
-                    <option value="1"> Pie Chart</option>
-                    <option value="2"> Bard Chart</option>
-                    <option value="3"> Line Chart</option>
-                    <option value="4"> Summery </option>
+                    <option value="Pie Chart"> Pie Chart</option>
+                    <option value="Bar Chart"> Bar Chart</option>
+                    <option value="Line Chart"> Line Chart</option>
+                    <option value="Summery"> Summery </option>
                 </select>
             </div>
         </div>
@@ -67,7 +69,7 @@
                 pie chart will see soon
             </div>
             <div class="bar-chart hidden">
-                <div id="top_x_div" style="width: 900px; height: 500px;"></div>
+                <div class="top_x_div" style="width: 900px; height: 500px;"></div>
             </div>
             <div class="line-chart hidden">
                 pie chart will see soon
@@ -80,26 +82,45 @@
     </div>
 
 
+
     <!--  Added Javascript Here  -->
     <script>
-        const selectElement = document.querySelectorAll('.poolOption');
+        const selectElements = document.querySelectorAll('.poolOption');
 
-        selectElement.forEach((item) => {
-            item.addEventListener('click', (event) => {
-                event.preventDefault();
-                if (event.target.value == 1) {
-                    document.querySelector('.pie-chart').classList.remove('hidden');
-                    document.querySelector('.bar-chart').classList.add('hidden');
-                    document.querySelector('.line-chart').classList.add('hidden');
+        selectElements.forEach((selectElement) => {
+            selectElement.addEventListener('change', (event) => {
+                const targetValue = event.target.value;
+                const pollBox = event.target.closest('.PollBox');
+                const pieChart = pollBox.querySelector('.pie-chart');
+                const barChart = pollBox.querySelector('.bar-chart');
+                const lineChart = pollBox.querySelector('.line-chart');
+                const poolBars = pollBox.querySelector('.poolBars');
 
-                } else if (event.target.value == 2) {
-                    document.querySelector('.bar-chart').classList.remove('hidden');
+                if (targetValue === 'Pie Chart') {
+                    pieChart.classList.remove('hidden');
+                    barChart.classList.add('hidden');
+                    lineChart.classList.add('hidden');
+                    poolBars.classList.add('hidden');
+                } else if (targetValue === 'Bar Chart') {
+                    barChart.classList.remove('hidden');
+                    pieChart.classList.add('hidden');
+                    lineChart.classList.add('hidden');
+                    poolBars.classList.add('hidden');
+                } else if (targetValue === 'Line Chart') {
+                    lineChart.classList.remove('hidden');
+                    barChart.classList.add('hidden');
+                    pieChart.classList.add('hidden');
+                    poolBars.classList.add('hidden');
+                } else {
+                    poolBars.classList.remove('hidden');
+                    pieChart.classList.add('hidden');
+                    barChart.classList.add('hidden');
+                    lineChart.classList.add('hidden');
                 }
-            })
-
-        })
-
+            });
+        });
     </script>
+
     <!--  Added Javascript Here  -->
     <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
     <script>
@@ -133,10 +154,15 @@
                 bar: { groupWidth: "90%" }
             };
 
-            var chart = new google.charts.Bar(document.getElementById('top_x_div'));
-            chart.draw(data, options);
+            // Select all elements with class 'top_x_div' and draw the chart for each one
+            var chartElements = document.querySelectorAll('.top_x_div');
+            chartElements.forEach((element) => {
+                var chart = new google.charts.Bar(element);
+                chart.draw(data, google.charts.Bar.convertOptions(options));
+            });
         };
     </script>
+
 </body>
 
 </html>

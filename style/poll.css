@@ -235,36 +235,7 @@ menu {
 .container {
     width: 100%;
 }
-@media (min-width: 320px) {
-    .container {
-        max-width: 320px;
-    }
-}
-@media (min-width: 640px) {
-    .container {
-        max-width: 640px;
-    }
-}
-@media (min-width: 768px) {
-    .container {
-        max-width: 768px;
-    }
-}
-@media (min-width: 1024px) {
-    .container {
-        max-width: 1024px;
-    }
-}
-@media (min-width: 1280px) {
-    .container {
-        max-width: 1280px;
-    }
-}
-@media (min-width: 1536px) {
-    .container {
-        max-width: 1536px;
-    }
-}
+
 .hidden {
     display: none !important;
 }
@@ -276,7 +247,7 @@ menu {
 /*  Start here pool Box Design  */
 .PollBox{
     background-color:white;
-    width: 90%;
+    width: 95%;
     min-height: 100px;
     border-radius: 10px;
     border-top: 4px solid #fca21161;
@@ -288,6 +259,7 @@ menu {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    margin: 15px 0px;
 }
 .question h2{
     text-transform: capitalize;
@@ -359,7 +331,6 @@ menu {
 .question-text {
     background-color: #ffedd178;
     padding: 5px 10px;
-    width: 50%;
     min-height: 30px;
     max-height: 35px;
 }
@@ -377,3 +348,78 @@ menu {
     flex-direction: column;
     gap: 20px;
 }
+
+.poolOption{
+    border: 1px solid rgb(173, 175, 173);
+    padding: 8px 12px;
+    margin: 0px 5px;
+    border-radius: 5px;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    -ms-border-radius: 5px;
+    -o-border-radius: 5px;
+}
+.poolOption:focus{
+  outline: none;
+  
+}
+
+.viewBtn{
+    font-size: 16px !important;
+    border: 1px solid #fca21161;
+    padding: 10px 15px;
+    color: #fca311;
+    background-color: white;
+    border-radius: 6px;
+    -webkit-border-radius: 6px;
+    -moz-border-radius: 6px;
+    -ms-border-radius: 6px;
+    -o-border-radius: 6px;
+    transition: all linear 0.3s;
+    -webkit-transition: all linear 0.3s;
+    -moz-transition: all linear 0.3s;
+    -ms-transition: all linear 0.3s;
+    -o-transition: all linear 0.3s;
+}
+.viewBtn:hover,
+.viewBtn:active{
+  background-color:#fca311;
+  color: white;
+  border: 1px solid #fca31161;
+  font-weight: 500;
+}
+
+
+/*  Final Design End here  */
+/*  Responsive Design  */
+@media (min-width: 320px) {
+    .container {
+        max-width: 320px;
+    }
+}
+@media (min-width: 640px) {
+    .container {
+        max-width: 640px;
+    }
+}
+@media (min-width: 768px) {
+    .container {
+        max-width: 768px;
+    }
+}
+@media (min-width: 1024px) {
+    .container {
+        max-width: 1024px;
+    }
+}
+@media (min-width: 1280px) {
+    .container {
+        max-width: 1280px;
+    }
+}
+@media (min-width: 1536px) {
+    .container {
+        max-width: 1536px;
+    }
+}
+/*  Responsive Design  */
