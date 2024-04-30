@@ -248,7 +248,7 @@ menu {
 }
 main {
   max-width: 1080px;
-  width: 95%;
+  width: 90%;
   margin: 10px auto;
   
 }
@@ -432,9 +432,9 @@ p {
   font-size: 13px;
 }
 
-#piechart, 
-#chart_div, 
-#line-chart-google {
+.piechart, 
+.chart_div, 
+.line-chart-google {
   width: 100%;
   height: 350px;
 }
@@ -443,9 +443,9 @@ p {
   main{
     max-width: 90%;
   }
- #piechart, 
- #chart_div, 
-#line-chart-google{
+.piechart, 
+.chart_div, 
+.line-chart-google{
   width: 100%;
   height: 190px;
 }
@@ -453,7 +453,6 @@ p {
   font-size: 16px;
 }
 }
-
 
 
 
