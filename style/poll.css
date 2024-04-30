@@ -246,17 +246,25 @@ menu {
     margin-left: auto;
     margin-right: auto;
 }
+main {
+  max-width: 1080px;
+  width: 100%;
+  margin: 10px auto;
+}
 
 /*  Start here pool Box Design  */
 .PollBox{
-    background-color:white;
     width: 100%;
-    min-height: 100px;
-    max-width: 40rem;
+    background-color:white;
     border-radius: 10px;
     border-top: 4px solid #fca21161;
     padding: 30px 35px;
-    margin: 10px auto;
+    margin: 0px auto;
+    transition:height linear .8s;
+    -webkit-transition:height linear .8s;
+    -moz-transition:height linear .8s;
+    -ms-transition:height linear .8s;
+    -o-transition:height linear .8s;
 }
 .main-tool-box{
   width: 100%;
@@ -266,7 +274,7 @@ menu {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    margin: 15px 0px;
+    
 }
 .question h2{
     text-transform: capitalize;
@@ -285,14 +293,13 @@ menu {
 
 /* Question tool Box  */
 .question-option{
-    max-width: 800px;
     width: 100%;
-    border: 1px solid rgb(173, 175, 173);
-    transition: all linear 0.5s;
-    -webkit-transition: all linear 0.5s;
-    -moz-transition: all linear 0.5s;
-    -ms-transition: all linear 0.5s;
-    -o-transition: all linear 0.5s;
+    border: 1px solid rgba(209, 209, 209, 0.479);
+    transition: all linear 1s;
+    -webkit-transition: all linear 1s;
+    -moz-transition: all linear 1s;
+    -ms-transition: all linear 1s;
+    -o-transition: all linear 1s;
     border-radius: 5px;
 }
 
@@ -334,22 +341,25 @@ menu {
             transform-origin: 0% 0%;
   }
 }
-
-.question-text {
-    background-color: #ffedd178;
-    padding: 5px 10px;
-    min-height: 30px;
-    max-height: 35px;
-}
-.question-text p {
+.question-bars p {
  display: flex;
  justify-content: space-between;
  font-size: 16px;
- font-weight: 600;
+ font-weight: 400;
  color: #020314;
  text-transform: capitalize;
+ margin-right: 10px;
+ margin-bottom: 5px;
 
 }
+
+.question-text {
+    background-color: #f2b544;
+    padding: 5px 10px;
+    min-height: 30px;
+    max-height: 40px;
+}
+
 .poolBars{
     display: flex;
     flex-direction: column;
@@ -399,56 +409,35 @@ menu {
 }
 
 
-/*  Responsive Design  */
-#bar-chart {
-  width: 100%;
-  max-width: 600px;
-  height: 200px;
-  position: relative;
-}
-#line-chart {
- width: 100%;
-  height: 240px;
-  margin: 0  auto;
-  position: relative;
 
+/*  Responsive Design  */
+
+
+p {
+  margin-top: 10px;
+  margin-bottom: 5px;
+  font-size: 13px;
 }
-/* #bar-chart::before, #line-chart::before {
-  content: "";
-  position: absolute;
-  display: block;
-  width: 200px;
-  height: 50px;
-  left: 30%;
-  top: 60%;
-  background: #FAFAFA;
-  box-shadow: 1px 1px 0 0 #DDD;
-} */
-#pie-chart {
-  width: 600px;
-  height: 250px;
-  position: relative;
+
+#piechart, 
+#chart_div, 
+#curve_chart {
+  width: 100%;
+  height: 350px;
 }
-#pie-chart::before {
-  content: "";
-  position: absolute;
-  display: block;
-  width: 120px;
-  height: 115px;
-  left: 315px;
-  top: 0;
-  background: #FAFAFA;
-  box-shadow: 1px 1px 0 0 #DDD;
+
+@media screen and (max-width: 768px) {
+  main{
+    max-width: 90%;
+  }
+ #piechart, 
+ #chart_div, 
+#curve_chart{
+  width: 100%;
+  height: 200px;
 }
-#pie-chart::after {
-  content: "";
-  position: absolute;
-  display: block;
-  top: 260px;
-  left: 70px;
-  width: 170px;
-  height: 2px;
-  background: rgba(0,0,0,0.1);
-  border-radius: 50%;
-  box-shadow: 0 0 3px 4px rgba(0,0,0,0.1);
 }
+
+
+
+

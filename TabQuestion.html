@@ -1,7 +1,6 @@
 <!doctype html>
 <html dir="ltr" lang="en" data-bs-theme="light">
-
-<head>
+  <head>
     <meta charset="utf-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <!-- Tell the browser to be responsive to screen width -->
@@ -12,316 +11,253 @@
     <title>Royex Events || Booking Details</title>
     <link rel="canonical" href="" />
     <!-- Favicon icon -->
-    <link rel="icon" type="image/png" sizes="16x16" href="assets/images/favicon.png" />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="16x16"
+      href="assets/images/favicon.png"
+    />
 
     <link rel="stylesheet" href="./style/poll.css" />
-</head>
+  </head>
 
-<body style="background-color: rgb(227, 227, 227)">
-
-
-
-
-    <div class="PollBox">
-
+  <body style="background-color: rgb(227, 227, 227)">
+    <main>
+      <div class="PollBox">
         <div class="toolbox">
-            <div class="question">
-                <h2>1. How Older are you ?</h2>
-            </div>
-            <div class="option-part">
-                <a href="#" class="viewBtn">View</a>
-                <select name="options" class="poolOption">
-                    <option>Choose Chart</option>
-                    <option value="Pie Chart"> Pie Chart</option>
-                    <option value="Bar Chart"> Bar Chart</option>
-                    <option value="Line Chart"> Line Chart</option>
-                    <option value="Summery"> Summery </option>
-                </select>
-            </div>
+          <div class="question">
+            <h2>1. How Older are you ?</h2>
+          </div>
+          <div class="option-part">
+            <a href="#" class="viewBtn">View</a>
+            <select name="options" class="poolOption">
+              <option>Choose Chart</option>
+              <option value="Pie Chart">Pie Chart</option>
+              <option value="Bar Chart">Bar Chart</option>
+              <option value="Line Chart">Line Chart</option>
+              <option value="Summery">Summery</option>
+            </select>
+          </div>
         </div>
-
-
-        <!--  Start Pool toolbox -->
-        <div class="main-tool-box">
-            <!-- Bar Chart -->
-            <div class="poolBars">
-                <div class="question-option ">
-                    <div class="question-text question-bars" style="width: 30%;">
-                        <p>
-                            <span>18-25</span>
-                            <span>30%</span>
-                        </p>
-                    </div>
-
-                </div>
-                <div class="question-option ">
-                    <div class="question-text question-bars" style="width: 90%;">
-                        <p>
-                            <span> These user Choose this Option 28-35</span>
-                            <span>90%</span>
-                        </p>
-                    </div>
-
-                </div>
+        <!-- Pool bars -->
+        <div class="poolBars">
+          <div class="question-bars">
+            <p>
+              <span> These user Choose this Option 28-35</span>
+              <span style="font-weight: 700">90%</span>
+            </p>
+            <div class="question-option">
+              <div class="question-text question-bars" style="width: 90%"></div>
             </div>
-            <!-- Bar Chart -->
-            <div class="pie-chart hidden">
-                  <h5>Page Hits per Country</h5>
-  <div id="pie-chart"></div>
-            </div>
-            <div class="bar-chart hidden">
-                <h5>Daily Page Hits</h5>
-  <div id="bar-chart"></div>
-            </div>
-            <div class="line-chart hidden">
-                <h5>Traffic Over Time</h5>
-  <div id="line-chart"></div>
-            </div>
+          </div>
         </div>
+        <div class="poolBars">
+          <div class="question-bars">
+            <p>
+              <span> These user Choose this Option 28-35</span>
+              <span style="font-weight: 700">90%</span>
+            </p>
+            <div class="question-option">
+              <div class="question-text question-bars" style="width: 90%"></div>
+            </div>
+          </div>
+        </div>
+        <!-- Pool bars -->
         <!--  Start Pool toolbox -->
 
-
-
-    </div>
-
-
+        <div class="pie-chart hidden">
+          <div id="piechart"></div>
+        </div>
+        <div class="bar-chart hidden"></div>
+        <div class="line-chart hidden"></div>
+      </div>
+    </main>
 
     <!--  Added Javascript Here  -->
     <script>
-        const selectElements = document.querySelectorAll('.poolOption');
+      const selectElements = document.querySelectorAll(".poolOption");
 
-        selectElements.forEach((selectElement) => {
-            selectElement.addEventListener('change', (event) => {
-                const targetValue = event.target.value;
-                const pollBox = event.target.closest('.PollBox');
-                const pieChart = pollBox.querySelector('.pie-chart');
-                const barChart = pollBox.querySelector('.bar-chart');
-                const lineChart = pollBox.querySelector('.line-chart');
-                const poolBars = pollBox.querySelector('.poolBars');
+      selectElements.forEach((selectElement) => {
+        selectElement.addEventListener("change", (event) => {
+          const targetValue = event.target.value;
+          const pollBox = event.target.closest(".PollBox");
+          const pieChart = pollBox.querySelector(".pie-chart");
+          const barChart = pollBox.querySelector(".bar-chart");
+          const lineChart = pollBox.querySelector(".line-chart");
+          const poolBars = pollBox.querySelectorAll(".poolBars");
 
-                if (targetValue === 'Pie Chart') {
-                    pieChart.classList.remove('hidden');
-                    barChart.classList.add('hidden');
-                    lineChart.classList.add('hidden');
-                    poolBars.classList.add('hidden');
-                } else if (targetValue === 'Bar Chart') {
-                    barChart.classList.remove('hidden');
-                    pieChart.classList.add('hidden');
-                    lineChart.classList.add('hidden');
-                    poolBars.classList.add('hidden');
-                } else if (targetValue === 'Line Chart') {
-                    lineChart.classList.remove('hidden');
-                    barChart.classList.add('hidden');
-                    pieChart.classList.add('hidden');
-                    poolBars.classList.add('hidden');
-                } else {
-                    poolBars.classList.remove('hidden');
-                    pieChart.classList.add('hidden');
-                    barChart.classList.add('hidden');
-                    lineChart.classList.add('hidden');
-                }
+          if (targetValue === "Pie Chart") {
+            pieChart.classList.remove("hidden");
+            barChart.classList.add("hidden");
+            lineChart.classList.add("hidden");
+            poolBars.forEach((poolBar) => {
+              poolBar.classList.add("hidden");
             });
+          } else if (targetValue === "Bar Chart") {
+            barChart.classList.remove("hidden");
+            pieChart.classList.add("hidden");
+            lineChart.classList.add("hidden");
+
+            poolBars.forEach((poolBar) => {
+              poolBar.classList.add("hidden");
+            });
+          } else if (targetValue === "Line Chart") {
+            lineChart.classList.remove("hidden");
+            barChart.classList.add("hidden");
+            pieChart.classList.add("hidden");
+
+            poolBars.forEach((poolBar) => {
+              poolBar.classList.add("hidden");
+            });
+          } else {
+            poolBars.forEach((poolBar) => {
+              poolBar.classList.remove("hidden");
+            });
+            pieChart.classList.add("hidden");
+            barChart.classList.add("hidden");
+            lineChart.classList.add("hidden");
+          }
         });
+      });
     </script>
 
     <!--  Added Javascript Here  -->
-    <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+    <script
+      type="text/javascript"
+      src="https://www.gstatic.com/charts/loader.js"
+    ></script>
+    <!-- <script type="text/javascript">
+    google.charts.load('current', { 'packages': ['corechart'] });
+    google.charts.setOnLoadCallback(drawChart);
 
-    <script>
-        google.load("visualization", "1", {packages:["corechart"]});
-google.setOnLoadCallback(drawCharts);
-function drawCharts() {
-  
-  var barData = google.visualization.arrayToDataTable([
-    ['Day', 'Page Views', 'Unique Views'],
-    ['Sun',  1050,      600 ],
-    ['Mon',  1370,      910 ],
-    ['Tue',  660,       400 ],
-    ['Wed',  1030,      540 ],
-    ['Thu',  1000,      480 ],
-    ['Fri',  1170,      960 ],
-    ['Sat',  660,       320 ]
-  ]);
-  // set bar chart options
-  var barOptions = {
-    focusTarget: 'category',
-    backgroundColor: 'transparent',
-    colors: ['cornflowerblue', 'tomato'],
-    fontName: 'Open Sans',
-    chartArea: {
-      left: 50,
-      top: 10,
-      width: 700,
-      height: '60%'
-    },
-    bar: {
-      groupWidth: '80%'
-    },
-    hAxis: {
-      textStyle: {
-        fontSize: 11
-      }
-    },
-    vAxis: {
-      minValue: 0,
-      maxValue: 1500,
-      baselineColor: '#DDD',
-      gridlines: {
-        color: '#DDD',
-        count: 4
-      },
-      textStyle: {
-        fontSize: 11
-      }
-    },
-    legend: {
-      position: 'bottom',
-      textStyle: {
-        fontSize: 12
-      }
-    },
-    animation: {
-      duration: 1200,
-      easing: 'out',
-			startup: true
-    }
-  };
-  // draw bar chart twice so it animates
-  var barChart = new google.visualization.ColumnChart(document.getElementById('bar-chart'));
-  //barChart.draw(barZeroData, barOptions);
-  barChart.draw(barData, barOptions);
-  
-  // BEGIN LINE GRAPH
-  
-  function randomNumber(base, step) {
-    return Math.floor((Math.random()*step)+base);
-  }
-  function createData(year, start1, start2, step, offset) {
-    var ar = [];
-    for (var i = 0; i < 12; i++) {
-      ar.push([new Date(year, i), randomNumber(start1, step)+offset, randomNumber(start2, step)+offset]);
-    }
-    return ar;
-  }
-  var randomLineData = [
-    ['Year', 'Page Views', 'Unique Views']
-  ];
-  for (var x = 0; x < 7; x++) {
-    var newYear = createData(2007+x, 10000, 5000, 4000, 800*Math.pow(x,2));
-    for (var n = 0; n < 12; n++) {
-      randomLineData.push(newYear.shift());
-    }
-  }
-  var lineData = google.visualization.arrayToDataTable(randomLineData);
-  
-	/*
-  var animLineData = [
-    ['Year', 'Page Views', 'Unique Views']
-  ];
-  for (var x = 0; x < 7; x++) {
-    var zeroYear = createData(2007+x, 0, 0, 0, 0);
-    for (var n = 0; n < 12; n++) {
-      animLineData.push(zeroYear.shift());
-    }
-  }
-  var zeroLineData = google.visualization.arrayToDataTable(animLineData);
-	*/
+    function drawChart() {
+      var data = google.visualization.arrayToDataTable([
+        ['Year', 'Sales', 'Expenses'],
+        ['2004', 1000, 400],
+        ['2005', 1170, 460],
+        ['2006', 660, 1120],
+        ['2007', 1030, 540]
+      ]);
 
-  var lineOptions = {
-    backgroundColor: 'transparent',
-    colors: ['cornflowerblue', 'tomato'],
-    fontName: 'Open Sans',
-    focusTarget: 'category',
-    chartArea: {
-      left: 50,
-      top: 10,
-      width: '100%',
-      height: '70%'
-    },
-    hAxis: {
-      //showTextEvery: 12,
-      textStyle: {
-        fontSize: 11
-      },
-      baselineColor: 'transparent',
-      gridlines: {
-        color: 'transparent'
-      }
-    },
-    vAxis: {
-      minValue: 0,
-      maxValue: 50000,
-      baselineColor: '#DDD',
-      gridlines: {
-        color: '#DDD',
-        count: 4
-      },
-      textStyle: {
-        fontSize: 11
-      }
-    },
-    legend: {
-      position: 'bottom',
-      textStyle: {
-        fontSize: 12
-      }
-    },
-    animation: {
-      duration: 1200,
-      easing: 'out',
-			startup: true
-    }
-  };
+      var options = {
+        title: 'Company Performance',
+        curveType: 'function',
+        legend: { position: 'bottom' },
+        fontName: 'Open Sans',
+        blurEffect: 0.5,
+        chartArea: {
+          width: '100%',
+          height: '80%'
+        }
+        , animation: {
+          duration: 1000
+        }
+      };
 
-  var lineChart = new google.visualization.LineChart(document.getElementById('line-chart'));
-  //lineChart.draw(zeroLineData, lineOptions);
-  lineChart.draw(lineData, lineOptions);
-  
-  // BEGIN PIE CHART
-  
-  // pie chart data
-  var pieData = google.visualization.arrayToDataTable([
-    ['Country', 'Page Hits'],
-    ['USA',      7242],
-    ['Canada',   4563],
-    ['Mexico',   1345],
-    ['Sweden',    946],
-    ['Germany',  2150]
-  ]);
-  // pie chart options
-  var pieOptions = {
-    backgroundColor: 'transparent',
-    pieHole: 0.4,
-    colors: [ "cornflowerblue", 
-              "olivedrab", 
-              "orange", 
-              "tomato", 
-              "crimson", 
-              "purple", 
-              "turquoise", 
-              "forestgreen", 
-              "navy", 
-              "gray"],
-    pieSliceText: 'value',
-    tooltip: {
-      text: 'percentage'
-    },
-    fontName: 'Open Sans',
-    chartArea: {
-      width: '100%',
-      height: '94%'
-    },
-    legend: {
-      textStyle: {
-        fontSize: 13
-      }
+      var chart = new google.visualization.LineChart(document.getElementById('curve_chart'));
+
+      chart.draw(data, options);
     }
-  };
-  // draw pie chart
-  var pieChart = new google.visualization.PieChart(document.getElementById('pie-chart'));
-  pieChart.draw(pieData, pieOptions);
-}
+  </script>
+  <script type="text/javascript">
+    google.charts.load('current', { packages: ['corechart', 'bar'] });
+    google.charts.setOnLoadCallback(drawStacked);
+
+    function drawStacked() {
+      var data = new google.visualization.DataTable();
+      data.addColumn('timeofday', 'Time of Day');
+      data.addColumn('number', 'Motivation Level');
+      data.addColumn('number', 'Energy Level');
+
+      data.addRows([
+        [{ v: [8, 0, 0], f: '8 am' }, 1, .25],
+        [{ v: [9, 0, 0], f: '9 am' }, 2, .5],
+        [{ v: [10, 0, 0], f: '10 am' }, 3, 1],
+        [{ v: [11, 0, 0], f: '11 am' }, 4, 2.25],
+        [{ v: [12, 0, 0], f: '12 pm' }, 5, 2.25],
+        [{ v: [13, 0, 0], f: '1 pm' }, 6, 3],
+        [{ v: [14, 0, 0], f: '2 pm' }, 7, 4],
+        [{ v: [15, 0, 0], f: '3 pm' }, 8, 5.25],
+        [{ v: [16, 0, 0], f: '4 pm' }, 9, 7.5],
+        [{ v: [17, 0, 0], f: '5 pm' }, 10, 10],
+      ]);
+
+      var options = {
+        title: 'Motivation and Energy Level Throughout the Day',
+        isStacked: true,
+        hAxis: {
+          title: 'Time of Day',
+          format: 'h:mm a',
+          viewWindow: {
+            min: [7, 30, 0],
+            max: [17, 30, 0]
+          }
+        },
+        vAxis: {
+          title: 'Rating (scale of 1-10)'
+        }
+      };
+
+      var chart = new google.visualization.ColumnChart(document.getElementById('chart_div'));
+      chart.draw(data, options);
+    }
+  </script> -->
+    <script type="text/javascript">
+      google.charts.load("current", { packages: ["corechart"] });
+      google.charts.setOnLoadCallback(drawChart);
+      let isChartLoaded = false;
+      google.charts.setOnLoadCallback(function () {
+        isChartLoaded = true;
+      });
+      function drawChart() {
+        var data = google.visualization.arrayToDataTable([
+          ["Task", "Hours per Day"],
+          ["Work", 11],
+          ["Eat", 2],
+          ["Commute", 2],
+          ["Watch TV", 2],
+          ["Sleep", 7],
+        ]);
+
+        var options = {
+          title: "My Daily Activities",
+          chartArea: {
+            width: "100%",
+            height: "50%",
+          },
+        };
+
+        var chart = new google.visualization.PieChart(
+          document.getElementById("piechart"),
+        );
+
+        chart.draw(data, options);
+      }
+
+      function updateSize() {
+        const width = window.innerWidth;
+        const height = window.innerHeight;
+        if (
+          width <= width ||
+          (width >= window && height <= height) ||
+          height >= height
+        ) {
+          if (isChartLoaded) {
+            drawChart();
+          }
+        }
+      }
+
+      window.addEventListener("resize", updateSize, { passive: true });
+      updateSize();
+      const opSelect = document.querySelectorAll(".poolOption");
+      opSelect.forEach((op) => {
+        op.addEventListener("change", (e) => {
+          if (e.target.value) {
+            updateSize();
+          }
+        });
+      });
     </script>
-</body>
-
+  </body>
 </html>
