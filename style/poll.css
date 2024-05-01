@@ -238,6 +238,7 @@ menu {
     background-color: #fff;
     max-width: calc(100% - 5px);
     margin: 0 auto;
+     padding-bottom: 20px;
     border-top: 14px solid #fca311;
     border-bottom: 0.4px solid #fca311;
     border-radius: 10px ;
@@ -253,6 +254,7 @@ font-size: 30px;
 font-weight: 500;
  padding: 10px 20px;
  margin: 10px auto;
+
 }
 .question-description{
 color: #524e4e;
@@ -260,6 +262,7 @@ font-weight: 500;
 font-size: 16px;
  padding: 0px 20px;
  caption-side: top;
+ text-transform: capitalize;
 }
 .description-title hr{
 background: #000;
