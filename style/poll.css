@@ -22,7 +22,6 @@ html,
   -o-tab-size: 4;
      tab-size: 4;
   /* 3 */
-  font-family: Roboto, sans-serif;
   /* 4 */
   font-feature-settings: normal;
   /* 5 */
@@ -234,6 +233,57 @@ menu {
   margin: 0;
   padding: 0;
 }
+.description-title{
+    width: 100%;
+    background-color: #fff;
+    max-width: calc(100% - 5px);
+    margin: 0 auto;
+    border-top: 14px solid #fca311;
+    border-bottom: 0.4px solid #fca311;
+    border-radius: 10px ;
+    -webkit-border-radius: 10px ;
+    -moz-border-radius: 10px ;
+    -ms-border-radius: 10px ;
+    -o-border-radius: 10px ;
+}
+
+.description-title h2{
+color: #524e4e;
+font-size: 30px;
+font-weight: 500;
+ padding: 10px 20px;
+ margin: 10px auto;
+}
+.question-description{
+color: #524e4e;
+font-weight: 500;
+font-size: 16px;
+ padding: 0px 20px;
+ caption-side: top;
+}
+.description-title hr{
+background: #000;
+margin-top: 10px;
+
+}   
+
+.require-text{
+    color: rgb(227, 68, 68);
+    text-transform: capitalize;
+    padding: 0px 30px;
+}
+
+@media screen and (max-width: 768px) {
+  .description-title h2{
+    font-size: 24px;
+  }
+  .question-description{
+    font-size: 14px;
+  }
+
+}
+
+
 
 .container {
     width: 100%;
