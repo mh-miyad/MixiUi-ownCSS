@@ -8,7 +8,7 @@
   /* 2 */
   border-style: solid;
   /* 2 */
-  border-color: #E5E7EB;
+  border-color: #e5e7eb;
   /* 2 */
 }
 html,
@@ -20,7 +20,7 @@ html,
   -moz-tab-size: 4;
   /* 3 */
   -o-tab-size: 4;
-     tab-size: 4;
+  tab-size: 4;
   /* 3 */
   /* 4 */
   font-feature-settings: normal;
@@ -36,7 +36,7 @@ body {
   /* 1 */
   line-height: inherit;
   font-family: "Open Sans", Arial;
-  background: #EDEDED;
+  background: #ededed;
   /* 2 */
 }
 
@@ -55,7 +55,7 @@ Add the correct text decoration in Chrome, Edge, and Safari.
 
 abbr:where([title]) {
   -webkit-text-decoration: underline dotted;
-          text-decoration: underline dotted;
+  text-decoration: underline dotted;
 }
 
 /*
@@ -139,8 +139,6 @@ sup {
   top: -0.5em;
 }
 
-
-
 button,
 input,
 optgroup,
@@ -181,9 +179,9 @@ select {
 */
 
 button,
-[type='button'],
-[type='reset'],
-[type='submit'] {
+[type="button"],
+[type="reset"],
+[type="submit"] {
   -webkit-appearance: button;
   /* 1 */
   background-color: transparent;
@@ -199,7 +197,6 @@ Use the modern Firefox focus style for all focusable elements.
 :-moz-focusring {
   outline: auto;
 }
-
 
 blockquote,
 dl,
@@ -233,251 +230,236 @@ menu {
   margin: 0;
   padding: 0;
 }
-.description-title{
-    width: 100%;
-    background-color: #fff;
-    max-width: calc(100% - 5px);
-    margin: 0 auto;
-     padding-bottom: 20px;
-    border-top: 14px solid #fca311;
-    border-bottom: 0.4px solid #fca311;
-    border-radius: 10px ;
-    -webkit-border-radius: 10px ;
-    -moz-border-radius: 10px ;
-    -ms-border-radius: 10px ;
-    -o-border-radius: 10px ;
+.description-title {
+  width: 100%;
+  background-color: #fff;
+  max-width: calc(100% - 5px);
+  margin: 0 auto;
+  padding-bottom: 20px;
+  border-top: 14px solid #fca311;
+  border-bottom: 0.4px solid #fca311;
+  border-radius: 10px;
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  -ms-border-radius: 10px;
+  -o-border-radius: 10px;
 }
 
-.description-title h2{
-color: #524e4e;
-font-size: 30px;
-font-weight: 500;
- padding: 10px 20px;
- margin: 10px auto;
-
+.description-title h2 {
+  color: #524e4e;
+  font-size: 30px;
+  font-weight: 500;
+  padding: 10px 20px;
+  margin: 10px auto;
 }
-.question-description{
-color: #524e4e;
-font-weight: 500;
-font-size: 16px;
- padding: 0px 20px;
- caption-side: top;
- text-transform: capitalize;
+.question-description {
+  color: #524e4e;
+  font-weight: 500;
+  font-size: 16px;
+  padding: 0px 20px;
+  caption-side: top;
+  text-transform: capitalize;
 }
-.description-title hr{
-background: #000;
-margin-top: 10px;
+.description-title hr {
+  background: #000;
+  margin-top: 10px;
+}
 
-}   
-
-.require-text{
-    color: rgb(227, 68, 68);
-    text-transform: capitalize;
-    padding: 0px 30px;
+.require-text {
+  color: rgb(227, 68, 68);
+  text-transform: capitalize;
+  padding: 0px 30px;
 }
 
 @media screen and (max-width: 768px) {
-  .description-title h2{
+  .description-title h2 {
     font-size: 24px;
   }
-  .question-description{
+  .question-description {
     font-size: 14px;
   }
-
 }
 
-
-
 .container {
-    width: 100%;
+  width: 100%;
 }
 
 .hidden {
-    display: none !important;
+  display: none !important;
 }
 .mx-auto {
-    margin-left: auto;
-    margin-right: auto;
+  margin-left: auto;
+  margin-right: auto;
 }
 main {
   max-width: 1080px;
   width: 90%;
   margin: 10px auto;
-  
 }
 
 /*  Start here pool Box Design  */
-.PollBox{
-    width: 100%;
-    background-color:white;
-    border-radius: 10px;
-    border-top: 4px solid #fca21161;
-    padding: 30px 35px;
-    margin: 20px auto;
-    transition:height linear .8s;
-    -webkit-transition:height linear .8s;
-    -moz-transition:height linear .8s;
-    -ms-transition:height linear .8s;
-    -o-transition:height linear .8s;
+.PollBox {
+  width: 100%;
+  background-color: white;
+  border-radius: 10px;
+  border-top: 4px solid #fca21161;
+  padding: 30px 35px;
+  margin: 20px auto;
+  transition: height linear 0.8s;
+  -webkit-transition: height linear 0.8s;
+  -moz-transition: height linear 0.8s;
+  -ms-transition: height linear 0.8s;
+  -o-transition: height linear 0.8s;
 }
-.main-tool-box{
+.main-tool-box {
   width: 100%;
   display: block;
 }
-.main-question{
-    width: 100%;
-    text-align: left;
-    font-size: 20px;
-    margin: 20px 0 5px 0;
-    text-transform: capitalize;
-    line-height: 32px;
-    color: #060c12;
-    font-weight: 600;
-    word-break: keep-all;
+.main-question {
+  width: 100%;
+  text-align: left;
+  font-size: 20px;
+  margin: 20px 0 5px 0;
+  text-transform: capitalize;
+  line-height: 32px;
+  color: #060c12;
+  font-weight: 600;
+  word-break: keep-all;
 }
 
-.toolbox{
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    
+.toolbox {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
-.question h2{
-    text-transform: capitalize;
-    font-size: 24px;
-    font-weight: 600;
-    color: #060c12;
-    
+.question h2 {
+  text-transform: capitalize;
+  font-size: 24px;
+  font-weight: 600;
+  color: #060c12;
 }
-.all-question{
-    display: flex;
-    flex-direction: column;
-    gap: 10px;
-    margin-top: 10px;
+.all-question {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin-top: 10px;
 }
-
 
 /* Question tool Box  */
-.question-option{
-    width: 100%;
-    border: 1px solid rgba(209, 209, 209, 0.479);
-    transition: all linear 1s;
-    -webkit-transition: all linear 1s;
-    -moz-transition: all linear 1s;
-    -ms-transition: all linear 1s;
-    -o-transition: all linear 1s;
-    border-radius: 5px;
+.question-option {
+  width: 100%;
+  border: 1px solid rgba(209, 209, 209, 0.479);
+  transition: all linear 1s;
+  -webkit-transition: all linear 1s;
+  -moz-transition: all linear 1s;
+  -ms-transition: all linear 1s;
+  -o-transition: all linear 1s;
+  border-radius: 5px;
 }
-
 
 /* Question tool Box  */
 
 /*  Start here pool Box Design  */
 
 .question-bars {
-	-webkit-animation: question-bars 1s linear both;
-	        animation: question-bars 1s linear both;
+  -webkit-animation: question-bars 1s linear both;
+  animation: question-bars 1s linear both;
 }
 
 @-webkit-keyframes question-bars {
   0% {
     -webkit-transform: scaleX(0.4);
-            transform: scaleX(0.4);
+    transform: scaleX(0.4);
     -webkit-transform-origin: 0% 0%;
-            transform-origin: 0% 0%;
+    transform-origin: 0% 0%;
   }
   100% {
     -webkit-transform: scaleX(1);
-            transform: scaleX(1);
+    transform: scaleX(1);
     -webkit-transform-origin: 0% 0%;
-            transform-origin: 0% 0%;
+    transform-origin: 0% 0%;
   }
 }
 @keyframes question-bars {
   0% {
     -webkit-transform: scaleX(0.4);
-            transform: scaleX(0.4);
+    transform: scaleX(0.4);
     -webkit-transform-origin: 0% 0%;
-            transform-origin: 0% 0%;
+    transform-origin: 0% 0%;
   }
   100% {
     -webkit-transform: scaleX(1);
-            transform: scaleX(1);
+    transform: scaleX(1);
     -webkit-transform-origin: 0% 0%;
-            transform-origin: 0% 0%;
+    transform-origin: 0% 0%;
   }
 }
 .question-bars p {
- display: flex;
- justify-content: space-between;
- font-size: 16px;
- font-weight: 400;
- color: #020314;
- text-transform: capitalize;
- margin-right: 10px;
- margin-bottom: 5px;
-
+  display: flex;
+  justify-content: space-between;
+  font-size: 16px;
+  font-weight: 400;
+  color: #020314;
+  text-transform: capitalize;
+  margin-right: 10px;
+  margin-bottom: 5px;
 }
 
 .question-text {
-    background-color: #f2b544;
-    padding: 5px 10px;
-    min-height: 30px;
-    max-height: 40px;
+  background-color: #f2b544;
+  padding: 5px 10px;
+  min-height: 30px;
+  max-height: 40px;
 }
 
-.poolBars{
-    display: flex;
-    flex-direction: column;
-    gap: 20px;
+.poolBars {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
 }
 
-.poolOption{
-    border: 1px solid rgba(255, 176, 18, 0.813);
-    padding: 8px 12px;
-    margin: 0px 5px;
-    border-radius: 5px;
-    -webkit-border-radius: 5px;
-    -moz-border-radius: 5px;
-    -ms-border-radius: 5px;
-    -o-border-radius: 5px;
-    font-size: 16px;
-    appearance: none;
+.poolOption {
+  border: 1px solid rgba(255, 176, 18, 0.813);
+  padding: 8px 12px;
+  margin: 0px 5px;
+  border-radius: 5px;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  -ms-border-radius: 5px;
+  -o-border-radius: 5px;
+  font-size: 16px;
+  appearance: none;
 }
-.poolOption:focus{
+.poolOption:focus {
   outline: none;
-  
 }
 
-.viewBtn{
-    font-size: 16px !important;
-    border: 1px solid #fca21161;
-    padding: 10px 15px;
-    color: #fca311;
-    background-color: white;
-    border-radius: 6px;
-    -webkit-border-radius: 6px;
-    -moz-border-radius: 6px;
-    -ms-border-radius: 6px;
-    -o-border-radius: 6px;
-    transition: all linear 0.3s;
-    -webkit-transition: all linear 0.3s;
-    -moz-transition: all linear 0.3s;
-    -ms-transition: all linear 0.3s;
-    -o-transition: all linear 0.3s;
+.viewBtn {
+  font-size: 16px !important;
+  border: 1px solid #fca21161;
+  padding: 10px 15px;
+  color: #fca311;
+  background-color: white;
+  border-radius: 6px;
+  -webkit-border-radius: 6px;
+  -moz-border-radius: 6px;
+  -ms-border-radius: 6px;
+  -o-border-radius: 6px;
+  transition: all linear 0.3s;
+  -webkit-transition: all linear 0.3s;
+  -moz-transition: all linear 0.3s;
+  -ms-transition: all linear 0.3s;
+  -o-transition: all linear 0.3s;
 }
 .viewBtn:hover,
-.viewBtn:active{
-  background-color:#fca311;
+.viewBtn:active {
+  background-color: #fca311;
   color: white;
   border: 1px solid #fca31161;
   font-weight: 500;
 }
 
-
-
 /*  Responsive Design  */
-
 
 p {
   margin-top: 10px;
@@ -485,27 +467,32 @@ p {
   font-size: 13px;
 }
 
-.piechart, 
-.chart_div, 
+.piechart,
+.chart_div,
 .line-chart-google {
   width: 100%;
   height: 350px;
 }
 
 @media screen and (max-width: 768px) {
-  main{
+  main {
     max-width: 90%;
   }
-.piechart, 
-.chart_div, 
-.line-chart-google{
-  width: 100%;
-  height: 190px;
-}
-.main-question{
-  font-size: 16px;
-}
+  .piechart,
+  .chart_div,
+  .line-chart-google {
+    width: 100%;
+    height: 190px;
+  }
+  .main-question {
+    font-size: 16px;
+  }
 }
 
-
-
+.contact-table table thead th {
+  background: #feb01fbe;
+  padding: 20px 30px !important;
+  text-wrap: nowrap;
+  color: #000000 !important;
+  font-weight: 700 !important;
+}
