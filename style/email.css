@@ -1,0 +1,97 @@
+[data-bs-theme="dark"] .autocomplete-results {
+  background-color: #000;
+  color: white;
+  border-color: rgb(23, 23, 23);
+}
+[data-bs-theme="dark"] .autocomplete-results li:hover {
+  background-color: #161414;
+  color: rgb(217, 217, 217);
+  border-color: rgb(23, 23, 23);
+}
+
+[data-bs-theme="dark"] .search-container h2,
+[data-bs-theme="dark"] .email-sender-type form label {
+  color: white;
+}
+/* styles.css */
+.search-container {
+  position: relative;
+  width: 100%;
+  max-width: 400px;
+  margin-bottom: 30px;
+}
+.search-container h2 {
+  font-size: 24px;
+  font-weight: 600;
+  margin-bottom: 20px;
+  color: #000;
+  text-transform: capitalize;
+}
+#searchInput {
+  width: 100%;
+  padding: 10px;
+  font-size: 16px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+.autocomplete-results {
+  position: absolute;
+  z-index: 1000;
+  width: calc(100% - 2px);
+  margin-top: 0;
+  padding: 0;
+  background-color: #fff;
+  border: 1px solid #ccc;
+  border-top: none;
+  border-radius: 0 0 5px 5px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  list-style: none;
+  color: black;
+  max-height: 250px;
+  overflow-y: auto;
+}
+
+.autocomplete-results::-webkit-scrollbar {
+  width: 5px;
+  background-color: #ffc568;
+}
+
+.autocomplete-results::-webkit-scrollbar-thumb {
+  background-color: #fca311;
+}
+
+.autocomplete-results li {
+  padding: 10px;
+  cursor: pointer;
+}
+
+.autocomplete-results li:hover {
+  background-color: #f0f0f0;
+}
+
+/*  radio button  */
+.email-sender-type form input[type="radio"] {
+  width: 24px;
+  height: 24px;
+}
+.email-checker {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-top: 10px;
+}
+.email-sender-type form label {
+  color: #161414;
+  font-size: 18px;
+  margin-top: 4px;
+  font-weight: 500;
+}
+/*  radio button  */
+
+/*  responsive  */
+@media screen and (max-width: 768px) {
+  .search-container {
+    max-width: 100% !important;
+  }
+}
