@@ -9,7 +9,19 @@
   border-color: rgb(23, 23, 23);
 }
 
+[data-bs-theme="dark"] .email-sender-type form select,
+[data-bs-theme="dark"] .time-date input[type="date"],
+[data-bs-theme="dark"] .time-date input[type="time"] {
+  background-color: #161414;
+  color: white;
+  border-color: rgb(23, 23, 23);
+}
+
+[data-bs-theme="dark"] .email-sending-part label,
+[data-bs-theme="dark"] .email-sending-part h2,
+[data-bs-theme="dark"] .sender-time-date h2,
 [data-bs-theme="dark"] .search-container h2,
+[data-bs-theme="dark"] .sender-details h2,
 [data-bs-theme="dark"] .email-sender-type form label {
   color: white;
 }
@@ -17,15 +29,28 @@
 .search-container {
   position: relative;
   width: 100%;
-  max-width: 400px;
   margin-bottom: 30px;
 }
-.search-container h2 {
+.email-sending-part h2,
+.sender-time-date h2,
+.search-container h2,
+.sender-details h2 {
   font-size: 24px;
   font-weight: 600;
   margin-bottom: 20px;
   color: #000;
   text-transform: capitalize;
+}
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border-width: 0;
 }
 #searchInput {
   width: 100%;
@@ -70,10 +95,25 @@
   background-color: #f0f0f0;
 }
 
+.email-sender-type {
+  width: 100%;
+}
 /*  radio button  */
 .email-sender-type form input[type="radio"] {
   width: 24px;
   height: 24px;
+}
+.email-sender-type form select {
+  width: 100%;
+  padding: 10px;
+  font-size: 16px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  color: black;
+  background-color: #fff;
+  text-align: center;
 }
 .email-checker {
   display: flex;
@@ -81,6 +121,7 @@
   gap: 10px;
   margin-top: 10px;
 }
+.email-sending-part label,
 .email-sender-type form label {
   color: #161414;
   font-size: 18px;
@@ -88,10 +129,85 @@
   font-weight: 500;
 }
 /*  radio button  */
+.time-date {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-top: 20px;
+}
+.time-date input[type="date"],
+.time-date input[type="time"] {
+  width: 100%;
+  display: block;
+  padding: 10px;
+  font-size: 16px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  color: black;
+  background-color: #fff;
+  text-align: center;
+}
 
+.email-sending-part input {
+  width: 100%;
+  padding: 10px;
+  font-size: 16px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  color: black;
+  background-color: #fff;
+  text-align: left;
+}
+[data-bs-theme="dark"] .email-sending-part input,
+[data-bs-theme="dark"] .email-sending-part textarea {
+  background-color: #161414;
+  color: white;
+  border-color: rgb(23, 23, 23);
+}
+.email-sending-part textarea {
+  width: 100%;
+  min-height: 420px;
+  padding: 20px;
+  font-size: 16px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  color: black;
+  background-color: #fff;
+  text-align: left;
+}
+.email-sending-part textarea::-webkit-scrollbar {
+  width: 5px;
+  background-color: #ffc568;
+}
+.email-sending-part textarea::-webkit-scrollbar-thumb {
+  background-color: #fca311;
+}
+.email-button {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+.btn-send {
+  width: 100%;
+  max-width: 200px;
+  background-color: #fca311;
+  color: white;
+  padding: 10px;
+  font-weight: 600;
+  text-transform: capitalize;
+}
 /*  responsive  */
 @media screen and (max-width: 768px) {
-  .search-container {
-    max-width: 100% !important;
+  .email-sending-part h2,
+  .sender-time-date h2,
+  .search-container h2,
+  .sender-details h2 {
+    font-size: 16px;
   }
 }

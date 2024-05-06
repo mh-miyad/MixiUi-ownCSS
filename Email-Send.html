@@ -1287,15 +1287,15 @@
           </section>
 
           <!-- Email sending and Full Body part  -->
-          <section>
-            <div class="search-container">
-              <h2>Existing mailing list</h2>
-              <input type="text" id="searchInput" placeholder="Search..." />
-              <ul id="searchResults" class="autocomplete-results"></ul>
-            </div>
+          <section class="container-fluid">
             <!--  main part Start -->
-            <div class="email-sender-type">
-              <form action="#">
+            <div class="email-sender-type row">
+              <form action="#" class="col-12 col-lg-5">
+                <div class="search-container">
+                  <h2 class="mb-4">Existing mailing list</h2>
+                  <input type="text" id="searchInput" placeholder="Search..." />
+                  <ul id="searchResults" class="autocomplete-results"></ul>
+                </div>
                 <div class="email-checker">
                   <input
                     type="radio"
@@ -1320,8 +1320,76 @@
                   />
                   <label for="registerPeople"> Not Joined People (100) </label>
                 </div>
+                <hr />
+                <div class="sender-details">
+                  <h2>Select sender details</h2>
+                  <select name="sender-details" id="sendar-details">
+                    <option value="1">SMTP</option>
+                    <option value="2">Gmail</option>
+                  </select>
+                </div>
+                <hr />
+                <div class="sender-time-date">
+                  <h2>Date and Time of Sending Email</h2>
+                  <div class="time-date">
+                    <input type="date" name="" id="" />
+                    <input type="time" name="" id="" />
+                  </div>
+                </div>
               </form>
+              <!-- email sending Part  -->
+              <div class="col-12 col-lg-7">
+                <div class="email-sending-part">
+                  <h2 class="mb-3">Write Email</h2>
+                  <div>
+                    <label for="subjectOfEmail" class="form-label sr-only">
+                      Subject :
+                    </label>
+                    <input
+                      type="text"
+                      id="subjectOfEmail"
+                      placeholder=" Subject : .............."
+                    />
+                  </div>
+                  <div>
+                    <label for="bodyOfEmail" class="form-label sr-only">
+                      Body
+                    </label>
+                    <textarea name="bodyOfEmail" id="bodyOfEmail">
+Dear [Prospect Name],
+
+Thank you for expressing interest in [Your Software] during our recent conversation. I’m excited to share how our software can help you achieve [Specific Benefit] and streamline your operations.
+
+To help you better understand our solution, I’d like to invite you to an exclusive live demo of [Your Software]. During this session, we will walk you through the key features and answer any questions you may have.
+
+Please click the link below to select a date and time that works best for you:
+
+[Demo Scheduling Link]
+
+Looking forward to showcasing the value of [Your Software] to your business!
+
+Best regards,
+[Your Name]
+[Your Email]
+[Your Phone Number]
+                    </textarea>
+                  </div>
+                  <div class="email-button">
+                    <button class="btn btn-send">Send</button>
+                    <button
+                      class="btn btn-send"
+                      data-bs-toggle="modal"
+                      data-bs-target="#exampleModal"
+                    >
+                      test
+                    </button>
+                  </div>
+                </div>
+              </div>
+              <!-- email sending Part  -->
             </div>
+
+            <!--  main part End -->
           </section>
           <!-- Email sending and Full Body part  -->
 
@@ -1334,6 +1402,7 @@
 
         <!-- --------------------------------------------------------------
           End -->
+        <!-- modal part  -->
         <div
           class="modal fade contactDeleteModal"
           id="exampleModal"
@@ -1343,8 +1412,8 @@
         >
           <div class="modal-dialog modal-lg modal-dialog-centered">
             <div class="modal-content">
-              <div class="modal-body p-lg-5">
-                <div class="rounded border border-2 p-5 text-center">
+              <div class="modal-body">
+                <div class="rounded border-2 p-5 text-center">
                   <h2 class="fs-7 text-black">
                     <span class="" id="conatctList">0</span> Contact Select
                   </h2>
@@ -1374,6 +1443,7 @@
             </div>
           </div>
         </div>
+        <!-- modal part  -->
         <!-- -------------------------------------------------------------- -->
 
         <!-- -------------------------------------------------------------- -->
