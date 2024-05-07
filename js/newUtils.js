@@ -1105,9 +1105,23 @@ optionCreateBtn.addEventListener("click", () => {
       <i class="bi bi-x-lg"></i>
     </button>
   </div>
-  <button class="btn btn-warning my-2" onclick="saveInfo(this,'Date','${count2}')">
+ 
+    <div class="d-flex gap-3 align-items-center justify-content-between">
+                         <button class="btn btn-warning my-2" onclick="saveInfo(this,'Date','${count2}')">
     save
   </button>
+                              <div class="d-flex align-items-center tab-content-3">
+                                <p class="mt-3 txt-black fs-5 px-4 text-capitalize">Required</p>
+                                <label class="switch-sec switch">
+                                  <input type="checkbox">
+                                  <span class="slider round">
+                                    <span class="switch-text switch-text-yes">Yes</span>
+                                    <span class="switch-text switch-text-no">No</span>
+                                  </span>
+                                </label>
+
+                              </div>
+                            </div>
 </div>
 <div class="time-input d-none my-3">
 <div class=" d-flex justify-content-between align-items-center  gap-3 ">
@@ -1127,9 +1141,23 @@ optionCreateBtn.addEventListener("click", () => {
     <i class="bi bi-x-lg"></i>
   </button>
 </div>
-<button class="btn btn-warning my-2" onclick="saveInfo(this,'Time','${count2}')">
+
+  <div class="d-flex gap-3 align-items-center justify-content-between">
+                           <button class="btn btn-warning my-2" onclick="saveInfo(this,'Time','${count2}')">
   save
 </button>
+                              <div class="d-flex align-items-center tab-content-3">
+                                <p class="mt-3 txt-black fs-5 px-4 text-capitalize">Required</p>
+                                <label class="switch-sec switch">
+                                  <input type="checkbox">
+                                  <span class="slider round">
+                                    <span class="switch-text switch-text-yes">Yes</span>
+                                    <span class="switch-text switch-text-no">No</span>
+                                  </span>
+                                </label>
+
+                              </div>
+                            </div>
 </div>
   </div>
   
