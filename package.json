@@ -6,11 +6,11 @@
     "prettier-plugin-tailwindcss": "^0.5.11",
     "tailwindcss": "^3.4.1"
   },
-  "name": "Mixin Tailwind",
+  "name": "MixiUi-ownCSS",
   "version": "1.0.0",
   "main": "postcss.config.js",
   "scripts": {
-    "css": "npx tailwindcss -i ./style/input-2.css -o ./style/thankyou.css --watch"
+    "css": "npx tailwindcss -i ./style/input-2.css -o ./style/index.css --watch"
   },
   "keywords": [],
   "author": "",
