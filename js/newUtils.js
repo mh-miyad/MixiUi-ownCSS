@@ -573,7 +573,21 @@ optionCreateBtn.addEventListener("click", () => {
             <button class="btn fw-bold  link-btn-1"><i class="bi bi-link"></i></button>
           </div>
         </div>
-        <button class="btn btn-warning" onclick="saveInfo(this,'Short Answer','${count2}')">Save</button>
+        <div class="d-flex gap-3 align-items-center justify-content-between">
+                            <button class="btn btn-warning" onclick="saveInfo(this,'Short Answer','${count2}')">Save</button>
+                              <div class="d-flex align-items-center tab-content-3">
+                                <p class="mt-3 txt-black fs-5 px-4 text-capitalize">Required</p>
+                                <label class="switch-sec switch">
+                                  <input type="checkbox">
+                                  <span class="slider round">
+                                    <span class="switch-text switch-text-yes">Yes</span>
+                                    <span class="switch-text switch-text-no">No</span>
+                                  </span>
+                                </label>
+
+                              </div>
+                            </div>
+        
       </div>
       <button class="mt-5 btn btn-danger short-title-btn">
         <i class="bi bi-x-lg"></i>
@@ -593,7 +607,21 @@ optionCreateBtn.addEventListener("click", () => {
             <button class="btn fw-bold  link-btn-1"><i class="bi bi-link"></i></button>
           </div>
         </div>
-        <button class="btn btn-warning" onclick="saveInfo(this,'Paragraph','${count2}')">Save</button>
+        <div class="d-flex gap-3 align-items-center justify-content-between">
+                                <button class="btn btn-warning" onclick="saveInfo(this,'Paragraph','${count2}')">Save</button>
+                              <div class="d-flex align-items-center tab-content-3">
+                                <p class="mt-3 txt-black fs-5 px-4 text-capitalize">Required</p>
+                                <label class="switch-sec switch">
+                                  <input type="checkbox">
+                                  <span class="slider round">
+                                    <span class="switch-text switch-text-yes">Yes</span>
+                                    <span class="switch-text switch-text-no">No</span>
+                                  </span>
+                                </label>
+
+                              </div>
+                            </div>
+      
       </div>
       <button class=" mt-0 btn btn-danger prg-btn">
         <i class="bi bi-x-lg"></i>
@@ -631,7 +659,21 @@ optionCreateBtn.addEventListener("click", () => {
           Add option
         </Button>
       </div>
-      <button class="btn btn-warning mx-3" onclick="saveMultipleBtn3( '${makeUniqueId}','multiple-input','${count2}')"> Save</button>
+      <div class="d-flex gap-3 align-items-center justify-content-between">
+                            <button class="btn btn-warning mx-3" onclick="saveMultipleBtn3( '${makeUniqueId}','multiple-input','${count2}')"> Save</button>
+                              <div class="d-flex align-items-center tab-content-3">
+                                <p class="mt-3 txt-black fs-5 px-4 text-capitalize">Required</p>
+                                <label class="switch-sec switch">
+                                  <input type="checkbox">
+                                  <span class="slider round">
+                                    <span class="switch-text switch-text-yes">Yes</span>
+                                    <span class="switch-text switch-text-no">No</span>
+                                  </span>
+                                </label>
+
+                              </div>
+                            </div>
+     
     </div>
     <div class="choice-input d-none my-3">
       <div class="add-more-choice-input" id="add-more-choice-input-${count2}">
@@ -665,7 +707,21 @@ optionCreateBtn.addEventListener("click", () => {
           Add option
         </Button>
       </div>
-      <button class="btn btn-warning mx-3" onclick="saveMultipleBtn3( '${makeUniqueId}','choice-input','${count2}')"> Save</button>
+      <div class="d-flex gap-3 align-items-center justify-content-between">
+                                <button class="btn btn-warning mx-3" onclick="saveMultipleBtn3( '${makeUniqueId}','choice-input','${count2}')"> Save</button>
+                              <div class="d-flex align-items-center tab-content-3">
+                                <p class="mt-3 txt-black fs-5 px-4 text-capitalize">Required</p>
+                                <label class="switch-sec switch">
+                                  <input type="checkbox">
+                                  <span class="slider round">
+                                    <span class="switch-text switch-text-yes">Yes</span>
+                                    <span class="switch-text switch-text-no">No</span>
+                                  </span>
+                                </label>
+
+                              </div>
+                            </div>
+   
     </div>
     <div class="dropdown-input d-none my-3">
       <div class="add-more-dropdown-input" id="add-more-dropdown-input-${count2}">
@@ -699,7 +755,21 @@ optionCreateBtn.addEventListener("click", () => {
           Add option
         </Button>
       </div>
-      <button class="btn btn-warning mx-3" onclick="saveMultipleBtn3('${makeUniqueId}','dropdown-input','${count2}')"> Save</button>
+      <div class="d-flex gap-3 align-items-center justify-content-between">
+                                <button class="btn btn-warning mx-3" onclick="saveMultipleBtn3('${makeUniqueId}','dropdown-input','${count2}')"> Save</button>
+                              <div class="d-flex align-items-center tab-content-3">
+                                <p class="mt-3 txt-black fs-5 px-4 text-capitalize">Required</p>
+                                <label class="switch-sec switch">
+                                  <input type="checkbox">
+                                  <span class="slider round">
+                                    <span class="switch-text switch-text-yes">Yes</span>
+                                    <span class="switch-text switch-text-no">No</span>
+                                  </span>
+                                </label>
+
+                              </div>
+                            </div>
+   
     </div>
     <div class="fileUpload-input d-none my-3">
     <div class=" d-flex justify-content-between align-items-center  gap-3 ">
@@ -723,7 +793,21 @@ optionCreateBtn.addEventListener("click", () => {
       </button>
       
     </div>
-    <button class="btn btn-warning mx-3" onclick="saveFile(this,'File Upload','${count2}')">Save</button>
+    <div class="d-flex gap-3 align-items-center justify-content-between">
+                            <button class="btn btn-warning mx-3" onclick="saveFile(this,'File Upload','${count2}')">Save</button>
+                              <div class="d-flex align-items-center tab-content-3">
+                                <p class="mt-3 txt-black fs-5 px-4 text-capitalize">Required</p>
+                                <label class="switch-sec switch">
+                                  <input type="checkbox">
+                                  <span class="slider round">
+                                    <span class="switch-text switch-text-yes">Yes</span>
+                                    <span class="switch-text switch-text-no">No</span>
+                                  </span>
+                                </label>
+
+                              </div>
+                            </div>
+    
    </div>
     <div class="linear-scale-input d-none my-3 d-flex justify-content-between align-items-center  gap-3 ">
       <div class="flex-grow-1 linear-scale" >
@@ -786,10 +870,23 @@ optionCreateBtn.addEventListener("click", () => {
            </div>
           </div>
         </div>
-       <div>
-        <button class="btn btn-warning my-3 linear-scale-save-btn ">Save</button>
-        <button class="btn btn-danger my-3 linear-scale-delete-btn d-none">Delete</button>
-      </div>
+        <div class="d-flex gap-3 align-items-center justify-content-between">
+                              <div>
+                              <button class="btn btn-warning my-3 linear-scale-save-btn ">Save</button>
+                              <button class="btn btn-danger my-3 linear-scale-delete-btn d-none">Delete</button>
+                            </div>
+                              <div class="d-flex align-items-center tab-content-3">
+                                <p class="mt-3 txt-black fs-5 px-4 text-capitalize">Required</p>
+                                <label class="switch-sec switch">
+                                  <input type="checkbox">
+                                  <span class="slider round">
+                                    <span class="switch-text switch-text-yes">Yes</span>
+                                    <span class="switch-text switch-text-no">No</span>
+                                  </span>
+                                </label>
+
+                              </div>
+                            </div>
        </div>
       <button class=" mt-4 btn btn-danger linearScale-input-btn">
         <i class="bi bi-x-lg"></i>
@@ -871,9 +968,23 @@ optionCreateBtn.addEventListener("click", () => {
           <!-- Column  part add option  -->
          </div>
         </div>
-        <div>
+       
+        <div class="d-flex gap-3 align-items-center justify-content-between">
+                           <div>
           <button class="btn btn-warning save-multiple-choice-grid mx-4 px-5 my-4 py-2" onclick="saveMultipleBtn(this)"> Save </button>
         </div>
+                              <div class="d-flex align-items-center tab-content-3">
+                                <p class="mt-3 txt-black fs-5 px-4 text-capitalize">Required</p>
+                                <label class="switch-sec switch">
+                                  <input type="checkbox">
+                                  <span class="slider round">
+                                    <span class="switch-text switch-text-yes">Yes</span>
+                                    <span class="switch-text switch-text-no">No</span>
+                                  </span>
+                                </label>
+
+                              </div>
+                            </div>
       </div>
       <button class=" mt-4 btn btn-danger multiple-choice-grid-btn">
         <i class="bi bi-x-lg"></i>
@@ -920,7 +1031,7 @@ optionCreateBtn.addEventListener("click", () => {
        <!-- rows part add option  -->
          <!-- Rows part  -->
          </div>
-         <hr class="border-2 border border-dark d-lg-none">
+         <hr class="border-2  border-dark d-lg-none">
          <div>
            
            <!-- Column part  -->
@@ -954,9 +1065,23 @@ optionCreateBtn.addEventListener("click", () => {
           <!-- Column  part add option  -->
          </div>
         </div>
-        <div>
+       
+        <div class="d-flex gap-3 align-items-center justify-content-between">
+                             <div>
           <button class="btn btn-warning save-multiple-choice-grid mx-4 px-5 my-4 py-2" onclick="saveMultipleBtn2(this)"> Save </button>
         </div>
+                              <div class="d-flex align-items-center tab-content-3">
+                                <p class="mt-3 txt-black fs-5 px-4 text-capitalize">Required</p>
+                                <label class="switch-sec switch">
+                                  <input type="checkbox">
+                                  <span class="slider round">
+                                    <span class="switch-text switch-text-yes">Yes</span>
+                                    <span class="switch-text switch-text-no">No</span>
+                                  </span>
+                                </label>
+
+                              </div>
+                            </div>
       </div>
       <button class=" mt-4 btn btn-danger multiple-checkBox-grid-btn">
         <i class="bi bi-x-lg"></i>
