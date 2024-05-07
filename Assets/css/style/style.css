@@ -71,6 +71,7 @@
 [data-bs-theme="dark"] .new-faq-section .visitor-main-box input,
 [data-bs-theme="dark"] .postEvent-survey .visitor-main-box input {
   background-color: #000000;
+  border-color: rgb(49, 49, 49) !important;
 }
 [data-bs-theme="dark"] .enter-survey-name {
   background-color: #0c0d0f;
@@ -84,20 +85,23 @@
   background-color: #000;
 }
 [data-bs-theme="dark"] .createSurveModal .modal-body {
-  background: #323743;
+  background-color: #323743;
   color: white;
 }
 [data-bs-theme="dark"] .createSurveModal .modal-body .border-dark {
-  background: #000;
+  background-color: #000;
   color: white;
-  border: white !important;
+  border-color: rgb(49, 49, 49) !important;
 }
-[data-bs-theme="dark"] .enter-survey-name .visitor-main-box .border-dark {
-  border: 1px solid rgb(208, 207, 207) !important;
+[data-bs-theme="dark"] .visitor-main-box {
+  border: 1px solid rgb(56, 56, 56) !important;
+}
+[data-bs-theme="dark"] .enter-survey-name .visitor-main-box {
+  border: 1px solid rgb(56, 56, 56) !important;
 }
 [data-bs-theme="dark"] .enter-survey-name input {
   background-color: #000 !important;
-  border: 1px solid rgb(208, 207, 207) !important;
+  border: 1px solid rgb(82, 82, 82) !important;
   color: white;
 }
 [data-bs-theme="dark"] .new-faq-section {
@@ -904,7 +908,7 @@
   border: 1.4px solid #fca311;
 }
 
-[data-bs-theme="dark"] .tab-content-3 .slider:before  {
+[data-bs-theme="dark"] .tab-content-3 .slider:before {
   background-color: #101010;
   border: 1px solid #fca311;
 }
