@@ -314,23 +314,10 @@ header img {
   margin-right: auto;
 }
 main {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  gap: 10px;
-  margin: 30px 20px;
+  width: 97%;
+  margin: 30px auto !important;
 }
 
-.card-part {
-  max-width: 800px;
-}
-
-@media (min-width: 1200px) {
-  main {
-    flex-direction: row;
-    margin: 5rem auto;
-  }
-}
 /*  Start here pool Box Design  */
 .PollBox {
   width: 100%;

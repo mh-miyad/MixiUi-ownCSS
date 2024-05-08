@@ -109,7 +109,6 @@ document
   .getElementById("question-border-color")
   .addEventListener("change", (event) => {
       cardOfForm.forEach((card) => {
-        console.log(card);
       card.style.borderColor = event.target.value;
     });
   });
