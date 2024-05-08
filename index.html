@@ -10,6 +10,7 @@
     <main class="mx-auto px-5 sm:container">
       <!-- box main -->
       <div class="grid grid-cols-1 gap-5 sm:grid-cols-2 lg:grid-cols-4">
+
         <div
           class="w-full rounded-lg border border-blue-200 bg-white px-10 py-7 shadow dark:border-blue-400 dark:bg-blue-400/20"
         >
@@ -33,12 +34,35 @@
       </div>
       <!-- box main -->
     </main>
+   
+ 
+    <div id="draggable" draggable="true">Drag me!</div>
+    <div id="dropzone">Drop here</div>
+
     <script>
+        const draggableElement = document.getElementById('draggable');
+        const dropzone = document.getElementById('dropzone');
+
+        draggableElement.addEventListener('dragstart', function(event) {
+            event.dataTransfer.setData('text/plain', event.target.id);
+        });
+
+        dropzone.addEventListener('dragover', function(event) {
+            event.preventDefault();
+        });
+
+        dropzone.addEventListener('drop', function(event) {
+            const droppedElementId = event.dataTransfer.getData('text/plain');
+            const droppedElement = document.getElementById(droppedElementId);
+            dropzone.appendChild(droppedElement);
+        });
+    </script>
+     <script>
       const html = document.querySelector("html");
       const body = document.querySelector("body");
       body.addEventListener("click", (e) => {
         html.classList.toggle("dark");
       });
     </script>
-  </body>
+</body>
 </html>
