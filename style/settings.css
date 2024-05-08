@@ -1,0 +1,655 @@
+@import url(https://fonts.googleapis.com/css?family=Open+Sans:400,700);
+*,
+::before,
+::after {
+  box-sizing: border-box;
+  /* 1 */
+  border-width: 0;
+  /* 2 */
+  border-style: solid;
+  /* 2 */
+  border-color: #e5e7eb;
+  /* 2 */
+}
+html,
+:host {
+  line-height: 1.5;
+  /* 1 */
+  -webkit-text-size-adjust: 100%;
+  /* 2 */
+  -moz-tab-size: 4;
+  /* 3 */
+  -o-tab-size: 4;
+  tab-size: 4;
+  /* 3 */
+  /* 4 */
+  font-feature-settings: normal;
+  /* 5 */
+  font-variation-settings: normal;
+  /* 6 */
+  -webkit-tap-highlight-color: transparent;
+  /* 7 */
+}
+
+body {
+  margin: 0;
+  /* 1 */
+  line-height: inherit;
+  font-family: "Open Sans", Arial;
+  background-color: #ededed;
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
+  background-attachment: fixed;
+  /* 2 */
+}
+
+hr {
+  height: 0;
+  /* 1 */
+  color: inherit;
+  /* 2 */
+  border-top-width: 1px;
+  /* 3 */
+}
+
+/*
+Add the correct text decoration in Chrome, Edge, and Safari.
+*/
+
+abbr:where([title]) {
+  -webkit-text-decoration: underline dotted;
+  text-decoration: underline dotted;
+}
+
+/*
+Remove the default font size and weight for headings.
+*/
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-size: inherit;
+  font-weight: inherit;
+}
+
+/*
+Reset links to optimize for opt-in styling instead of opt-out.
+*/
+
+a {
+  color: inherit;
+  text-decoration: inherit;
+}
+
+/*
+Add the correct font weight in Edge and Safari.
+*/
+
+b,
+strong {
+  font-weight: bolder;
+}
+
+/*
+1. Use the user's configured `mono` font-family by default.
+2. Use the user's configured `mono` font-feature-settings by default.
+3. Use the user's configured `mono` font-variation-settings by default.
+4. Correct the odd `em` font sizing in all browsers.
+*/
+
+code,
+kbd,
+samp,
+pre {
+  font-family: ui-monospace, monospace;
+  /* 1 */
+  font-feature-settings: normal;
+  /* 2 */
+  font-variation-settings: normal;
+  /* 3 */
+  font-size: 1em;
+  /* 4 */
+}
+
+/*
+Add the correct font size in all browsers.
+*/
+
+small {
+  font-size: 80%;
+}
+
+/*
+Prevent `sub` and `sup` elements from affecting the line height in all browsers.
+*/
+
+sub,
+sup {
+  font-size: 75%;
+  line-height: 0;
+  position: relative;
+  vertical-align: baseline;
+}
+
+sub {
+  bottom: -0.25em;
+}
+
+sup {
+  top: -0.5em;
+}
+
+button,
+input,
+optgroup,
+select,
+textarea {
+  font-family: inherit;
+  /* 1 */
+  font-feature-settings: inherit;
+  /* 1 */
+  font-variation-settings: inherit;
+  /* 1 */
+  font-size: 100%;
+  /* 1 */
+  font-weight: inherit;
+  /* 1 */
+  line-height: inherit;
+  /* 1 */
+  color: inherit;
+  /* 1 */
+  margin: 0;
+  /* 2 */
+  padding: 0;
+  /* 3 */
+}
+
+/*
+Remove the inheritance of text transform in Edge and Firefox.
+*/
+
+button,
+select {
+  text-transform: none;
+}
+
+/*
+1. Correct the inability to style clickable types in iOS and Safari.
+2. Remove default button styles.
+*/
+
+button,
+[type="button"],
+[type="reset"],
+[type="submit"] {
+  -webkit-appearance: button;
+  /* 1 */
+  background-color: transparent;
+  /* 2 */
+  background-image: none;
+  /* 2 */
+}
+
+/*
+Use the modern Firefox focus style for all focusable elements.
+*/
+
+:-moz-focusring {
+  outline: auto;
+}
+
+blockquote,
+dl,
+dd,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+hr,
+figure,
+p,
+pre {
+  margin: 0;
+}
+
+fieldset {
+  margin: 0;
+  padding: 0;
+}
+
+legend {
+  padding: 0;
+}
+
+ol,
+ul,
+menu {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+header {
+  width: 100%;
+  background-color: #df2121;
+  margin-bottom: 20px;
+  max-height: 200px;
+  overflow: hidden;
+  border-radius: 5px;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  -ms-border-radius: 5px;
+  -o-border-radius: 5px;
+}
+header img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  object-position: center;
+  margin: 0 auto;
+}
+.description-title {
+  width: 100%;
+  background-color: #fff;
+  max-width: calc(100% - 5px);
+  margin: 0 auto;
+  color: #524e4e;
+  padding-bottom: 20px;
+  border-top: 14px solid #fca311;
+  border-bottom: 0.4px solid #fca311;
+  border-radius: 10px;
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  -ms-border-radius: 10px;
+  -o-border-radius: 10px;
+}
+
+.description-title h2 {
+  font-size: 30px;
+  font-weight: 500;
+  padding: 10px 20px;
+  margin: 10px auto;
+}
+.question-description {
+  font-weight: 500;
+  font-size: 16px;
+  padding: 0px 20px;
+  caption-side: top;
+  text-transform: capitalize;
+}
+.description-title hr {
+  background: #000;
+  margin-top: 10px;
+}
+
+.require-text {
+  color: rgb(227, 68, 68);
+  text-transform: capitalize;
+  padding: 0px 30px;
+}
+
+@media screen and (max-width: 768px) {
+  .description-title h2 {
+    font-size: 24px;
+  }
+  .question-description {
+    font-size: 14px;
+  }
+}
+
+.container {
+  width: 100%;
+}
+
+.hidden {
+  display: none !important;
+}
+.mx-auto {
+  margin-left: auto;
+  margin-right: auto;
+}
+main {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 10px;
+  margin: 30px 20px;
+}
+
+.card-part {
+  max-width: 800px;
+}
+
+@media (min-width: 1200px) {
+  main {
+    flex-direction: row;
+    margin: 5rem auto;
+  }
+}
+/*  Start here pool Box Design  */
+.PollBox {
+  width: 100%;
+  background-color: white;
+  border-radius: 10px;
+  border-top: 4px solid #d58b15;
+  padding: 30px 35px;
+  margin: 20px auto;
+  transition: height linear 0.8s;
+  -webkit-transition: height linear 0.8s;
+  -moz-transition: height linear 0.8s;
+  -ms-transition: height linear 0.8s;
+  -o-transition: height linear 0.8s;
+}
+.main-tool-box {
+  width: 100%;
+  display: block;
+}
+.main-question {
+  width: 100%;
+  text-align: left;
+  font-size: 20px;
+  margin: 20px 0 5px 0;
+  text-transform: capitalize;
+  line-height: 32px;
+  color: #060c12;
+  font-weight: 600;
+  word-break: keep-all;
+}
+
+.toolbox {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.question h2 {
+  text-transform: capitalize;
+  font-size: 24px;
+  font-weight: 600;
+  color: #060c12;
+}
+.all-question {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin-top: 10px;
+}
+
+/* Question tool Box  */
+.question-option {
+  width: 100%;
+  border: 1px solid rgba(209, 209, 209, 0.479);
+  transition: all linear 1s;
+  -webkit-transition: all linear 1s;
+  -moz-transition: all linear 1s;
+  -ms-transition: all linear 1s;
+  -o-transition: all linear 1s;
+  border-radius: 5px;
+}
+
+/* Question tool Box  */
+
+/*  Start here pool Box Design  */
+
+.question-bars {
+  -webkit-animation: question-bars 1s linear both;
+  animation: question-bars 1s linear both;
+}
+
+@-webkit-keyframes question-bars {
+  0% {
+    -webkit-transform: scaleX(0.4);
+    transform: scaleX(0.4);
+    -webkit-transform-origin: 0% 0%;
+    transform-origin: 0% 0%;
+  }
+  100% {
+    -webkit-transform: scaleX(1);
+    transform: scaleX(1);
+    -webkit-transform-origin: 0% 0%;
+    transform-origin: 0% 0%;
+  }
+}
+@keyframes question-bars {
+  0% {
+    -webkit-transform: scaleX(0.4);
+    transform: scaleX(0.4);
+    -webkit-transform-origin: 0% 0%;
+    transform-origin: 0% 0%;
+  }
+  100% {
+    -webkit-transform: scaleX(1);
+    transform: scaleX(1);
+    -webkit-transform-origin: 0% 0%;
+    transform-origin: 0% 0%;
+  }
+}
+.question-bars p {
+  display: flex;
+  justify-content: space-between;
+  font-size: 16px;
+  font-weight: 400;
+  color: #020314;
+  text-transform: capitalize;
+  margin-right: 10px;
+  margin-bottom: 5px;
+}
+
+.question-text {
+  background-color: #f2b544;
+  padding: 5px 10px;
+  min-height: 30px;
+  max-height: 40px;
+}
+
+.poolBars {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.poolOption {
+  border: 1px solid rgba(255, 176, 18, 0.813);
+  padding: 8px 12px;
+  margin: 0px 5px;
+  color: #000 !important;
+  cursor: pointer;
+  border-radius: 5px;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  -ms-border-radius: 5px;
+  -o-border-radius: 5px;
+  font-size: 16px;
+  appearance: none;
+}
+.poolOption:focus {
+  outline: none;
+}
+
+.viewBtn {
+  font-size: 16px !important;
+  border: 1px solid #fca21161;
+  padding: 10px 15px;
+  color: #fca311;
+  background-color: white;
+  border-radius: 6px;
+  -webkit-border-radius: 6px;
+  -moz-border-radius: 6px;
+  -ms-border-radius: 6px;
+  -o-border-radius: 6px;
+  transition: all linear 0.3s;
+  -webkit-transition: all linear 0.3s;
+  -moz-transition: all linear 0.3s;
+  -ms-transition: all linear 0.3s;
+  -o-transition: all linear 0.3s;
+}
+.viewBtn:hover,
+.viewBtn:active {
+  background-color: #fca311;
+  color: white;
+}
+
+/*  Responsive Design  */
+
+p {
+  margin-top: 10px;
+  margin-bottom: 5px;
+  font-size: 13px;
+}
+
+.piechart,
+.chart_div,
+.line-chart-google {
+  width: 100%;
+  height: 350px;
+}
+
+@media screen and (max-width: 768px) {
+  main {
+    max-width: 90%;
+  }
+  .piechart,
+  .chart_div,
+  .line-chart-google {
+    width: 100%;
+    height: 190px;
+  }
+  .main-question {
+    font-size: 16px;
+  }
+}
+
+.contact-table table thead th {
+  background: #fde7bf58;
+  padding: 20px 30px !important;
+  text-wrap: nowrap;
+  color: #000000 !important;
+  font-weight: 700 !important;
+}
+
+/* End here */
+.question-main-wrapper .form-control {
+  background-color: #fff;
+  padding: 20px 30px;
+  border-radius: 10px;
+  border-width: 1px;
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  -ms-border-radius: 10px;
+  -o-border-radius: 10px;
+  overflow: hidden;
+  height: auto;
+}
+[data-bs-theme="dark"] .question-main-wrapper .form-control .form-select {
+  background-color: #000;
+  color: white;
+  border: 1px solid white;
+}
+[data-bs-theme="dark"] .question-main-wrapper .form-control select:focus {
+  background-color: #000;
+  color: white;
+  border: 1px solid white;
+}
+.question-main-wrapper .form-control .form-select {
+  max-width: 300px;
+  padding: 10px 20px;
+  margin: 20px 0px;
+  border-radius: 3px;
+  border: 1px solid black;
+  -webkit-border-radius: 3px;
+  -moz-border-radius: 3px;
+  -ms-border-radius: 3px;
+  -o-border-radius: 3px;
+}
+.question-main-wrapper .form-control .form-label {
+  display: block;
+  color: black;
+  font-size: 20px;
+  font-weight: 500;
+}
+.question-main-wrapper .form-control .form-input {
+  display: block;
+  width: 100%;
+  border: 0;
+  background: transparent;
+  resize: vertical;
+  height: auto;
+  color: #000;
+  margin-top: 10px;
+  border-bottom: 1px solid #0f0707;
+  transition: all ease-in-out 0.2s;
+  -webkit-transition: all ease-in-out 0.2s;
+  -moz-transition: all ease-in-out 0.2s;
+  -ms-transition: all ease-in-out 0.2s;
+  -o-transition: all ease-in-out 0.2s;
+}
+.question-main-wrapper .form-control .form-input:focus {
+  border: 0;
+  border-bottom: 1.2px solid #000;
+  padding: 10px 5px;
+}
+.question-main-wrapper .form-control input[type="date"],
+.question-main-wrapper .form-control input[type="time"] {
+  border: 0;
+  border-bottom: 1.2px solid #000;
+  padding: 10px 10px;
+  width: 100%;
+  max-width: 300px;
+  margin-top: 20px;
+  margin-bottom: 10px;
+}
+
+.multiple-choice-form input[type="checkbox"],
+.multiple-choice-form input[type="radio"] {
+  width: 20px;
+  height: 20px;
+  cursor: pointer;
+  background-color: #fca311;
+  border: 1px solid #000;
+  border-radius: 4px;
+  margin: 10px 5px;
+  -webkit-border-radius: 4px;
+  -moz-border-radius: 4px;
+  -ms-border-radius: 4px;
+  -o-border-radius: 4px;
+}
+.multiple-choice-form {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+/* start here  setting form  */
+.form-part form {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  background-color: #ffffff !important;
+  padding: 35px 30px !important;
+  border-radius: 10px;
+}
+
+form h3 {
+  text-align: center;
+  font-size: 24px;
+  font-weight: 700;
+  color: #020314;
+  text-transform: capitalize;
+  margin-bottom: 5px;
+}
+form hr {
+  margin-bottom: 10px;
+}
+
+.form-part form label {
+  color: #5a5656 !important;
+  font-size: 18px !important;
+  font-weight: 700 !important;
+}
+.form-part form input {
+  color: #000000 !important;
+}
+/* start here  setting form  */
