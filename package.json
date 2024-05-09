@@ -10,7 +10,7 @@
   "version": "1.0.0",
   "main": "postcss.config.js",
   "scripts": {
-    "css": "npx tailwindcss -i ./style/input-2.css -o ./style/index.css --watch"
+    "css": "npx tailwindcss -i ./style/input-2.css -o ./style/Email-Template.css --watch"
   },
   "keywords": [],
   "author": "",
