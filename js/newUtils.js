@@ -1666,6 +1666,7 @@ function saveMultipleBtn2(ele) {
 }
 
 function saveInfo(info, value, id) {
+
   const mainDiv = info.closest(".flex-grow-1");
   const inputValue = mainDiv.querySelector("input");
   if (value === "Date") {
@@ -1677,6 +1678,22 @@ function saveInfo(info, value, id) {
   } else {
     console.log(inputValue.value, value, id);
   }
+
+  //  adding it require fill
+  const requireFill = mainDiv.querySelector(".require-fill input[type='checkbox']");
+  
+  if (requireFill.checked) {
+    console.log("require fill");
+    
+  } else {
+    console.log("no require fill");
+  }
+  //  adding it require fill
+  
+    // requireFill.addEventListener("change", (e) => {
+    //   console.log(e.target.value);
+    // })
+  
 }
 function saveFile(info, value, id) {
   const mainDiv = info.closest(".flex-grow-1");
