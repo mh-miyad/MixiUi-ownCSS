@@ -1766,41 +1766,48 @@ function saveFile(info, value, id) {
 
 
   const container = document.getElementById('survey_create_option');
-   function upBox(btn) { 
-    alert("up")
-  }
-  function downBox(btn) {
-      alert("down")
-  }
+  //  function upBox(btn) { 
+  //   alert("up")
+  // }
+  // function downBox(btn) {
+  //     alert("down")
+  // }
 
 
  
 
   container.addEventListener('click', function(event) {
-    // if (event.target.classList.contains('up-btn')) {
-    //   moveUp(event.target.parentElement);
-    // } else if (event.target.classList.contains('down-btn')) {
-    //   moveDown(event.target.parentElement);
-    // }
+    if (event.target.classList.contains('bi-caret-up')) {
+      moveUp(event.target.parentElement);
+      // console.log(event.target.parentElement)
+    } else if (event.target.classList.contains('bi-caret-down')) {
+      // console.log(event.target.parentElement)
+      moveDown(event.target.parentElement);
+    }
 
-    console.log(event.target);
+   
   });
 
-  function moveUp(element) {
-    const prevSibling = element.previousElementSibling;
-    if (prevSibling) {
-      container.insertBefore(element, prevSibling);
-    }
-  }
+function moveUp(element) {
+  const mainDiv = element.closest(".visitor-main-box");
+  const prevSibling = mainDiv.previousElementSibling;
+  console.log(prevSibling);
+  
+}
 
+// if (prevSibling) {
+  //   container.insertBefore(element, prevSibling);
+  // }
   function moveDown(element) {
-    const nextSibling = element.nextElementSibling;
-    if (nextSibling) {
-      container.insertBefore(element, nextSibling.nextElementSibling);
-    } else {
-      container.appendChild(element);
-    }
+    const mainDiv = element.closest(".visitor-main-box");
+    const nextSibling = mainDiv;
+    console.log(nextSibling)
   }
-
+  
+  // if (nextSibling) {
+    //   container.insertBefore(element, nextSibling.nextElementSibling);
+  // } else {
+  //   container.appendChild(element);
+  // }
 
 //  shorting 
