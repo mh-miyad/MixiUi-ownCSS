@@ -552,14 +552,20 @@ let count2 = 1;
 optionCreateBtn.addEventListener("click", () => {
   const option1 = document.createElement("div");
   option1.draggable = true;
-  option1.setAttribute("ondragstart", "drag(event)");
   optionUniqueId++;
   count2++;
   const makeUniqueId = `survey-option-${optionUniqueId}`;
   option1.innerHTML = ` <div class="my-3   lg-w-75 py-3 pe-5 ps-4 visitor-main-box" id=${makeUniqueId}  >
   <!-- content -->
   <div class="d-flex justify-content-between align-items-center">
-                  <div></div>
+                  <div class="button-group">
+                          <button class="btn up-btn">
+                         <i class="bi bi-caret-up"></i>
+                        </button>
+                        <button class="btn down-btn" >
+                         <i class="bi bi-caret-down"></i>
+                        </button>
+                      </div>
                   <div>
                   <button class="btn" data-bs-toggle="modal" data-bs-target="#staticBackdrop">
                       <i class="bi bi-pen"></i>
@@ -1755,6 +1761,46 @@ function saveFile(info, value, id) {
       }
     }
     return null;
+}
+  
+
+
+  const container = document.getElementById('survey_create_option');
+   function upBox(btn) { 
+    alert("up")
   }
+  function downBox(btn) {
+      alert("down")
+  }
+
+
+ 
+
+  container.addEventListener('click', function(event) {
+    // if (event.target.classList.contains('up-btn')) {
+    //   moveUp(event.target.parentElement);
+    // } else if (event.target.classList.contains('down-btn')) {
+    //   moveDown(event.target.parentElement);
+    // }
+
+    console.log(event.target);
+  });
+
+  function moveUp(element) {
+    const prevSibling = element.previousElementSibling;
+    if (prevSibling) {
+      container.insertBefore(element, prevSibling);
+    }
+  }
+
+  function moveDown(element) {
+    const nextSibling = element.nextElementSibling;
+    if (nextSibling) {
+      container.insertBefore(element, nextSibling.nextElementSibling);
+    } else {
+      container.appendChild(element);
+    }
+  }
+
 
 //  shorting 
