@@ -1021,12 +1021,12 @@
                                 <div class="card-img">
                                   <div class="img-preview position-relative btn-file">
                                     <div class="yes">
-                                      <img id="ImgPreview" src="assets/images/icon/cloud-upload.png" alt="broken_image"
-                                        class="preview1 upload-img mx-auto" />
+                                      <img  src="assets/images/icon/cloud-upload.png" alt="broken_image"
+                                        class="preview1 ImgPreview upload-img mx-auto" />
                                     </div>
-                                    <input type="file" id="imag" title="Upload_img" class="form-control input-img" />
+                                    <input type="file" title="Upload_img" class="imag form-control input-img" />
                                   </div>
-                                  <button type="button" id="removeImage1" class="close-btn btn-rmv1"><i
+                                  <button type="button" class="removeImage1" class="close-btn btn-rmv1"><i
                                       class="bi bi-x-circle-fill"></i></button>
                                 </div>
                               </div>
@@ -1637,34 +1637,34 @@
       }
     }
 
-    $("#imag").change(function () {
+    $(".imag").change(function () {
       // add your logic to decide which image control you'll use
-      var imgControlName = "#ImgPreview";
+      var imgControlName = ".ImgPreview";
       readURL(this, imgControlName);
       $(".preview1").addClass("it");
       $(".btn-rmv1").addClass("rmv");
     });
 
-    $("#removeImage1").click(function (e) {
+    $(".removeImage1").click(function (e) {
       e.preventDefault();
-      $("#imag").val("");
-      $("#ImgPreview").attr("src", "assets/images/icon/broken_image.png");
+      $(".imag").val("");
+      $(".ImgPreview").attr("src", "assets/images/icon/broken_image.png");
       $(".preview1").removeClass("it");
       $(".btn-rmv1").removeClass("rmv");
     });
 
-    $("#imag1").change(function () {
+    $(".imag1").change(function () {
       // add your logic to decide which image control you'll use
-      var imgControlName = "#ImgPreview1";
+      var imgControlName = ".ImgPreview1";
       readURL(this, imgControlName);
       $(".preview_1").addClass("it");
       $(".btn-rmv_1").addClass("rmv");
     });
 
-    $("#removeImage_1").click(function (e) {
+    $(".removeImage_1").click(function (e) {
       e.preventDefault();
-      $("#imag1").val("");
-      $("#ImgPreview1").attr("src", "assets/images/icon/picture_as_pdf.png");
+      $(".imag1").val("");
+      $(".ImgPreview1").attr("src", "assets/images/icon/picture_as_pdf.png");
       $(".preview_1").removeClass("it");
       $(".btn-rmv_1").removeClass("rmv");
     });

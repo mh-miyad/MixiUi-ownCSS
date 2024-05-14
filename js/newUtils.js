@@ -506,8 +506,9 @@ function addMoreInput(type, value, btn) {
   count++;
 }
 function saveMultipleBtn3(id, ele, idValue) {
-  console.log(id, ele);
+  
   const parentDiv = document.querySelector(` #${id} .${ele}`);
+ ;
   // Gather dynamically created input values
   const inputValues = Array.from(
     parentDiv.querySelectorAll(".form-control"),
@@ -516,11 +517,21 @@ function saveMultipleBtn3(id, ele, idValue) {
 
   // Combine all input values
   const [firstValue, ...remainingValues] = inputValues;
-  alert(1);
+  // alert(1);
   console.log("id of this event:", id);
   console.log("Title Of main Value:", firstValue);
   console.log("dynamic Input value :", remainingValues);
   console.log(idValue);
+   const requireFill = parentDiv.querySelector(".require-fill input[type='checkbox']");
+  
+  if (requireFill.checked) {
+    console.log("require fill");
+    
+  } else {
+    console.log("no require fill");
+  }
+ 
+
 }
 
 // Remove Input From Dynamic Delete Option
@@ -577,7 +588,7 @@ optionCreateBtn.addEventListener("click", () => {
                             <button class="btn btn-warning" onclick="saveInfo(this,'Short Answer','${count2}')">Save</button>
                               <div class="d-flex align-items-center tab-content-3">
                                 <p class="mt-3 txt-black fs-5 px-4 text-capitalize">Required</p>
-                                <label class="switch-sec switch">
+                                <label class="switch-sec  require-fill switch">
                                   <input type="checkbox">
                                   <span class="slider round">
                                     <span class="switch-text switch-text-yes">Yes</span>
@@ -611,7 +622,7 @@ optionCreateBtn.addEventListener("click", () => {
                                 <button class="btn btn-warning" onclick="saveInfo(this,'Paragraph','${count2}')">Save</button>
                               <div class="d-flex align-items-center tab-content-3">
                                 <p class="mt-3 txt-black fs-5 px-4 text-capitalize">Required</p>
-                                <label class="switch-sec switch">
+                                <label class="switch-sec   require-fill switch">
                                   <input type="checkbox">
                                   <span class="slider round">
                                     <span class="switch-text switch-text-yes">Yes</span>
@@ -663,7 +674,7 @@ optionCreateBtn.addEventListener("click", () => {
                             <button class="btn btn-warning mx-3" onclick="saveMultipleBtn3( '${makeUniqueId}','multiple-input','${count2}')"> Save</button>
                               <div class="d-flex align-items-center tab-content-3">
                                 <p class="mt-3 txt-black fs-5 px-4 text-capitalize">Required</p>
-                                <label class="switch-sec switch">
+                                <label class="switch-sec  require-fill switch">
                                   <input type="checkbox">
                                   <span class="slider round">
                                     <span class="switch-text switch-text-yes">Yes</span>
@@ -711,7 +722,7 @@ optionCreateBtn.addEventListener("click", () => {
                                 <button class="btn btn-warning mx-3" onclick="saveMultipleBtn3( '${makeUniqueId}','choice-input','${count2}')"> Save</button>
                               <div class="d-flex align-items-center tab-content-3">
                                 <p class="mt-3 txt-black fs-5 px-4 text-capitalize">Required</p>
-                                <label class="switch-sec switch">
+                                <label class="switch-sec require-fill  switch">
                                   <input type="checkbox">
                                   <span class="slider round">
                                     <span class="switch-text switch-text-yes">Yes</span>
@@ -759,7 +770,7 @@ optionCreateBtn.addEventListener("click", () => {
                                 <button class="btn btn-warning mx-3" onclick="saveMultipleBtn3('${makeUniqueId}','dropdown-input','${count2}')"> Save</button>
                               <div class="d-flex align-items-center tab-content-3">
                                 <p class="mt-3 txt-black fs-5 px-4 text-capitalize">Required</p>
-                                <label class="switch-sec switch">
+                                <label class="switch-sec require-fill switch">
                                   <input type="checkbox">
                                   <span class="slider round">
                                     <span class="switch-text switch-text-yes">Yes</span>
@@ -780,11 +791,11 @@ optionCreateBtn.addEventListener("click", () => {
           <div class="card-img">
               <div class="img-preview position-relative btn-file">
                   <div class="yes" >
-                      <img id="ImgPreview" src="assets/images/icon/cloud-upload.png" alt="broken_image" class="preview1 upload-img mx-auto" />
+                      <img  src="assets/images/icon/cloud-upload.png" alt="broken_image" class="ImgPreview preview1 upload-img mx-auto" />
                   </div>
-                  <input type="file" id="imag" title="Upload_img" class="form-control input-img"/>
+                  <input type="file"  title="Upload_img" class="form-control imag input-img"/>
               </div>
-              <button type="button" id="removeImage1" class="close-btn btn-rmv1"><i class="bi bi-x-circle-fill"></i></button>
+              <button type="button" class="removeImage1" class="close-btn btn-rmv1"><i class="bi bi-x-circle-fill"></i></button>
           </div>
       </div>
       </div>
@@ -797,7 +808,7 @@ optionCreateBtn.addEventListener("click", () => {
                             <button class="btn btn-warning mx-3" onclick="saveFile(this,'File Upload','${count2}')">Save</button>
                               <div class="d-flex align-items-center tab-content-3">
                                 <p class="mt-3 txt-black fs-5 px-4 text-capitalize">Required</p>
-                                <label class="switch-sec switch">
+                                <label class="switch-sec require-fill switch">
                                   <input type="checkbox">
                                   <span class="slider round">
                                     <span class="switch-text switch-text-yes">Yes</span>
@@ -877,7 +888,7 @@ optionCreateBtn.addEventListener("click", () => {
                             </div>
                               <div class="d-flex align-items-center tab-content-3">
                                 <p class="mt-3 txt-black fs-5 px-4 text-capitalize">Required</p>
-                                <label class="switch-sec switch">
+                                <label class="switch-sec require-fill switch">
                                   <input type="checkbox">
                                   <span class="slider round">
                                     <span class="switch-text switch-text-yes">Yes</span>
@@ -975,7 +986,7 @@ optionCreateBtn.addEventListener("click", () => {
         </div>
                               <div class="d-flex align-items-center tab-content-3">
                                 <p class="mt-3 txt-black fs-5 px-4 text-capitalize">Required</p>
-                                <label class="switch-sec switch">
+                                <label class="switch-sec require-fill switch">
                                   <input type="checkbox">
                                   <span class="slider round">
                                     <span class="switch-text switch-text-yes">Yes</span>
@@ -1072,7 +1083,7 @@ optionCreateBtn.addEventListener("click", () => {
         </div>
                               <div class="d-flex align-items-center tab-content-3">
                                 <p class="mt-3 txt-black fs-5 px-4 text-capitalize">Required</p>
-                                <label class="switch-sec switch">
+                                <label class="switch-sec require-fill switch">
                                   <input type="checkbox">
                                   <span class="slider round">
                                     <span class="switch-text switch-text-yes">Yes</span>
@@ -1112,7 +1123,7 @@ optionCreateBtn.addEventListener("click", () => {
   </button>
                               <div class="d-flex align-items-center tab-content-3">
                                 <p class="mt-3 txt-black fs-5 px-4 text-capitalize">Required</p>
-                                <label class="switch-sec switch">
+                                <label class="switch-sec require-fill switch">
                                   <input type="checkbox">
                                   <span class="slider round">
                                     <span class="switch-text switch-text-yes">Yes</span>
@@ -1148,7 +1159,7 @@ optionCreateBtn.addEventListener("click", () => {
 </button>
                               <div class="d-flex align-items-center tab-content-3">
                                 <p class="mt-3 txt-black fs-5 px-4 text-capitalize">Required</p>
-                                <label class="switch-sec switch">
+                                <label class="switch-sec require-fill switch">
                                   <input type="checkbox">
                                   <span class="slider round">
                                     <span class="switch-text switch-text-yes">Yes</span>
@@ -1698,6 +1709,14 @@ function saveInfo(info, value, id) {
 function saveFile(info, value, id) {
   const mainDiv = info.closest(".flex-grow-1");
   const findFileInput = mainDiv.querySelector("input[type='file']");
+    const requireFill = mainDiv.querySelector(".require-fill input[type='checkbox']");
   console.log(findFileInput.files[0]);
   console.log(value, id);
+  if (requireFill.checked) {
+    console.log("require fill");
+    
+  } else {
+    console.log("no require fill");
+  }
+  
 }
