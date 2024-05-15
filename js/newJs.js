@@ -1732,56 +1732,6 @@ document.addEventListener("DOMContentLoaded", function () {
 		}
 	}
 });
-// function saveInfo(info, value, id) {
-// 	const mainDiv = info.closest(".flex-grow-1");
-
-// 	const inputValue = mainDiv.querySelector("input");
-// 	const requireFill = mainDiv.querySelector(
-// 		".require-fill input[type='checkbox']"
-// 	);
-
-// 	if (requireFill) {
-// 		if (requireFill.checked) {
-// 			console.log("require fill");
-// 		} else {
-// 			console.log("no require fill");
-// 		}
-// 		requireFill.checked = false;
-// 	} else {
-// 		console.log("Checkbox not found");
-// 	}
-
-// 	if (value === "Date") {
-// 		const dateInput = mainDiv.querySelector("input[type='date']");
-
-// 		if (requireFill) {
-// 			if (requireFill.checked) {
-// 				console.log("require fill");
-// 			} else {
-// 				console.log("no require fill");
-// 			}
-// 			requireFill.checked = false;
-// 		} else {
-// 			console.log("Checkbox not found");
-// 		}
-// 		console.log(dateInput.value, value, id);
-// 	} else if (value === "Time") {
-// 		const timeInput = mainDiv.querySelector("input[type='time']");
-// 		console.log(requireFill?.checked ? "require fill" : "no require fill");
-// 		console.log(timeInput.value, value, id);
-// 	} else {
-// 		console.log(inputValue.value, value, id);
-// 	}
-// }
-
-function resetCheckboxState(mainDiv) {
-	const requireFill = mainDiv.querySelector(
-		".require-fill input[type='checkbox']"
-	);
-	if (requireFill) {
-		requireFill.checked = false;
-	}
-}
 
 // Function to save information based on the input type
 
@@ -1799,7 +1749,6 @@ function saveInfo(info, value, id) {
 	} else {
 		console.log(inputValue.value, value, id);
 		console.log(requireFill.checked ? "require fill" : "no require fill");
-		resetCheckboxState(mainDiv);
 	}
 }
 function dateTime(info, value, id) {
@@ -1813,7 +1762,7 @@ function dateTime(info, value, id) {
 	if (value === "Date") {
 		const dateInput = mainDiv.querySelector("input[type='date']");
 		console.log(dateInput.value, value, id);
-		resetCheckboxState(mainDiv);
+
 		console.log(requireFill.checked ? "require fill" : "no require fill");
 	} else if (value === "Time") {
 		const timeInput = mainDiv.querySelector("input[type='time']");
