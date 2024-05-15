@@ -58,5 +58,15 @@
   "editor.detectIndentation": true,
   "editor.language.colorizedBracketPairs": [
    
+[
+	{
+		"open": "{",
+		"close": "}",
+		"tokenType": "delimiter.bracket"
+		
+	},
+
+]
+
   ],
 }

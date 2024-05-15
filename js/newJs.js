@@ -1679,35 +1679,6 @@ function saveMultipleBtn2(ele) {
 	console.log(titleInput.value, rows, column);
 }
 
-function saveInfo(info, value, id) {
-	const mainDiv = info.closest(".flex-grow-1");
-	const inputValue = mainDiv.querySelector("input");
-	if (value === "Date") {
-		const dateInput = mainDiv.querySelector("input[type='date']");
-		console.log(dateInput.value, value, id);
-	} else if (value === "Time") {
-		const timeInput = mainDiv.querySelector("input[type='time']");
-		console.log(timeInput.value, value, id);
-	} else {
-		console.log(inputValue.value, value, id);
-	}
-
-	//  adding it require fill
-	const requireFill = mainDiv.querySelector(
-		".require-fill input[type='checkbox']"
-	);
-
-	if (requireFill.checked) {
-		console.log("require fill");
-	} else {
-		console.log("no require fill");
-	}
-	//  adding it require fill
-
-	// requireFill.addEventListener("change", (e) => {
-	//   console.log(e.target.value);
-	// })
-}
 function saveFile(info, value, id) {
 	const mainDiv = info.closest(".flex-grow-1");
 	const findFileInput = mainDiv.querySelector("input[type='file']");
@@ -1727,7 +1698,7 @@ document.addEventListener("DOMContentLoaded", function () {
 	const container = document.getElementById("survey_create_option");
 
 	let debounceTimeout;
-	const debounceDelay = 100; // Adjust delay as needed
+	const debounceDelay = 1000; // Adjust delay as needed
 
 	container.addEventListener("click", function (event) {
 		if (
@@ -1761,5 +1732,93 @@ document.addEventListener("DOMContentLoaded", function () {
 		}
 	}
 });
+// function saveInfo(info, value, id) {
+// 	const mainDiv = info.closest(".flex-grow-1");
 
-//  shorting
+// 	const inputValue = mainDiv.querySelector("input");
+// 	const requireFill = mainDiv.querySelector(
+// 		".require-fill input[type='checkbox']"
+// 	);
+
+// 	if (requireFill) {
+// 		if (requireFill.checked) {
+// 			console.log("require fill");
+// 		} else {
+// 			console.log("no require fill");
+// 		}
+// 		requireFill.checked = false;
+// 	} else {
+// 		console.log("Checkbox not found");
+// 	}
+
+// 	if (value === "Date") {
+// 		const dateInput = mainDiv.querySelector("input[type='date']");
+
+// 		if (requireFill) {
+// 			if (requireFill.checked) {
+// 				console.log("require fill");
+// 			} else {
+// 				console.log("no require fill");
+// 			}
+// 			requireFill.checked = false;
+// 		} else {
+// 			console.log("Checkbox not found");
+// 		}
+// 		console.log(dateInput.value, value, id);
+// 	} else if (value === "Time") {
+// 		const timeInput = mainDiv.querySelector("input[type='time']");
+// 		console.log(requireFill?.checked ? "require fill" : "no require fill");
+// 		console.log(timeInput.value, value, id);
+// 	} else {
+// 		console.log(inputValue.value, value, id);
+// 	}
+// }
+
+function resetCheckboxState(mainDiv) {
+	const requireFill = mainDiv.querySelector(
+		".require-fill input[type='checkbox']"
+	);
+	if (requireFill) {
+		requireFill.checked = false;
+	}
+}
+
+// Function to save information based on the input type
+
+function saveInfo(info, value, id) {
+	// Find the closest parent with class 'flex-grow-1'
+	const mainDiv = info.closest(".flex-grow-1");
+
+	// Find the input and checkbox within the mainDiv
+	const inputValue = mainDiv.querySelector("input:not([type='checkbox'])");
+	const requireFill = mainDiv.querySelector(
+		".require-fill input[type='checkbox']"
+	);
+	if (value === "Date" || value === "Time") {
+		dateTime(info, value, id);
+	} else {
+		console.log(inputValue.value, value, id);
+		console.log(requireFill.checked ? "require fill" : "no require fill");
+		resetCheckboxState(mainDiv);
+	}
+}
+
+function dateTime(info, value, id) {
+	const mainDiv = info.closest(".flex-grow-1");
+	const requireFill = mainDiv.querySelector(
+		".require-fill-2 input[type='checkbox']"
+	);
+	const requireFill_3 = mainDiv.querySelector(
+		".require-fill-3 input[type='checkbox']"
+	);
+	if (value === "Date") {
+		const dateInput = mainDiv.querySelector("input[type='date']");
+		console.log(dateInput.value, value, id);
+		resetCheckboxState(mainDiv);
+		console.log(requireFill.checked ? "require fill" : "no require fill");
+	} else if (value === "Time") {
+		const timeInput = mainDiv.querySelector("input[type='time']");
+		console.log(timeInput.value, value, id);
+		console.log(requireFill_3?.checked ? "require fill" : "no require fill");
+	}
+}
