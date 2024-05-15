@@ -90,7 +90,7 @@
               <img src="assets/images/logo-dark-text.png" class="light-logo" alt="homepage" />
             </span>
           </a>
-          <!-- -------------------------------------------------------------- --> 
+          <!-- -------------------------------------------------------------- -->
           <!-- End Logo -->
           <!-- -------------------------------------------------------------- -->
           <!-- -------------------------------------------------------------- -->
@@ -836,21 +836,21 @@
               <!--  Here design part  -->
               <!-- Here start Option Section -->
               <div class="d-flex flex-column flex-lg-row align-items-lg-start justify-content-lg-between">
-                <div id="survey_create_option" class=" my-5 my-lg-4 flex-grow-1"  >
+                <div id="survey_create_option" class=" my-5 my-lg-4 flex-grow-1">
                   <!-- Option 1 -->
-                
-                  <div class="my-3   lg-w-75 py-3 pe-5 ps-4 visitor-main-box" id="survey-option-1"  >
+
+                  <div class="my-3   lg-w-75 py-3 pe-5 ps-4 visitor-main-box" id="survey-option-1">
                     <!-- content -->
                     <div class="d-flex justify-content-between align-items-center">
                       <div class="button-group">
-                          <button class="btn up-btn" >
-                         <i class="bi bi-caret-up"></i>
+                        <button class="btn up-btn">
+                          <i class="bi bi-caret-up"></i>
                         </button>
-                        <button class="btn down-btn" >
-                         <i class="bi bi-caret-down"></i>
+                        <button class="btn down-btn">
+                          <i class="bi bi-caret-down"></i>
                         </button>
                       </div>
-                      <div >
+                      <div>
                         <button class="btn" data-bs-toggle="modal" data-bs-target="#staticBackdrop">
                           <i class="bi bi-pen"></i>
                         </button>
@@ -862,7 +862,7 @@
                     <div class="d-flex flex-column flex-sm-row justify-content-lg-between  select-div-1  gap-2"
                       data-option="1">
                       <div class="flex-grow-1 ">
-                        <div class="short-title  d-flex justify-content-between align-items-start gap-2 ">
+                        <div class="short-title  d-flex justify-content-between align-items-start  gap-2  ">
                           <div class="flex-grow-1">
                             <div>
                               <label for="short-tittle" class="form-label text-dark">
@@ -910,7 +910,7 @@
                               </div>
                             </div>
                             <div class="d-flex gap-3 align-items-center justify-content-between">
-                               <button class="btn btn-warning" onclick="saveInfo(this,'Paragraph','1')">Save</button>
+                              <button class="btn btn-warning" onclick="saveInfo(this,'Paragraph','1')">Save</button>
                               <div class="d-flex align-items-center tab-content-3">
                                 <p class="mt-3 txt-black fs-5 px-4 text-capitalize">Required</p>
                                 <label class="switch-sec switch require-fill">
@@ -958,23 +958,23 @@
                               Add option
                             </Button>
                           </div>
-                          
 
-                        <div class="d-flex gap-3 align-items-center justify-content-between">
-                           <button class="btn btn-warning mx-3"
-                            onclick="saveMultipleBtn3( 'survey_create_option','multiple-input','1')"> Save</button>
-                              <div class="d-flex align-items-center tab-content-3">
-                                <p class="mt-3 txt-black fs-5 px-4 text-capitalize">Required</p>
-                                <label class="switch-sec  require-fill switch">
-                                  <input type="checkbox">
-                                  <span class="slider round">
-                                    <span class="switch-text switch-text-yes">Yes</span>
-                                    <span class="switch-text switch-text-no">No</span>
-                                  </span>
-                                </label>
 
-                              </div>
+                          <div class="d-flex gap-3 align-items-center justify-content-between">
+                            <button class="btn btn-warning mx-3"
+                              onclick="saveMultipleBtn3( 'survey_create_option','multiple-input','1')"> Save</button>
+                            <div class="d-flex align-items-center tab-content-3">
+                              <p class="mt-3 txt-black fs-5 px-4 text-capitalize">Required</p>
+                              <label class="switch-sec  require-fill switch">
+                                <input type="checkbox">
+                                <span class="slider round">
+                                  <span class="switch-text switch-text-yes">Yes</span>
+                                  <span class="switch-text switch-text-no">No</span>
+                                </span>
+                              </label>
+
                             </div>
+                          </div>
                         </div>
                         <div class="choice-input d-none my-3">
                           <div class="add-more-choice-input" id="add-more-choice-input-1">
@@ -1057,7 +1057,7 @@
                                 <div class="card-img">
                                   <div class="img-preview position-relative btn-file">
                                     <div class="yes">
-                                      <img  src="assets/images/icon/cloud-upload.png" alt="broken_image"
+                                      <img src="assets/images/icon/cloud-upload.png" alt="broken_image"
                                         class="preview1 ImgPreview upload-img mx-auto" />
                                     </div>
                                     <input type="file" title="Upload_img" class="imag form-control input-img" />
@@ -1541,7 +1541,7 @@
                     </div>
 
                   </div>
-                
+
                   <!-- Option 1 -->
                 </div>
 
@@ -1572,8 +1572,8 @@
 
                 </div>
               </div>
-              
-              
+
+
 
 
               <!-- Here start Create Survey Section  -->
@@ -1670,47 +1670,47 @@
   </script>
 
   <script>
-   function readURL(input, imgControlName) {
-  if (input.files && input.files[0]) {
-    var reader = new FileReader();
-    reader.onload = function (e) {
-      $(imgControlName).attr("src", e.target.result);
-    };
-    reader.readAsDataURL(input.files[0]);
-  }
-}
+    function readURL(input, imgControlName) {
+      if (input.files && input.files[0]) {
+        var reader = new FileReader();
+        reader.onload = function (e) {
+          $(imgControlName).attr("src", e.target.result);
+        };
+        reader.readAsDataURL(input.files[0]);
+      }
+    }
 
-$(document).on('change', '.imag', function () {
-  var imgControlName = $(this).closest('.card-img').find('.ImgPreview');
-  readURL(this, imgControlName);
-  $(this).closest('.card-img').find('.preview1').addClass('it');
-  $(this).closest('.card-img').find('.btn-rmv1').addClass('rmv');
-});
+    $(document).on('change', '.imag', function () {
+      var imgControlName = $(this).closest('.card-img').find('.ImgPreview');
+      readURL(this, imgControlName);
+      $(this).closest('.card-img').find('.preview1').addClass('it');
+      $(this).closest('.card-img').find('.btn-rmv1').addClass('rmv');
+    });
 
-$(document).on('click', '.removeImage1', function (e) {
-  e.preventDefault();
-  var container = $(this).closest('.card-img');
-  container.find('.imag').val("");
-  container.find('.ImgPreview').attr("src", "assets/images/icon/broken_image.png");
-  container.find('.preview1').removeClass('it');
-  container.find('.btn-rmv1').removeClass('rmv');
-});
+    $(document).on('click', '.removeImage1', function (e) {
+      e.preventDefault();
+      var container = $(this).closest('.card-img');
+      container.find('.imag').val("");
+      container.find('.ImgPreview').attr("src", "assets/images/icon/broken_image.png");
+      container.find('.preview1').removeClass('it');
+      container.find('.btn-rmv1').removeClass('rmv');
+    });
 
-$(document).on('change', '.imag1', function () {
-  var imgControlName = $(this).closest('.card-img').find('.ImgPreview1');
-  readURL(this, imgControlName);
-  $(this).closest('.card-img').find('.preview_1').addClass('it');
-  $(this).closest('.card-img').find('.btn-rmv_1').addClass('rmv');
-});
+    $(document).on('change', '.imag1', function () {
+      var imgControlName = $(this).closest('.card-img').find('.ImgPreview1');
+      readURL(this, imgControlName);
+      $(this).closest('.card-img').find('.preview_1').addClass('it');
+      $(this).closest('.card-img').find('.btn-rmv_1').addClass('rmv');
+    });
 
-$(document).on('click', '.removeImage_1', function (e) {
-  e.preventDefault();
-  var container = $(this).closest('.card-img');
-  container.find('.imag1').val("");
-  container.find('.ImgPreview1').attr("src", "assets/images/icon/picture_as_pdf.png");
-  container.find('.preview_1').removeClass('it');
-  container.find('.btn-rmv_1').removeClass('rmv');
-});
+    $(document).on('click', '.removeImage_1', function (e) {
+      e.preventDefault();
+      var container = $(this).closest('.card-img');
+      container.find('.imag1').val("");
+      container.find('.ImgPreview1').attr("src", "assets/images/icon/picture_as_pdf.png");
+      container.find('.preview_1').removeClass('it');
+      container.find('.btn-rmv_1').removeClass('rmv');
+    });
 
   </script>
 </body>

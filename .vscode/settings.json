@@ -55,7 +55,7 @@
 	"editor.wrappingIndent": "none",
 	"editor.wrappingStrategy": "advanced",
 	"editor.tabSize": 2,
-  "editor.detectIndentation": false,
+  "editor.detectIndentation": true,
   "editor.language.colorizedBracketPairs": [
    
   ],
