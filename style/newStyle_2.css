@@ -145,6 +145,75 @@
 
 /* Add here miyad custom styles */
 /* style\style.css */
+.img-preview {
+  background-color: transparent;
+  border: 2px dashed rgba(169, 183, 197, 1);
+  border-radius: 5px;
+  height: 250px;
+}
+.img-preview .input-img.form-control[type="file"] {
+  padding: 0;
+}
+.img-preview {
+  height: 100px;
+}
+.card .img-preview {
+  border-radius: 5px;
+  border: 1px solid #eaeff4;
+  background: #eaeff4;
+  height: 150px;
+}
+
+
+.img-preview {
+  background: #fff;
+  border-radius: 5px;
+  height: 230px;
+  overflow-y: hidden;
+  overflow-x: hidden;
+  width: 100%;
+  margin-top: 0px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0px;
+  border: 1.5px solid rgba(234, 239, 244, 1);
+}
+
+.upload-img {
+  height: 100%;
+  object-fit: scale-down;
+  width: 100%;
+}
+
+.upload-img.it {
+  object-fit: contain;
+  width: 100%;
+  /* width: 100%;
+  object-position: top center; */
+}
+
+
+.btn-rmv_1,
+.btn-rmv1,
+.close-btn {
+  position: absolute;
+  right: 0;
+  top: 0;
+  color: #000;
+  font-size: 18px;
+  opacity: 1;
+  background: #fff;
+  line-height: 15px;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+.btn-rmv_1,
+.btn-rmv1 {
+  z-index: 1000;
+}
+
 .box-container {
   background: #fff;
   border: 1px solid #e8eceeed;
