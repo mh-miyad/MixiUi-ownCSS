@@ -1802,7 +1802,6 @@ function saveInfo(info, value, id) {
 		resetCheckboxState(mainDiv);
 	}
 }
-
 function dateTime(info, value, id) {
 	const mainDiv = info.closest(".flex-grow-1");
 	const requireFill = mainDiv.querySelector(
