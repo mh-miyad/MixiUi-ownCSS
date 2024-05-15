@@ -551,8 +551,6 @@ let optionUniqueId = 1;
 let count2 = 1;
 optionCreateBtn.addEventListener("click", () => {
   const option1 = document.createElement("div");
-    option1.draggable = true;
-  option1.setAttribute("ondragstart", "drag(event)");
   optionUniqueId++;
   count2++;
   const makeUniqueId = `survey-option-${optionUniqueId}`;
@@ -1738,75 +1736,8 @@ function saveFile(info, value, id) {
 
 
 
-//  shorting 
-
-//   function allowDrop(ev) {
-//     ev.preventDefault();
-//   }
-
-// function drag(ev) {
-   
-//     ev.dataTransfer.setData("text", ev.target.id);
-//   }
-
-//   function drop(ev) {
-//     ev.preventDefault();
-   
-//     var data = ev.dataTransfer.getData("text");
-//     var draggableElement = document.getElementById(data);
-//     var container = ev.target.closest('.flex-grow-1');
-//     container.insertBefore(draggableElement, findDropTarget(container, ev.clientY));
-//   }
-
-//   function findDropTarget(container, mouseY) {
-//     var children = container.children;
-//     for (var i = 0; i < children.length; i++) {
-//       var rect = children[i].getBoundingClientRect();
-//       if (mouseY < rect.top + rect.height / 2) {
-//         return children[i];
-//       }
-//     }
-//     return null;
-//   }
 
 
-  const container = document.getElementById('survey_create_option');
-  //  function upBox(btn) { 
-  //   alert("up")
-  // }
-  // function downBox(btn) {
-  //     alert("down")
-  // }
-
-
- 
-// document.addEventListener('DOMContentLoaded', function() {
-//   const container = document.getElementById('survey_create_option');
-
-//   container.addEventListener('click', function(event) {
-//     if (event.target.classList.contains('bi-caret-up')) {
-//       moveUp(event.target.closest(".visitor-main-box"));
-//     } else if (event.target.classList.contains('bi-caret-down')) {
-//       moveDown(event.target.closest(".visitor-main-box"));
-//     }
-//   });
-
-//   function moveUp(element) {
-//     const prevSibling = element.previousElementSibling;
-//     if (prevSibling && container.contains(prevSibling)) {
-//       container.insertBefore(element, prevSibling);
-//     }
-//   }
-
-//   function moveDown(element) {
-//     const nextSibling = element.nextElementSibling;
-//     if (nextSibling && container.contains(nextSibling)) {
-//       container.insertBefore(element, nextSibling.nextElementSibling);
-//     } else {
-//       container.appendChild(element);
-//     }
-//   }
-// });
 document.addEventListener('DOMContentLoaded', function() {
   const container = document.getElementById('survey_create_option');
 
