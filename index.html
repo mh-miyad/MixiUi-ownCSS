@@ -33,24 +33,6 @@
 
 
   <script>
-    const draggableElement = document.getElementById("draggable");
-    const dropzone = document.getElementById("dropzone");
-
-    draggableElement.addEventListener("dragstart", function (event) {
-      event.dataTransfer.setData("text/plain", event.target.id);
-    });
-
-    dropzone.addEventListener("dragover", function (event) {
-      event.preventDefault();
-    });
-
-    dropzone.addEventListener("drop", function (event) {
-      const droppedElementId = event.dataTransfer.getData("text/plain");
-      const droppedElement = document.getElementById(droppedElementId);
-      dropzone.appendChild(droppedElement);
-    });
-  </script>
-  <script>
     const html = document.querySelector("html");
     const body = document.querySelector("body");
     body.addEventListener("click", (e) => {
