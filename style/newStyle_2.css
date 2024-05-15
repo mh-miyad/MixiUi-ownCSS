@@ -1105,6 +1105,13 @@
   transition: all 0.2s ease-out;
   cursor: pointer;
 }
+.visitor-main-box {
+  transition: transform 0.3s ease, opacity 0.3s ease !important;
+  -webkit-transition: transform 0.3s ease, opacity 0.3s ease !important;
+  -moz-transition: transform 0.3s ease, opacity 0.3s ease !important;
+  -ms-transition: transform 0.3s ease, opacity 0.3s ease !important;
+  -o-transition: transform 0.3s ease, opacity 0.3s ease !important;
+}
 
 #toolBoxOfInput {
   /* position: fixed;
