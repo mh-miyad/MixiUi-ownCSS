@@ -577,10 +577,12 @@ optionCreateBtn.addEventListener("click", () => {
     <div class="short-title   d-flex justify-content-between align-items-start gap-2 ">
       <div class="flex-grow-1">
         <div>
-          <label for="short-tittle" class="form-label text-dark">
-            Short Title
-          </label>
-          <input type="text" id="survey-input-1" class="form-control py-3" placeholder="Write ...">
+        		<label for="short-tittle" class="form-label text-dark">
+																Short Title
+															</label>
+														<input type="text" id="short-tittle-${count2}" name="short-tittle-1"
+    class="form-control py-3 short-title" placeholder="Write ..." value="">
+
           <div class="toolBar">
             <button class="btn fw-bold  cursor-pointer  bold-btn-1">B</button>
             <button class="btn fw-bold  cursor-pointer  italic-btn-1">I</button>
@@ -589,9 +591,9 @@ optionCreateBtn.addEventListener("click", () => {
           </div>
         </div>
         <div class="d-flex gap-3 align-items-center justify-content-between">
-                            <button class="btn btn-warning" onclick="saveInfo(this,'Short Answer','${count2}')">Save</button>
+                         
                               <div class="d-flex align-items-center tab-content-3">
-                                <p class="mt-3 txt-black fs-5 px-4 text-capitalize">Required</p>
+                               
                                 <label class="switch-sec  require-fill switch">
                                   <input type="checkbox">
                                   <span class="slider round">
@@ -1291,6 +1293,7 @@ optionCreateBtn.addEventListener("click", () => {
 </div>`;
 
   optionMainDiv.appendChild(option1);
+  reload();
   toolBox(makeUniqueId);
   linearScale(makeUniqueId);
   // showValue(
