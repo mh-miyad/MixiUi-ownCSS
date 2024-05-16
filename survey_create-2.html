@@ -1786,10 +1786,13 @@
 	</script>
 
 	<script>
+		const serializeData = [];
 		function reload() {
 			const shortTitleInputs = document.querySelectorAll('.short-title input[type="text"]');
 
 			shortTitleInputs.forEach(input => {
+
+
 				input.addEventListener('change', (event) => {
 					const inputId = event.target.id;
 					const inputValue = event.target.value;
@@ -1797,20 +1800,34 @@
 					const requireFill = mainDiv.querySelector(
 						".require-fill input[type='checkbox']"
 					);
-
+					let shortAnswer;
 					requireFill.addEventListener('change', (event) => {
 						if (!event.target.checked) {
 							console.log("no require fill");
 							console.log(`Input ID: ${inputId}, Value: ${inputValue},`)
+							shortAnswer = {
+								id: inputId,
+								value: inputValue,
+								requireFill: !event.target.checked
+							}
 						} else {
 							console.log("require fill");
 							console.log(`Input ID: ${inputId}, Value: ${inputValue},`)
+							shortAnswer = {
+								id: inputId,
+								value: inputValue,
+								requireFill: true
+							}
 						}
 					});
 
 					console.log(`Input ID: ${inputId}, Value: ${inputValue},"no require fill"`);
-
-
+					shortAnswer = {
+						id: inputId,
+						value: inputValue,
+						requireFill: false
+					}
+					serializeData.push(shortAnswer);
 				});
 			});
 		}
