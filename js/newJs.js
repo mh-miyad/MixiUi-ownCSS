@@ -1,484 +1,484 @@
 class SelectManager {
-	constructor(selectSelector) {
-		this.container = document.querySelector("body");
-		this.selectSelector = selectSelector;
-		this.init();
-	}
+  constructor(selectSelector) {
+    this.container = document.querySelector("body");
+    this.selectSelector = selectSelector;
+    this.init();
+  }
 
-	init() {
-		this.container.addEventListener("click", (e) => {
-			const targetSelect = e.target.closest(this.selectSelector);
-			if (targetSelect) {
-				this.handleSelectClick(targetSelect);
-			} else {
-				this.closeAllSelects();
-			}
-		});
+  init() {
+    this.container.addEventListener("click", (e) => {
+      const targetSelect = e.target.closest(this.selectSelector);
+      if (targetSelect) {
+        this.handleSelectClick(targetSelect);
+      } else {
+        this.closeAllSelects();
+      }
+    });
 
-		document.addEventListener("click", (e) => {
-			if (
-				!e.target.closest(this.selectSelector) &&
-				!e.target.closest(".select-list")
-			) {
-				this.closeAllSelects();
-			}
-		});
-	}
+    document.addEventListener("click", (e) => {
+      if (
+        !e.target.closest(this.selectSelector) &&
+        !e.target.closest(".select-list")
+      ) {
+        this.closeAllSelects();
+      }
+    });
+  }
 
-	handleSelectClick(select) {
-		const field = select.querySelector(".select-field");
-		const list = select.querySelector(".select-list");
-		this.closeOtherSelects(field);
+  handleSelectClick(select) {
+    const field = select.querySelector(".select-field");
+    const list = select.querySelector(".select-list");
+    this.closeOtherSelects(field);
 
-		list.classList.toggle("open");
-		field.classList.toggle("turn");
+    list.classList.toggle("open");
+    field.classList.toggle("turn");
 
-		list.addEventListener("click", (e) => {
-			e.stopPropagation();
-		});
+    list.addEventListener("click", (e) => {
+      e.stopPropagation();
+    });
 
-		const selectItemClickHandler = (e) => {
-			const selectedItem = e.target.closest("li");
+    const selectItemClickHandler = (e) => {
+      const selectedItem = e.target.closest("li");
 
-			if (selectedItem) {
-				const selectDiv = selectedItem.closest(".visitor-main-box");
-				const idOfSelectDiv = selectDiv.id;
-				const selectedPTag = selectedItem.querySelector("p");
-				const newPTag = selectedPTag.cloneNode(true);
-				const getValue = newPTag.textContent.trim();
-				getValueByClick(idOfSelectDiv, getValue);
+      if (selectedItem) {
+        const selectDiv = selectedItem.closest(".visitor-main-box");
+        const idOfSelectDiv = selectDiv.id;
+        const selectedPTag = selectedItem.querySelector("p");
+        const newPTag = selectedPTag.cloneNode(true);
+        const getValue = newPTag.textContent.trim();
+        getValueByClick(idOfSelectDiv, getValue);
 
-				//  here i this need Switch Case
+        //  here i this need Switch Case
 
-				//  here i this need Switch Case
+        //  here i this need Switch Case
 
-				// Remove any event listeners attached to the cloned p tag
-				newPTag.querySelectorAll("*").forEach((element) => {
-					for (const eventType in element.eventListeners) {
-						// Loop through all attached events
-						element.removeEventListener(
-							eventType,
-							element.eventListeners[eventType][0]
-						);
-					}
-				});
-				field.innerHTML = ""; // Clear contents instead of removing specific tag
+        // Remove any event listeners attached to the cloned p tag
+        newPTag.querySelectorAll("*").forEach((element) => {
+          for (const eventType in element.eventListeners) {
+            // Loop through all attached events
+            element.removeEventListener(
+              eventType,
+              element.eventListeners[eventType][0]
+            );
+          }
+        });
+        field.innerHTML = ""; // Clear contents instead of removing specific tag
 
-				// Append the cloned p tag to the select-field
-				field.appendChild(newPTag);
+        // Append the cloned p tag to the select-field
+        field.appendChild(newPTag);
 
-				list.classList.remove("open");
-				field.classList.remove("turn");
-				list.removeEventListener("click", selectItemClickHandler);
-			}
-		};
+        list.classList.remove("open");
+        field.classList.remove("turn");
+        list.removeEventListener("click", selectItemClickHandler);
+      }
+    };
 
-		list.addEventListener("click", selectItemClickHandler);
-	}
+    list.addEventListener("click", selectItemClickHandler);
+  }
 
-	closeOtherSelects(clickedField) {
-		var selects = this.container.querySelectorAll(this.selectSelector);
-		for (var i = 0; i < selects.length; i++) {
-			var select = selects[i];
-			var field = select.querySelector(".select-field");
-			var list = select.querySelector(".select-list");
+  closeOtherSelects(clickedField) {
+    var selects = this.container.querySelectorAll(this.selectSelector);
+    for (var i = 0; i < selects.length; i++) {
+      var select = selects[i];
+      var field = select.querySelector(".select-field");
+      var list = select.querySelector(".select-list");
 
-			if (field && list && field !== clickedField) {
-				if (list.classList.contains("open")) {
-					list.classList.remove("open");
-				}
-				if (field.classList.contains("turn")) {
-					field.classList.remove("turn");
-				}
-			}
-		}
-	}
+      if (field && list && field !== clickedField) {
+        if (list.classList.contains("open")) {
+          list.classList.remove("open");
+        }
+        if (field.classList.contains("turn")) {
+          field.classList.remove("turn");
+        }
+      }
+    }
+  }
 
-	closeAllSelects() {
-		let selects = this.container.querySelectorAll(this.selectSelector);
-		for (let i = 0; i < selects.length; i++) {
-			let select = selects[i];
-			const field = select.querySelector(".select-field");
-			const list = select.querySelector(".select-list");
+  closeAllSelects() {
+    let selects = this.container.querySelectorAll(this.selectSelector);
+    for (let i = 0; i < selects.length; i++) {
+      let select = selects[i];
+      const field = select.querySelector(".select-field");
+      const list = select.querySelector(".select-list");
 
-			if (list && field) {
-				list.classList.remove("open");
-				field.classList.remove("turn");
-			}
-		}
-	}
+      if (list && field) {
+        list.classList.remove("open");
+        field.classList.remove("turn");
+      }
+    }
+  }
 }
 
 const selectManager = new SelectManager(".select");
 
 function getValueByClick(id, getValue) {
-	deleteItem(id);
-	switch (getValue) {
-		case "Short Answer":
-			// showValue(document.querySelector(`#${id} .short-title`), getValue);
-			document.querySelector(`#${id} .short-title`).classList.remove("d-none");
-			document.querySelector(`#${id}  .prgraph-input`).classList.add("d-none");
-			document.querySelector(`#${id}  .multiple-input`).classList.add("d-none");
-			document.querySelector(`#${id}  .choice-input`).classList.add("d-none");
-			document.querySelector(`#${id}  .dropdown-input`).classList.add("d-none");
-			document.querySelector(`#${id}  .date-input`).classList.add("d-none");
-			document.querySelector(`#${id}  .time-input`).classList.add("d-none");
-			document
-				.querySelector(`#${id}  .fileUpload-input`)
-				.classList.add("d-none");
-			document
-				.querySelector(`#${id}  .linear-scale-input`)
-				.classList.add("d-none");
-			document
-				.querySelector(`#${id}  .multiple-choice-grid`)
-				.classList.add("d-none");
-			document
-				.querySelector(`#${id}  .multiple-checkBox-grid`)
-				.classList.add("d-none");
-			break;
-		case "Paragraph":
-			// showValue(document.querySelector(`#${id} .prgraph-input`), getValue);
-			document.querySelector(`#${id}  .short-title`).classList.add("d-none");
-			document
-				.querySelector(`#${id}  .prgraph-input`)
-				.classList.remove("d-none");
-			document.querySelector(`#${id}  .multiple-input`).classList.add("d-none");
-			document.querySelector(`#${id}  .choice-input`).classList.add("d-none");
-			document.querySelector(`#${id}  .dropdown-input`).classList.add("d-none");
-			document.querySelector(`#${id}  .date-input`).classList.add("d-none");
-			document.querySelector(`#${id}  .time-input`).classList.add("d-none");
-			document
-				.querySelector(`#${id}  .fileUpload-input`)
-				.classList.add("d-none");
-			document
-				.querySelector(`#${id}  .linear-scale-input`)
-				.classList.add("d-none");
-			document
-				.querySelector(`#${id}  .multiple-choice-grid`)
-				.classList.add("d-none");
-			document
-				.querySelector(`#${id}  .multiple-checkBox-grid`)
-				.classList.add("d-none");
-			break;
-		case "Multiple Choice":
-			document
-				.querySelector(`#${id}  .multiple-input`)
-				.classList.remove("d-none");
-			document.querySelector(`#${id}  .short-title`).classList.add("d-none");
-			document.querySelector(`#${id}  .prgraph-input`).classList.add("d-none");
-			document.querySelector(`#${id}  .choice-input`).classList.add("d-none");
-			document.querySelector(`#${id}  .dropdown-input`).classList.add("d-none");
-			document.querySelector(`#${id}  .date-input`).classList.add("d-none");
-			document.querySelector(`#${id}  .time-input`).classList.add("d-none");
-			document
-				.querySelector(`#${id}  .fileUpload-input`)
-				.classList.add("d-none");
-			document
-				.querySelector(`#${id}  .linear-scale-input`)
-				.classList.add("d-none");
-			document
-				.querySelector(`#${id}  .multiple-choice-grid`)
-				.classList.add("d-none");
-			document
-				.querySelector(`#${id}  .multiple-checkBox-grid`)
-				.classList.add("d-none");
-			break;
-		case "Checkboxes":
-			document
-				.querySelector(`#${id}  .choice-input`)
-				.classList.remove("d-none");
-			document.querySelector(`#${id}  .short-title`).classList.add("d-none");
-			document.querySelector(`#${id}  .prgraph-input`).classList.add("d-none");
-			document.querySelector(`#${id}  .multiple-input`).classList.add("d-none");
-			document.querySelector(`#${id}  .dropdown-input`).classList.add("d-none");
-			document.querySelector(`#${id}  .date-input`).classList.add("d-none");
-			document.querySelector(`#${id}  .time-input`).classList.add("d-none");
-			document
-				.querySelector(`#${id}  .fileUpload-input`)
-				.classList.add("d-none");
-			document
-				.querySelector(`#${id}  .linear-scale-input`)
-				.classList.add("d-none");
-			document
-				.querySelector(`#${id}  .multiple-choice-grid`)
-				.classList.add("d-none");
-			document
-				.querySelector(`#${id}  .multiple-checkBox-grid`)
-				.classList.add("d-none");
-			break;
-		case "DropDown":
-			document
-				.querySelector(`#${id}  .dropdown-input`)
-				.classList.remove("d-none");
-			document.querySelector(`#${id}  .choice-input`).classList.add("d-none");
-			document.querySelector(`#${id}  .short-title`).classList.add("d-none");
-			document.querySelector(`#${id}  .prgraph-input`).classList.add("d-none");
-			document.querySelector(`#${id}  .multiple-input`).classList.add("d-none");
-			document.querySelector(`#${id}  .date-input`).classList.add("d-none");
-			document.querySelector(`#${id}  .time-input`).classList.add("d-none");
-			document
-				.querySelector(`#${id}  .fileUpload-input`)
-				.classList.add("d-none");
-			document
-				.querySelector(`#${id}  .linear-scale-input`)
-				.classList.add("d-none");
-			document
-				.querySelector(`#${id}  .multiple-choice-grid`)
-				.classList.add("d-none");
-			document
-				.querySelector(`#${id}  .multiple-checkBox-grid`)
-				.classList.add("d-none");
-			break;
-		case "File Upload":
-			// showValue(document.querySelector(`#${id} .fileUpload-input`), getValue);
-			document
-				.querySelector(`#${id}  .fileUpload-input`)
-				.classList.remove("d-none");
-			document
-				.querySelector(`#${id}  .linear-scale-input`)
-				.classList.add("d-none");
-			document.querySelector(`#${id}  .dropdown-input`).classList.add("d-none");
-			document.querySelector(`#${id}  .choice-input`).classList.add("d-none");
-			document.querySelector(`#${id}  .short-title`).classList.add("d-none");
-			document.querySelector(`#${id}  .prgraph-input`).classList.add("d-none");
-			document.querySelector(`#${id}  .multiple-input`).classList.add("d-none");
-			document.querySelector(`#${id}  .date-input`).classList.add("d-none");
-			document.querySelector(`#${id}  .time-input`).classList.add("d-none");
-			document
-				.querySelector(`#${id}  .multiple-choice-grid`)
-				.classList.add("d-none");
-			document
-				.querySelector(`#${id}  .multiple-checkBox-grid`)
-				.classList.add("d-none");
-			break;
-		case "Linear Scale":
-			document
-				.querySelector(`#${id}  .linear-scale-input`)
-				.classList.remove("d-none");
-			document
-				.querySelector(`#${id}  .fileUpload-input`)
-				.classList.add("d-none");
-			document.querySelector(`#${id}  .dropdown-input`).classList.add("d-none");
-			document.querySelector(`#${id}  .choice-input`).classList.add("d-none");
-			document.querySelector(`#${id}  .short-title`).classList.add("d-none");
-			document.querySelector(`#${id}  .prgraph-input`).classList.add("d-none");
-			document.querySelector(`#${id}  .multiple-input`).classList.add("d-none");
-			document.querySelector(`#${id}  .date-input`).classList.add("d-none");
-			document.querySelector(`#${id}  .time-input`).classList.add("d-none");
-			document
-				.querySelector(`#${id}  .multiple-choice-grid`)
-				.classList.add("d-none");
-			document
-				.querySelector(`#${id}  .multiple-checkBox-grid`)
-				.classList.add("d-none");
-			break;
-		case "Multiple Choice Grid":
-			document
-				.querySelector(`#${id}  .multiple-choice-grid`)
-				.classList.remove("d-none");
-			document
-				.querySelector(`#${id}  .linear-scale-input`)
-				.classList.add("d-none");
-			document
-				.querySelector(`#${id}  .fileUpload-input`)
-				.classList.add("d-none");
-			document
-				.querySelector(`#${id}  .multiple-checkBox-grid`)
-				.classList.add("d-none");
-			document.querySelector(`#${id}  .dropdown-input`).classList.add("d-none");
-			document.querySelector(`#${id}  .choice-input`).classList.add("d-none");
-			document.querySelector(`#${id}  .short-title`).classList.add("d-none");
-			document.querySelector(`#${id}  .prgraph-input`).classList.add("d-none");
-			document.querySelector(`#${id}  .multiple-input`).classList.add("d-none");
-			document.querySelector(`#${id}  .date-input`).classList.add("d-none");
-			document.querySelector(`#${id}  .time-input`).classList.add("d-none");
-			break;
-		case "Checkbox Grid":
-			document
-				.querySelector(`#${id}  .multiple-checkBox-grid`)
-				.classList.remove("d-none");
-			document
-				.querySelector(`#${id}  .multiple-choice-grid`)
-				.classList.add("d-none");
-			document
-				.querySelector(`#${id}  .linear-scale-input`)
-				.classList.add("d-none");
-			document
-				.querySelector(`#${id}  .fileUpload-input`)
-				.classList.add("d-none");
-			document.querySelector(`#${id}  .dropdown-input`).classList.add("d-none");
-			document.querySelector(`#${id}  .choice-input`).classList.add("d-none");
-			document.querySelector(`#${id}  .short-title`).classList.add("d-none");
-			document.querySelector(`#${id}  .prgraph-input`).classList.add("d-none");
-			document.querySelector(`#${id}  .multiple-input`).classList.add("d-none");
-			document.querySelector(`#${id}  .date-input`).classList.add("d-none");
-			document.querySelector(`#${id}  .time-input`).classList.add("d-none");
-			break;
-		case "Date":
-			// showValue(document.querySelector(`#${id} .date-input`), getValue);
-			document.querySelector(`#${id}  .date-input`).classList.remove("d-none");
-			document.querySelector(`#${id}  .short-title`).classList.add("d-none");
-			document.querySelector(`#${id}  .prgraph-input`).classList.add("d-none");
-			document.querySelector(`#${id}  .multiple-input`).classList.add("d-none");
-			document.querySelector(`#${id}  .choice-input`).classList.add("d-none");
-			document.querySelector(`#${id}  .dropdown-input`).classList.add("d-none");
-			document.querySelector(`#${id}  .time-input`).classList.add("d-none");
-			document
-				.querySelector(`#${id}  .fileUpload-input`)
-				.classList.add("d-none");
-			document
-				.querySelector(`#${id}  .linear-scale-input`)
-				.classList.add("d-none");
-			document
-				.querySelector(`#${id}  .multiple-choice-grid`)
-				.classList.add("d-none");
-			document
-				.querySelector(`#${id}  .multiple-checkBox-grid`)
-				.classList.add("d-none");
-			break;
-		case "Time":
-			// showValue(document.querySelector(`#${id} .time-input`), getValue);
-			document.querySelector(`#${id}  .time-input`).classList.remove("d-none");
-			document.querySelector(`#${id}  .short-title`).classList.add("d-none");
-			document.querySelector(`#${id}  .prgraph-input`).classList.add("d-none");
-			document.querySelector(`#${id}  .dropdown-input`).classList.add("d-none");
-			document.querySelector(`#${id}  .multiple-input`).classList.add("d-none");
-			document.querySelector(`#${id}  .choice-input`).classList.add("d-none");
-			document.querySelector(`#${id}  .date-input`).classList.add("d-none");
-			document
-				.querySelector(`#${id}  .fileUpload-input`)
-				.classList.add("d-none");
-			document
-				.querySelector(`#${id}  .linear-scale-input`)
-				.classList.add("d-none");
-			document
-				.querySelector(`#${id}  .multiple-choice-grid`)
-				.classList.add("d-none");
-			document
-				.querySelector(`#${id}  .multiple-checkBox-grid`)
-				.classList.add("d-none");
-			break;
-		default:
-			document.querySelector(`#${id}  .short-title`).classList.add("d-none");
-			document.querySelector(`#${id}  .prgraph-input`).classList.add("d-none");
-			document.querySelector(`#${id}  .multiple-input`).classList.add("d-none");
-			document.querySelector(`#${id}  .dropdown-input`).classList.add("d-none");
-			document.querySelector(`#${id}  .choice-input`).classList.add("d-none");
-			document.querySelector(`#${id}  .date-input`).classList.add("d-none");
-			document.querySelector(`#${id}  .time-input`).classList.add("d-none");
-			document
-				.querySelector(`#${id}  .fileUpload-input`)
-				.classList.add("d-none");
-			document
-				.querySelector(`#${id}  .linear-scale-input`)
-				.classList.add("d-none");
-			document
-				.querySelector(`#${id}  .multiple-choice-grid`)
-				.classList.add("d-none");
-			document
-				.querySelector(`#${id}  .multiple-checkBox-grid`)
-				.classList.add("d-none");
+  deleteItem(id);
+  switch (getValue) {
+    case "Short Answer":
+      // showValue(document.querySelector(`#${id} .short-title`), getValue);
+      document.querySelector(`#${id} .short-title`).classList.remove("d-none");
+      document.querySelector(`#${id}  .prgraph-input`).classList.add("d-none");
+      document.querySelector(`#${id}  .multiple-input`).classList.add("d-none");
+      document.querySelector(`#${id}  .choice-input`).classList.add("d-none");
+      document.querySelector(`#${id}  .dropdown-input`).classList.add("d-none");
+      document.querySelector(`#${id}  .date-input`).classList.add("d-none");
+      document.querySelector(`#${id}  .time-input`).classList.add("d-none");
+      document
+        .querySelector(`#${id}  .fileUpload-input`)
+        .classList.add("d-none");
+      document
+        .querySelector(`#${id}  .linear-scale-input`)
+        .classList.add("d-none");
+      document
+        .querySelector(`#${id}  .multiple-choice-grid`)
+        .classList.add("d-none");
+      document
+        .querySelector(`#${id}  .multiple-checkBox-grid`)
+        .classList.add("d-none");
+      break;
+    case "Paragraph":
+      // showValue(document.querySelector(`#${id} .prgraph-input`), getValue);
+      document.querySelector(`#${id}  .short-title`).classList.add("d-none");
+      document
+        .querySelector(`#${id}  .prgraph-input`)
+        .classList.remove("d-none");
+      document.querySelector(`#${id}  .multiple-input`).classList.add("d-none");
+      document.querySelector(`#${id}  .choice-input`).classList.add("d-none");
+      document.querySelector(`#${id}  .dropdown-input`).classList.add("d-none");
+      document.querySelector(`#${id}  .date-input`).classList.add("d-none");
+      document.querySelector(`#${id}  .time-input`).classList.add("d-none");
+      document
+        .querySelector(`#${id}  .fileUpload-input`)
+        .classList.add("d-none");
+      document
+        .querySelector(`#${id}  .linear-scale-input`)
+        .classList.add("d-none");
+      document
+        .querySelector(`#${id}  .multiple-choice-grid`)
+        .classList.add("d-none");
+      document
+        .querySelector(`#${id}  .multiple-checkBox-grid`)
+        .classList.add("d-none");
+      break;
+    case "Multiple Choice":
+      document
+        .querySelector(`#${id}  .multiple-input`)
+        .classList.remove("d-none");
+      document.querySelector(`#${id}  .short-title`).classList.add("d-none");
+      document.querySelector(`#${id}  .prgraph-input`).classList.add("d-none");
+      document.querySelector(`#${id}  .choice-input`).classList.add("d-none");
+      document.querySelector(`#${id}  .dropdown-input`).classList.add("d-none");
+      document.querySelector(`#${id}  .date-input`).classList.add("d-none");
+      document.querySelector(`#${id}  .time-input`).classList.add("d-none");
+      document
+        .querySelector(`#${id}  .fileUpload-input`)
+        .classList.add("d-none");
+      document
+        .querySelector(`#${id}  .linear-scale-input`)
+        .classList.add("d-none");
+      document
+        .querySelector(`#${id}  .multiple-choice-grid`)
+        .classList.add("d-none");
+      document
+        .querySelector(`#${id}  .multiple-checkBox-grid`)
+        .classList.add("d-none");
+      break;
+    case "Checkboxes":
+      document
+        .querySelector(`#${id}  .choice-input`)
+        .classList.remove("d-none");
+      document.querySelector(`#${id}  .short-title`).classList.add("d-none");
+      document.querySelector(`#${id}  .prgraph-input`).classList.add("d-none");
+      document.querySelector(`#${id}  .multiple-input`).classList.add("d-none");
+      document.querySelector(`#${id}  .dropdown-input`).classList.add("d-none");
+      document.querySelector(`#${id}  .date-input`).classList.add("d-none");
+      document.querySelector(`#${id}  .time-input`).classList.add("d-none");
+      document
+        .querySelector(`#${id}  .fileUpload-input`)
+        .classList.add("d-none");
+      document
+        .querySelector(`#${id}  .linear-scale-input`)
+        .classList.add("d-none");
+      document
+        .querySelector(`#${id}  .multiple-choice-grid`)
+        .classList.add("d-none");
+      document
+        .querySelector(`#${id}  .multiple-checkBox-grid`)
+        .classList.add("d-none");
+      break;
+    case "DropDown":
+      document
+        .querySelector(`#${id}  .dropdown-input`)
+        .classList.remove("d-none");
+      document.querySelector(`#${id}  .choice-input`).classList.add("d-none");
+      document.querySelector(`#${id}  .short-title`).classList.add("d-none");
+      document.querySelector(`#${id}  .prgraph-input`).classList.add("d-none");
+      document.querySelector(`#${id}  .multiple-input`).classList.add("d-none");
+      document.querySelector(`#${id}  .date-input`).classList.add("d-none");
+      document.querySelector(`#${id}  .time-input`).classList.add("d-none");
+      document
+        .querySelector(`#${id}  .fileUpload-input`)
+        .classList.add("d-none");
+      document
+        .querySelector(`#${id}  .linear-scale-input`)
+        .classList.add("d-none");
+      document
+        .querySelector(`#${id}  .multiple-choice-grid`)
+        .classList.add("d-none");
+      document
+        .querySelector(`#${id}  .multiple-checkBox-grid`)
+        .classList.add("d-none");
+      break;
+    case "File Upload":
+      // showValue(document.querySelector(`#${id} .fileUpload-input`), getValue);
+      document
+        .querySelector(`#${id}  .fileUpload-input`)
+        .classList.remove("d-none");
+      document
+        .querySelector(`#${id}  .linear-scale-input`)
+        .classList.add("d-none");
+      document.querySelector(`#${id}  .dropdown-input`).classList.add("d-none");
+      document.querySelector(`#${id}  .choice-input`).classList.add("d-none");
+      document.querySelector(`#${id}  .short-title`).classList.add("d-none");
+      document.querySelector(`#${id}  .prgraph-input`).classList.add("d-none");
+      document.querySelector(`#${id}  .multiple-input`).classList.add("d-none");
+      document.querySelector(`#${id}  .date-input`).classList.add("d-none");
+      document.querySelector(`#${id}  .time-input`).classList.add("d-none");
+      document
+        .querySelector(`#${id}  .multiple-choice-grid`)
+        .classList.add("d-none");
+      document
+        .querySelector(`#${id}  .multiple-checkBox-grid`)
+        .classList.add("d-none");
+      break;
+    case "Linear Scale":
+      document
+        .querySelector(`#${id}  .linear-scale-input`)
+        .classList.remove("d-none");
+      document
+        .querySelector(`#${id}  .fileUpload-input`)
+        .classList.add("d-none");
+      document.querySelector(`#${id}  .dropdown-input`).classList.add("d-none");
+      document.querySelector(`#${id}  .choice-input`).classList.add("d-none");
+      document.querySelector(`#${id}  .short-title`).classList.add("d-none");
+      document.querySelector(`#${id}  .prgraph-input`).classList.add("d-none");
+      document.querySelector(`#${id}  .multiple-input`).classList.add("d-none");
+      document.querySelector(`#${id}  .date-input`).classList.add("d-none");
+      document.querySelector(`#${id}  .time-input`).classList.add("d-none");
+      document
+        .querySelector(`#${id}  .multiple-choice-grid`)
+        .classList.add("d-none");
+      document
+        .querySelector(`#${id}  .multiple-checkBox-grid`)
+        .classList.add("d-none");
+      break;
+    case "Multiple Choice Grid":
+      document
+        .querySelector(`#${id}  .multiple-choice-grid`)
+        .classList.remove("d-none");
+      document
+        .querySelector(`#${id}  .linear-scale-input`)
+        .classList.add("d-none");
+      document
+        .querySelector(`#${id}  .fileUpload-input`)
+        .classList.add("d-none");
+      document
+        .querySelector(`#${id}  .multiple-checkBox-grid`)
+        .classList.add("d-none");
+      document.querySelector(`#${id}  .dropdown-input`).classList.add("d-none");
+      document.querySelector(`#${id}  .choice-input`).classList.add("d-none");
+      document.querySelector(`#${id}  .short-title`).classList.add("d-none");
+      document.querySelector(`#${id}  .prgraph-input`).classList.add("d-none");
+      document.querySelector(`#${id}  .multiple-input`).classList.add("d-none");
+      document.querySelector(`#${id}  .date-input`).classList.add("d-none");
+      document.querySelector(`#${id}  .time-input`).classList.add("d-none");
+      break;
+    case "Checkbox Grid":
+      document
+        .querySelector(`#${id}  .multiple-checkBox-grid`)
+        .classList.remove("d-none");
+      document
+        .querySelector(`#${id}  .multiple-choice-grid`)
+        .classList.add("d-none");
+      document
+        .querySelector(`#${id}  .linear-scale-input`)
+        .classList.add("d-none");
+      document
+        .querySelector(`#${id}  .fileUpload-input`)
+        .classList.add("d-none");
+      document.querySelector(`#${id}  .dropdown-input`).classList.add("d-none");
+      document.querySelector(`#${id}  .choice-input`).classList.add("d-none");
+      document.querySelector(`#${id}  .short-title`).classList.add("d-none");
+      document.querySelector(`#${id}  .prgraph-input`).classList.add("d-none");
+      document.querySelector(`#${id}  .multiple-input`).classList.add("d-none");
+      document.querySelector(`#${id}  .date-input`).classList.add("d-none");
+      document.querySelector(`#${id}  .time-input`).classList.add("d-none");
+      break;
+    case "Date":
+      // showValue(document.querySelector(`#${id} .date-input`), getValue);
+      document.querySelector(`#${id}  .date-input`).classList.remove("d-none");
+      document.querySelector(`#${id}  .short-title`).classList.add("d-none");
+      document.querySelector(`#${id}  .prgraph-input`).classList.add("d-none");
+      document.querySelector(`#${id}  .multiple-input`).classList.add("d-none");
+      document.querySelector(`#${id}  .choice-input`).classList.add("d-none");
+      document.querySelector(`#${id}  .dropdown-input`).classList.add("d-none");
+      document.querySelector(`#${id}  .time-input`).classList.add("d-none");
+      document
+        .querySelector(`#${id}  .fileUpload-input`)
+        .classList.add("d-none");
+      document
+        .querySelector(`#${id}  .linear-scale-input`)
+        .classList.add("d-none");
+      document
+        .querySelector(`#${id}  .multiple-choice-grid`)
+        .classList.add("d-none");
+      document
+        .querySelector(`#${id}  .multiple-checkBox-grid`)
+        .classList.add("d-none");
+      break;
+    case "Time":
+      // showValue(document.querySelector(`#${id} .time-input`), getValue);
+      document.querySelector(`#${id}  .time-input`).classList.remove("d-none");
+      document.querySelector(`#${id}  .short-title`).classList.add("d-none");
+      document.querySelector(`#${id}  .prgraph-input`).classList.add("d-none");
+      document.querySelector(`#${id}  .dropdown-input`).classList.add("d-none");
+      document.querySelector(`#${id}  .multiple-input`).classList.add("d-none");
+      document.querySelector(`#${id}  .choice-input`).classList.add("d-none");
+      document.querySelector(`#${id}  .date-input`).classList.add("d-none");
+      document
+        .querySelector(`#${id}  .fileUpload-input`)
+        .classList.add("d-none");
+      document
+        .querySelector(`#${id}  .linear-scale-input`)
+        .classList.add("d-none");
+      document
+        .querySelector(`#${id}  .multiple-choice-grid`)
+        .classList.add("d-none");
+      document
+        .querySelector(`#${id}  .multiple-checkBox-grid`)
+        .classList.add("d-none");
+      break;
+    default:
+      document.querySelector(`#${id}  .short-title`).classList.add("d-none");
+      document.querySelector(`#${id}  .prgraph-input`).classList.add("d-none");
+      document.querySelector(`#${id}  .multiple-input`).classList.add("d-none");
+      document.querySelector(`#${id}  .dropdown-input`).classList.add("d-none");
+      document.querySelector(`#${id}  .choice-input`).classList.add("d-none");
+      document.querySelector(`#${id}  .date-input`).classList.add("d-none");
+      document.querySelector(`#${id}  .time-input`).classList.add("d-none");
+      document
+        .querySelector(`#${id}  .fileUpload-input`)
+        .classList.add("d-none");
+      document
+        .querySelector(`#${id}  .linear-scale-input`)
+        .classList.add("d-none");
+      document
+        .querySelector(`#${id}  .multiple-choice-grid`)
+        .classList.add("d-none");
+      document
+        .querySelector(`#${id}  .multiple-checkBox-grid`)
+        .classList.add("d-none");
 
-			break;
-	}
+      break;
+  }
 }
 
 function deleteItem(id) {
-	// close Short Answer
-	document
-		.querySelector(`#${id} .short-title-btn`)
-		.addEventListener("click", () => {
-			document.querySelector(`#${id} .short-title`).classList.add("d-none");
-		});
-	// close Paragraph
-	document.querySelector(`#${id} .prg-btn`).addEventListener("click", () => {
-		document.querySelector(`#${id} .prgraph-input`).classList.add("d-none");
-	});
-	//multiple choice
-	document
-		.querySelector(`#${id} .multiple-choice-btn`)
-		.addEventListener("click", () => {
-			document.querySelector(`#${id} .multiple-input`).classList.add("d-none");
-		});
-	//choice-input-btn
-	document
-		.querySelector(`#${id} .choice-input-btn`)
-		.addEventListener("click", () => {
-			document.querySelector(`#${id} .choice-input`).classList.add("d-none");
-		});
-	// Dropdown
-	document
-		.querySelector(`#${id} .dropdown-input-btn`)
-		.addEventListener("click", () => {
-			document.querySelector(`#${id} .dropdown-input`).classList.add("d-none");
-		});
-	// Date
-	document
-		.querySelector(`#${id} .date-input-btn`)
-		.addEventListener("click", () => {
-			document.querySelector(`#${id} .date-input`).classList.add("d-none");
-		});
-	// fileUpload Btn
-	document
-		.querySelector(`#${id} .fileUpload-input-btn`)
-		.addEventListener("click", () => {
-			document
-				.querySelector(`#${id} .fileUpload-input`)
-				.classList.add("d-none");
-		});
-	// Linear Scale  Btn
-	document
-		.querySelector(`#${id} .linearScale-input-btn`)
-		.addEventListener("click", () => {
-			document
-				.querySelector(`#${id} .linear-scale-input`)
-				.classList.add("d-none");
-		});
-	// Multiple choice grid  Btn
-	document
-		.querySelector(`#${id} .multiple-choice-grid-btn`)
-		.addEventListener("click", () => {
-			document
-				.querySelector(`#${id} .multiple-choice-grid`)
-				.classList.add("d-none");
-		});
-	// CheckBox grid  Btn
-	document
-		.querySelector(`#${id} .multiple-checkBox-grid-btn`)
-		.addEventListener("click", () => {
-			document
-				.querySelector(`#${id} .multiple-checkBox-grid`)
-				.classList.add("d-none");
-		});
-	// Time
-	document
-		.querySelector(`#${id} .time-input-btn`)
-		.addEventListener("click", () => {
-			document.querySelector(`#${id} .time-input`).classList.add("d-none");
-		});
+  // close Short Answer
+  document
+    .querySelector(`#${id} .short-title-btn`)
+    .addEventListener("click", () => {
+      document.querySelector(`#${id} .short-title`).classList.add("d-none");
+    });
+  // close Paragraph
+  document.querySelector(`#${id} .prg-btn`).addEventListener("click", () => {
+    document.querySelector(`#${id} .prgraph-input`).classList.add("d-none");
+  });
+  //multiple choice
+  document
+    .querySelector(`#${id} .multiple-choice-btn`)
+    .addEventListener("click", () => {
+      document.querySelector(`#${id} .multiple-input`).classList.add("d-none");
+    });
+  //choice-input-btn
+  document
+    .querySelector(`#${id} .choice-input-btn`)
+    .addEventListener("click", () => {
+      document.querySelector(`#${id} .choice-input`).classList.add("d-none");
+    });
+  // Dropdown
+  document
+    .querySelector(`#${id} .dropdown-input-btn`)
+    .addEventListener("click", () => {
+      document.querySelector(`#${id} .dropdown-input`).classList.add("d-none");
+    });
+  // Date
+  document
+    .querySelector(`#${id} .date-input-btn`)
+    .addEventListener("click", () => {
+      document.querySelector(`#${id} .date-input`).classList.add("d-none");
+    });
+  // fileUpload Btn
+  document
+    .querySelector(`#${id} .fileUpload-input-btn`)
+    .addEventListener("click", () => {
+      document
+        .querySelector(`#${id} .fileUpload-input`)
+        .classList.add("d-none");
+    });
+  // Linear Scale  Btn
+  document
+    .querySelector(`#${id} .linearScale-input-btn`)
+    .addEventListener("click", () => {
+      document
+        .querySelector(`#${id} .linear-scale-input`)
+        .classList.add("d-none");
+    });
+  // Multiple choice grid  Btn
+  document
+    .querySelector(`#${id} .multiple-choice-grid-btn`)
+    .addEventListener("click", () => {
+      document
+        .querySelector(`#${id} .multiple-choice-grid`)
+        .classList.add("d-none");
+    });
+  // CheckBox grid  Btn
+  document
+    .querySelector(`#${id} .multiple-checkBox-grid-btn`)
+    .addEventListener("click", () => {
+      document
+        .querySelector(`#${id} .multiple-checkBox-grid`)
+        .classList.add("d-none");
+    });
+  // Time
+  document
+    .querySelector(`#${id} .time-input-btn`)
+    .addEventListener("click", () => {
+      document.querySelector(`#${id} .time-input`).classList.add("d-none");
+    });
 }
 
 function deleteBox(id) {
-	document.querySelector(`#${id}`).remove();
+  document.querySelector(`#${id}`).remove();
 }
 //!  here If Anyone click input
 
 let count = 2;
 
 function showInput(value) {
-	const choiceInput = document.querySelector(`#${value}`);
-	if (choiceInput) {
-		console.log(choiceInput);
-		choiceInput.removeAttribute("readonly");
-	} else {
-		console.log(`#${value} not found`);
-	}
+  const choiceInput = document.querySelector(`#${value}`);
+  if (choiceInput) {
+    console.log(choiceInput);
+    choiceInput.removeAttribute("readonly");
+  } else {
+    console.log(`#${value} not found`);
+  }
 }
 
 function addMoreInput(type, value, btn) {
-	const addDiv = document.querySelector(`#${value}`);
-	const newDiv = document.createElement("div");
-	newDiv.innerHTML = `
+  const addDiv = document.querySelector(`#${value}`);
+  const newDiv = document.createElement("div");
+  newDiv.innerHTML = `
     <div class="d-flex align-items-center gap-3">
       <div class="form-check my-2 d-flex align-items-center gap-2 multiple-box-all">
         <input
@@ -501,41 +501,41 @@ function addMoreInput(type, value, btn) {
       </button>
     </div>
   `;
-	addDiv.appendChild(newDiv);
+  addDiv.appendChild(newDiv);
 
-	count++;
+  count++;
 }
 function saveMultipleBtn3(id, ele, idValue) {
-	const parentDiv = document.querySelector(` #${id} .${ele}`);
-	// Gather dynamically created input values
-	const inputValues = Array.from(
-		parentDiv.querySelectorAll(".form-control")
-	).map((input) => input.value);
-	// Gather all input values with class "form-control"
+  const parentDiv = document.querySelector(` #${id} .${ele}`);
+  // Gather dynamically created input values
+  const inputValues = Array.from(
+    parentDiv.querySelectorAll(".form-control")
+  ).map((input) => input.value);
+  // Gather all input values with class "form-control"
 
-	// Combine all input values
-	const [firstValue, ...remainingValues] = inputValues;
-	// alert(1);
-	console.log("id of this event:", id);
-	console.log("Title Of main Value:", firstValue);
-	console.log("dynamic Input value :", remainingValues);
-	console.log(idValue);
-	const requireFill = parentDiv.querySelector(
-		".require-fill input[type='checkbox']"
-	);
+  // Combine all input values
+  const [firstValue, ...remainingValues] = inputValues;
+  // alert(1);
+  console.log("id of this event:", id);
+  console.log("Title Of main Value:", firstValue);
+  console.log("dynamic Input value :", remainingValues);
+  console.log(idValue);
+  const requireFill = parentDiv.querySelector(
+    ".require-fill input[type='checkbox']"
+  );
 
-	if (requireFill.checked) {
-		console.log("require fill");
-	} else {
-		console.log("no require fill");
-	}
+  if (requireFill.checked) {
+    console.log("require fill");
+  } else {
+    console.log("no require fill");
+  }
 }
 
 // Remove Input From Dynamic Delete Option
 function removeInput(button) {
-	const parentDiv = button.closest(".d-flex");
-	parentDiv.remove();
-	count--;
+  const parentDiv = button.closest(".d-flex");
+  parentDiv.remove();
+  count--;
 }
 // Remove Input From Dynamic Delete Option
 //!  here If Anyone click input
@@ -547,11 +547,11 @@ const optionCreateBtn = document.getElementById("btn-create-option");
 let optionUniqueId = 1;
 let count2 = 1;
 optionCreateBtn.addEventListener("click", () => {
-	const option1 = document.createElement("div");
-	optionUniqueId++;
-	count2++;
-	const makeUniqueId = `survey-option-${optionUniqueId}`;
-	option1.innerHTML = ` <div class="my-3   lg-w-75 py-3 pe-5 ps-4 visitor-main-box" id=${makeUniqueId}  >
+  const option1 = document.createElement("div");
+  optionUniqueId++;
+  count2++;
+  const makeUniqueId = `survey-option-${optionUniqueId}`;
+  option1.innerHTML = ` <div class="my-3   lg-w-75 py-3 pe-5 ps-4 visitor-main-box" id=${makeUniqueId}  >
   <!-- content -->
   <div class="d-flex justify-content-between align-items-center">
                   <div class="button-group">
@@ -1290,278 +1290,278 @@ optionCreateBtn.addEventListener("click", () => {
 
 </div>`;
 
-	optionMainDiv.appendChild(option1);
-	toolBox(makeUniqueId);
-	linearScale(makeUniqueId);
-	// showValue(
-	//   document.querySelector(`#survey-option-${optionUniqueId} .short-title`),
-	//   "Short Answer"
-	// );
+  optionMainDiv.appendChild(option1);
+  toolBox(makeUniqueId);
+  linearScale(makeUniqueId);
+  // showValue(
+  //   document.querySelector(`#survey-option-${optionUniqueId} .short-title`),
+  //   "Short Answer"
+  // );
 });
 
 // Create Dynamic option
 
 // linear Scale option
 const linearScaleOptions = document.querySelectorAll(
-	".linear-scale-option-value"
+  ".linear-scale-option-value"
 );
 
 linearScaleOptions.forEach((option) => {
-	option.addEventListener("change", (event) => {
-		// Use "change" event for better handling
-		const linearScaleDiv = event.target.closest(".linear-scale");
-		const inputOfValueOfMain = linearScaleDiv.querySelector(
-			".linear-scale input"
-		);
-		const saveBtnOfLinearScale = linearScaleDiv.querySelector(
-			".linear-scale-save-btn"
-		);
-		const deleteBtnOfLinearScale = linearScaleDiv.querySelector(
-			".linear-scale-delete-btn"
-		);
-		const linearSecondLast = linearScaleDiv.querySelector(
-			".linear-second-last"
-		);
-		const mainLinearScaleOf =
-			linearScaleDiv.querySelector(".linear-main-scale");
+  option.addEventListener("change", (event) => {
+    // Use "change" event for better handling
+    const linearScaleDiv = event.target.closest(".linear-scale");
+    const inputOfValueOfMain = linearScaleDiv.querySelector(
+      ".linear-scale input"
+    );
+    const saveBtnOfLinearScale = linearScaleDiv.querySelector(
+      ".linear-scale-save-btn"
+    );
+    const deleteBtnOfLinearScale = linearScaleDiv.querySelector(
+      ".linear-scale-delete-btn"
+    );
+    const linearSecondLast = linearScaleDiv.querySelector(
+      ".linear-second-last"
+    );
+    const mainLinearScaleOf =
+      linearScaleDiv.querySelector(".linear-main-scale");
 
-		const newDivOfLinearScale = linearScaleDiv.querySelector(
-			".linear-scale-created"
-		);
-		const newCreatedInput = linearScaleDiv.querySelector(".new-created-input");
-		const linearFirstInput = linearScaleDiv.querySelector(
-			".linear-first input"
-		);
-		const linearSecondInput = linearScaleDiv.querySelector(
-			".linear-second input"
-		);
-		const mainLinearScale = linearScaleDiv.querySelector(".linear-all-scale");
-		const valueOfSelect = [];
-		if (linearScaleDiv) {
-			const dataLinearValue = event.target.dataset.linearValue; // Use dataset property
-			const selectedValue = event.target.value;
-			// Perform additional actions based on dataLinearValue and selectedValue
-			if (dataLinearValue === "first") {
-				valueOfSelect[0] = selectedValue;
-			} else if (dataLinearValue === "last") {
-				valueOfSelect[1] = selectedValue;
-				linearSecondLast.innerHTML = selectedValue;
-			} else {
-				console.log("Invalid dataLinearValue:", dataLinearValue);
-			}
-		}
+    const newDivOfLinearScale = linearScaleDiv.querySelector(
+      ".linear-scale-created"
+    );
+    const newCreatedInput = linearScaleDiv.querySelector(".new-created-input");
+    const linearFirstInput = linearScaleDiv.querySelector(
+      ".linear-first input"
+    );
+    const linearSecondInput = linearScaleDiv.querySelector(
+      ".linear-second input"
+    );
+    const mainLinearScale = linearScaleDiv.querySelector(".linear-all-scale");
+    const valueOfSelect = [];
+    if (linearScaleDiv) {
+      const dataLinearValue = event.target.dataset.linearValue; // Use dataset property
+      const selectedValue = event.target.value;
+      // Perform additional actions based on dataLinearValue and selectedValue
+      if (dataLinearValue === "first") {
+        valueOfSelect[0] = selectedValue;
+      } else if (dataLinearValue === "last") {
+        valueOfSelect[1] = selectedValue;
+        linearSecondLast.innerHTML = selectedValue;
+      } else {
+        console.log("Invalid dataLinearValue:", dataLinearValue);
+      }
+    }
 
-		saveBtnOfLinearScale.addEventListener("click", () => {
-			if (newDivOfLinearScale.classList.contains("d-none")) {
-				const crateInput = createCheckboxes(Number(valueOfSelect[1]));
-				linearScaleDiv.querySelector(".linear-input-main-value").innerText =
-					inputOfValueOfMain.value;
-				linearScaleDiv.querySelector(".inputValue1").innerText =
-					linearFirstInput.value;
-				linearScaleDiv.querySelector(".inputValue2").innerText =
-					linearSecondInput.value;
-				if (crateInput) {
-					const allCheckInput = crateInput.querySelectorAll("input");
-					allCheckInput.forEach((input) => {
-						input.addEventListener("change", () => {
-							console.log(input.value);
-						});
-					});
-				}
-				// value of all input
-				console.log(
-					inputOfValueOfMain.value,
-					linearFirstInput.value,
-					linearSecondInput.value
-				);
-				// value of all input
-				newCreatedInput.append(crateInput);
-				mainLinearScale.classList.add("d-none");
-				mainLinearScaleOf.classList.add("d-none");
-				newDivOfLinearScale.classList.remove("d-none");
-				deleteBtnOfLinearScale.classList.remove("d-none");
-			} else {
-				deleteBtnOfLinearScale.classList.remove("d-none");
-			}
-		});
-		deleteBtnOfLinearScale.addEventListener("click", () => {
-			linearScaleDiv.querySelector(".linear-input-main-value").innerText = "";
-			linearScaleDiv.querySelector(".inputValue1").innerText = "";
-			linearScaleDiv.querySelector(".inputValue2").innerText = "";
-			newCreatedInput.innerHTML = "";
-			inputOfValueOfMain.value = "";
-			linearFirstInput.value = "";
-			linearSecondInput.value = "";
-			newDivOfLinearScale.classList.add("d-none");
-			mainLinearScale.classList.remove("d-none");
-			mainLinearScaleOf.classList.remove("d-none");
-		});
-	});
+    saveBtnOfLinearScale.addEventListener("click", () => {
+      if (newDivOfLinearScale.classList.contains("d-none")) {
+        const crateInput = createCheckboxes(Number(valueOfSelect[1]));
+        linearScaleDiv.querySelector(".linear-input-main-value").innerText =
+          inputOfValueOfMain.value;
+        linearScaleDiv.querySelector(".inputValue1").innerText =
+          linearFirstInput.value;
+        linearScaleDiv.querySelector(".inputValue2").innerText =
+          linearSecondInput.value;
+        if (crateInput) {
+          const allCheckInput = crateInput.querySelectorAll("input");
+          allCheckInput.forEach((input) => {
+            input.addEventListener("change", () => {
+              console.log(input.value);
+            });
+          });
+        }
+        // value of all input
+        console.log(
+          inputOfValueOfMain.value,
+          linearFirstInput.value,
+          linearSecondInput.value
+        );
+        // value of all input
+        newCreatedInput.append(crateInput);
+        mainLinearScale.classList.add("d-none");
+        mainLinearScaleOf.classList.add("d-none");
+        newDivOfLinearScale.classList.remove("d-none");
+        deleteBtnOfLinearScale.classList.remove("d-none");
+      } else {
+        deleteBtnOfLinearScale.classList.remove("d-none");
+      }
+    });
+    deleteBtnOfLinearScale.addEventListener("click", () => {
+      linearScaleDiv.querySelector(".linear-input-main-value").innerText = "";
+      linearScaleDiv.querySelector(".inputValue1").innerText = "";
+      linearScaleDiv.querySelector(".inputValue2").innerText = "";
+      newCreatedInput.innerHTML = "";
+      inputOfValueOfMain.value = "";
+      linearFirstInput.value = "";
+      linearSecondInput.value = "";
+      newDivOfLinearScale.classList.add("d-none");
+      mainLinearScale.classList.remove("d-none");
+      mainLinearScaleOf.classList.remove("d-none");
+    });
+  });
 });
 
 // linear Scale option
 function createCheckboxes(number) {
-	if (typeof number !== "number" || number <= 0) {
-		throw new Error("Number must be a positive integer.");
-	}
+  if (typeof number !== "number" || number <= 0) {
+    throw new Error("Number must be a positive integer.");
+  }
 
-	const div = document.createElement("div");
-	div.classList.add(
-		"d-flex",
-		"flex-wrap",
-		"gap-4",
-		"align-items-center",
-		"justify-content-center",
-		"all-checkbox"
-	);
-	for (let i = 0; i < number; i++) {
-		const checkbox = document.createElement("input");
-		checkbox.type = "checkbox";
-		checkbox.name = `checkbox-${i}`;
-		div.appendChild(checkbox);
-		checkbox.addEventListener("change", (event) => {
-			console.log(event.target.checked);
-		});
-	}
+  const div = document.createElement("div");
+  div.classList.add(
+    "d-flex",
+    "flex-wrap",
+    "gap-4",
+    "align-items-center",
+    "justify-content-center",
+    "all-checkbox"
+  );
+  for (let i = 0; i < number; i++) {
+    const checkbox = document.createElement("input");
+    checkbox.type = "checkbox";
+    checkbox.name = `checkbox-${i}`;
+    div.appendChild(checkbox);
+    checkbox.addEventListener("change", (event) => {
+      console.log(event.target.checked);
+    });
+  }
 
-	return div;
+  return div;
 }
 
 // Here Add Visibility
 function toolBox(id) {
-	const btn = document.querySelector(`#${id} .bold-btn-1`);
-	const italicButtons = document.querySelector(`#${id} .italic-btn-1`);
-	const underlineButtons = document.querySelector(`#${id} .underline-btn-1`);
-	const linkButtons = document.querySelector(`#${id} .link-btn-1`);
-	btn.addEventListener("click", function (e) {
-		const select = e.target;
-		const selectInput = select.closest(".flex-grow-1");
-		const inputField = selectInput.querySelector("input");
-		inputField.style.fontWeight =
-			inputField.style.fontWeight === "bold" ? "normal" : "bold";
-	});
+  const btn = document.querySelector(`#${id} .bold-btn-1`);
+  const italicButtons = document.querySelector(`#${id} .italic-btn-1`);
+  const underlineButtons = document.querySelector(`#${id} .underline-btn-1`);
+  const linkButtons = document.querySelector(`#${id} .link-btn-1`);
+  btn.addEventListener("click", function (e) {
+    const select = e.target;
+    const selectInput = select.closest(".flex-grow-1");
+    const inputField = selectInput.querySelector("input");
+    inputField.style.fontWeight =
+      inputField.style.fontWeight === "bold" ? "normal" : "bold";
+  });
 
-	italicButtons.addEventListener("click", function (e) {
-		const select = e.target;
-		const selectInput = select.closest(".flex-grow-1");
-		const inputField = selectInput.querySelector("input");
-		inputField.style.fontStyle =
-			inputField.style.fontStyle === "italic" ? "normal" : "italic";
-	});
+  italicButtons.addEventListener("click", function (e) {
+    const select = e.target;
+    const selectInput = select.closest(".flex-grow-1");
+    const inputField = selectInput.querySelector("input");
+    inputField.style.fontStyle =
+      inputField.style.fontStyle === "italic" ? "normal" : "italic";
+  });
 
-	underlineButtons.addEventListener("click", function (e) {
-		const select = e.target;
-		const selectInput = select.closest(".flex-grow-1");
-		const inputField = selectInput.querySelector("input");
-		inputField.style.textDecoration =
-			inputField.style.textDecoration === "underline" ? "none" : "underline";
-	});
+  underlineButtons.addEventListener("click", function (e) {
+    const select = e.target;
+    const selectInput = select.closest(".flex-grow-1");
+    const inputField = selectInput.querySelector("input");
+    inputField.style.textDecoration =
+      inputField.style.textDecoration === "underline" ? "none" : "underline";
+  });
 
-	linkButtons.addEventListener("click", function (e) {
-		const select = e.target;
-		const selectInput = select.closest(".flex-grow-1");
-		const inputField = selectInput.querySelector("input");
-		const link = prompt("Enter the link URL:");
-		if (link !== null && link.trim() !== "") {
-			const selectedText = inputField.value.substring(
-				inputField.selectionStart,
-				inputField.selectionEnd
-			);
-			const linkedText = `<a href="${link}">${selectedText}</a>`;
-			const newText =
-				inputField.value.slice(0, inputField.selectionStart) +
-				linkedText +
-				inputField.value.slice(inputField.selectionEnd);
-			inputField.value = newText;
-		}
-	});
+  linkButtons.addEventListener("click", function (e) {
+    const select = e.target;
+    const selectInput = select.closest(".flex-grow-1");
+    const inputField = selectInput.querySelector("input");
+    const link = prompt("Enter the link URL:");
+    if (link !== null && link.trim() !== "") {
+      const selectedText = inputField.value.substring(
+        inputField.selectionStart,
+        inputField.selectionEnd
+      );
+      const linkedText = `<a href="${link}">${selectedText}</a>`;
+      const newText =
+        inputField.value.slice(0, inputField.selectionStart) +
+        linkedText +
+        inputField.value.slice(inputField.selectionEnd);
+      inputField.value = newText;
+    }
+  });
 }
 //  Linier Scale Functions
 function linearScale(id) {
-	const linearScaleOptions = document.querySelector(`#${id} .linear-scale`);
-	linearScaleOptions.addEventListener("change", (event) => {
-		// Use "change" event for better handling
-		const linearScaleDiv = event.target.closest(".linear-scale");
-		const inputOfValueOfMain = linearScaleDiv.querySelector(
-			".linear-scale input"
-		);
-		const saveBtnOfLinearScale = linearScaleDiv.querySelector(
-			".linear-scale-save-btn"
-		);
-		const deleteBtnOfLinearScale = linearScaleDiv.querySelector(
-			".linear-scale-delete-btn"
-		);
-		const linearSecondLast = linearScaleDiv.querySelector(
-			".linear-second-last"
-		);
-		const mainLinearScaleOf =
-			linearScaleDiv.querySelector(".linear-main-scale");
+  const linearScaleOptions = document.querySelector(`#${id} .linear-scale`);
+  linearScaleOptions.addEventListener("change", (event) => {
+    // Use "change" event for better handling
+    const linearScaleDiv = event.target.closest(".linear-scale");
+    const inputOfValueOfMain = linearScaleDiv.querySelector(
+      ".linear-scale input"
+    );
+    const saveBtnOfLinearScale = linearScaleDiv.querySelector(
+      ".linear-scale-save-btn"
+    );
+    const deleteBtnOfLinearScale = linearScaleDiv.querySelector(
+      ".linear-scale-delete-btn"
+    );
+    const linearSecondLast = linearScaleDiv.querySelector(
+      ".linear-second-last"
+    );
+    const mainLinearScaleOf =
+      linearScaleDiv.querySelector(".linear-main-scale");
 
-		const newDivOfLinearScale = linearScaleDiv.querySelector(
-			".linear-scale-created"
-		);
-		const newCreatedInput = linearScaleDiv.querySelector(".new-created-input");
-		const linearFirstInput = linearScaleDiv.querySelector(
-			".linear-first input"
-		);
-		const linearSecondInput = linearScaleDiv.querySelector(
-			".linear-second input"
-		);
-		const mainLinearScale = linearScaleDiv.querySelector(".linear-all-scale");
-		const valueOfSelect = [];
-		if (linearScaleDiv) {
-			const dataLinearValue = event.target.dataset.linearValue; // Use dataset property
-			const selectedValue = event.target.value;
-			// Perform additional actions based on dataLinearValue and selectedValue
-			if (dataLinearValue === "first") {
-				valueOfSelect[0] = selectedValue;
-			} else if (dataLinearValue === "last") {
-				valueOfSelect[1] = selectedValue;
-				linearSecondLast.innerHTML = selectedValue;
-			} else {
-				console.log("Invalid dataLinearValue:", dataLinearValue);
-			}
-		}
+    const newDivOfLinearScale = linearScaleDiv.querySelector(
+      ".linear-scale-created"
+    );
+    const newCreatedInput = linearScaleDiv.querySelector(".new-created-input");
+    const linearFirstInput = linearScaleDiv.querySelector(
+      ".linear-first input"
+    );
+    const linearSecondInput = linearScaleDiv.querySelector(
+      ".linear-second input"
+    );
+    const mainLinearScale = linearScaleDiv.querySelector(".linear-all-scale");
+    const valueOfSelect = [];
+    if (linearScaleDiv) {
+      const dataLinearValue = event.target.dataset.linearValue; // Use dataset property
+      const selectedValue = event.target.value;
+      // Perform additional actions based on dataLinearValue and selectedValue
+      if (dataLinearValue === "first") {
+        valueOfSelect[0] = selectedValue;
+      } else if (dataLinearValue === "last") {
+        valueOfSelect[1] = selectedValue;
+        linearSecondLast.innerHTML = selectedValue;
+      } else {
+        console.log("Invalid dataLinearValue:", dataLinearValue);
+      }
+    }
 
-		saveBtnOfLinearScale.addEventListener("click", () => {
-			if (newDivOfLinearScale.classList.contains("d-none")) {
-				const crateInput = createCheckboxes(Number(valueOfSelect[1]));
-				linearScaleDiv.querySelector(".linear-input-main-value").innerText =
-					inputOfValueOfMain.value;
-				linearScaleDiv.querySelector(".inputValue1").innerText =
-					linearFirstInput.value;
-				linearScaleDiv.querySelector(".inputValue2").innerText =
-					linearSecondInput.value;
-				newCreatedInput.append(crateInput);
-				mainLinearScale.classList.add("d-none");
-				mainLinearScaleOf.classList.add("d-none");
-				newDivOfLinearScale.classList.remove("d-none");
-				deleteBtnOfLinearScale.classList.remove("d-none");
-			} else {
-				deleteBtnOfLinearScale.classList.remove("d-none");
-			}
-		});
-		deleteBtnOfLinearScale.addEventListener("click", () => {
-			linearScaleDiv.querySelector(".linear-input-main-value").innerText = "";
-			linearScaleDiv.querySelector(".inputValue1").innerText = "";
-			linearScaleDiv.querySelector(".inputValue2").innerText = "";
-			newCreatedInput.innerHTML = "";
-			inputOfValueOfMain.value = "";
-			linearFirstInput.value = "";
-			linearSecondInput.value = "";
-			newDivOfLinearScale.classList.add("d-none");
-			mainLinearScale.classList.remove("d-none");
-			mainLinearScaleOf.classList.remove("d-none");
-		});
-	});
+    saveBtnOfLinearScale.addEventListener("click", () => {
+      if (newDivOfLinearScale.classList.contains("d-none")) {
+        const crateInput = createCheckboxes(Number(valueOfSelect[1]));
+        linearScaleDiv.querySelector(".linear-input-main-value").innerText =
+          inputOfValueOfMain.value;
+        linearScaleDiv.querySelector(".inputValue1").innerText =
+          linearFirstInput.value;
+        linearScaleDiv.querySelector(".inputValue2").innerText =
+          linearSecondInput.value;
+        newCreatedInput.append(crateInput);
+        mainLinearScale.classList.add("d-none");
+        mainLinearScaleOf.classList.add("d-none");
+        newDivOfLinearScale.classList.remove("d-none");
+        deleteBtnOfLinearScale.classList.remove("d-none");
+      } else {
+        deleteBtnOfLinearScale.classList.remove("d-none");
+      }
+    });
+    deleteBtnOfLinearScale.addEventListener("click", () => {
+      linearScaleDiv.querySelector(".linear-input-main-value").innerText = "";
+      linearScaleDiv.querySelector(".inputValue1").innerText = "";
+      linearScaleDiv.querySelector(".inputValue2").innerText = "";
+      newCreatedInput.innerHTML = "";
+      inputOfValueOfMain.value = "";
+      linearFirstInput.value = "";
+      linearSecondInput.value = "";
+      newDivOfLinearScale.classList.add("d-none");
+      mainLinearScale.classList.remove("d-none");
+      mainLinearScaleOf.classList.remove("d-none");
+    });
+  });
 }
 
 //  here Add new multiple input
 let rowsValue = 2;
 function addMoreRows(type, value, btn) {
-	const addDiv = document.querySelector(`#${value}`);
-	const newDiv = document.createElement("div");
-	newDiv.innerHTML = `
+  const addDiv = document.querySelector(`#${value}`);
+  const newDiv = document.createElement("div");
+  newDiv.innerHTML = `
     <div class="d-flex  align-items-center gap-3">
       <div class="form-check my-2 d-flex align-items-center gap-2">
         <input
@@ -1585,14 +1585,14 @@ function addMoreRows(type, value, btn) {
       </button>
     </div>
   `;
-	addDiv.appendChild(newDiv);
-	rowsValue++;
+  addDiv.appendChild(newDiv);
+  rowsValue++;
 }
 let columnValue = 2;
 function addMoreColumn(type, value, btn) {
-	const addDiv = document.querySelector(`#${value}`);
-	const newDiv = document.createElement("div");
-	newDiv.innerHTML = `
+  const addDiv = document.querySelector(`#${value}`);
+  const newDiv = document.createElement("div");
+  newDiv.innerHTML = `
     <div class="d-flex  align-items-center gap-3">
       <div class="form-check my-2 d-flex align-items-center gap-2">
         <input
@@ -1616,157 +1616,173 @@ function addMoreColumn(type, value, btn) {
       </button>
     </div>
   `;
-	addDiv.appendChild(newDiv);
-	columnValue++;
+  addDiv.appendChild(newDiv);
+  columnValue++;
 }
 
 // Remove Input From Dynamic Delete Option
 function removeInput2(button, value) {
-	const parentDiv = button.closest(".d-flex");
-	parentDiv.remove();
-	if (value === "rowsValue") {
-		if (rowsValue > 2) {
-			rowsValue--;
-		}
-	} else if (value === "columnValue") {
-		if (columnValue > 2) {
-			columnValue--;
-		}
-	}
+  const parentDiv = button.closest(".d-flex");
+  parentDiv.remove();
+  if (value === "rowsValue") {
+    if (rowsValue > 2) {
+      rowsValue--;
+    }
+  } else if (value === "columnValue") {
+    if (columnValue > 2) {
+      columnValue--;
+    }
+  }
 }
 // Remove Input From Dynamic Delete Option
 //!  here If Anyone click input
 
 // Function to save the multiple choice grid
 function saveMultipleBtn(ele) {
-	const parentDiv = ele.closest(".multiple-choice-grid");
-	const inputDiv = parentDiv.querySelector(".choice-inbox");
-	const titleInput = inputDiv.querySelector("input");
-	const mainDiv = parentDiv.querySelector(".multiple-grid-choice-main-div");
-	const rowsDiv = parentDiv.querySelector(".add-more-multiple-rows");
-	const rows = [];
-	const rowsInputAll = rowsDiv.querySelectorAll("input.form-control");
-	rowsInputAll.forEach((ele) => {
-		rows.push(ele.value);
-	});
-	const columnDiv = parentDiv.querySelector(".add-more-multiple-column");
-	const column = [];
-	const columnInputAll = columnDiv.querySelectorAll("input.form-control");
-	columnInputAll.forEach((ele) => {
-		column.push(ele.value);
-	});
-	mainDiv.classList.add("d-none");
-	console.log(titleInput.value, rows, column);
+  const parentDiv = ele.closest(".multiple-choice-grid");
+  const inputDiv = parentDiv.querySelector(".choice-inbox");
+  const titleInput = inputDiv.querySelector("input");
+  const mainDiv = parentDiv.querySelector(".multiple-grid-choice-main-div");
+  const rowsDiv = parentDiv.querySelector(".add-more-multiple-rows");
+  const rows = [];
+  const rowsInputAll = rowsDiv.querySelectorAll("input.form-control");
+  rowsInputAll.forEach((ele) => {
+    rows.push(ele.value);
+  });
+  const columnDiv = parentDiv.querySelector(".add-more-multiple-column");
+  const column = [];
+  const columnInputAll = columnDiv.querySelectorAll("input.form-control");
+  columnInputAll.forEach((ele) => {
+    column.push(ele.value);
+  });
+  mainDiv.classList.add("d-none");
+  console.log(titleInput.value, rows, column);
 }
 function saveMultipleBtn2(ele) {
-	const parentDiv = ele.closest(".multiple-checkBox-grid");
-	const inputDiv = parentDiv.querySelector(".chekbox-inbox");
-	const titleInput = inputDiv.querySelector("input");
-	const mainDiv = parentDiv.querySelector(".multiple-grid-choice-main-div");
-	const rowsDiv = parentDiv.querySelector(".add-more-multiple-rows");
-	const rows = [];
-	const rowsInputAll = rowsDiv.querySelectorAll("input.form-control");
-	rowsInputAll.forEach((ele) => {
-		rows.push(ele.value);
-	});
-	const columnDiv = parentDiv.querySelector(".add-more-multiple-column");
-	const column = [];
-	const columnInputAll = columnDiv.querySelectorAll("input.form-control");
-	columnInputAll.forEach((ele) => {
-		column.push(ele.value);
-	});
-	mainDiv.classList.add("d-none");
-	console.log(titleInput.value, rows, column);
+  const parentDiv = ele.closest(".multiple-checkBox-grid");
+  const inputDiv = parentDiv.querySelector(".chekbox-inbox");
+  const titleInput = inputDiv.querySelector("input");
+  const mainDiv = parentDiv.querySelector(".multiple-grid-choice-main-div");
+  const rowsDiv = parentDiv.querySelector(".add-more-multiple-rows");
+  const rows = [];
+  const rowsInputAll = rowsDiv.querySelectorAll("input.form-control");
+  rowsInputAll.forEach((ele) => {
+    rows.push(ele.value);
+  });
+  const columnDiv = parentDiv.querySelector(".add-more-multiple-column");
+  const column = [];
+  const columnInputAll = columnDiv.querySelectorAll("input.form-control");
+  columnInputAll.forEach((ele) => {
+    column.push(ele.value);
+  });
+  mainDiv.classList.add("d-none");
+  console.log(titleInput.value, rows, column);
 }
 
 function saveFile(info, value, id) {
-	const mainDiv = info.closest(".flex-grow-1");
-	const findFileInput = mainDiv.querySelector("input[type='file']");
-	const requireFill = mainDiv.querySelector(
-		".require-fill input[type='checkbox']"
-	);
-	console.log(findFileInput.files[0]);
-	console.log(value, id);
-	if (requireFill.checked) {
-		console.log("require fill");
-	} else {
-		console.log("no require fill");
-	}
+  const mainDiv = info.closest(".flex-grow-1");
+  const findFileInput = mainDiv.querySelector("input[type='file']");
+  const requireFill = mainDiv.querySelector(
+    ".require-fill input[type='checkbox']"
+  );
+  console.log(findFileInput.files[0]);
+  console.log(value, id);
+  if (requireFill.checked) {
+    console.log("require fill");
+  } else {
+    console.log("no require fill");
+  }
 }
-
-document.addEventListener("DOMContentLoaded", function () {
-	const container = document.getElementById("survey_create_option");
-
-	let debounceTimeout;
-	const debounceDelay = 1000; // Adjust delay as needed
-
-	container.addEventListener("click", function (event) {
-		if (
-			event.target.classList.contains("bi-caret-up") ||
-			event.target.classList.contains("bi-caret-down")
-		) {
-			clearTimeout(debounceTimeout);
-			debounceTimeout = setTimeout(() => {
-				if (event.target.classList.contains("bi-caret-up")) {
-					moveUp(event.target.closest(".visitor-main-box"));
-				} else if (event.target.classList.contains("bi-caret-down")) {
-					moveDown(event.target.closest(".visitor-main-box"));
-				}
-			}, debounceDelay);
-		}
-	});
-
-	function moveUp(element) {
-		const prevSibling = element.previousElementSibling;
-		if (prevSibling && container.contains(prevSibling)) {
-			container.insertBefore(element, prevSibling);
-		}
-	}
-
-	function moveDown(element) {
-		const nextSibling = element.nextElementSibling;
-		if (nextSibling && container.contains(nextSibling)) {
-			container.insertBefore(element, nextSibling.nextElementSibling);
-		} else {
-			container.appendChild(element);
-		}
-	}
-});
 
 // Function to save information based on the input type
 
 function saveInfo(info, value, id) {
-	// Find the closest parent with class 'flex-grow-1'
-	const mainDiv = info.closest(".flex-grow-1");
+  // Find the closest parent with class 'flex-grow-1'
+  const mainDiv = info.closest(".flex-grow-1");
 
-	// Find the input and checkbox within the mainDiv
-	const inputValue = mainDiv.querySelector("input:not([type='checkbox'])");
-	const requireFill = mainDiv.querySelector(
-		".require-fill input[type='checkbox']"
-	);
-	if (value === "Date" || value === "Time") {
-		dateTime(info, value, id);
-	} else {
-		console.log(inputValue.value, value, id);
-		console.log(requireFill.checked ? "require fill" : "no require fill");
-	}
+  // Find the input and checkbox within the mainDiv
+  const inputValue = mainDiv.querySelector("input:not([type='checkbox'])");
+  const requireFill = mainDiv.querySelector(
+    ".require-fill input[type='checkbox']"
+  );
+  if (value === "Date" || value === "Time") {
+    dateTime(info, value, id);
+  } else {
+    console.log(inputValue.value, value, id);
+    console.log(requireFill.checked ? "require fill" : "no require fill");
+  }
 }
 function dateTime(info, value, id) {
-	const mainDiv = info.closest(".flex-grow-1");
-	const requireFill = mainDiv.querySelector(
-		".require-fill-2 input[type='checkbox']"
-	);
-	const requireFill_3 = mainDiv.querySelector(
-		".require-fill-3 input[type='checkbox']"
-	);
-	if (value === "Date") {
-		const dateInput = mainDiv.querySelector("input[type='date']");
-		console.log(dateInput.value, value, id);
+  const mainDiv = info.closest(".flex-grow-1");
+  const requireFill = mainDiv.querySelector(
+    ".require-fill-2 input[type='checkbox']"
+  );
+  const requireFill_3 = mainDiv.querySelector(
+    ".require-fill-3 input[type='checkbox']"
+  );
+  if (value === "Date") {
+    const dateInput = mainDiv.querySelector("input[type='date']");
+    console.log(dateInput.value, value, id);
 
-		console.log(requireFill.checked ? "require fill" : "no require fill");
-	} else if (value === "Time") {
-		const timeInput = mainDiv.querySelector("input[type='time']");
-		console.log(timeInput.value, value, id);
-		console.log(requireFill_3?.checked ? "require fill" : "no require fill");
-	}
+    console.log(requireFill.checked ? "require fill" : "no require fill");
+  } else if (value === "Time") {
+    const timeInput = mainDiv.querySelector("input[type='time']");
+    console.log(timeInput.value, value, id);
+    console.log(requireFill_3?.checked ? "require fill" : "no require fill");
+    checkbox();
+  }
+}
+
+const container = document.getElementById("survey_create_option");
+
+let debounceTimeout;
+const debounceDelay = 1000; // Adjust delay as needed
+
+container.addEventListener("click", function (event) {
+  if (
+    event.target.classList.contains("bi-caret-up") ||
+    event.target.classList.contains("bi-caret-down")
+  ) {
+    clearTimeout(debounceTimeout);
+    debounceTimeout = setTimeout(() => {
+      const clickedDiv = event.target.closest(".visitor-main-box");
+      const clickedDivId = clickedDiv.id; // Get ID of the clicked div
+
+      if (event.target.classList.contains("bi-caret-up")) {
+        moveUp(clickedDiv);
+      } else if (event.target.classList.contains("bi-caret-down")) {
+        moveDown(clickedDiv);
+      }
+
+      // Log IDs after movement
+      const currentPosition =
+        clickedDiv.parentElement.children.indexOf(clickedDiv);
+      const previousDivId =
+        currentPosition > 0 ? clickedDiv.previousElementSibling.id : null;
+      const nextDivId =
+        currentPosition < container.children.length - 1
+          ? clickedDiv.nextElementSibling.id
+          : null;
+
+      console.log(
+        `Clicked Div ID: ${clickedDivId}, Moved Up From: ${previousDivId}, Moved Down To: ${nextDivId}`
+      );
+    }, debounceDelay);
+  }
+});
+
+function moveUp(element) {
+  const prevSibling = element.previousElementSibling;
+  if (prevSibling && container.contains(prevSibling)) {
+    container.insertBefore(element, prevSibling);
+  }
+}
+
+function moveDown(element) {
+  const nextSibling = element.nextElementSibling;
+  if (nextSibling && container.contains(nextSibling)) {
+    container.insertBefore(element, nextSibling.nextElementSibling);
+  } else {
+    container.appendChild(element);
+  }
 }
