@@ -511,9 +511,6 @@ function saveMultipleBtn3(id, ele, idValue) {
   const inputValues = Array.from(
     parentDiv.querySelectorAll(".form-control")
   ).map((input) => input.value);
-  // Gather all input values with class "form-control"
-
-  // Combine all input values
   const [firstValue, ...remainingValues] = inputValues;
   // alert(1);
   console.log("id of this event:", id);
@@ -1762,23 +1759,5 @@ function reRender() {
       container.appendChild(element);
     }
   }
-
-  const mainDiv = document.getElementById("survey_create_option");
-
-  function assignPositionalIds(mainDiv) {
-    if (!mainDiv || mainDiv.nodeType !== Node.ELEMENT_NODE) {
-      console.error(
-        "Invalid argument: Please provide a valid main div element."
-      );
-      return;
-    }
-
-    const childDivs = mainDiv.querySelectorAll(".visitor-main-box");
-    return Array.from(childDivs).map((childDiv, index) => {
-      return { element: childDiv, position: index + 1 };
-    });
-  }
-
-  console.log(assignPositionalIds(mainDiv));
 }
 reRender();
