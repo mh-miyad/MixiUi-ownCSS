@@ -1,3 +1,5 @@
+const defaultDate = new Date().toISOString().split("T")[0];
+
 class SelectManager {
   constructor(selectSelector) {
     this.container = document.querySelector("body");
@@ -548,7 +550,7 @@ optionCreateBtn.addEventListener("click", () => {
   optionUniqueId++;
   count2++;
   const makeUniqueId = `survey-option-${optionUniqueId}`;
-  option1.innerHTML = ` <div class="my-3   lg-w-75 py-3 pe-5 ps-4 visitor-main-box" id=${makeUniqueId}  >
+  option1.innerHTML = `  <div class="my-3   lg-w-75 py-3 pe-5 ps-4 visitor-main-box" id=${makeUniqueId}  >
   <!-- content -->
   <div class="d-flex justify-content-between align-items-center">
                   <div class="button-group">
@@ -590,7 +592,7 @@ optionCreateBtn.addEventListener("click", () => {
         <div class="d-flex gap-3 align-items-center justify-content-between">
                          
                               <div class="d-flex align-items-center tab-content-3">
-                               
+                                <p class="mt-3 txt-black fs-5 px-4 text-capitalize">Required</p>
                                 <label class="switch-sec  require-fill switch">
                                   <input type="checkbox">
                                   <span class="slider round">
@@ -620,8 +622,7 @@ optionCreateBtn.addEventListener("click", () => {
             <button class="btn fw-bold  link-btn-1"><i class="bi bi-link"></i></button>
           </div>
         </div>
-        <div class="d-flex gap-3 align-items-center justify-content-between">
-                                <button class="btn btn-warning" onclick="saveInfo(this,'Paragraph','${count2}')">Save</button>
+ 
                               <div class="d-flex align-items-center tab-content-3">
                                 <p class="mt-3 txt-black fs-5 px-4 text-capitalize">Required</p>
                                 <label class="switch-sec   require-fill switch">
@@ -633,7 +634,7 @@ optionCreateBtn.addEventListener("click", () => {
                                 </label>
 
                               </div>
-                            </div>
+                            
       
       </div>
       <button class=" mt-0 btn btn-danger prg-btn">
@@ -1105,73 +1106,75 @@ optionCreateBtn.addEventListener("click", () => {
     <div class="flex-grow-1">
      <div>
                           <label for="short-tittle" class="form-label text-dark">
-                            Short Title
+                            Date Title
                           </label>
-                          <input type="text" id="survey-input-1" class="form-control py-3" placeholder="Write ...">
-                       
-                        </div>
-      <label for="writePrg" class="form-label txt-black">Date</label>
+                          <input type="text" id="survey-input-${count2}" class="form-control py-3" placeholder="Write ...">
+
+                          <div>
+                           <label for="writePrg" class="form-label txt-black">Date</label>
       <input type="date" placeholder="Write Paragraph" name="write" id="writePrg"
         class="form-control" />
+                          </div>
+                          <div class="d-flex align-items-center tab-content-3">
+                                <p class="mt-3 txt-black fs-5 px-4 text-capitalize">Required</p>
+                                <label class="switch-sec require-fill switch">
+                                  <input type="checkbox">
+                                  <span class="slider round">
+                                    <span class="switch-text switch-text-yes">Yes</span>
+                                    <span class="switch-text switch-text-no">No</span>
+                                  </span>
+                                </label>
+
+                              </div>
+                        </div>
+     
     </div>
     <button class=" mt-4 btn btn-danger date-input-btn">
       <i class="bi bi-x-lg"></i>
     </button>
   </div>
- 
-    <div class="d-flex gap-3 align-items-center justify-content-between">
-                         <button class="btn btn-warning my-2" onclick="saveInfo(this,'Date','${count2}')">
-    save
-  </button>
-                              <div class="d-flex align-items-center tab-content-3">
-                                <p class="mt-3 txt-black fs-5 px-4 text-capitalize">Required</p>
-                                <label class="switch-sec require-fill switch">
-                                  <input type="checkbox">
-                                  <span class="slider round">
-                                    <span class="switch-text switch-text-yes">Yes</span>
-                                    <span class="switch-text switch-text-no">No</span>
-                                  </span>
-                                </label>
-
-                              </div>
-                            </div>
-</div>
-<div class="time-input d-none my-3">
-<div class=" d-flex justify-content-between align-items-center  gap-3 ">
-  <div class="flex-grow-1">
-   <div>
-                          <label for="short-tittle" class="form-label text-dark">
-                            Short Title
-                          </label>
-                          <input type="text" id="survey-input-1" class="form-control py-3" placeholder="Write ...">
-                       
-                        </div>
-    <label for="writePrg" class="form-label txt-black">Time</label>
-    <input type="time" placeholder="Write Paragraph" name="write" id="writePrg"
-      class="form-control" />
-  </div>
-  <button class=" mt-4 btn btn-danger time-input-btn">
-    <i class="bi bi-x-lg"></i>
-  </button>
+       
+                            
 </div>
 
-  <div class="d-flex gap-3 align-items-center justify-content-between">
-                           <button class="btn btn-warning my-2" onclick="saveInfo(this,'Time','${count2}')">
-  save
-</button>
-                              <div class="d-flex align-items-center tab-content-3">
-                                <p class="mt-3 txt-black fs-5 px-4 text-capitalize">Required</p>
-                                <label class="switch-sec require-fill switch">
-                                  <input type="checkbox">
-                                  <span class="slider round">
-                                    <span class="switch-text switch-text-yes">Yes</span>
-                                    <span class="switch-text switch-text-no">No</span>
-                                  </span>
-                                </label>
+           <div class="time-input d-none my-3">
+													<div class=" d-flex justify-content-between align-items-center  gap-3 ">
+														<div class="flex-grow-1">
+															<div>
+																<label for="time-tittle" class="form-label text-dark">
+																	Short Title
+																</label>
+																<input type="text" id="survey-input-${count2}" class="form-control py-3"
+																	placeholder="Write ...">
+																<div>
+																	<label for="writePrg" class="form-label txt-black">Time</label>
+																	<input type="time" class="form-control" />
+																</div>
+																<div class="d-flex align-items-center tab-content-3">
+																	<p class="mt-3 txt-black fs-5 px-4 text-capitalize">
+																		Required
+																	</p>
+																	<label class="switch-sec switch require-fill">
+																		<input type="checkbox">
+																		<span class="slider round">
+																			<span class="switch-text switch-text-yes">Yes</span>
+																			<span class="switch-text switch-text-no">No</span>
+																		</span>
+																	</label>
 
-                              </div>
-                            </div>
-</div>
+																</div>
+															</div>
+
+														</div>
+														<button type="button" class=" mt-4 btn btn-danger time-input-btn">
+															<i class="bi bi-x-lg"></i>
+														</button>
+													</div>
+
+
+
+												</div>
+
   </div>
   
     <div class="block-wrapper">
@@ -1228,41 +1231,9 @@ optionCreateBtn.addEventListener("click", () => {
                 </span> 
                 <span>DropDown</span>
               </p>
-              <hr class="border-1 border border-dark">
+            
             </li>
-            <li>
-              <p class="txt-black fs-4 fw-normal">
-                <span>
-                  <img src="./assets/images/icon/fileUpload.png" alt="" class="mx-2">
-                </span> 
-                <span>File Upload</span>
-              </p>
-            </li>
-            <li>
-              <hr class="border-1 border border-dark">
-              <p class="txt-black  fs-4 fw-normal">
-                <span>
-                  <img src="./assets/images/icon/lineearScale.png" alt="" class="mx-2">
-                </span> 
-                <span>Linear Scale</span>
-              </p>
-            </li>
-            <li>
-              <p class="txt-black fs-4 fw-normal">
-                <span>
-                  <img src="./assets/images/icon/multipleGrid.png" alt="" class="mx-2">
-                </span> 
-                <span>Multiple Choice Grid</span>
-              </p>
-            </li>
-            <li>
-              <p class="txt-black fs-4 fw-normal">
-                <span>
-                  <img src="./assets/images/icon/checkBoxGrid.png" alt="" class="mx-2">
-                </span> 
-                <span>Checkbox Grid</span>
-              </p>
-            </li>
+           
             <li>
               <hr class="border-1 border border-dark">
               <p class="txt-black fs-4 fw-normal">
