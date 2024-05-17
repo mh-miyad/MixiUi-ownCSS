@@ -1296,10 +1296,7 @@ optionCreateBtn.addEventListener("click", () => {
   reload();
   toolBox(makeUniqueId);
   linearScale(makeUniqueId);
-  // showValue(
-  //   document.querySelector(`#survey-option-${optionUniqueId} .short-title`),
-  //   "Short Answer"
-  // );
+  reRender();
 });
 
 // Create Dynamic option
@@ -1697,24 +1694,6 @@ function saveFile(info, value, id) {
   }
 }
 
-// Function to save information based on the input type
-
-function saveInfo(info, value, id) {
-  // Find the closest parent with class 'flex-grow-1'
-  const mainDiv = info.closest(".flex-grow-1");
-
-  // Find the input and checkbox within the mainDiv
-  const inputValue = mainDiv.querySelector("input:not([type='checkbox'])");
-  const requireFill = mainDiv.querySelector(
-    ".require-fill input[type='checkbox']"
-  );
-  if (value === "Date" || value === "Time") {
-    dateTime(info, value, id);
-  } else {
-    console.log(inputValue.value, value, id);
-    console.log(requireFill.checked ? "require fill" : "no require fill");
-  }
-}
 function dateTime(info, value, id) {
   const mainDiv = info.closest(".flex-grow-1");
   const requireFill = mainDiv.querySelector(
@@ -1741,51 +1720,65 @@ const container = document.getElementById("survey_create_option");
 let debounceTimeout;
 const debounceDelay = 1000; // Adjust delay as needed
 
-container.addEventListener("click", function (event) {
-  if (
-    event.target.classList.contains("bi-caret-up") ||
-    event.target.classList.contains("bi-caret-down")
-  ) {
-    clearTimeout(debounceTimeout);
-    debounceTimeout = setTimeout(() => {
-      const clickedDiv = event.target.closest(".visitor-main-box");
-      const clickedDivId = clickedDiv.id; // Get ID of the clicked div
+function reRender() {
+  container.addEventListener("click", function (event) {
+    if (
+      event.target.classList.contains("bi-caret-up") ||
+      event.target.classList.contains("bi-caret-down")
+    ) {
+      clearTimeout(debounceTimeout);
+      debounceTimeout = setTimeout(() => {
+        const clickedDiv = event.target.closest(".visitor-main-box");
 
-      if (event.target.classList.contains("bi-caret-up")) {
-        moveUp(clickedDiv);
-      } else if (event.target.classList.contains("bi-caret-down")) {
-        moveDown(clickedDiv);
-      }
+        if (event.target.classList.contains("bi-caret-up")) {
+          moveUp(clickedDiv);
+        } else if (event.target.classList.contains("bi-caret-down")) {
+          moveDown(clickedDiv);
+        }
+      }, debounceDelay);
+    }
+  });
 
-      // Log IDs after movement
-      const currentPosition =
-        clickedDiv.parentElement.children.indexOf(clickedDiv);
-      const previousDivId =
-        currentPosition > 0 ? clickedDiv.previousElementSibling.id : null;
-      const nextDivId =
-        currentPosition < container.children.length - 1
-          ? clickedDiv.nextElementSibling.id
-          : null;
+  function moveUp(element) {
+    const prevSibling = element.previousElementSibling;
+    console.log("moveUp", prevSibling);
 
-      console.log(
-        `Clicked Div ID: ${clickedDivId}, Moved Up From: ${previousDivId}, Moved Down To: ${nextDivId}`
+    if (prevSibling === null) {
+      container.insertBefore(element, container.firstChild);
+      console.log(container.firstChild.id);
+    } else if (prevSibling && container.contains(prevSibling)) {
+      container.insertBefore(element, prevSibling);
+    } else {
+      alert("Can't move up");
+    }
+  }
+
+  function moveDown(element) {
+    const nextSibling = element.nextElementSibling;
+    console.log("moveDown", nextSibling);
+    if (nextSibling && container.contains(nextSibling)) {
+      container.insertBefore(element, nextSibling.nextElementSibling);
+    } else {
+      container.appendChild(element);
+    }
+  }
+
+  const mainDiv = document.getElementById("survey_create_option");
+
+  function assignPositionalIds(mainDiv) {
+    if (!mainDiv || mainDiv.nodeType !== Node.ELEMENT_NODE) {
+      console.error(
+        "Invalid argument: Please provide a valid main div element."
       );
-    }, debounceDelay);
-  }
-});
+      return;
+    }
 
-function moveUp(element) {
-  const prevSibling = element.previousElementSibling;
-  if (prevSibling && container.contains(prevSibling)) {
-    container.insertBefore(element, prevSibling);
+    const childDivs = mainDiv.querySelectorAll(".visitor-main-box");
+    return Array.from(childDivs).map((childDiv, index) => {
+      return { element: childDiv, position: index + 1 };
+    });
   }
-}
 
-function moveDown(element) {
-  const nextSibling = element.nextElementSibling;
-  if (nextSibling && container.contains(nextSibling)) {
-    container.insertBefore(element, nextSibling.nextElementSibling);
-  } else {
-    container.appendChild(element);
-  }
+  console.log(assignPositionalIds(mainDiv));
 }
+reRender();

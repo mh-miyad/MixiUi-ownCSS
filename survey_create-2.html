@@ -838,7 +838,7 @@
 							</div>
 						</div>
 						<!-- here Start main Section  -->
-						<form action="#" class="my-5" id="create-survey-form">
+						<main class="my-5" id="create-survey-form">
 							<!-- Here start Create Survey Section  -->
 							<div class="enter-survey-name p-3  ">
 								<div>
@@ -1643,12 +1643,12 @@
 							</div>
 
 							<div>
-								<button type="submit" class="btn btn-warning ">Submit </button>
+								<button type="button" class="btn btn-warning " id="submitButton">Submit </button>
 							</div>
 
 
 							<!-- Here start Create Survey Section  -->
-						</form>
+						</main>
 
 						<!--  here End main section  page  -->
 					</div>
@@ -1800,55 +1800,35 @@
 					const requireFill = mainDiv.querySelector(
 						".require-fill input[type='checkbox']"
 					);
-					let shortAnswer;
-					requireFill.addEventListener('change', (event) => {
-						if (!event.target.checked) {
-							console.log("no require fill");
-							console.log(`Input ID: ${inputId}, Value: ${inputValue},`)
-							shortAnswer = {
-								id: inputId,
-								value: inputValue,
-								requireFill: !event.target.checked
-							}
-						} else {
-							console.log("require fill");
-							console.log(`Input ID: ${inputId}, Value: ${inputValue},`)
-							shortAnswer = {
-								id: inputId,
-								value: inputValue,
-								requireFill: true
-							}
-						}
-					});
-
-					console.log(`Input ID: ${inputId}, Value: ${inputValue},"no require fill"`);
-					shortAnswer = {
+					let shortAnswer = {
 						id: inputId,
 						value: inputValue,
 						requireFill: false
 					}
+					requireFill.addEventListener('change', (event) => {
+						if (!event.target.checked) {
+							const updateRequired = serializeData.find((data) => data.id === inputId);
+							if (updateRequired) { // Check if updateRequired exists before assignment
+								updateRequired.requireFill = false;
+							}
+						} else {
+							const updateRequired = serializeData.find((data) => data.id === inputId);
+							if (updateRequired) {
+								updateRequired.requireFill = true;
+							}
+						}
+					});
 					serializeData.push(shortAnswer);
 				});
 			});
 		}
 		reload()
 
+		document.getElementById("submitButton").addEventListener("click", () => {
+			console.log(serializeData);
+			reRender();
+		});
 
-		const form = document.getElementById('create-survey-form')
-
-		form.addEventListener('submit', function (event) {
-			event.stopPropagation();
-			event.preventDefault();
-			const formData = new FormData(form);
-
-			// Iterate over form data entries and log them in a clear format
-			for (const [key, value] of formData.entries()) {
-				console.log(`Key: ${key}, Value: ${value}`);
-			}
-			const data = Object.fromEntries(formData.entries());
-			console.log(data);
-
-		})
 
 
 	</script>
