@@ -2235,18 +2235,18 @@ const inputOfRequires = [
   ".multiple-input",
 ];
 
-inputOfRequires.forEach((ele) => {
-  document.querySelectorAll(ele).forEach((div) => {
+  document.querySelectorAll(".short-title").forEach((div) => {
     const mainDiv = div.closest(".flex-grow-1");
 
     const requireFill = mainDiv.querySelector(".require-fill input[type='checkbox']");
 
     if (requireFill && requireFill.checked) { // Check for existence and checked state
-      console.log(`${ele} requires filling`); // Consistent wording
-    }
-  });
-});
+      console.log(` ${div.id} requires filling`); // Consistent wording
+    }else{
+      console.log(` ${div.id} not  requires filling`); // Consistent wording
 
+		}
+  });
 
 		
 	
