@@ -116,7 +116,7 @@
 					<div class="top-search-box mb-0">
 						<form class="search-form" action="">
 							<div class="input-group">
-								<button type="submit" class="btn input-group-text" id="basic-addon1">
+								<button type="button" type="submit" class="btn input-group-text" id="basic-addon1">
 									<i data-feather="search" class="feather-sm"></i>
 								</button>
 								<input type="text" class="form-control" placeholder="Search..." aria-label="Username"
@@ -137,7 +137,7 @@
 						<!-- -------------------------------------------------------------- -->
 
 						<li class="nav-item">
-							<button class="theme-switcher gray-circle-btn waves-effect waves-dark" id="btnSwitch" type="button"
+							<button type="button" class="theme-switcher gray-circle-btn waves-effect waves-dark" id="btnSwitch" type="button"
 								title="Switch theme">
 								<span class="sr-only">Switch theme</span>
 								<i class="sun-icon" data-feather="sun" aria-hidden="true"></i>
@@ -872,27 +872,28 @@
 							<!--  Here design part  -->
 
 							<!--  Here design part  -->
-							<!-- Here start Option Section -->
+							<form action="#" id="survey-create-form">
+								<!-- Here start Option Section -->
 							<div class="d-flex flex-column flex-lg-row align-items-lg-start justify-content-lg-between">
-								<div id="survey_create_option" class=" my-5 my-lg-4 flex-grow-1">
+								<div id="survey_create_option" class=" my-5 my-lg-0 flex-grow-1">
 									<!-- Option 1 -->
 
 									<div class="my-3   lg-w-75 py-3 pe-5 ps-4 visitor-main-box" id="survey-option-1">
 										<!-- content -->
 										<div class="d-flex justify-content-between align-items-center">
 											<div class="button-group">
-												<button type="button" class="btn up-btn">
+												<button type="button" type="button" class="btn up-btn">
 													<i class="bi bi-caret-up"></i>
 												</button>
-												<button type="button" class="btn down-btn">
+												<button type="button" type="button" class="btn down-btn">
 													<i class="bi bi-caret-down"></i>
 												</button>
 											</div>
 											<div>
-												<button type="button" class="btn" data-bs-toggle="modal" data-bs-target="#staticBackdrop">
+												<button type="button" type="button" class="btn" data-bs-toggle="modal" data-bs-target="#staticBackdrop">
 													<i class="bi bi-pen"></i>
 												</button>
-												<button type="button" class="btn text-danger" onclick="deleteBox('survey-option-1')">
+												<button type="button" type="button" class="btn text-danger" onclick="deleteBox('survey-option-1')">
 													<i class="bi bi-trash"></i>
 												</button>
 											</div>
@@ -903,16 +904,16 @@
 												<div class="short-title  d-flex justify-content-between align-items-start  gap-2  ">
 													<div class="flex-grow-1">
 														<div>
-															<label for="short-tittle" class="form-label text-dark">
+															<label for="short-tittle-1" class="form-label text-dark">
 																Short Title
 															</label>
 															<input type="text" id="short-tittle-1" name="short-tittle-1"
 																class="form-control py-3 short-title" placeholder="Write ...">
 															<div class="toolBar">
-																<button type="button" class="btn fw-bold  cursor-pointer  bold-btn-1">B</button>
-																<button type="button" class="btn fw-bold  cursor-pointer  italic-btn-1">I</button>
-																<button type="button" class="btn fw-bold  cursor-pointer  underline-btn-1">U</button>
-																<button type="button" class="btn fw-bold  link-btn-1"><i
+																<button type="button" type="button" class="btn fw-bold  cursor-pointer  bold-btn-1">B</button>
+																<button type="button" type="button" class="btn fw-bold  cursor-pointer  italic-btn-1">I</button>
+																<button type="button" type="button" class="btn fw-bold  cursor-pointer  underline-btn-1">U</button>
+																<button type="button" type="button" class="btn fw-bold  link-btn-1"><i
 																		class="bi bi-link"></i></button>
 															</div>
 														</div>
@@ -929,23 +930,23 @@
 
 														</div>
 													</div>
-													<button type="button" class="mt-5 btn btn-danger short-title-btn">
+													<!-- <button type="button" type="button" class="mt-5 btn btn-danger short-title-btn">
 														<i class="bi bi-x-lg"></i>
-													</button>
+													</button> -->
 												</div>
 												<div
 													class="prgraph-input paragraph-input d-none  d-flex justify-content-between align-items-center  gap-2 ">
 													<div class="flex-grow-1">
 														<div>
-															<label for="paragraph-tittle" class="form-label text-dark">
+															<label for="paragraph-tittle-1" class="form-label text-dark">
 																Paragraph
 															</label>
-															<input type="text" id="survey-input-1" class="form-control py-3 " placeholder="Write ...">
+															<input type="text" id="survey-input-1" name="paragraph-tittle-1" class="form-control py-3 " placeholder="Write ...">
 															<div class="toolBar">
-																<button type="button" class="btn fw-bold  cursor-pointer  bold-btn-1">B</button>
-																<button type="button" class="btn fw-bold  cursor-pointer  italic-btn-1">I</button>
-																<button type="button" class="btn fw-bold  cursor-pointer  underline-btn-1">U</button>
-																<button type="button" class="btn fw-bold  link-btn-1"><i
+																<button type="button" type="button" class="btn fw-bold  cursor-pointer  bold-btn-1">B</button>
+																<button type="button" type="button" class="btn fw-bold  cursor-pointer  italic-btn-1">I</button>
+																<button type="button" type="button" class="btn fw-bold  cursor-pointer  underline-btn-1">U</button>
+																<button type="button" type="button" class="btn fw-bold  link-btn-1"><i
 																		class="bi bi-link"></i></button>
 															</div>
 														</div>
@@ -964,46 +965,39 @@
 														</div>
 
 													</div>
-													<button type="button" class=" mt-0 btn btn-danger prg-btn">
-														<i class="bi bi-x-lg"></i>
-													</button>
+
 												</div>
 												<div class="multiple-input d-none my-3">
 													<div class="add-more-multiple-input" id="add-more-multiple-input-1">
 														<div class="multiple-box">
-															<label for="Titile" class="form-label text-dark">
+															<label for="multiple-title-1" class="form-label text-dark">
 																Multiple Choice Tittle
 															</label>
-															<input type="text" class="form-control py-3" placeholder="Write ...">
+															<input type="text"  name="multiple-title-1" class="form-control py-3" placeholder="Write ...">
 
 														</div>
 														<div class="d-flex  align-items-center  gap-3 ">
 															<div class="form-check my-2 d-flex align-items-center gap-2 multiple-box-all ">
 																<input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios1" />
 																<div>
-																	<input class="form-control txt-black mt-1 fw-normal" id="choice-input-first"
+																	<input class="form-control txt-black mt-1 fw-normal" 
+																	name="multiple-choice-1-1" id="choice-input-first"
 																		placeholder="Option 1" />
 																</div>
 															</div>
-															<button type="button" class=" mt-1 btn btn-danger multiple-choice-btn">
-																<i class="bi bi-x-lg"></i>
-															</button>
+
 														</div>
 													</div>
 													<div class="form-check my-2 d-flex align-items-center gap-2">
 														<input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios2"
 															value="option2" />
-														<Button type="button" class="btn text-muted mt-1 fw-normal"
-															onclick="addMoreInput( `radio`,`add-more-multiple-input-1`,`multiple-choice-btn`)">
+														<button type="button" type="button" class="btn text-muted mt-1 fw-normal"
+															onclick="addMoreInput( `radio`,`add-more-multiple-input-1`,`multiple-choice-btn`,`multiple-choice-1`)">
 															Add option
 														</Button>
 													</div>
 
 
-													<div class="d-flex gap-3 align-items-center justify-content-between">
-														<button type="button" class="btn btn-warning mx-3"
-															onclick="saveMultipleBtn3( 'survey_create_option','multiple-input','1')">
-															Save</button>
 														<div class="d-flex align-items-center tab-content-3">
 															<p class="mt-3 txt-black fs-5 px-4 text-capitalize">
 																Required
@@ -1017,15 +1011,15 @@
 															</label>
 
 														</div>
-													</div>
+													
 												</div>
 												<div class="choice-input d-none my-3">
 													<div class="add-more-choice-input" id="add-more-choice-input-1">
 														<div>
-															<label for="Titile" class="form-label text-dark">
+															<label for="Titile" name="choice-tittle-1" class="form-label text-dark">
 																Choice Tittle
 															</label>
-															<input type="text" class="form-control py-3" placeholder="Write ...">
+															<input type="text" class="form-control py-3" name="choice-title-1-1"  placeholder="Write ...">
 
 														</div>
 														<div class="d-flex  align-items-center  gap-3">
@@ -1035,385 +1029,93 @@
 
 																<div>
 																	<input class="form-control txt-black mt-1 fw-normal" id="choice-input-first"
+																	name="choice-input-1-1"
 																		placeholder="Option 1" />
 																</div>
 
 
 															</div>
-															<button type="button" class=" mt-1 btn btn-danger choice-input-btn">
-																<i class="bi bi-x-lg"></i>
-															</button>
+
 														</div>
 													</div>
 													<div class="form-check my-2 d-flex align-items-center gap-2">
 														<input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios2"
 															value="option2" />
-														<button type="button" class="btn text-muted mt-1 fw-normal"
-															onclick="addMoreInput( `checkbox`,`add-more-choice-input-1`,`choice-input-btn`)">
+														<button type="button" type="button" class="btn text-muted mt-1 fw-normal"
+															onclick="addMoreInput( `checkbox`,`add-more-choice-input-1`,`choice-input-btn`, `choice-input-1`)">
 															Add option
 														</button>
 													</div>
-													<button type="button" class="btn btn-warning mx-3"
-														onclick="saveMultipleBtn3( 'survey_create_option','choice-input','1')">
-														Save</button>
+													
+														<div class="d-flex align-items-center tab-content-3">
+															<p class="mt-3 txt-black fs-5 px-4 text-capitalize">
+																Required
+															</p>
+															<label class="switch-sec  require-fill switch">
+																<input type="checkbox">
+																<span class="slider round">
+																	<span class="switch-text switch-text-yes">Yes</span>
+																	<span class="switch-text switch-text-no">No</span>
+																</span>
+															</label>
+
+														</div>
 												</div>
 												<div class="dropdown-input d-none my-3">
 													<div class="add-more-dropdown-input" id="add-more-dropdown-input-1">
 														<div>
-															<label for="Titile" class="form-label text-dark">
+															<label for="Titile"  class="form-label text-dark">
 																DropDown Tittle
 															</label>
-															<input type="text" class="form-control py-3" placeholder="Write ...">
+															<input type="text" name="dropdown-tittle-1" class="form-control py-3" placeholder="Write ...">
 
 														</div>
 														<div class="d-flex  align-items-center  gap-3">
 															<div class="form-check my-2 d-flex align-items-center gap-2 ">
-																<input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios1"
+																<input class="form-check-input" type="radio" name="dropdown-input-1-1" id="exampleRadios1"
 																	value="option1" />
 																<div>
 																	<input class="form-control txt-black mt-1 fw-normal" id="choice-input-first"
+																	name="dropdown-input-1-1" 
 																		placeholder="Option 1" />
 																</div>
 
 															</div>
-															<button type="button" class=" mt-1 btn btn-danger dropdown-input-btn">
-																<i class="bi bi-x-lg"></i>
-															</button>
+
 														</div>
 													</div>
 													<div class="form-check my-2 d-flex align-items-center gap-2">
 														<input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios2"
 															value="option2" />
-														<button type="button" class="btn text-muted mt-1 fw-normal"
-															onclick="addMoreInput( `radio`,`add-more-dropdown-input-1`,`dropdown-input-btn`)">
+														<button type="button" type="button" class="btn text-muted mt-1 fw-normal"
+															onclick="addMoreInput( `radio`,`add-more-dropdown-input-1`,`dropdown-input-btn`,`dropdown-input-1`)">
 															Add option
 														</Button>
 													</div>
-													<button type="button" class="btn btn-warning mx-3"
-														onclick="saveMultipleBtn3( 'survey_create_option','dropdown-input','1')">
-														Save</button>
-												</div>
-												<div class="fileUpload-input d-none my-3">
-													<div class=" d-flex justify-content-between align-items-center  gap-3 ">
-														<div class="flex-grow-1">
-															<label for="writePrg" class="form-label txt-black">Upload
-																File </label>
-
-															<div class="form-group card dropzone border-dashed">
-																<div class="card-img">
-																	<div class="img-preview position-relative btn-file">
-																		<div class="yes">
-																			<img src="assets/images/icon/cloud-upload.png" alt="broken_image"
-																				class="preview1 ImgPreview upload-img mx-auto" />
-																		</div>
-																		<input type="file" title="Upload_img" class="imag form-control input-img" />
-																	</div>
-																	<button type="button" class="removeImage1" class="close-btn btn-rmv1"><i
-																			class="bi bi-x-circle-fill"></i></button>
-																</div>
-															</div>
-														</div>
-														<button type="button" class=" mt-4 btn btn-danger fileUpload-input-btn">
-															<i class="bi bi-x-lg"></i>
-														</button>
-
-													</div>
-													<button type="button" class="btn btn-warning mx-3"
-														onclick="saveFile(this,'File Upload','1')">Save</button>
-												</div>
-												<div
-													class="linear-scale-input d-none my-3 d-flex justify-content-between align-items-start gap-3 ">
-													<div class="flex-grow-1 linear-scale">
-														<label for="enter-survey-name" class="form-label text-dark">
-															Tittle Of Scale
-														</label>
-														<input type="text" class="form-control py-3" placeholder="Write ...">
-														<div class="toolBar my-3">
-															<span class="mx-1 bold-btn-1">B</span>
-															<span class="mx-1 italic-btn-1">I</span>
-															<span class="mx-1 underline-btn-1">U</span>
-															<span class="mx-1 link-btn-1"><i class="bi bi-link"></i></span>
-														</div>
-														<div>
-															<!-- here level  select  -->
-															<div class="linear-main-scale d-flex gap-5 align-items-center">
-																<select name="levelFirst" class="form-select w-50 linear-scale-option-value" id=""
-																	data-linear-value="first">
-																	<option value="1">1</option>
-																</select>
-																<div>To</div>
-																<select name="levelLast" class="form-select w-50 linear-scale-option-value" id=""
-																	data-linear-value="last">
-																	<option value="2">2</option>
-																	<option value="3">3</option>
-																	<option value="4">4</option>
-																	<option value="5">5</option>
-																	<option value="6">6</option>
-																	<option value="7">7</option>
-																	<option value="8">8</option>
-																	<option value="9">9</option>
-																	<option value="10">1</option>
-																</select>
-
-															</div>
-															<!-- here level  select  -->
-															<div class="linear-all-scale my-4">
-																<!-- here level left name  -->
-																<div class="d-flex align-items-center gap-2 my-2 linear-first">
-																	<span class="text-dark">1</span>
-																	<input class="form-control" type="text" name="" id="">
-																</div>
-
-																<!-- here level left name  -->
-
-
-																<!-- here level  Right Name   -->
-																<div class="d-flex align-items-center gap-2 linear-second">
-																	<span class="linear-second-last text-dark">2</span>
-																	<input class="form-control" type="text" name="" id="">
-																</div>
-																<!-- here level  Right Name   -->
-															</div>
-															<div class="linear-scale-created d-none">
-																<h2 class="linear-input-main-value text-dark text-center text-capitalize ">
-																</h2>
-																<div class="d-flex justify-content-between align-items-center  my-4">
-																	<span class="inputValue1 text-dark">1</span>
-																	<div class="new-created-input">
-
-																	</div>
-																	<span class="inputValue2 text-dark">10</span>
-																</div>
-															</div>
-														</div>
-
-														<div class="d-flex gap-3 align-items-center justify-content-between">
-															<div>
-																<button type="button" class="btn btn-warning my-3 linear-scale-save-btn ">Save</button>
-																<button type="button"
-																	class="btn btn-danger my-3 linear-scale-delete-btn d-none">Delete</button>
-															</div>
-															<div class="d-flex align-items-center tab-content-3">
-																<p class="mt-3 txt-black fs-5 px-4 text-capitalize">
-																	Required</p>
-																<label class="switch-sec switch">
-																	<input type="checkbox">
-																	<span class="slider round">
-																		<span class="switch-text switch-text-yes">Yes</span>
-																		<span class="switch-text switch-text-no">No</span>
-																	</span>
-																</label>
-
-															</div>
-														</div>
-													</div>
-													<button type="button" class=" mt-4 btn btn-danger linearScale-input-btn">
-														<i class="bi bi-x-lg"></i>
-													</button>
-												</div>
-
-												<div
-													class="multiple-choice-grid d-none my-3 d-flex justify-content-between align-items-start  gap-3">
-													<div>
-														<div class="choice-inbox">
-															<label for="Titile" class="form-label text-dark">
-																Multiple Choice Tittle
+													
+														<div class="d-flex align-items-center tab-content-3">
+															<p class="mt-3 txt-black fs-5 px-4 text-capitalize">
+																Required
+															</p>
+															<label class="switch-sec  require-fill switch">
+																<input type="checkbox">
+																<span class="slider round">
+																	<span class="switch-text switch-text-yes">Yes</span>
+																	<span class="switch-text switch-text-no">No</span>
+																</span>
 															</label>
-															<input type="text" class="form-control py-3" placeholder="Write ...">
+
 														</div>
-														<div
-															class="d-flex align-items-lg-start flex-column flex-xl-row gap-3 multiple-grid-choice-main-div">
-															<div>
-																<!-- Rows part  -->
-																<div class="add-more-multiple-rows" id="add-more-multiple-rows-1">
-																	<h2 class="text-dark mx-5 mt-2">
-																		Rows </h2>
-																	<div class="d-flex align-items-center  gap-3">
-																		<div class="form-check my-2 d-flex align-items-center gap-2 ">
-																			<input class="form-check-input" type="radio" name="exampleRadios"
-																				id="exampleRadios1" value="option1" />
-																			<div>
-																				<input class="form-control txt-black mt-1 fw-normal" id="choice-input-first"
-																					placeholder="Option 1" />
-																			</div>
-																		</div>
-																		<button type="button" class=" mt-1 btn btn-danger multiple-choice-btn">
-																			<i class="bi bi-x-lg"></i>
-																		</button>
-																	</div>
-																</div>
-																<!-- rows part add option  -->
-
-																<div class="form-check my-2 d-flex align-items-center gap-2">
-																	<input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios2"
-																		value="option2" />
-																	<button type="button" class="btn text-muted mt-1 fw-normal"
-																		onclick="addMoreRows( `radio`,`add-more-multiple-rows-1`,`multiple-choice-btn`)">
-																		Add option
-																	</button>
-																</div>
-
-																<!-- rows part add option  -->
-																<!-- Rows part  -->
-															</div>
-															<hr class="border-2 border border-dark d-lg-none">
-															<div>
-
-																<!-- Column part  -->
-																<div class="add-more-multiple-column" id="add-more-multiple-column-1">
-																	<h2 class="text-dark mx-5 mt-2">
-																		Columns </h2>
-																	<div class="d-flex align-items-center  gap-3">
-																		<div class="form-check my-2 d-flex align-items-center gap-2 ">
-																			<input class="form-check-input" type="radio" name="exampleRadios"
-																				id="exampleRadios1" value="option1" />
-																			<div>
-																				<input class="form-control txt-black mt-1 fw-normal" id="choice-input-first"
-																					placeholder="Option 1" />
-																			</div>
-																		</div>
-																		<button type="button" class=" mt-1 btn btn-danger multiple-choice-btn">
-																			<i class="bi bi-x-lg"></i>
-																		</button>
-																	</div>
-
-																</div>
-																<!-- Column part  -->
-																<!-- Column  part add option  -->
-																<div class="form-check my-2 d-flex align-items-center gap-2">
-																	<input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios2"
-																		value="option2" />
-																	<button type="button" class="btn text-muted mt-1 fw-normal"
-																		onclick="addMoreColumn( `radio`,`add-more-multiple-column-1`,`multiple-choice-btn`)">
-																		Add option
-																	</button>
-																</div>
-																<!-- Column  part add option  -->
-															</div>
-														</div>
-
-														<div class="d-flex gap-3 align-items-center justify-content-between">
-															<div>
-																<button class="btn btn-warning save-multiple-choice-grid mx-4 px-5 my-4 py-2"
-																	onclick="saveMultipleBtn(this)">
-																	Save </button>
-															</div>
-															<div class="d-flex align-items-center tab-content-3">
-																<p class="mt-3 txt-black fs-5 px-4 text-capitalize">
-																	Required</p>
-																<label class="switch-sec switch">
-																	<input type="checkbox">
-																	<span class="slider round">
-																		<span class="switch-text switch-text-yes">Yes</span>
-																		<span class="switch-text switch-text-no">No</span>
-																	</span>
-																</label>
-
-															</div>
-														</div>
-													</div>
-													<button type="button" class=" mt-4 btn btn-danger multiple-choice-grid-btn">
-														<i class="bi bi-x-lg"></i>
-													</button>
 												</div>
-												<div
-													class="multiple-checkBox-grid d-none my-3 d-flex justify-content-between align-items-start  gap-3">
-													<div>
-														<div class="chekbox-inbox">
-															<label for="Titile" class="form-label text-dark">
-																CheckBox Tittle
-															</label>
-															<input type="text" class="form-control py-3" placeholder="Write ...">
-														</div>
-														<div
-															class="d-flex align-items-lg-start flex-column flex-xl-row gap-3 multiple-grid-choice-main-div">
-															<div>
-																<!-- Rows part  -->
-																<div class="add-more-multiple-rows" id="add-more-multipleCheckBox-rows-1">
-																	<h2 class="text-dark mx-5 mt-2">
-																		Rows </h2>
-																	<div class="d-flex align-items-center  gap-3">
-																		<div class="form-check my-2 d-flex align-items-center gap-2 ">
-																			<input class="form-check-input" type="checkbox" name="exampleRadios"
-																				id="exampleRadios1" value="option1" />
-																			<div>
-																				<input class="form-control txt-black mt-1 fw-normal" id="choice-input-first"
-																					placeholder="Option 1" />
-																			</div>
-																		</div>
-																		<button type="button" class=" mt-1 btn btn-danger multiple-choice-btn">
-																			<i class="bi bi-x-lg"></i>
-																		</button>
-																	</div>
-																</div>
-																<!-- rows part add option  -->
-
-																<div class="form-check my-2 d-flex align-items-center gap-2">
-																	<input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios2"
-																		value="option2" />
-																	<button type="button" class="btn text-muted mt-1 fw-normal"
-																		onclick="addMoreRows( `checkbox`,`add-more-multipleCheckBox-rows-1`,`multiple-choice-btn`)">
-																		Add option
-																	</button>
-																</div>
-
-																<!-- rows part add option  -->
-																<!-- Rows part  -->
-															</div>
-															<hr class="border-2 border border-dark d-lg-none">
-															<div>
-
-																<!-- Column part  -->
-																<div class="add-more-multiple-column" id="add-more-multipleCheckBox-column-1">
-																	<h2 class="text-dark mx-5 mt-2">
-																		Columns </h2>
-																	<div class="d-flex align-items-center  gap-3">
-																		<div class="form-check my-2 d-flex align-items-center gap-2 ">
-																			<input class="form-check-input" type="checkbox" name="exampleRadios"
-																				id="exampleRadios1" value="option1" />
-																			<div>
-																				<input class="form-control txt-black mt-1 fw-normal" id="choice-input-first"
-																					placeholder="Option 1" />
-																			</div>
-																		</div>
-																		<button type="button" class=" mt-1 btn btn-danger multiple-choice-btn">
-																			<i class="bi bi-x-lg"></i>
-																		</button>
-																	</div>
-
-																</div>
-																<!-- Column part  -->
-																<!-- Column  part add option  -->
-																<div class="form-check my-2 d-flex align-items-center gap-2">
-																	<input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios2"
-																		value="option2" />
-																	<button type="button" class="btn text-muted mt-1 fw-normal"
-																		onclick="addMoreColumn( `checkbox`,`add-more-multipleCheckBox-column-1`,`multiple-choice-btn`)">
-																		Add option
-																	</button>
-																</div>
-																<!-- Column  part add option  -->
-															</div>
-														</div>
-														<div>
-															<button type="button"
-																class="btn btn-warning save-multiple-choice-grid mx-4 px-5 my-4 py-2"
-																onclick="saveMultipleBtn2(this)"> Save
-															</button>
-														</div>
-													</div>
-													<button type="button" class=" mt-4 btn btn-danger multiple-checkBox-grid-btn">
-														<i class="bi bi-x-lg"></i>
-													</button>
-												</div>
+												
 												<div class="date-input d-none my-3">
 													<div class="d-flex justify-content-between align-items-center  gap-3 ">
 														<div class="flex-grow-1">
 															<div>
-																<label for="short-tittle" class="form-label text-dark">
+																<label for="date-tittle-1" class="form-label text-dark">
 																	Short Title
 																</label>
-																<input type="text" id="survey-input-1" class="form-control py-3"
+																<input type="text" id="survey-input-1" name="date-tittle-1" class="form-control py-3"
 																	placeholder="Write ...">
 																<div class="my-2">
 																	<label for="writePrg" class="form-label txt-black">Date</label>
@@ -1435,9 +1137,7 @@
 
 															</div>
 														</div>
-														<button type="button" class=" mt-4 btn btn-danger date-input-btn">
-															<i class="bi bi-x-lg"></i>
-														</button>
+
 													</div>
 
 
@@ -1448,10 +1148,10 @@
 													<div class=" d-flex justify-content-between align-items-center  gap-3 ">
 														<div class="flex-grow-1">
 															<div>
-																<label for="time-tittle" class="form-label text-dark">
+																<label for="time-tittle-1" class="form-label text-dark">
 																	Short Title
 																</label>
-																<input type="text" id="survey-input-1" class="form-control py-3"
+																<input type="text" id="survey-input-1" name="time-tittle-1" class="form-control py-3"
 																	placeholder="Write ...">
 																<div>
 																	<label for="writePrg" class="form-label txt-black">Time</label>
@@ -1473,9 +1173,7 @@
 															</div>
 
 														</div>
-														<button type="button" class=" mt-4 btn btn-danger time-input-btn">
-															<i class="bi bi-x-lg"></i>
-														</button>
+
 													</div>
 
 
@@ -1635,9 +1333,10 @@
 							</div>
 
 							<div>
-								<button type="button" class="btn btn-warning " id="submitButton">Submit </button>
+								<button  type="submit" class="btn btn-warning " id="submitButton">Submit </button>
 							</div>
 
+							</form>
 
 							<!-- Here start Create Survey Section  -->
 						</main>
@@ -1834,7 +1533,7 @@
 		const selectManager = new SelectManager(".select");
 
 		function getValueByClick(id, getValue) {
-			deleteItem(id);
+
 			switch (getValue) {
 				case "Short Answer":
 					// showValue(document.querySelector(`#${id} .short-title`), getValue);
@@ -1845,18 +1544,7 @@
 					document.querySelector(`#${id}  .dropdown-input`).classList.add("d-none");
 					document.querySelector(`#${id}  .date-input`).classList.add("d-none");
 					document.querySelector(`#${id}  .time-input`).classList.add("d-none");
-					document
-						.querySelector(`#${id}  .fileUpload-input`)
-						.classList.add("d-none");
-					document
-						.querySelector(`#${id}  .linear-scale-input`)
-						.classList.add("d-none");
-					document
-						.querySelector(`#${id}  .multiple-choice-grid`)
-						.classList.add("d-none");
-					document
-						.querySelector(`#${id}  .multiple-checkBox-grid`)
-						.classList.add("d-none");
+				
 					break;
 				case "Paragraph":
 					// showValue(document.querySelector(`#${id} .prgraph-input`), getValue);
@@ -1869,18 +1557,7 @@
 					document.querySelector(`#${id}  .dropdown-input`).classList.add("d-none");
 					document.querySelector(`#${id}  .date-input`).classList.add("d-none");
 					document.querySelector(`#${id}  .time-input`).classList.add("d-none");
-					document
-						.querySelector(`#${id}  .fileUpload-input`)
-						.classList.add("d-none");
-					document
-						.querySelector(`#${id}  .linear-scale-input`)
-						.classList.add("d-none");
-					document
-						.querySelector(`#${id}  .multiple-choice-grid`)
-						.classList.add("d-none");
-					document
-						.querySelector(`#${id}  .multiple-checkBox-grid`)
-						.classList.add("d-none");
+			
 					break;
 				case "Multiple Choice":
 					document
@@ -1892,18 +1569,7 @@
 					document.querySelector(`#${id}  .dropdown-input`).classList.add("d-none");
 					document.querySelector(`#${id}  .date-input`).classList.add("d-none");
 					document.querySelector(`#${id}  .time-input`).classList.add("d-none");
-					document
-						.querySelector(`#${id}  .fileUpload-input`)
-						.classList.add("d-none");
-					document
-						.querySelector(`#${id}  .linear-scale-input`)
-						.classList.add("d-none");
-					document
-						.querySelector(`#${id}  .multiple-choice-grid`)
-						.classList.add("d-none");
-					document
-						.querySelector(`#${id}  .multiple-checkBox-grid`)
-						.classList.add("d-none");
+				
 					break;
 				case "Checkboxes":
 					document
@@ -1915,18 +1581,7 @@
 					document.querySelector(`#${id}  .dropdown-input`).classList.add("d-none");
 					document.querySelector(`#${id}  .date-input`).classList.add("d-none");
 					document.querySelector(`#${id}  .time-input`).classList.add("d-none");
-					document
-						.querySelector(`#${id}  .fileUpload-input`)
-						.classList.add("d-none");
-					document
-						.querySelector(`#${id}  .linear-scale-input`)
-						.classList.add("d-none");
-					document
-						.querySelector(`#${id}  .multiple-choice-grid`)
-						.classList.add("d-none");
-					document
-						.querySelector(`#${id}  .multiple-checkBox-grid`)
-						.classList.add("d-none");
+
 					break;
 				case "DropDown":
 					document
@@ -1938,104 +1593,9 @@
 					document.querySelector(`#${id}  .multiple-input`).classList.add("d-none");
 					document.querySelector(`#${id}  .date-input`).classList.add("d-none");
 					document.querySelector(`#${id}  .time-input`).classList.add("d-none");
-					document
-						.querySelector(`#${id}  .fileUpload-input`)
-						.classList.add("d-none");
-					document
-						.querySelector(`#${id}  .linear-scale-input`)
-						.classList.add("d-none");
-					document
-						.querySelector(`#${id}  .multiple-choice-grid`)
-						.classList.add("d-none");
-					document
-						.querySelector(`#${id}  .multiple-checkBox-grid`)
-						.classList.add("d-none");
+			
 					break;
-				case "File Upload":
-					// showValue(document.querySelector(`#${id} .fileUpload-input`), getValue);
-					document
-						.querySelector(`#${id}  .fileUpload-input`)
-						.classList.remove("d-none");
-					document
-						.querySelector(`#${id}  .linear-scale-input`)
-						.classList.add("d-none");
-					document.querySelector(`#${id}  .dropdown-input`).classList.add("d-none");
-					document.querySelector(`#${id}  .choice-input`).classList.add("d-none");
-					document.querySelector(`#${id}  .short-title`).classList.add("d-none");
-					document.querySelector(`#${id}  .prgraph-input`).classList.add("d-none");
-					document.querySelector(`#${id}  .multiple-input`).classList.add("d-none");
-					document.querySelector(`#${id}  .date-input`).classList.add("d-none");
-					document.querySelector(`#${id}  .time-input`).classList.add("d-none");
-					document
-						.querySelector(`#${id}  .multiple-choice-grid`)
-						.classList.add("d-none");
-					document
-						.querySelector(`#${id}  .multiple-checkBox-grid`)
-						.classList.add("d-none");
-					break;
-				case "Linear Scale":
-					document
-						.querySelector(`#${id}  .linear-scale-input`)
-						.classList.remove("d-none");
-					document
-						.querySelector(`#${id}  .fileUpload-input`)
-						.classList.add("d-none");
-					document.querySelector(`#${id}  .dropdown-input`).classList.add("d-none");
-					document.querySelector(`#${id}  .choice-input`).classList.add("d-none");
-					document.querySelector(`#${id}  .short-title`).classList.add("d-none");
-					document.querySelector(`#${id}  .prgraph-input`).classList.add("d-none");
-					document.querySelector(`#${id}  .multiple-input`).classList.add("d-none");
-					document.querySelector(`#${id}  .date-input`).classList.add("d-none");
-					document.querySelector(`#${id}  .time-input`).classList.add("d-none");
-					document
-						.querySelector(`#${id}  .multiple-choice-grid`)
-						.classList.add("d-none");
-					document
-						.querySelector(`#${id}  .multiple-checkBox-grid`)
-						.classList.add("d-none");
-					break;
-				case "Multiple Choice Grid":
-					document
-						.querySelector(`#${id}  .multiple-choice-grid`)
-						.classList.remove("d-none");
-					document
-						.querySelector(`#${id}  .linear-scale-input`)
-						.classList.add("d-none");
-					document
-						.querySelector(`#${id}  .fileUpload-input`)
-						.classList.add("d-none");
-					document
-						.querySelector(`#${id}  .multiple-checkBox-grid`)
-						.classList.add("d-none");
-					document.querySelector(`#${id}  .dropdown-input`).classList.add("d-none");
-					document.querySelector(`#${id}  .choice-input`).classList.add("d-none");
-					document.querySelector(`#${id}  .short-title`).classList.add("d-none");
-					document.querySelector(`#${id}  .prgraph-input`).classList.add("d-none");
-					document.querySelector(`#${id}  .multiple-input`).classList.add("d-none");
-					document.querySelector(`#${id}  .date-input`).classList.add("d-none");
-					document.querySelector(`#${id}  .time-input`).classList.add("d-none");
-					break;
-				case "Checkbox Grid":
-					document
-						.querySelector(`#${id}  .multiple-checkBox-grid`)
-						.classList.remove("d-none");
-					document
-						.querySelector(`#${id}  .multiple-choice-grid`)
-						.classList.add("d-none");
-					document
-						.querySelector(`#${id}  .linear-scale-input`)
-						.classList.add("d-none");
-					document
-						.querySelector(`#${id}  .fileUpload-input`)
-						.classList.add("d-none");
-					document.querySelector(`#${id}  .dropdown-input`).classList.add("d-none");
-					document.querySelector(`#${id}  .choice-input`).classList.add("d-none");
-					document.querySelector(`#${id}  .short-title`).classList.add("d-none");
-					document.querySelector(`#${id}  .prgraph-input`).classList.add("d-none");
-					document.querySelector(`#${id}  .multiple-input`).classList.add("d-none");
-					document.querySelector(`#${id}  .date-input`).classList.add("d-none");
-					document.querySelector(`#${id}  .time-input`).classList.add("d-none");
-					break;
+			
 				case "Date":
 					// showValue(document.querySelector(`#${id} .date-input`), getValue);
 					document.querySelector(`#${id}  .date-input`).classList.remove("d-none");
@@ -2045,18 +1605,6 @@
 					document.querySelector(`#${id}  .choice-input`).classList.add("d-none");
 					document.querySelector(`#${id}  .dropdown-input`).classList.add("d-none");
 					document.querySelector(`#${id}  .time-input`).classList.add("d-none");
-					document
-						.querySelector(`#${id}  .fileUpload-input`)
-						.classList.add("d-none");
-					document
-						.querySelector(`#${id}  .linear-scale-input`)
-						.classList.add("d-none");
-					document
-						.querySelector(`#${id}  .multiple-choice-grid`)
-						.classList.add("d-none");
-					document
-						.querySelector(`#${id}  .multiple-checkBox-grid`)
-						.classList.add("d-none");
 					break;
 				case "Time":
 					// showValue(document.querySelector(`#${id} .time-input`), getValue);
@@ -2067,18 +1615,7 @@
 					document.querySelector(`#${id}  .multiple-input`).classList.add("d-none");
 					document.querySelector(`#${id}  .choice-input`).classList.add("d-none");
 					document.querySelector(`#${id}  .date-input`).classList.add("d-none");
-					document
-						.querySelector(`#${id}  .fileUpload-input`)
-						.classList.add("d-none");
-					document
-						.querySelector(`#${id}  .linear-scale-input`)
-						.classList.add("d-none");
-					document
-						.querySelector(`#${id}  .multiple-choice-grid`)
-						.classList.add("d-none");
-					document
-						.querySelector(`#${id}  .multiple-checkBox-grid`)
-						.classList.add("d-none");
+				
 					break;
 				default:
 					document.querySelector(`#${id}  .short-title`).classList.add("d-none");
@@ -2088,102 +1625,11 @@
 					document.querySelector(`#${id}  .choice-input`).classList.add("d-none");
 					document.querySelector(`#${id}  .date-input`).classList.add("d-none");
 					document.querySelector(`#${id}  .time-input`).classList.add("d-none");
-					document
-						.querySelector(`#${id}  .fileUpload-input`)
-						.classList.add("d-none");
-					document
-						.querySelector(`#${id}  .linear-scale-input`)
-						.classList.add("d-none");
-					document
-						.querySelector(`#${id}  .multiple-choice-grid`)
-						.classList.add("d-none");
-					document
-						.querySelector(`#${id}  .multiple-checkBox-grid`)
-						.classList.add("d-none");
+				
 
 					break;
 			}
 		}
-
-		function deleteItem(id) {
-			// close Short Answer
-			document
-				.querySelector(`#${id} .short-title-btn`)
-				.addEventListener("click", () => {
-					document.querySelector(`#${id} .short-title`).classList.add("d-none");
-				});
-			// close Paragraph
-			document.querySelector(`#${id} .prg-btn`).addEventListener("click", () => {
-				document.querySelector(`#${id} .prgraph-input`).classList.add("d-none");
-			});
-			//multiple choice
-			document
-				.querySelector(`#${id} .multiple-choice-btn`)
-				.addEventListener("click", () => {
-					document.querySelector(`#${id} .multiple-input`).classList.add("d-none");
-				});
-			//choice-input-btn
-			document
-				.querySelector(`#${id} .choice-input-btn`)
-				.addEventListener("click", () => {
-					document.querySelector(`#${id} .choice-input`).classList.add("d-none");
-				});
-			// Dropdown
-			document
-				.querySelector(`#${id} .dropdown-input-btn`)
-				.addEventListener("click", () => {
-					document.querySelector(`#${id} .dropdown-input`).classList.add("d-none");
-				});
-			// Date
-			document
-				.querySelector(`#${id} .date-input-btn`)
-				.addEventListener("click", () => {
-					document.querySelector(`#${id} .date-input`).classList.add("d-none");
-				});
-			// fileUpload Btn
-			document
-				.querySelector(`#${id} .fileUpload-input-btn`)
-				.addEventListener("click", () => {
-					document
-						.querySelector(`#${id} .fileUpload-input`)
-						.classList.add("d-none");
-				});
-			// Linear Scale  Btn
-			document
-				.querySelector(`#${id} .linearScale-input-btn`)
-				.addEventListener("click", () => {
-					document
-						.querySelector(`#${id} .linear-scale-input`)
-						.classList.add("d-none");
-				});
-			// Multiple choice grid  Btn
-			document
-				.querySelector(`#${id} .multiple-choice-grid-btn`)
-				.addEventListener("click", () => {
-					document
-						.querySelector(`#${id} .multiple-choice-grid`)
-						.classList.add("d-none");
-				});
-			// CheckBox grid  Btn
-			document
-				.querySelector(`#${id} .multiple-checkBox-grid-btn`)
-				.addEventListener("click", () => {
-					document
-						.querySelector(`#${id} .multiple-checkBox-grid`)
-						.classList.add("d-none");
-				});
-			// Time
-			document
-				.querySelector(`#${id} .time-input-btn`)
-				.addEventListener("click", () => {
-					document.querySelector(`#${id} .time-input`).classList.add("d-none");
-				});
-		}
-
-		function deleteBox(id) {
-			document.querySelector(`#${id}`).remove();
-		}
-		//!  here If Anyone click input
 
 		let count = 2;
 
@@ -2197,7 +1643,7 @@
 			}
 		}
 
-		function addMoreInput(type, value, btn) {
+		function addMoreInput(type, value, btn, text) {
 			const addDiv = document.querySelector(`#${value}`);
 			const newDiv = document.createElement("div");
 			newDiv.innerHTML = `
@@ -2214,11 +1660,12 @@
           <input
             class="form-control txt-black mt-1 fw-normal"
             id="choice-input${count}"
+						name="${text}-${count}"
             placeholder="Option ${count}"
           />
         </div>
       </div>
-      <button class="mt-1 btn btn-danger ${btn}" onclick="removeInput(this)">
+      <button type="button" class="mt-1 btn btn-danger ${btn}" onclick="removeInput(this)">
         <i class="bi bi-x-lg"></i>
       </button>
     </div>
@@ -2274,18 +1721,18 @@
   <!-- content -->
   <div class="d-flex justify-content-between align-items-center">
                   <div class="button-group">
-                          <button class="btn up-btn">
+                          <button type="button" class="btn up-btn">
                          <i class="bi bi-caret-up"></i>
                         </button>
-                        <button class="btn down-btn" >
+                        <button type="button" class="btn down-btn" >
                          <i class="bi bi-caret-down"></i>
                         </button>
                       </div>
                   <div>
-                  <button class="btn" data-bs-toggle="modal" data-bs-target="#staticBackdrop">
+                  <button type="button" class="btn" data-bs-toggle="modal" data-bs-target="#staticBackdrop">
                       <i class="bi bi-pen"></i>
                     </button>
-                    <button class="btn text-danger" onclick="deleteBox('${makeUniqueId}')">
+                    <button type="button" class="btn text-danger" onclick="deleteBox('${makeUniqueId}')">
                       <i class="bi bi-trash"></i>
                     </button>
                   </div>
@@ -2296,17 +1743,17 @@
     <div class="short-title   d-flex justify-content-between align-items-start gap-2 ">
       <div class="flex-grow-1">
         <div>
-        		<label for="short-tittle" class="form-label text-dark">
+        		<label for="${count2}" class="form-label text-dark">
 																Short Title
 															</label>
-														<input type="text" id="short-tittle-${count2}" name="short-tittle-1"
+														<input type="text"    <input type="text" id="survey-input-${count2}" name="short-tittle-${count2}"
     class="form-control py-3 short-title" placeholder="Write ..." value="">
 
           <div class="toolBar">
-            <button class="btn fw-bold  cursor-pointer  bold-btn-1">B</button>
-            <button class="btn fw-bold  cursor-pointer  italic-btn-1">I</button>
-            <button class="btn fw-bold  cursor-pointer  underline-btn-1">U</button>
-            <button class="btn fw-bold  link-btn-1"><i class="bi bi-link"></i></button>
+            <button type="button" class="btn fw-bold  cursor-pointer  bold-btn-1">B</button>
+            <button type="button" class="btn fw-bold  cursor-pointer  italic-btn-1">I</button>
+            <button type="button" class="btn fw-bold  cursor-pointer  underline-btn-1">U</button>
+            <button type="button" class="btn fw-bold  link-btn-1"><i class="bi bi-link"></i></button>
           </div>
         </div>
         <div class="d-flex gap-3 align-items-center justify-content-between">
@@ -2324,22 +1771,20 @@
                               </div>
                             </div>
       </div>
-      <button class="mt-5 btn btn-danger short-title-btn">
-        <i class="bi bi-x-lg"></i>
-      </button>
+   
     </div>
-    <div class="prgraph-input d-none  d-flex justify-content-between align-items-center  gap-2 ">
+    <div class="prgraph-input paragraph-input d-none  d-flex justify-content-between align-items-center  gap-2 ">
       <div class="flex-grow-1">
         <div>
-          <label for="short-tittle" class="form-label text-dark">
+          <label for="paragraph-tittle-${count2}" class="form-label text-dark">
             Paragraph 
           </label>
-          <input type="text" id="survey-input-1" class="form-control py-3" placeholder="Write ...">
+          <input type="text" id="survey-input-${count2}" name="paragraph-tittle-${count2}" class="form-control py-3" placeholder="Write ...">
           <div class="toolBar">
-            <button class="btn fw-bold  cursor-pointer  bold-btn-1">B</button>
-            <button class="btn fw-bold  cursor-pointer  italic-btn-1">I</button>
-            <button class="btn fw-bold  cursor-pointer  underline-btn-1">U</button>
-            <button class="btn fw-bold  link-btn-1"><i class="bi bi-link"></i></button>
+            <button type="button" class="btn fw-bold  cursor-pointer  bold-btn-1">B</button>
+            <button type="button" class="btn fw-bold  cursor-pointer  italic-btn-1">I</button>
+            <button type="button" class="btn fw-bold  cursor-pointer  underline-btn-1">U</button>
+            <button type="button" class="btn fw-bold  link-btn-1"><i class="bi bi-link"></i></button>
           </div>
         </div>
  
@@ -2357,9 +1802,7 @@
                             
       
       </div>
-      <button class=" mt-0 btn btn-danger prg-btn">
-        <i class="bi bi-x-lg"></i>
-      </button>
+     
     </div>
     <div class="multiple-input d-none my-3">
       <div class="add-more-multiple-input" id="add-more-multiple-input-${count2}">
@@ -2367,7 +1810,7 @@
           <label for="Titile" class="form-label text-dark">
             Multiple Choice Tittle 
           </label>
-          <input type="text"  class="form-control py-3" placeholder="Write ...">
+          <input type="text" name="multiple-title-${count2}"  class="form-control py-3" placeholder="Write ...">
          
         </div>
         <div class="d-flex  align-items-center  gap-3">
@@ -2376,25 +1819,22 @@
               value="option1" />
             <div>
               <input class="form-control txt-black mt-1 fw-normal" id="choice-input-first"
-                placeholder="Option 1"  />
+                placeholder="Option 1" name="multiple-choice-${count2}-1"  />
             </div>
          
           </div>
-          <button class=" mt-1 btn btn-danger multiple-choice-btn">
-            <i class="bi bi-x-lg"></i>
-          </button>
+      
         </div>
       </div>
       <div class="form-check my-2 d-flex align-items-center gap-2">
         <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios2"
           value="option2" />
-        <Button class="btn text-muted mt-1 fw-normal"
-          onclick="addMoreInput( 'radio','add-more-multiple-input-${count2}','multiple-choice-btn')">
+        <button type="button" class="btn text-muted mt-1 fw-normal"
+          onclick="addMoreInput( 'radio','add-more-multiple-input-${count2}','multiple-choice-btn','multiple-choice-${count2}')">
           Add option
-        </Button>
+        </button>
       </div>
-      <div class="d-flex gap-3 align-items-center justify-content-between">
-                            <button class="btn btn-warning mx-3" onclick="saveMultipleBtn3( '${makeUniqueId}','multiple-input','${count2}')"> Save</button>
+     
                               <div class="d-flex align-items-center tab-content-3">
                                 <p class="mt-3 txt-black fs-5 px-4 text-capitalize">Required</p>
                                 <label class="switch-sec  require-fill switch">
@@ -2406,7 +1846,7 @@
                                 </label>
 
                               </div>
-                            </div>
+                          
      
     </div>
     <div class="choice-input d-none my-3">
@@ -2415,7 +1855,7 @@
           <label for="Titile" class="form-label text-dark">
              Choice Tittle 
           </label>
-          <input type="text"  class="form-control py-3" placeholder="Write ...">
+          <input type="text" name="choice-title-${count2}"  class="form-control py-3" placeholder="Write ...">
          
         </div>
         <div class="d-flex  align-items-center  gap-3">
@@ -2424,25 +1864,22 @@
               value="option1" />
             <div>
               <input class="form-control txt-black mt-1 fw-normal" id="choice-input-first"
-                placeholder="Option 1"  />
+                placeholder="Option 1"   name="choice-input-${count2}-1"/>
             </div>
 
           </div>
-          <button class=" mt-1 btn btn-danger choice-input-btn">
-            <i class="bi bi-x-lg"></i>
-          </button>
+       
         </div>
       </div>
       <div class="form-check my-2 d-flex align-items-center gap-2">
         <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios2"
           value="option2" />
-        <Button class="btn text-muted mt-1 fw-normal"
-          onclick="addMoreInput( 'checkbox','add-more-choice-input-${count2}','choice-input-btn')">
+        <button type="button" class="btn text-muted mt-1 fw-normal"
+          onclick="addMoreInput( 'checkbox','add-more-choice-input-${count2}','choice-input-btn','choice-input-${count2}')">
           Add option
-        </Button>
+        </button>
       </div>
-      <div class="d-flex gap-3 align-items-center justify-content-between">
-                                <button class="btn btn-warning mx-3" onclick="saveMultipleBtn3( '${makeUniqueId}','choice-input','${count2}')"> Save</button>
+     
                               <div class="d-flex align-items-center tab-content-3">
                                 <p class="mt-3 txt-black fs-5 px-4 text-capitalize">Required</p>
                                 <label class="switch-sec require-fill  switch">
@@ -2454,7 +1891,7 @@
                                 </label>
 
                               </div>
-                            </div>
+                          
    
     </div>
     <div class="dropdown-input d-none my-3">
@@ -2463,34 +1900,31 @@
           <label for="Titile" class="form-label text-dark">
             DropDown  Tittle 
           </label>
-          <input type="text"  class="form-control py-3" placeholder="Write ...">
+          <input type="text" name="dropdown-tittle-${count2}"  class="form-control py-3" placeholder="Write ...">
          
         </div>
         <div class="d-flex  align-items-center  gap-3">
           <div class="form-check my-2 d-flex align-items-center gap-2 ">
-            <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios1"
+            <input class="form-check-input" type="radio"  id="exampleRadios1"
               value="option1" />
             <div>
               <input class="form-control txt-black mt-1 fw-normal" id="choice-input-first"
-                placeholder="Option 1"  />
+                placeholder="Option 1" name="dropdown-input-${count2}-1" />
             </div>
 
           </div>
-          <button class=" mt-1 btn btn-danger dropdown-input-btn">
-            <i class="bi bi-x-lg"></i>
-          </button>
+        
         </div>
       </div>
       <div class="form-check my-2 d-flex align-items-center gap-2">
         <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios2"
           value="option2" />
-        <Button class="btn text-muted mt-1 fw-normal"
-          onclick="addMoreInput( 'radio','add-more-dropdown-input-${count2}','dropdown-input-btn')">
+        <button type="button" class="btn text-muted mt-1 fw-normal"
+          onclick="addMoreInput( 'radio','add-more-dropdown-input-${count2}','dropdown-input-btn','dropdown-input-${count2}')">
           Add option
-        </Button>
+        </button>
       </div>
-      <div class="d-flex gap-3 align-items-center justify-content-between">
-                                <button class="btn btn-warning mx-3" onclick="saveMultipleBtn3('${makeUniqueId}','dropdown-input','${count2}')"> Save</button>
+ 
                               <div class="d-flex align-items-center tab-content-3">
                                 <p class="mt-3 txt-black fs-5 px-4 text-capitalize">Required</p>
                                 <label class="switch-sec require-fill switch">
@@ -2502,333 +1936,18 @@
                                 </label>
 
                               </div>
-                            </div>
+                      
    
     </div>
-    <div class="fileUpload-input d-none my-3">
-    <div class=" d-flex justify-content-between align-items-center  gap-3 ">
-      <div class="flex-grow-1">
-        <label for="writePrg" class="form-label txt-black">Upload File </label>
-       
-        <div class="form-group card dropzone border-dashed">
-          <div class="card-img">
-              <div class="img-preview position-relative btn-file">
-                  <div class="yes" >
-                      <img  src="assets/images/icon/cloud-upload.png" alt="broken_image" class="ImgPreview preview1 upload-img mx-auto" />
-                  </div>
-                  <input type="file"  title="Upload_img" class="form-control imag input-img"/>
-              </div>
-              <button type="button" class="removeImage1" class="close-btn btn-rmv1"><i class="bi bi-x-circle-fill"></i></button>
-          </div>
-      </div>
-      </div>
-      <button class=" mt-4 btn btn-danger fileUpload-input-btn">
-        <i class="bi bi-x-lg"></i>
-      </button>
-      
-    </div>
-    <div class="d-flex gap-3 align-items-center justify-content-between">
-                            <button class="btn btn-warning mx-3" onclick="saveFile(this,'File Upload','${count2}')">Save</button>
-                              <div class="d-flex align-items-center tab-content-3">
-                                <p class="mt-3 txt-black fs-5 px-4 text-capitalize">Required</p>
-                                <label class="switch-sec require-fill switch">
-                                  <input type="checkbox">
-                                  <span class="slider round">
-                                    <span class="switch-text switch-text-yes">Yes</span>
-                                    <span class="switch-text switch-text-no">No</span>
-                                  </span>
-                                </label>
-
-                              </div>
-                            </div>
-    
-   </div>
-    <div class="linear-scale-input d-none my-3 d-flex justify-content-between align-items-center  gap-3 ">
-      <div class="flex-grow-1 linear-scale" >
-        <label for="enter-survey-name" class="form-label text-dark">
-          Tittle Of Scale 
-        </label>
-        <input type="text" class="form-control py-3" placeholder="Write ...">
-        <div class="toolBar my-3">
-          <span class="mx-1 bold-btn-1">B</span>
-          <span class="mx-1 italic-btn-1">I</span>
-          <span class="mx-1 underline-btn-1">U</span>
-          <span class="mx-1 link-btn-1"><i class="bi bi-link"></i></span>
-        </div>
-        <div>
-           <!-- here level  select  -->
-           <div class="linear-main-scale d-flex gap-5 align-items-center">
-            <select name="levelFirst" class="form-select w-50 linear-scale-option-value" id="" data-linear-value="first">
-              <option value="1">1</option>
-            </select>
-            <div>To</div>
-            <select name="levelLast" class="form-select w-50 linear-scale-option-value" id="" data-linear-value="last">
-              <option value="2">2</option>
-              <option value="3">3</option>
-              <option value="4">4</option>
-              <option value="5">5</option>
-              <option value="6">6</option>
-              <option value="7">7</option>
-              <option value="8">8</option>
-              <option value="9">9</option>
-              <option value="10">10</option>
-            </select>
-
-           </div>
-           <!-- here level  select  -->
-          <div class="linear-all-scale my-4">
-             <!-- here level left name  -->
-             <div class="d-flex align-items-center gap-2 my-2 linear-first">
-              <span class="text-dark">1</span>
-              <input class="form-control" type="text" name="" id="">
-             </div>
-          
-           <!-- here level left name  -->
-
-         
-           <!-- here level  Right Name   -->
-           <div class="d-flex align-items-center gap-2 linear-second">
-            <span class="linear-second-last text-dark">2</span>
-            <input class="form-control" type="text" name="" id="">
-           </div>
-           <!-- here level  Right Name   -->
-          </div>
-          <div class="linear-scale-created d-none">
-            <h2 class="linear-input-main-value text-dark text-center text-capitalize "></h2>
-           <div class="d-flex justify-content-between align-items-center  my-4">
-            <span class="inputValue1 text-dark">1</span>
-            <div class="new-created-input">
-            
-            </div>
-            <span class="inputValue2 text-dark">10</span>
-           </div>
-          </div>
-        </div>
-        <div class="d-flex gap-3 align-items-center justify-content-between">
-                              <div>
-                              <button class="btn btn-warning my-3 linear-scale-save-btn ">Save</button>
-                              <button class="btn btn-danger my-3 linear-scale-delete-btn d-none">Delete</button>
-                            </div>
-                              <div class="d-flex align-items-center tab-content-3">
-                                <p class="mt-3 txt-black fs-5 px-4 text-capitalize">Required</p>
-                                <label class="switch-sec require-fill switch">
-                                  <input type="checkbox">
-                                  <span class="slider round">
-                                    <span class="switch-text switch-text-yes">Yes</span>
-                                    <span class="switch-text switch-text-no">No</span>
-                                  </span>
-                                </label>
-
-                              </div>
-                            </div>
-       </div>
-      <button class=" mt-4 btn btn-danger linearScale-input-btn">
-        <i class="bi bi-x-lg"></i>
-      </button>
-    </div>
-
-    <div class="multiple-choice-grid d-none my-3 d-flex justify-content-between align-items-center  gap-3">
-      <div>
-      <div class="choice-inbox">
-          <label for="Titile" class="form-label text-dark">
-            Multiple Choice Tittle 
-          </label>
-          <input type="text"  class="form-control py-3" placeholder="Write ...">
-        </div>
-        <div class="d-flex align-items-lg-start flex-column flex-xl-row gap-3 multiple-grid-choice-main-div">
-         <div>
-           <!-- Rows part  -->
-           <div class="add-more-multiple-rows" id="add-more-multiple-rows-${count2}">
-             <h2 class="text-dark mx-5 mt-2"> Rows </h2>
-             <div class="d-flex align-items-center  gap-3">
-              <div class="form-check my-2 d-flex align-items-center gap-2 ">
-                <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios1"
-                  value="option1" />
-                <div>
-                  <input class="form-control txt-black mt-1 fw-normal" id="choice-input-first"
-                    placeholder="Option 1"  />
-                </div>
-              </div>
-              <button class=" mt-1 btn btn-danger multiple-choice-btn">
-                <i class="bi bi-x-lg"></i>
-              </button>
-            </div>
-        </div>
-         <!-- rows part add option  -->
-      
-         <div class="form-check my-2 d-flex align-items-center gap-2">
-          <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios2"
-            value="option2" />
-          <button class="btn text-muted mt-1 fw-normal"
-            onclick="addMoreRows( 'radio','add-more-multiple-rows-${count2}','multiple-choice-btn')">
-            Add option
-          </button>
-        </div>
-      
-       <!-- rows part add option  -->
-         <!-- Rows part  -->
-         </div>
-         <hr class="border-2  border-dark d-lg-none">
-         <div>
-           
-           <!-- Column part  -->
-           <div class="add-more-multiple-column" id="add-more-multiple-column-${count2}">
-           <h2 class="text-dark mx-5 mt-2"> Columns </h2>
-          <div class="d-flex align-items-center  gap-3">
-            <div class="form-check my-2 d-flex align-items-center gap-2 ">
-              <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios1"
-                value="option1" />
-              <div>
-                <input class="form-control txt-black mt-1 fw-normal" id="choice-input-first"
-                  placeholder="Option 1"  />
-              </div>
-            </div>
-            <button class=" mt-1 btn btn-danger multiple-choice-btn">
-              <i class="bi bi-x-lg"></i>
-            </button>
-          </div>
-
-        </div>
-         <!-- Column part  -->
-          <!-- Column  part add option  -->
-          <div class="form-check my-2 d-flex align-items-center gap-2">
-           <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios2"
-             value="option2" />
-           <button class="btn text-muted mt-1 fw-normal"
-             onclick="addMoreColumn( 'radio','add-more-multiple-column-${count2}','multiple-choice-btn')">
-             Add option
-           </button>
-         </div>
-          <!-- Column  part add option  -->
-         </div>
-        </div>
-       
-        <div class="d-flex gap-3 align-items-center justify-content-between">
-                           <div>
-          <button class="btn btn-warning save-multiple-choice-grid mx-4 px-5 my-4 py-2" onclick="saveMultipleBtn(this)"> Save </button>
-        </div>
-                              <div class="d-flex align-items-center tab-content-3">
-                                <p class="mt-3 txt-black fs-5 px-4 text-capitalize">Required</p>
-                                <label class="switch-sec require-fill switch">
-                                  <input type="checkbox">
-                                  <span class="slider round">
-                                    <span class="switch-text switch-text-yes">Yes</span>
-                                    <span class="switch-text switch-text-no">No</span>
-                                  </span>
-                                </label>
-
-                              </div>
-                            </div>
-      </div>
-      <button class=" mt-4 btn btn-danger multiple-choice-grid-btn">
-        <i class="bi bi-x-lg"></i>
-      </button>
-  </div>
-    <div class="multiple-checkBox-grid d-none my-3 d-flex justify-content-between align-items-center  gap-3">
-      <div>
-      <div class="chekbox-inbox">
-          <label for="Titile" class="form-label text-dark">
-            CheckBox  Tittle 
-          </label>
-          <input type="text"  class="form-control py-3" placeholder="Write ...">
-        </div>
-        <div class="d-flex align-items-lg-start flex-column flex-xl-row gap-3 multiple-grid-choice-main-div">
-         <div>
-           <!-- Rows part  -->
-           <div class="add-more-multiple-rows" id="add-more-multipleCheckBox-rows-${count2}">
-             <h2 class="text-dark mx-5 mt-2"> Rows </h2>
-             <div class="d-flex align-items-center  gap-3">
-              <div class="form-check my-2 d-flex align-items-center gap-2 ">
-                <input class="form-check-input" type="checkbox" name="exampleRadios" id="exampleRadios1"
-                  value="option1" />
-                <div>
-                  <input class="form-control txt-black mt-1 fw-normal" id="choice-input-first"
-                    placeholder="Option 1"  />
-                </div>
-              </div>
-              <button class=" mt-1 btn btn-danger multiple-choice-btn">
-                <i class="bi bi-x-lg"></i>
-              </button>
-            </div>
-        </div>
-         <!-- rows part add option  -->
-      
-         <div class="form-check my-2 d-flex align-items-center gap-2">
-          <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios2"
-            value="option2" />
-          <button class="btn text-muted mt-1 fw-normal"
-            onclick="addMoreRows( 'checkbox','add-more-multipleCheckBox-rows-${count2}','multiple-choice-btn')">
-            Add option
-          </button>
-        </div>
-      
-       <!-- rows part add option  -->
-         <!-- Rows part  -->
-         </div>
-         <hr class="border-2  border-dark d-lg-none">
-         <div>
-           
-           <!-- Column part  -->
-           <div class="add-more-multiple-column" id="add-more-multiple-column-${count2}">
-           <h2 class="text-dark mx-5 mt-2"> Columns </h2>
-          <div class="d-flex align-items-center  gap-3">
-            <div class="form-check my-2 d-flex align-items-center gap-2 ">
-              <input class="form-check-input" type="checkbox" name="exampleRadios" id="exampleRadios1"
-                value="option1" />
-              <div>
-                <input class="form-control txt-black mt-1 fw-normal" id="choice-input-first"
-                  placeholder="Option 1"  />
-              </div>
-            </div>
-            <button class=" mt-1 btn btn-danger multiple-choice-btn">
-              <i class="bi bi-x-lg"></i>
-            </button>
-          </div>
-
-        </div>
-         <!-- Column part  -->
-          <!-- Column  part add option  -->
-          <div class="form-check my-2 d-flex align-items-center gap-2">
-           <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios2"
-             value="option2" />
-           <button class="btn text-muted mt-1 fw-normal"
-             onclick="addMoreColumn( 'checkbox','add-more-multiple-column-${count2}','multiple-choice-btn')">
-             Add option
-           </button>
-         </div>
-          <!-- Column  part add option  -->
-         </div>
-        </div>
-       
-        <div class="d-flex gap-3 align-items-center justify-content-between">
-                             <div>
-          <button class="btn btn-warning save-multiple-choice-grid mx-4 px-5 my-4 py-2" onclick="saveMultipleBtn2(this)"> Save </button>
-        </div>
-                              <div class="d-flex align-items-center tab-content-3">
-                                <p class="mt-3 txt-black fs-5 px-4 text-capitalize">Required</p>
-                                <label class="switch-sec require-fill switch">
-                                  <input type="checkbox">
-                                  <span class="slider round">
-                                    <span class="switch-text switch-text-yes">Yes</span>
-                                    <span class="switch-text switch-text-no">No</span>
-                                  </span>
-                                </label>
-
-                              </div>
-                            </div>
-      </div>
-      <button class=" mt-4 btn btn-danger multiple-checkBox-grid-btn">
-        <i class="bi bi-x-lg"></i>
-      </button>
-  </div>
+   
   <div class="date-input d-none my-3">
   <div class="d-flex justify-content-between align-items-center  gap-3 ">
     <div class="flex-grow-1">
      <div>
-                          <label for="short-tittle" class="form-label text-dark">
+                          <label for="date-tittle-${count2}" class="form-label text-dark">
                             Date Title
                           </label>
-                          <input type="text" id="survey-input-${count2}" class="form-control py-3" placeholder="Write ...">
+                          <input type="text" id="survey-input-${count2}" name="date-tittle-${count2}" class="form-control py-3" placeholder="Write ...">
 
                           <div>
                            <label for="writePrg" class="form-label txt-black">Date</label>
@@ -2849,9 +1968,7 @@
                         </div>
      
     </div>
-    <button class=" mt-4 btn btn-danger date-input-btn">
-      <i class="bi bi-x-lg"></i>
-    </button>
+  
   </div>
        
                             
@@ -2861,10 +1978,10 @@
 													<div class=" d-flex justify-content-between align-items-center  gap-3 ">
 														<div class="flex-grow-1">
 															<div>
-																<label for="time-tittle" class="form-label text-dark">
+																<label for="time-tittle-${count2}" class="form-label text-dark">
 																	Short Title
 																</label>
-																<input type="text" id="survey-input-${count2}" class="form-control py-3"
+																<input type="text" id="survey-input-${count2}" name="time-tittle-${count2}" class="form-control py-3"
 																	placeholder="Write ...">
 																<div>
 																	<label for="writePrg" class="form-label txt-black">Time</label>
@@ -2886,9 +2003,7 @@
 															</div>
 
 														</div>
-														<button type="button" class=" mt-4 btn btn-danger time-input-btn">
-															<i class="bi bi-x-lg"></i>
-														</button>
+												
 													</div>
 
 
@@ -2981,141 +2096,13 @@
 </div>`;
 
 			optionMainDiv.appendChild(option1);
-			reload();
+			
 			toolBox(makeUniqueId);
-			linearScale(makeUniqueId);
+		
 			reRender();
 		});
 
-		// Create Dynamic option
-
-		// linear Scale option
-		const linearScaleOptions = document.querySelectorAll(
-			".linear-scale-option-value"
-		);
-
-		linearScaleOptions.forEach((option) => {
-			option.addEventListener("change", (event) => {
-				// Use "change" event for better handling
-				const linearScaleDiv = event.target.closest(".linear-scale");
-				const inputOfValueOfMain = linearScaleDiv.querySelector(
-					".linear-scale input"
-				);
-				const saveBtnOfLinearScale = linearScaleDiv.querySelector(
-					".linear-scale-save-btn"
-				);
-				const deleteBtnOfLinearScale = linearScaleDiv.querySelector(
-					".linear-scale-delete-btn"
-				);
-				const linearSecondLast = linearScaleDiv.querySelector(
-					".linear-second-last"
-				);
-				const mainLinearScaleOf =
-					linearScaleDiv.querySelector(".linear-main-scale");
-
-				const newDivOfLinearScale = linearScaleDiv.querySelector(
-					".linear-scale-created"
-				);
-				const newCreatedInput = linearScaleDiv.querySelector(".new-created-input");
-				const linearFirstInput = linearScaleDiv.querySelector(
-					".linear-first input"
-				);
-				const linearSecondInput = linearScaleDiv.querySelector(
-					".linear-second input"
-				);
-				const mainLinearScale = linearScaleDiv.querySelector(".linear-all-scale");
-				const valueOfSelect = [];
-				if (linearScaleDiv) {
-					const dataLinearValue = event.target.dataset.linearValue; // Use dataset property
-					const selectedValue = event.target.value;
-					// Perform additional actions based on dataLinearValue and selectedValue
-					if (dataLinearValue === "first") {
-						valueOfSelect[0] = selectedValue;
-					} else if (dataLinearValue === "last") {
-						valueOfSelect[1] = selectedValue;
-						linearSecondLast.innerHTML = selectedValue;
-					} else {
-						console.log("Invalid dataLinearValue:", dataLinearValue);
-					}
-				}
-
-				saveBtnOfLinearScale.addEventListener("click", () => {
-					if (newDivOfLinearScale.classList.contains("d-none")) {
-						const crateInput = createCheckboxes(Number(valueOfSelect[1]));
-						linearScaleDiv.querySelector(".linear-input-main-value").innerText =
-							inputOfValueOfMain.value;
-						linearScaleDiv.querySelector(".inputValue1").innerText =
-							linearFirstInput.value;
-						linearScaleDiv.querySelector(".inputValue2").innerText =
-							linearSecondInput.value;
-						if (crateInput) {
-							const allCheckInput = crateInput.querySelectorAll("input");
-							allCheckInput.forEach((input) => {
-								input.addEventListener("change", () => {
-									console.log(input.value);
-								});
-							});
-						}
-						// value of all input
-						console.log(
-							inputOfValueOfMain.value,
-							linearFirstInput.value,
-							linearSecondInput.value
-						);
-						// value of all input
-						newCreatedInput.append(crateInput);
-						mainLinearScale.classList.add("d-none");
-						mainLinearScaleOf.classList.add("d-none");
-						newDivOfLinearScale.classList.remove("d-none");
-						deleteBtnOfLinearScale.classList.remove("d-none");
-					} else {
-						deleteBtnOfLinearScale.classList.remove("d-none");
-					}
-				});
-				deleteBtnOfLinearScale.addEventListener("click", () => {
-					linearScaleDiv.querySelector(".linear-input-main-value").innerText = "";
-					linearScaleDiv.querySelector(".inputValue1").innerText = "";
-					linearScaleDiv.querySelector(".inputValue2").innerText = "";
-					newCreatedInput.innerHTML = "";
-					inputOfValueOfMain.value = "";
-					linearFirstInput.value = "";
-					linearSecondInput.value = "";
-					newDivOfLinearScale.classList.add("d-none");
-					mainLinearScale.classList.remove("d-none");
-					mainLinearScaleOf.classList.remove("d-none");
-				});
-			});
-		});
-
-		// linear Scale option
-		function createCheckboxes(number) {
-			if (typeof number !== "number" || number <= 0) {
-				throw new Error("Number must be a positive integer.");
-			}
-
-			const div = document.createElement("div");
-			div.classList.add(
-				"d-flex",
-				"flex-wrap",
-				"gap-4",
-				"align-items-center",
-				"justify-content-center",
-				"all-checkbox"
-			);
-			for (let i = 0; i < number; i++) {
-				const checkbox = document.createElement("input");
-				checkbox.type = "checkbox";
-				checkbox.name = `checkbox-${i}`;
-				div.appendChild(checkbox);
-				checkbox.addEventListener("change", (event) => {
-					console.log(event.target.checked);
-				});
-			}
-
-			return div;
-		}
-
-		// Here Add Visibility
+		
 		function toolBox(id) {
 			const btn = document.querySelector(`#${id} .bold-btn-1`);
 			const italicButtons = document.querySelector(`#${id} .italic-btn-1`);
@@ -3164,245 +2151,7 @@
 				}
 			});
 		}
-		//  Linier Scale Functions
-		function linearScale(id) {
-			const linearScaleOptions = document.querySelector(`#${id} .linear-scale`);
-			linearScaleOptions.addEventListener("change", (event) => {
-				// Use "change" event for better handling
-				const linearScaleDiv = event.target.closest(".linear-scale");
-				const inputOfValueOfMain = linearScaleDiv.querySelector(
-					".linear-scale input"
-				);
-				const saveBtnOfLinearScale = linearScaleDiv.querySelector(
-					".linear-scale-save-btn"
-				);
-				const deleteBtnOfLinearScale = linearScaleDiv.querySelector(
-					".linear-scale-delete-btn"
-				);
-				const linearSecondLast = linearScaleDiv.querySelector(
-					".linear-second-last"
-				);
-				const mainLinearScaleOf =
-					linearScaleDiv.querySelector(".linear-main-scale");
-
-				const newDivOfLinearScale = linearScaleDiv.querySelector(
-					".linear-scale-created"
-				);
-				const newCreatedInput = linearScaleDiv.querySelector(".new-created-input");
-				const linearFirstInput = linearScaleDiv.querySelector(
-					".linear-first input"
-				);
-				const linearSecondInput = linearScaleDiv.querySelector(
-					".linear-second input"
-				);
-				const mainLinearScale = linearScaleDiv.querySelector(".linear-all-scale");
-				const valueOfSelect = [];
-				if (linearScaleDiv) {
-					const dataLinearValue = event.target.dataset.linearValue; // Use dataset property
-					const selectedValue = event.target.value;
-					// Perform additional actions based on dataLinearValue and selectedValue
-					if (dataLinearValue === "first") {
-						valueOfSelect[0] = selectedValue;
-					} else if (dataLinearValue === "last") {
-						valueOfSelect[1] = selectedValue;
-						linearSecondLast.innerHTML = selectedValue;
-					} else {
-						console.log("Invalid dataLinearValue:", dataLinearValue);
-					}
-				}
-
-				saveBtnOfLinearScale.addEventListener("click", () => {
-					if (newDivOfLinearScale.classList.contains("d-none")) {
-						const crateInput = createCheckboxes(Number(valueOfSelect[1]));
-						linearScaleDiv.querySelector(".linear-input-main-value").innerText =
-							inputOfValueOfMain.value;
-						linearScaleDiv.querySelector(".inputValue1").innerText =
-							linearFirstInput.value;
-						linearScaleDiv.querySelector(".inputValue2").innerText =
-							linearSecondInput.value;
-						newCreatedInput.append(crateInput);
-						mainLinearScale.classList.add("d-none");
-						mainLinearScaleOf.classList.add("d-none");
-						newDivOfLinearScale.classList.remove("d-none");
-						deleteBtnOfLinearScale.classList.remove("d-none");
-					} else {
-						deleteBtnOfLinearScale.classList.remove("d-none");
-					}
-				});
-				deleteBtnOfLinearScale.addEventListener("click", () => {
-					linearScaleDiv.querySelector(".linear-input-main-value").innerText = "";
-					linearScaleDiv.querySelector(".inputValue1").innerText = "";
-					linearScaleDiv.querySelector(".inputValue2").innerText = "";
-					newCreatedInput.innerHTML = "";
-					inputOfValueOfMain.value = "";
-					linearFirstInput.value = "";
-					linearSecondInput.value = "";
-					newDivOfLinearScale.classList.add("d-none");
-					mainLinearScale.classList.remove("d-none");
-					mainLinearScaleOf.classList.remove("d-none");
-				});
-			});
-		}
-
-		//  here Add new multiple input
-		let rowsValue = 2;
-		function addMoreRows(type, value, btn) {
-			const addDiv = document.querySelector(`#${value}`);
-			const newDiv = document.createElement("div");
-			newDiv.innerHTML = `
-    <div class="d-flex  align-items-center gap-3">
-      <div class="form-check my-2 d-flex align-items-center gap-2">
-        <input
-          class="form-check-input"
-          type="${type}"
-          name="exampleRadios"
-          id="exampleRadios${rowsValue}"
-          value="option${rowsValue}"
-        />
-        <button class="btn" onclick="showInput('choice-input${rowsValue}')">
-          <input
-            class="form-control txt-black mt-1 fw-normal"
-            id="choice-input${rowsValue}"
-            placeholder="Option ${rowsValue}"
-            readonly
-          />
-        </button>
-      </div>
-      <button class="mt-1 btn btn-danger ${btn}" onclick="removeInput2(this,'rowsValue')">
-        <i class="bi bi-x-lg"></i>
-      </button>
-    </div>
-  `;
-			addDiv.appendChild(newDiv);
-			rowsValue++;
-		}
-		let columnValue = 2;
-		function addMoreColumn(type, value, btn) {
-			const addDiv = document.querySelector(`#${value}`);
-			const newDiv = document.createElement("div");
-			newDiv.innerHTML = `
-    <div class="d-flex  align-items-center gap-3">
-      <div class="form-check my-2 d-flex align-items-center gap-2">
-        <input
-          class="form-check-input"
-          type="${type}"
-          name="exampleRadios"
-          id="exampleRadios-column-${columnValue}"
-          value="option${columnValue}"
-        />
-        <button class="btn" onclick="showInput('choice-input-column-${columnValue}')">
-          <input
-            class="form-control txt-black mt-1 fw-normal"
-            id="choice-input-column-${columnValue}"
-            placeholder="Option ${columnValue}"
-            readonly
-          />
-        </button>
-      </div>
-      <button class="mt-1 btn btn-danger ${btn}" onclick="removeInput2(this,'columnValue')">
-        <i class="bi bi-x-lg"></i>
-      </button>
-    </div>
-  `;
-			addDiv.appendChild(newDiv);
-			columnValue++;
-		}
-
-		// Remove Input From Dynamic Delete Option
-		function removeInput2(button, value) {
-			const parentDiv = button.closest(".d-flex");
-			parentDiv.remove();
-			if (value === "rowsValue") {
-				if (rowsValue > 2) {
-					rowsValue--;
-				}
-			} else if (value === "columnValue") {
-				if (columnValue > 2) {
-					columnValue--;
-				}
-			}
-		}
-		// Remove Input From Dynamic Delete Option
-		//!  here If Anyone click input
-
-		// Function to save the multiple choice grid
-		function saveMultipleBtn(ele) {
-			const parentDiv = ele.closest(".multiple-choice-grid");
-			const inputDiv = parentDiv.querySelector(".choice-inbox");
-			const titleInput = inputDiv.querySelector("input");
-			const mainDiv = parentDiv.querySelector(".multiple-grid-choice-main-div");
-			const rowsDiv = parentDiv.querySelector(".add-more-multiple-rows");
-			const rows = [];
-			const rowsInputAll = rowsDiv.querySelectorAll("input.form-control");
-			rowsInputAll.forEach((ele) => {
-				rows.push(ele.value);
-			});
-			const columnDiv = parentDiv.querySelector(".add-more-multiple-column");
-			const column = [];
-			const columnInputAll = columnDiv.querySelectorAll("input.form-control");
-			columnInputAll.forEach((ele) => {
-				column.push(ele.value);
-			});
-			mainDiv.classList.add("d-none");
-			console.log(titleInput.value, rows, column);
-		}
-		function saveMultipleBtn2(ele) {
-			const parentDiv = ele.closest(".multiple-checkBox-grid");
-			const inputDiv = parentDiv.querySelector(".chekbox-inbox");
-			const titleInput = inputDiv.querySelector("input");
-			const mainDiv = parentDiv.querySelector(".multiple-grid-choice-main-div");
-			const rowsDiv = parentDiv.querySelector(".add-more-multiple-rows");
-			const rows = [];
-			const rowsInputAll = rowsDiv.querySelectorAll("input.form-control");
-			rowsInputAll.forEach((ele) => {
-				rows.push(ele.value);
-			});
-			const columnDiv = parentDiv.querySelector(".add-more-multiple-column");
-			const column = [];
-			const columnInputAll = columnDiv.querySelectorAll("input.form-control");
-			columnInputAll.forEach((ele) => {
-				column.push(ele.value);
-			});
-			mainDiv.classList.add("d-none");
-			console.log(titleInput.value, rows, column);
-		}
-
-		function saveFile(info, value, id) {
-			const mainDiv = info.closest(".flex-grow-1");
-			const findFileInput = mainDiv.querySelector("input[type='file']");
-			const requireFill = mainDiv.querySelector(
-				".require-fill input[type='checkbox']"
-			);
-			console.log(findFileInput.files[0]);
-			console.log(value, id);
-			if (requireFill.checked) {
-				console.log("require fill");
-			} else {
-				console.log("no require fill");
-			}
-		}
-
-		function dateTime(info, value, id) {
-			const mainDiv = info.closest(".flex-grow-1");
-			const requireFill = mainDiv.querySelector(
-				".require-fill-2 input[type='checkbox']"
-			);
-			const requireFill_3 = mainDiv.querySelector(
-				".require-fill-3 input[type='checkbox']"
-			);
-			if (value === "Date") {
-				const dateInput = mainDiv.querySelector("input[type='date']");
-				console.log(dateInput.value, value, id);
-
-				console.log(requireFill.checked ? "require fill" : "no require fill");
-			} else if (value === "Time") {
-				const timeInput = mainDiv.querySelector("input[type='time']");
-				console.log(timeInput.value, value, id);
-				console.log(requireFill_3?.checked ? "require fill" : "no require fill");
-				checkbox();
-			}
-		}
-
+	
 		const container = document.getElementById("survey_create_option");
 
 		let debounceTimeout;
@@ -3456,171 +2205,74 @@
 	</script>
 
 
-	<script>
-		const serializeData = [];
-		function reload() {
-			const shortTitleInputs = document.querySelectorAll('.short-title input[type="text"]');
-			const paragraphInputs = document.querySelectorAll('.paragraph-input input[type="text"]');
-			const dateInputs = document.querySelectorAll('.date-input input[type="text"]');
-			const timeInputs = document.querySelectorAll('.time-input input[type="text"]');
-
-			shortTitleInputs.forEach(input => {
-
-
-				input.addEventListener('change', (event) => {
-					const inputId = event.target.id;
-					const inputValue = event.target.value;
-					const mainDiv = event.target.closest('.flex-grow-1');
-					const requireFill = mainDiv.querySelector(
-						".require-fill input[type='checkbox']"
-					);
-					let shortAnswer = {
-						id: inputId,
-						inputName: "Short Question Title",
-						value: inputValue,
-						requireFill: false
-					}
-					requireFill.addEventListener('change', (event) => {
-						if (!event.target.checked) {
-							const updateRequired = serializeData.find((data) => data.id === inputId);
-							if (updateRequired) { // Check if updateRequired exists before assignment
-								updateRequired.requireFill = false;
-							}
-						} else {
-							const updateRequired = serializeData.find((data) => data.id === inputId);
-							if (updateRequired) {
-								updateRequired.requireFill = true;
-							}
-						}
-					});
-					serializeData.push(shortAnswer);
-				});
-			});
-
-			paragraphInputs.forEach(input => {
+	
+<script>
+	function reRender() {
+		const form  = document.getElementById("survey-create-form");
+		form.addEventListener("submit",(event)=>{
+		event.preventDefault(); // Prevent default form submission
+		event.stopImmediatePropagation(); // prevent
+		event.stopPropagation();
 
 
-				input.addEventListener('change', (event) => {
-					const inputId = event.target.id;
-					const inputValue = event.target.value;
-					const mainDiv = event.target.closest('.flex-grow-1');
-					const requireFill = mainDiv.querySelector(
-						".require-fill input[type='checkbox']"
-					);
-					let paragraphTitle = {
-						id: inputId,
-						inputName: "Paragraph  Title",
-						value: inputValue,
-						requireFill: false
-					}
-					requireFill.addEventListener('change', (event) => {
-						if (!event.target.checked) {
-							const updateRequired = serializeData.find((data) => data.id === inputId);
-							if (updateRequired) { // Check if updateRequired exists before assignment
-								updateRequired.requireFill = false;
-							}
-						} else {
-							const updateRequired = serializeData.find((data) => data.id === inputId);
-							if (updateRequired) {
-								updateRequired.requireFill = true;
-							}
-						}
-					});
-					serializeData.push(paragraphTitle);
-				});
-			});
-			dateInputs.forEach(input => {
-				input.addEventListener('change', (event) => {
-					const inputId = event.target.id;
-					const inputValue = event.target.value;
-					const mainDiv = event.target.closest('.flex-grow-1');
+    const formData = new FormData(form);
 
-					const requireFill = mainDiv.querySelector(
-						".require-fill input[type='checkbox']"
-					);
-
-					let dateTitle = {
-						id: inputId,
-						inputName: "Date Title",
-						value: inputValue,
-						requireFill: false
-					}
-					requireFill?.addEventListener('change', (event) => {
-						if (!event.target.checked) {
-							const updateRequired = serializeData.find((data) => data.id === inputId);
-							if (updateRequired) { // Check if updateRequired exists before assignment
-								updateRequired.requireFill = false;
-							}
-						} else {
-							const updateRequired = serializeData.find((data) => data.id === inputId);
-							if (updateRequired) {
-								updateRequired.requireFill = true;
-							}
-						}
-					});
-					serializeData.push(dateTitle);
-				});
-			});
-			timeInputs.forEach(input => {
+    // Iterate over form data entries and log them in a clear format
+    for (const [key, value] of formData.entries()) {
+			 if (value) { // Check if value is truthy (not empty, null, undefined, etc.)
+    console.log(`Key: ${key}, Value: ${value}`);
+  }
+    }
 
 
-				input.addEventListener('change', (event) => {
-					const inputId = event.target.id;
-					const inputValue = event.target.value;
-					const mainDiv = event.target.closest('.flex-grow-1');
-					const requireFill = mainDiv.querySelector(
-						".require-fill input[type='checkbox']"
-					);
-					let timeTitle = {
-						id: inputId,
-						inputName: "Time Title",
-						value: inputValue,
-						requireFill: false
-					}
-					requireFill.addEventListener('change', (event) => {
-						if (!event.target.checked) {
-							const updateRequired = serializeData.find((data) => data.id === inputId);
-							if (updateRequired) { // Check if updateRequired exists before assignment
-								updateRequired.requireFill = false;
-							}
-						} else {
-							const updateRequired = serializeData.find((data) => data.id === inputId);
-							if (updateRequired) {
-								updateRequired.requireFill = true;
-							}
-						}
-					});
-					serializeData.push(timeTitle);
-				});
-			});
-		}
-		reload()
+const inputOfRequires = [
+  ".short-title",
+  ".paragraph-input",
+  ".date-input",
+  ".time-input",
+  ".dropdown-input",
+  ".choice-input",
+  ".multiple-input",
+];
 
-		document.getElementById("submitButton").addEventListener("click", () => {
-			console.log(serializeData);
-			const mainDiv = document.getElementById("survey_create_option");
+inputOfRequires.forEach((ele) => {
+  document.querySelectorAll(ele).forEach((div) => {
+    const mainDiv = div.closest(".flex-grow-1");
 
-			function assignPositionalIds(mainDiv) {
-				if (!mainDiv || mainDiv.nodeType !== Node.ELEMENT_NODE) {
-					console.error(
-						"Invalid argument: Please provide a valid main div element."
-					);
-					return;
-				}
+    const requireFill = mainDiv.querySelector(".require-fill input[type='checkbox']");
 
-				const childDivs = mainDiv.querySelectorAll(".visitor-main-box");
-				return Array.from(childDivs).map((childDiv, index) => {
-					return { element: childDiv, position: index + 1 };
-				});
-			}
-			console.log(assignPositionalIds(mainDiv))
-			reRender();
-		});
+    if (requireFill && requireFill.checked) { // Check for existence and checked state
+      console.log(`${ele} requires filling`); // Consistent wording
+    }
+  });
+});
 
 
+		
+	
+		// const mainDiv = document.getElementById("survey_create_option");
 
-	</script>
+		// 	function assignPositionalIds(mainDiv) {
+		// 		if (!mainDiv || mainDiv.nodeType !== Node.ELEMENT_NODE) {
+		// 			console.error(
+		// 				"Invalid argument: Please provide a valid main div element."
+		// 			);
+		// 			return;
+		// 		}
 
+		// 		const childDivs = mainDiv.querySelectorAll(".visitor-main-box");
+		// 		return Array.from(childDivs).map((childDiv, index) => {
+		// 			return { element: childDiv, position: index + 1 };
+		// 		});
+		// 	}
+		// 	console.log(assignPositionalIds(mainDiv))
+		
+	});
+
+
+	}
+reRender()
+</script>
 
 </body>
 

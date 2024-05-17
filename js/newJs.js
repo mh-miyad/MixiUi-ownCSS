@@ -604,11 +604,9 @@ optionCreateBtn.addEventListener("click", () => {
                               </div>
                             </div>
       </div>
-      <button class="mt-5 btn btn-danger short-title-btn">
-        <i class="bi bi-x-lg"></i>
-      </button>
+    
     </div>
-    <div class="prgraph-input d-none  d-flex justify-content-between align-items-center  gap-2 ">
+    <div class="prgraph-input paragraph-input d-none  d-flex justify-content-between align-items-center  gap-2 ">
       <div class="flex-grow-1">
         <div>
           <label for="short-tittle" class="form-label text-dark">
@@ -637,9 +635,7 @@ optionCreateBtn.addEventListener("click", () => {
                             
       
       </div>
-      <button class=" mt-0 btn btn-danger prg-btn">
-        <i class="bi bi-x-lg"></i>
-      </button>
+    
     </div>
     <div class="multiple-input d-none my-3">
       <div class="add-more-multiple-input" id="add-more-multiple-input-${count2}">
@@ -660,9 +656,7 @@ optionCreateBtn.addEventListener("click", () => {
             </div>
          
           </div>
-          <button class=" mt-1 btn btn-danger multiple-choice-btn">
-            <i class="bi bi-x-lg"></i>
-          </button>
+      
         </div>
       </div>
       <div class="form-check my-2 d-flex align-items-center gap-2">
